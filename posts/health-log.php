@@ -376,7 +376,7 @@ NAC 500 mg (Thorne)
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
 - 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
-- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
 - 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
 
 ■ Meditation (Oura Moment) — 08:36〜09:06（30分30秒）
@@ -438,7 +438,7 @@ NAC 500 mg (Thorne)
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
 - 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
-- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
 - 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
 
 ■ Meditation (Oura Moment) — 21:32〜21:50（17分41秒）
@@ -931,7 +931,7 @@ Readiness 76からのスタートで「緩めの日」と宣言したが、実�
 ■ ドラフト（下書き）
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
 - 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
   </pre>
 
