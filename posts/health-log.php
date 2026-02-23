@@ -1,6 +1,7 @@
 <?php
 $page_title = '【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】';
 $page_description = 'A daily log tracking food, sleep, supplements, meditation, and workouts. Includes AI-powered nutrition feedback. A biohacking and health optimization experiment.';
+$extra_css = ['/health-log.css'];
 require dirname(__DIR__) . '/header.php';
 ?>
 
@@ -22,10 +23,65 @@ require dirname(__DIR__) . '/header.php';
       pre.innerHTML = pre.innerHTML.replace(regex, '<span class="jp-font">$1</span>');
     });
 
+    // AI Feedback
+    var feedbackBtn = document.getElementById('ai-feedback-btn');
+    var mealInput = document.getElementById('meal-input');
+    var loading = document.getElementById('ai-loading');
+    var resultDiv = document.getElementById('ai-feedback-result');
+
+    if (feedbackBtn) {
+      feedbackBtn.addEventListener('click', function () {
+        var text = mealInput.value.trim();
+        if (!text) {
+          alert('食事内容を入力してください。');
+          return;
+        }
+        feedbackBtn.disabled = true;
+        feedbackBtn.style.opacity = '0.5';
+        loading.style.display = 'inline';
+        resultDiv.style.display = 'none';
+
+        fetch('/api/ai-feedback.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ meal_text: text })
+        })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (!result.ok) {
+            resultDiv.textContent = '⚠️ ' + (result.data.error || 'エラーが発生しました。');
+            resultDiv.style.borderColor = '#e8a0a0';
+            resultDiv.style.background = '#fff5f5';
+          } else {
+            var fb = result.data.feedback
+              .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+              .replace(/^(Breakfast|Lunch|Dinner)\s*:/gm, '<strong>$1 :</strong>')
+              .replace(/(\[合計:\s*~?[\d,]+kcal[^\]]*\])/g, '<strong>$1</strong>')
+              .replace(/^\*フィードバック:/gm, '<strong>*フィードバック:</strong>')
+              .replace(/\n/g, '<br>');
+            resultDiv.innerHTML = fb;
+            resultDiv.style.borderColor = '#c8ddf5';
+            resultDiv.style.background = '#fff';
+          }
+          resultDiv.style.display = 'block';
+        })
+        .catch(function () {
+          resultDiv.textContent = '⚠️ 通信エラーが発生しました。しばらくしてからお試しください。';
+          resultDiv.style.borderColor = '#e8a0a0';
+          resultDiv.style.background = '#fff5f5';
+          resultDiv.style.display = 'block';
+        })
+        .finally(function () {
+          feedbackBtn.disabled = false;
+          feedbackBtn.style.opacity = '1';
+          loading.style.display = 'none';
+        });
+      });
+    }
   };
 </script>
 
-<a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
+<p class="brand"><a href="https://mblog.com/">manablog</a></p>
 <time>11 Jan, 2026</time>
 <h1 class="title">【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】</h1>
 <p class="health-section hs-notice">
@@ -198,6 +254,19 @@ Breakfast/Lunch/Dinner (時刻): メニュー [Total: ~〇〇kcal, P: 〇g, F: �
   </div>
   <!-- End AI Prompt Section -->
 
+  <!-- AI Feedback Section -->
+  <div class="health-section hs-box hs-blue">
+    <p class="hs-title">🤖 AIの食事管理を試してみる</p>
+    <p class="hs-subdesc">AI費用はマナブ負担で、大量に使われると破産です。程々にお願いします🏋️🙏</p>
+    <textarea id="meal-input" rows="4" maxlength="2000" placeholder="例: 朝食 — 卵3個スクランブル、白米1杯、味噌汁（わかめ・豆腐）、納豆1パック" class="hs-textarea"></textarea>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
+      <button id="ai-feedback-btn" class="hs-btn">🤖 AIに聞く</button>
+      <span id="ai-loading" style="display: none; font-size: 13px; color: #888;">⏳ 分析中...</span>
+    </div>
+    <div id="ai-feedback-result" style="display: none;" class="hs-result"></div>
+  </div>
+  <!-- End AI Feedback Section -->
+
   <!-- Supplement Stack Section -->
   <div class="health-section hs-box hs-gray">
     <p class="hs-title">💊 僕が飲んでいるサプリ一覧</p>
@@ -271,6 +340,215 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-02-23</h2>
+  <pre>
+■ Morning Self-Check
+- Body: ?/10
+- Mind: ?/10
+- Spirit: ?/10
+
+■今日の積み上げ
+・理念：３年前の自分を救う
+・優先①：オフ会を定期開催
+・優先②：最速で拡大をする
+
+[高] 理念に直結するもの
+[ ] AIとコンテンツ作成
+[ ] メルマガで読者質問まとめて共有（次回メルマガ配信時に追記する）
+[x] クローンした音声でPodcastを撮ってみる
+[ ] mblog.comをHetznerに移転しつつ、Claude Codeでセットアップする。現状のシステム設計とCSS設計が美しくないので、全てを作り替える。
+[ ] Hetznerに移転したmblogのセキュリティ設定（Tailscale）
+[ ] Hetznerに移転したmblogサーバーに、Claude Code Telegramを入れる
+[ ] 自分の相棒となるAIキャラを作る（そのキャラが音声配信、動画に登場などする。キャラ設定や声、性格など固める必要あり）
+
+[中] 理念を加速するもの
+[ ] スクリーンタイムをAIに同期できるか確認（スマホやPCの使い過ぎとHRVの相関を見ていく）
+[ ] ストレッチルーティンの見直し（更に良いストレッチがあるかリサーチする）
+[ ] 若い子を集めて教育する寺子屋をやりたい
+[ ] マナブッダをキャラクター化して動画配信 → AIが主役コンテンツ。新しい発信形態
+
+[低] いつでもいい
+[ ] スマートウォッチを買う
+[ ] mblog.comにダークモードを実装する
+[ ] GA4スプレッドシートに日付ディメンションを追加する（日次PV比較レポートに必要）
+
+■ ドラフト（下書き）
+- 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
+- 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
+- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
+- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+
+■ Meditation (Oura Moment) — 08:36〜09:06（30分30秒）
+- Lowest HR: 60bpm（ベースライン 48bpm）
+- Avg HRV: 29ms（ベースライン 38ms）
+- HRV推移：セッション開始から上昇（20ms→30ms）
+- Skin Temp：セッション終了まで連続上昇（Cannabis時は中盤でプラトー・微減）
+- Self-rating: Same as usual
+※note: Cannabis無しの朝瞑想。昨夜Cannabis実験（第7回）との比較：HR +12 vs +27、HRV 29ms vs 18ms。主観と客観の逆転が鮮明 — Cannabis時「Better than usual」なのに生理データは過去最悪。Cannabis無し「Same as usual」なのに生理データは健全。皮膚温も今日は終始上昇、Cannabis時は中盤でプラトー。HRVが上昇パターン = 副交感神経が正常機能。全8回推移（最低心拍）：64/64/62/61/64/62/76/60、（HRV）：45/25/34/26/35/31/18/29。
+
+■ Food
+- Breakfast (09:07): ①卵3個（目玉焼き）＋ライスベリーライス大盛り（~150g）＋春菊・エリンギ・アーモンドサラダ＋キムチ（~50g） ②ヨーグルトボウル（ヨーグルト・オートミール・冷凍ブルーベリー・くるみ・かぼちゃの種・ゴジベリー・ミルク少々・Vital Proteins Collagen Peptides 1 serving・ハチミツ ~20g）
+  ~1,220kcal / P:67g / F:51g / C:132g（①：~545kcal / ②：~545kcal / コラーゲン：~70kcal / ハチミツ：~60kcal）
+  *Feedback from AI: [朝から栄養の掛け算] 卵3個でコリン+良質タンパク、ライスベリーのアントシアニン、キムチの乳酸菌、春菊のビタミンKに加え、②でオートミールのβ-グルカン（LDL低下・腸保護）、ブルーベリーのアントシアニンを二重補給。くるみのALA（植物性オメガ3）＋かぼちゃの種の亜鉛で抗炎症＋テストステロンサポート。コラーゲンペプチドのグリシン＋プロリン＋ヒドロキシプロリンが昨日のChest Dayで酷使した腱・靭帯の修復を加速。ビタミンCと一緒に摂ることでコラーゲン合成効率UP（春菊に含まれる）。P:67gは今日の目標136gの49%を朝食だけで達成。脂質51gは多めだが全てUFPA/PUFA由来。昼以降は低脂質で調整を。
+
+■ Supplements
+
+■ Treatment
+
+■ Substances
+
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-02-22</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 10/10
+- Mind: 9/10
+- Spirit: 8/10
+
+■今日の積み上げ
+・理念：３年前の自分を救う
+・優先①：オフ会を定期開催
+・優先②：最速で拡大をする
+
+[高] 理念に直結するもの
+[x] 奥さんのbotを修正（作業完了）
+[ ] AIとコンテンツ作成
+[ ] メルマガで読者質問まとめて共有（次回メルマガ配信時に追記する）
+[ ] クローンした音声でPodcastを撮ってみる
+[ ] mblog.comをHetznerに移転しつつ、Claude Codeでセットアップする。現状のシステム設計とCSS設計が美しくないので、全てを作り替える。
+
+[中] 理念を加速するもの
+[ ] スクリーンタイムをAIに同期できるか確認（スマホやPCの使い過ぎとHRVの相関を見ていく）
+[ ] ストレッチルーティンの見直し（更に良いストレッチがあるかリサーチする）
+[x] Claude Codeが権限を持ちすぎかもなのでセキュリティチェックする
+[ ] 若い子を集めて教育する寺子屋をやりたい
+[ ] マナブッダをキャラクター化して動画配信 → AIが主役コンテンツ。新しい発信形態
+[x] Cannabis×瞑想でHRV計測（Oura Moment）→ 夜間HRVと比較
+
+[低] いつでもいい
+[ ] スマートウォッチを買う
+[ ] mblog.comにダークモードを実装する
+[ ] GA4スプレッドシートに日付ディメンションを追加する（日次PV比較レポートに必要）
+
+■ ドラフト（下書き）
+- 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
+- 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
+- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
+- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+
+■ Meditation (Oura Moment) — 21:32〜21:50（17分41秒）
+- Lowest HR: 76bpm（ベースライン 49bpm）
+- Avg HRV: 18ms（ベースライン 38ms）
+- Skin Temp: セッション開始から上昇 → プラトー → 微減（末梢血管拡張＝副交感神経活性）
+- Self-rating: Better than usual 😊
+※note: 夕食後、Cannabis吸引しながらの瞑想（Cannabis×瞑想HRV実験 第7回）。過去最悪のデータ。HR +27（ベースライン比）、HRV 18ms（これまでの最低25msをさらに更新）。全7回推移：最低心拍 64/64/62/61/64/62/76、HRV 45/25/34/26/35/31/18。Cannabis後の瞑想は交感神経を刺激し、主観的なリラックス感と生理的データが真逆になる。Ouraの「Better than usual」は皮膚温上昇を見ているが、HR・HRVでは明らかにストレス状態。結論：瞑想の質を上げたいならCannabis後は避ける。
+
+■ Cycling (Oura Ring) — 合計3セッション
+- Session 1: 13:44〜14:12（28分 / 6.3km / 112kcal / moderate）
+- Session 2: 14:59〜15:23（24分 / 2.4km / 76kcal / moderate）
+- Session 3: 15:53〜16:04（11分 / 1.6km / 37kcal / moderate）
+- 合計：63分 / 10.3km / 225kcal
+
+■ Workout (16:10〜18:00 / 110分 / Chest Day)
+1. Bench Press with Smith Machine
+   - 50 kg + Bar x 6
+   - 55 kg + Bar x 4 (+ Bar)
+   - 60 kg + Bar x 2
+   - 50 kg + Bar x 6
+   - 45 kg + Bar x 8
+   - 40 kg + Bar x 10
+   - 40 kg + Bar x (6 + 1c)
+2. Dips
+   - 10
+   - 10
+   - 6 → Rest → 4
+3. Incline Bench Press
+   - 10 kg + Bar : 10
+   - 10 kg + Bar : 6
+   - 10 kg + Bar : 6
+   - 10 kg + Bar : 6
+4. Incline Chest Press Machine
+   - 20 kg x 12
+   - 30 kg x 7
+   - 30 kg x 7
+   - 25 kg x (8 + 2c)
+   - 25 kg x 7
+5. Pec Fly
+   - 24 kg x 10
+   - 24 kg x (6 + 2c)
+   - 24 kg x 7
+6. Incline Dumbbell Press
+   - 7.5 kg x 10
+   - 10 kg x (6 + 1c)
+   - 7.5 kg x (8 + 1c)
+   - 7.5 kg x 10
+
+■ Note
+※note: ルナ（犬）もログに載せることにした。
+※note: 本日は精神的な苛立ちが、少しあったように思う。HRVとの相関あり？ データを追っていく。
+※note: [面白い視点] Aaron Burnett（@aaronburnett）の予測 — 2031年までにテスラFSD＋Starlinkが、アメリカで「遊牧民的生活スタイル」と「都市からの大規模脱出」を加速する。アメリカの人口密度は50人/km²以下で、遠隔地生活が現実的になる。背景：住宅価格高騰・AIホームスクーリング・都市治安悪化。本人は8,000kmのロードトリップ済みで「すでに十分可能」と主張。テスラ・セミをRV化し、Optimusがヨセミテで夕食をサーブする未来図が話題。→ https://x.com/aaronburnett/status/2025276986348752998
+
+■ Social
+- 朝食：奥さんと近場のカフェへ
+
+■ Food
+- Breakfast (10:00): アボカドスムージー（大グラス）＋生ハムサラダ（ルッコラ・生ハム・くるみ・チーズ・オリーブオイルドレッシング）＋おかゆ（豚ひき肉・半熟卵・生姜・小ネギ）
+  ~1,110kcal / P:52g / F:62g / C:77g（スムージー+サラダ：630kcal / おかゆ：480kcal）
+  *Feedback from AI: [Recovery Brunch] アボカド+くるみのオメガ系脂質コンボに加え、おかゆで消化に優しいC:46gを補給。お腹が緩い翌日におかゆは最適解 — 米のデンプンが腸粘膜を保護し、豚ひき肉+卵でP:25g追加。ただしF:62gは今日の目標74gの84%をすでに朝食で消費。ランチ・ディナーは低脂質・高炭水化物で調整が必要。Running total: P:52g / 目標136gまで残り84g。
+
+- Lunch (14:00): ①わかめサラダ（レタス・キュウリ・トマト・にんじん・玉ねぎ・わかめ）＋豆腐＋無添加ドレッシング ②テンペバーグ丼（ライスベリーライス・テンペパティ・目玉焼き・おろし・もやし・デミグラス風ソース）＋味噌汁（小ネギ入り）
+  ~840kcal / P:45g / F:28g / C:101g（わかめ豆腐：220kcal / テンペバーグ丼：620kcal）
+  *Feedback from AI: [Japanese Health Combo] わかめ×豆腐×テンペの三位一体。わかめのミネラル、豆腐のイソフラボン、テンペの発酵プレバイオティクスで腸内環境◎。ライスベリーライスのアントシアニン＋おろし大根のジアスターゼが消化を強力サポート。P:45gはランチとして優秀。Running total after lunch: ~1,950kcal / P:97g / F:90g / C:178g。ディナーはカロリー+700kcal、C+183gを意識して。
+
+- Workout Snack (16:00): 3 Seeds Protein 1 scoop＋バナナ 2本
+  ~330kcal / P:23g / F:4g / C:61g
+  *Feedback from AI: [Intra-Workout Fuel] バナナの速吸収グルコース＋フルクトースが筋肉にすぐ届く。3 Seedsのプロテインで筋タンパク合成を同時サポート。このタイミングでC:61gを摂取したことで今日のC不足を大幅に改善。
+
+- Dinner (19:00): テンペ 120g（崩し）＋ビーガンラザニア＋ライスベリーライス＋焼き野菜（玉ねぎ・にんじん）＋ミニトマト＋きゅうりの和え物（わかめ・ごま）＋グリーンサラダ（春菊系・エリンギ・アーモンド）＋豆腐スープ（にんじん）
+  ~995kcal / P:47g / F:44g / C:102g
+  *Feedback from AI: [Post-Workout Plant Power] 筋トレ後のゴールデンタイムにテンペP:22g＋ラザニアP:10gで植物性タンパク質を合計32g確保。テンペの発酵菌が腸内の回復を加速し、筋タンパク合成を底上げ。ライスベリーライス＋ラザニアのC:64gでグリコーゲン補充◎。春菊・きゅうり・エリンギの多彩なフィトケミカルが炎症を鎮める。アーモンドのビタミンEが筋肉の酸化ストレス軽減。一皿にした植物性の多様性は満点。
+
+■ Supplements
+- Thorne PM x2
+- Ashwagandha 300mg
+
+■ Treatment
+（なし）
+
+■ Substances
+- Cannabis 0.6g Indica（21:30頃）
+
+■ Daily Summary (by AI)
+バルク中の高タンパク日。テンペ×ビーガンラザニアのディナーで植物性タンパク質をしっかり積み増し、P:167gは目標の123%を達成。カロリーも3,280kcalと目標超えで体重増加フェーズに貢献。一方、朝食のくるみ＋チーズ＋オリーブオイル＋アボカドで脂質が朝だけで62gに達し、1日合計F:138gと目標74gの186%に。胸の筋トレ110分をこなした日にしては炭水化物C:341gがやや不足。明日は炭水化物優先（白米・バナナ・パスタ）で調整すると回復効率が上がる。
+
+食事      実績          目標         達成率
+カロリー   3,280kcal    2,650kcal    124% ✅
+P          167g          136g        123% ✅
+F          138g           74g        186% ⚠️
+C          341g          361g         94%
+食物繊維    35g           25g        140%
+
+■ マナブの1日（AIが行動ログから生成）
+10:00 起床。Morning Self-Check: Body 10 / Mind 9 / Spirit 8。
+10:00 朝食。奥さんと近場のカフェへ。アボカドスムージー＋生ハムサラダ＋おかゆ。
+13:44 サイクリング開始（1セッション目 / 28分 / 6.3km）。
+14:59 サイクリング（2セッション目 / 24分 / 2.4km）。
+15:53 サイクリング（3セッション目 / 11分 / 1.6km）。合計63分 / 10.3km。
+16:00 Workout Snack（プロテイン＋バナナ2本）。
+16:10 Chest Day筋トレ開始。Bench Press×7set / Dips / Incline Bench / Machine Press / Pec Fly / Incline DB。
+18:00 筋トレ終了（110分）。
+19:00 ディナー（推定）。テンペ＋ビーガンラザニア＋野菜多品目。
+21:32 Oura Moment（瞑想 17分41秒）。HRV 18ms / Better than usual。
+この日の一言：「サイクリングも筋トレも動き続けた。体は応えてくれた。」
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-02-21</h2>
   <pre>
 ■ Morning Self-Check
@@ -310,8 +588,8 @@ NAC 500 mg (Thorne)
 - Session: 13:00（実施済み）
 
 ■ 後で読む / 見る
-- <a href="https://ilmostromberg.com/1000-days-with-oura-ring/" target="_blank">1000 days with Oura ring – My revelations with HRV</a>
-- <a href="https://bannerpeakhealth.com/heart-rate-variability-stress-management/" target="_blank">Heart Rate Variability: A New Tool for Stress Management</a>
+- [読了] <a href="https://ilmostromberg.com/1000-days-with-oura-ring/" target="_blank">1000 days with Oura ring – My revelations with HRV</a>
+- [読了] <a href="https://bannerpeakhealth.com/heart-rate-variability-stress-management/" target="_blank">Heart Rate Variability: A New Tool for Stress Management</a>
 - <a href="https://youtu.be/YFjfBk8HI5o" target="_blank">OpenClaw: The Viral AI Agent that Broke the Internet — Peter Steinberger | Lex Fridman Podcast #491</a>
 
 ■今日の積み上げ
@@ -325,8 +603,8 @@ NAC 500 mg (Thorne)
 [ ] AIとコンテンツ作成
 [ ] メルマガで読者質問まとめて共有（次回メルマガ配信時に追記する）
 [ ] クローンした音声でPodcastを撮ってみる
-[ ] 筋トレフォームチェックAIサービスの開発（ベータ版試作中）
 [ ] mblog.comをHetznerに移転しつつ、Claude Codeでセットアップする。現状のシステム設計とCSS設計が美しくないので、全てを作り替える。
+[ ] 「ヘルスログ×AI」プロダクトのβテスト — 今の環境をそのままコピーして渡す。TelegramボットとヘルスログサイトをセットアップするだけでMVP完成。
 
 [中] 理念を加速するもの
 [x] 情報収集
@@ -338,7 +616,14 @@ NAC 500 mg (Thorne)
 
 [低] いつでもいい
 [ ] スマートウォッチを買う
-[ ] mblog.comにダークモードを実装する（テスト環境で確認中）
+[ ] mblog.comにダークモードを実装する
+
+■ Note
+※note: お腹が緩いのでコーヒーを控える。
+※note: 本日より朝食のライスを大盛りに変更、バナナを毎日2本追加（C不足の恒久対策）。
+※note: Xを見ると、驚くほどつまらない。やはり今は発信をするよりも、プロダクトを作るタイミングだと思う。
+※note: プロダクトアイデア — 「ヘルスログ×AI」を非エンジニアでも使えるUIに落とし込んだアプリ/ウェブサービス。ターゲット：健康を管理したいけどOpenClawを使いこなせない人。プロトタイプはすでに存在する。マナブさん自身がそれ。
+※note: MVP方針 — アプリは作らない。TelegramがUI。ユーザーが登録→専用Telegramボット発行→ヘルスログサイト自動生成→あとはTelegramに送るだけ。まず友人2名でβテストする。今のマナブさんの環境をそのままコピーして渡すだけで動く。
 
 ■ Food
 - Breakfast (09:20): オムレツ（卵3個・ハム入り）＋ライスベリーライス 茶碗1杯＋味噌汁（サヤエンドウ・キノコ入り）＋りんご 3切れ＋チェリー 約10粒＋いちご 3個＋3 Seeds Protein 1 scoop＋EVOO 大さじ1＋ココナッツシュガー 大さじ1
@@ -348,6 +633,35 @@ NAC 500 mg (Thorne)
 - Lunch (14:00): ①ミックスグリーンサラダ（レタス・きゅうり・トマト・にんじん・玉ねぎ）＋キャロットジンジャードレッシング ②テンペバーグ丼（白米大盛り・テンペパティ・溶けたチーズ・トマト・デミグラス風ソース・レタス）＋味噌汁（豆腐・わかめ・小ネギ）＋パイナップル酵素ジュース
   ~1,150kcal / P:48g / F:36g / C:158g
   *Feedback from AI: [Plant-Based Power Bowl] テンペは発酵大豆由来でP:24g＋プレバイオティクス効果。ブロメライン（パイナップル酵素）が食前の消化促進を担い、味噌の発酵菌との相乗効果で腸内環境◎。ただし大盛り白米でC:158gとバルク向けに高カロリー構成。チーズでカルシウム補強。Running total: P:105g / 目標136gまで残り31g。ディナーで肉や魚を追加すれば目標達成圏内。
+
+- Dinner (20:00): Chicken Curry with Rice（Healthy Junk Express）＋ブロッコリー 50g＋ケール 40g＋バナナ 2本
+  ~510kcal / P:31g / F:8g / C:84g（チキンカリー+野菜：300kcal / バナナ2本：210kcal）
+  *Feedback from AI: [Micronutrient Grand Slam + Gut Reset] ブロッコリー＋ケールで抗酸化コンボ、チキンカレーでP:28g確保。バナナのペクチン（水溶性食物繊維）が腸粘膜を保護してお腹が緩い状態を自然にケア。カリウムで電解質補給。補食としてバナナ2本を追加したことでカロリー・Cともに大幅改善、目標達成圏内に。
+
+■ Substances
+- Cannabis: Compound Z 0.4g Hybrid (19:47)（0.7g用意したが0.4gで中断）
+- Cannabis: Indica 0.4g (22:15)
+
+■ Daily Summary (by AI)
+食事    実績         目標         達成率
+カロリー  2,639kcal   2,650kcal   100% ✅
+P        136g        136g        100% ✅
+F         88g         74g        119% ⚠️
+C        336g        361g         93%
+食物繊維   ~20g        25g         80%
+
+■ マナブの1日（AIが行動ログから生成）
+08:05 起床。Readiness 92、HRV 40ms。
+08:45 瞑想（Oura Moment 30分）。
+09:20 朝食（自宅）。
+13:00 ストレッチ完了。
+14:00 ランチ（Healthy Junk Express）。HRV記事2本を読了。
+15:00〜 情報収集タイム。weirdoをSOULに刻む。セキュリティチェック実施。
+17:00（推定）マッサージへ。背中の筋肉痛ケア。
+19:47 Cannabis Compound Z 0.4gで中断。最少量記録。
+20:00 ディナー（チキンカリー＋ケール＋バナナ2本）。
+22:15 Cannabis Indica 0.4g。
+この日の一言：「Cannabis量が減る。意思決定を体が先にしていた。」
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
@@ -617,8 +931,8 @@ Readiness 76からのスタートで「緩めの日」と宣言したが、実�
 ■ ドラフト（下書き）
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 編集中：<a href="https://mblog.substack.com">Newsletter #4：AIスキルの話</a>
 - 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
   </pre>
 
   <h2># 2026-02-18</h2>
