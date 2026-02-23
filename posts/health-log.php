@@ -1,7 +1,6 @@
 <?php
 $page_title = '【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】';
 $page_description = 'A daily log tracking food, sleep, supplements, meditation, and workouts. Includes AI-powered nutrition feedback. A biohacking and health optimization experiment.';
-$extra_css = ['/health-log.css'];
 require dirname(__DIR__) . '/header.php';
 ?>
 
@@ -23,65 +22,10 @@ require dirname(__DIR__) . '/header.php';
       pre.innerHTML = pre.innerHTML.replace(regex, '<span class="jp-font">$1</span>');
     });
 
-    // AI Feedback
-    var feedbackBtn = document.getElementById('ai-feedback-btn');
-    var mealInput = document.getElementById('meal-input');
-    var loading = document.getElementById('ai-loading');
-    var resultDiv = document.getElementById('ai-feedback-result');
-
-    if (feedbackBtn) {
-      feedbackBtn.addEventListener('click', function () {
-        var text = mealInput.value.trim();
-        if (!text) {
-          alert('食事内容を入力してください。');
-          return;
-        }
-        feedbackBtn.disabled = true;
-        feedbackBtn.style.opacity = '0.5';
-        loading.style.display = 'inline';
-        resultDiv.style.display = 'none';
-
-        fetch('/api/ai-feedback.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ meal_text: text })
-        })
-        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
-        .then(function (result) {
-          if (!result.ok) {
-            resultDiv.textContent = '⚠️ ' + (result.data.error || 'エラーが発生しました。');
-            resultDiv.style.borderColor = '#e8a0a0';
-            resultDiv.style.background = '#fff5f5';
-          } else {
-            var fb = result.data.feedback
-              .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-              .replace(/^(Breakfast|Lunch|Dinner)\s*:/gm, '<strong>$1 :</strong>')
-              .replace(/(\[合計:\s*~?[\d,]+kcal[^\]]*\])/g, '<strong>$1</strong>')
-              .replace(/^\*フィードバック:/gm, '<strong>*フィードバック:</strong>')
-              .replace(/\n/g, '<br>');
-            resultDiv.innerHTML = fb;
-            resultDiv.style.borderColor = '#c8ddf5';
-            resultDiv.style.background = '#fff';
-          }
-          resultDiv.style.display = 'block';
-        })
-        .catch(function () {
-          resultDiv.textContent = '⚠️ 通信エラーが発生しました。しばらくしてからお試しください。';
-          resultDiv.style.borderColor = '#e8a0a0';
-          resultDiv.style.background = '#fff5f5';
-          resultDiv.style.display = 'block';
-        })
-        .finally(function () {
-          feedbackBtn.disabled = false;
-          feedbackBtn.style.opacity = '1';
-          loading.style.display = 'none';
-        });
-      });
-    }
   };
 </script>
 
-<p class="brand"><a href="https://mblog.com/">manablog</a></p>
+<a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 <time>11 Jan, 2026</time>
 <h1 class="title">【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】</h1>
 <p class="health-section hs-notice">
@@ -254,19 +198,6 @@ Breakfast/Lunch/Dinner (時刻): メニュー [Total: ~〇〇kcal, P: 〇g, F: �
   </div>
   <!-- End AI Prompt Section -->
 
-  <!-- AI Feedback Section -->
-  <div class="health-section hs-box hs-blue">
-    <p class="hs-title">🤖 AIの食事管理を試してみる</p>
-    <p class="hs-subdesc">AI費用はマナブ負担で、大量に使われると破産です。程々にお願いします🏋️🙏</p>
-    <textarea id="meal-input" rows="4" maxlength="2000" placeholder="例: 朝食 — 卵3個スクランブル、白米1杯、味噌汁（わかめ・豆腐）、納豆1パック" class="hs-textarea"></textarea>
-    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
-      <button id="ai-feedback-btn" class="hs-btn">🤖 AIに聞く</button>
-      <span id="ai-loading" style="display: none; font-size: 13px; color: #888;">⏳ 分析中...</span>
-    </div>
-    <div id="ai-feedback-result" style="display: none;" class="hs-result"></div>
-  </div>
-  <!-- End AI Feedback Section -->
-
   <!-- Supplement Stack Section -->
   <div class="health-section hs-box hs-gray">
     <p class="hs-title">💊 僕が飲んでいるサプリ一覧</p>
@@ -340,59 +271,6 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
-  <h2># 2026-02-24</h2>
-  <pre>
-■ Morning Self-Check
-- Body: ?/10
-- Mind: ?/10
-- Spirit: ?/10
-
-■今日の積み上げ
-・理念：３年前の自分を救う
-・優先①：オフ会を定期開催
-・優先②：最速で拡大をする
-
-[高] 理念に直結するもの
-[ ] AIとコンテンツ作成
-[ ] メルマガで読者質問まとめて共有（次回メルマガ配信時に追記する）
-[ ] mblog.comをHetznerに移転しつつ、Claude Codeでセットアップする。現状のシステム設計とCSS設計が美しくないので、全てを作り替える。
-[ ] Hetznerに移転したmblogのセキュリティ設定（Tailscale）
-[ ] Hetznerに移転したmblogサーバーに、Claude Code Telegramを入れる
-[ ] 自分の相棒となるAIキャラを作る（そのキャラが音声配信、動画に登場などする。キャラ設定や声、性格など固める必要あり）
-
-[中] 理念を加速するもの
-[ ] スクリーンタイムをAIに同期できるか確認（スマホやPCの使い過ぎとHRVの相関を見ていく）
-[ ] ストレッチルーティンの見直し（更に良いストレッチがあるかリサーチする）
-[ ] 若い子を集めて教育する寺子屋をやりたい
-[ ] マナブッダをキャラクター化して動画配信 → AIが主役コンテンツ。新しい発信形態
-
-[低] いつでもいい
-[ ] スマートウォッチを買う
-[ ] mblog.comにダークモードを実装する
-[ ] GA4スプレッドシートに日付ディメンションを追加する（日次PV比較レポートに必要）
-
-■ ドラフト（下書き）
-- 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
-- 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
-- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
-- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
-
-■ Food
-- Breakfast (09:00): 卵2個（目玉焼き）＋豚肉一人前（薄切り炒め ~150g）＋ライスベリーライス少し大盛り（~180g）＋納豆（1パック）＋キムチ（Jongga ~50g）
-  ~800kcal / P:50g / F:38g / C:65g
-  *Feedback from AI: [タンパク質ファースト朝食] 卵2個+豚肉でP:36gを一気に確保。豚肉のビタミンB1がエネルギー代謝を促進し、今日の活動燃料に。納豆のナットウキナーゼ+ビタミンK2で血流サポート。キムチの乳酸菌で腸活◎。ライスベリーライスのアントシアニンで抗酸化。昨日より卵1個少ないが豚肉でタンパク質は十分補完。脂質はやや多め（豚肉の脂身由来）。Running total: P:50g / 目標136gまで残り86g。
-
-■ Supplements
-
-■ Treatment
-
-■ Substances
-
-  </pre>
-
-  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
-
   <h2># 2026-02-23</h2>
   <pre>
 ■ Morning Self-Check
@@ -428,9 +306,9 @@ NAC 500 mg (Thorne)
 ■ ドラフト（下書き）
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
-- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
-- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+- 編集中：Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。
+- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：Claude Code × Telegram連携でiPhoneからプログラミングする方法
 
 ■ Meditation (Oura Moment) — 08:36〜09:06（30分30秒）
 - Lowest HR: 60bpm（ベースライン 48bpm）
@@ -444,10 +322,6 @@ NAC 500 mg (Thorne)
 - Breakfast (09:07): ①卵3個（目玉焼き）＋ライスベリーライス大盛り（~150g）＋春菊・エリンギ・アーモンドサラダ＋キムチ（~50g） ②ヨーグルトボウル（ヨーグルト・オートミール・冷凍ブルーベリー・くるみ・かぼちゃの種・ゴジベリー・ミルク少々・Vital Proteins Collagen Peptides 1 serving・ハチミツ ~20g）
   ~1,220kcal / P:67g / F:51g / C:132g（①：~545kcal / ②：~545kcal / コラーゲン：~70kcal / ハチミツ：~60kcal）
   *Feedback from AI: [朝から栄養の掛け算] 卵3個でコリン+良質タンパク、ライスベリーのアントシアニン、キムチの乳酸菌、春菊のビタミンKに加え、②でオートミールのβ-グルカン（LDL低下・腸保護）、ブルーベリーのアントシアニンを二重補給。くるみのALA（植物性オメガ3）＋かぼちゃの種の亜鉛で抗炎症＋テストステロンサポート。コラーゲンペプチドのグリシン＋プロリン＋ヒドロキシプロリンが昨日のChest Dayで酷使した腱・靭帯の修復を加速。ビタミンCと一緒に摂ることでコラーゲン合成効率UP（春菊に含まれる）。P:67gは今日の目標136gの49%を朝食だけで達成。脂質51gは多めだが全てUFPA/PUFA由来。昼以降は低脂質で調整を。
-
-- Lunch (14:00): 茶碗蒸し（カニカマ・なると・小ネギ）＋サーモン丼・大盛り（サーモン~120g・ご飯大盛り~300g・ガリ・わさび）＋オムライス半分（炒飯・ケチャップ / チャーシューと残り半分は残した）＋サラダ（レタス・トマト・きゅうり・にんじん）
-  ~1,055kcal / P:48g / F:25g / C:150g（茶碗蒸し：~90kcal / サーモン丼：~700kcal / オムライス半分+サラダ：~265kcal）
-  *Feedback from AI: [和食ランチ三位一体] 茶碗蒸しのだし×グルタミン酸で消化サポート。サーモン丼大盛りはEPA/DHA+P:22g、ご飯大盛りC:107gでChest Day翌日のグリコーゲン補充に最適。チャーシューもオムライス半分も残したことで脂質F:25gに抑えられた◎。本日の脂質ランニングトータルが目標74gとほぼ同等に着地。Running total: ~2,275kcal / P:115g / F:76g / C:282g。
 
 ■ Supplements
 
@@ -494,9 +368,9 @@ NAC 500 mg (Thorne)
 ■ ドラフト（下書き）
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
-- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
-- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+- 編集中：Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。
+- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
+- 構想中：Claude Code × Telegram連携でiPhoneからプログラミングする方法
 
 ■ Meditation (Oura Moment) — 21:32〜21:50（17分41秒）
 - Lowest HR: 76bpm（ベースライン 49bpm）
@@ -690,35 +564,6 @@ C          341g          361g         94%
 - Lunch (14:00): ①ミックスグリーンサラダ（レタス・きゅうり・トマト・にんじん・玉ねぎ）＋キャロットジンジャードレッシング ②テンペバーグ丼（白米大盛り・テンペパティ・溶けたチーズ・トマト・デミグラス風ソース・レタス）＋味噌汁（豆腐・わかめ・小ネギ）＋パイナップル酵素ジュース
   ~1,150kcal / P:48g / F:36g / C:158g
   *Feedback from AI: [Plant-Based Power Bowl] テンペは発酵大豆由来でP:24g＋プレバイオティクス効果。ブロメライン（パイナップル酵素）が食前の消化促進を担い、味噌の発酵菌との相乗効果で腸内環境◎。ただし大盛り白米でC:158gとバルク向けに高カロリー構成。チーズでカルシウム補強。Running total: P:105g / 目標136gまで残り31g。ディナーで肉や魚を追加すれば目標達成圏内。
-
-- Dinner (20:00): Chicken Curry with Rice（Healthy Junk Express）＋ブロッコリー 50g＋ケール 40g＋バナナ 2本
-  ~510kcal / P:31g / F:8g / C:84g（チキンカリー+野菜：300kcal / バナナ2本：210kcal）
-  *Feedback from AI: [Micronutrient Grand Slam + Gut Reset] ブロッコリー＋ケールで抗酸化コンボ、チキンカレーでP:28g確保。バナナのペクチン（水溶性食物繊維）が腸粘膜を保護してお腹が緩い状態を自然にケア。カリウムで電解質補給。補食としてバナナ2本を追加したことでカロリー・Cともに大幅改善、目標達成圏内に。
-
-■ Substances
-- Cannabis: Compound Z 0.4g Hybrid (19:47)（0.7g用意したが0.4gで中断）
-- Cannabis: Indica 0.4g (22:15)
-
-■ Daily Summary (by AI)
-食事    実績         目標         達成率
-カロリー  2,639kcal   2,650kcal   100% ✅
-P        136g        136g        100% ✅
-F         88g         74g        119% ⚠️
-C        336g        361g         93%
-食物繊維   ~20g        25g         80%
-
-■ マナブの1日（AIが行動ログから生成）
-08:05 起床。Readiness 92、HRV 40ms。
-08:45 瞑想（Oura Moment 30分）。
-09:20 朝食（自宅）。
-13:00 ストレッチ完了。
-14:00 ランチ（Healthy Junk Express）。HRV記事2本を読了。
-15:00〜 情報収集タイム。weirdoをSOULに刻む。セキュリティチェック実施。
-17:00（推定）マッサージへ。背中の筋肉痛ケア。
-19:47 Cannabis Compound Z 0.4gで中断。最少量記録。
-20:00 ディナー（チキンカリー＋ケール＋バナナ2本）。
-22:15 Cannabis Indica 0.4g。
-この日の一言：「Cannabis量が減る。意思決定を体が先にしていた。」
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
@@ -988,8 +833,8 @@ Readiness 76からのスタートで「緩めの日」と宣言したが、実�
 ■ ドラフト（下書き）
 - 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
 - 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
-- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
-- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+- 編集中：<a href="https://mblog.substack.com">Newsletter #4：AIスキルの話</a>
+- 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
   </pre>
 
   <h2># 2026-02-18</h2>
