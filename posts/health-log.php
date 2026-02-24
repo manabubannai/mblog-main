@@ -472,13 +472,6 @@ C          400g          361g        111%
 - 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
 - 構想中：Claude Code × Telegram連携でiPhoneからプログラミングする方法
 
-■ Meditation (Oura Moment) — 21:32〜21:50（17分41秒）
-- Lowest HR: 76bpm（ベースライン 49bpm）
-- Avg HRV: 18ms（ベースライン 38ms）
-- Skin Temp: セッション開始から上昇 → プラトー → 微減（末梢血管拡張＝副交感神経活性）
-- Self-rating: Better than usual 😊
-※note: 夕食後、Cannabis吸引しながらの瞑想（Cannabis×瞑想HRV実験 第7回）。過去最悪のデータ。HR +27（ベースライン比）、HRV 18ms（これまでの最低25msをさらに更新）。全7回推移：最低心拍 64/64/62/61/64/62/76、HRV 45/25/34/26/35/31/18。Cannabis後の瞑想は交感神経を刺激し、主観的なリラックス感と生理的データが真逆になる。Ouraの「Better than usual」は皮膚温上昇を見ているが、HR・HRVでは明らかにストレス状態。結論：瞑想の質を上げたいならCannabis後は避ける。
-
 ■ Cycling (Oura Ring) — 合計3セッション
 - Session 1: 13:44〜14:12（28分 / 6.3km / 112kcal / moderate）
 - Session 2: 14:59〜15:23（24分 / 2.4km / 76kcal / moderate）
