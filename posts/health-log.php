@@ -472,6 +472,13 @@ C          400g          361g        111%
 - 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
 - 構想中：Claude Code × Telegram連携でiPhoneからプログラミングする方法
 
+■ Meditation (Oura Moment) — 09:26〜09:56（30分1秒）
+- Lowest HR: 63bpm（ベースライン 49bpm）
+- Avg HRV: 32ms（ベースライン 38ms）
+- HRV推移：序盤26ms → 中盤ピーク41ms → 後半25ms → 終盤34ms（山型）
+- Self-rating: 評価なし
+※note: 朝の瞑想。Cannabis無し。HRVが中盤で41msまで上昇し副交感神経の正常機能を確認。夜のCannabis後セッション（HRV 18ms）と同日に並べると差が鮮明。
+
 ■ Cycling (Oura Ring) — 合計3セッション
 - Session 1: 13:44〜14:12（28分 / 6.3km / 112kcal / moderate）
 - Session 2: 14:59〜15:23（24分 / 2.4km / 76kcal / moderate）
@@ -562,7 +569,8 @@ C          341g          361g         94%
 食物繊維    35g           25g        140%
 
 ■ マナブの1日（AIが行動ログから生成）
-10:00 起床。Morning Self-Check: Body 10 / Mind 9 / Spirit 8。
+09:26 朝の瞑想（30分1秒）。Cannabis無し。HRV 32ms / ピーク41ms。
+10:00 起床（推定）。Morning Self-Check: Body 10 / Mind 9 / Spirit 8。
 10:00 朝食。奥さんと近場のカフェへ。アボカドスムージー＋生ハムサラダ＋おかゆ。
 13:44 サイクリング開始（1セッション目 / 28分 / 6.3km）。
 14:59 サイクリング（2セッション目 / 24分 / 2.4km）。
