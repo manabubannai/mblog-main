@@ -464,12 +464,19 @@ C          400g          361g        111%
 - 構想中：あなたのAIを「最高の栄養士パートナー」にする方法
 - 構想中：Claude Code × Telegram連携でiPhoneからプログラミングする方法
 
-■ Meditation (Oura Moment) — 09:26〜09:56（30分1秒）
+■ Meditation (Oura Moment) — 09:26〜09:56（30分1秒）【Cannabis無し】
 - Lowest HR: 63bpm（ベースライン 49bpm）
 - Avg HRV: 32ms（ベースライン 38ms）
 - HRV推移：序盤26ms → 中盤ピーク41ms → 後半25ms → 終盤34ms（山型）
 - Self-rating: 評価なし
-※note: 朝の瞑想。Cannabis無し。HRVが中盤で41msまで上昇し副交感神経の正常機能を確認。夜のCannabis後セッション（HRV 18ms）と同日に並べると差が鮮明。
+※note: 朝の瞑想。Cannabis無し。副交感神経の正常機能を確認。
+
+■ Meditation (Oura Moment) — 21:33〜21:50（17分41秒）【Cannabis後】
+- Lowest HR: 76bpm（ベースライン 49bpm）
+- Avg HRV: 18ms（ベースライン 38ms）
+- HRV推移：セッション全体を通じて17〜21msで横ばい（副交感神経機能せず）
+- Self-rating: Better than usual 😊
+※note: Cannabis 0.8g Indica摂取後の瞑想（Cannabis×瞑想HRV実験 第7回）。同日朝との比較：HR +13bpm差 / HRV -14ms差。主観「いつもより良い」⇔ 生理データは過去最悪。胃痛＋胃薬も服用していた日 — 交絡因子として記録。
 
 ■ Cycling (Oura Ring) — 合計3セッション
 - Session 1: 13:44〜14:12（28分 / 6.3km / 112kcal / moderate）
