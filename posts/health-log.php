@@ -401,10 +401,6 @@ NAC 500 mg (Thorne)
   ~760kcal / P:38g / F:28g / C:87g
   *Feedback from AI: [しゃぶしゃぶ×回復メシ] 牛肉のL-カルニチン＋ヘム鉄が疲労回復と鉄補給に貢献。ごはん1杯C:55gで筋グリコーゲン補充◎。バナナのカリウムで筋肉コンディション維持＋夜のセロトニン生成をサポート。ネギ大量のアリシンが血流改善＋免疫強化。きのこのβ-グルカンが腸内環境をサポート。Cannabis 1.1g摂取日だが、亜鉛（牛肉）とビタミンC（ネギ）の組み合わせで炎症抑制に貢献。
 
-■ Supplements
-
-■ Treatment
-
 ■ Substances
 - Cannabis 0.4g Indica（19:00）
 - Cannabis 0.7g Indica（21:30）
