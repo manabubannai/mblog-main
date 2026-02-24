@@ -8,11 +8,11 @@ $IDEAS_FILE     = dirname(__DIR__) . '/data/ideas.json';
 
 // 初期データ（初回のみ）
 $DEFAULT_ITEMS = [
-    ['id'=>'1','text'=>'Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。','status'=>'編集中','note'=>'全8回のデータあり。胃痛が交絡因子として判明。','created_at'=>'2026-02-22','updated_at'=>'2026-02-24'],
-    ['id'=>'2','text'=>'OpenClawってなに？何がすごいの？','status'=>'構想中','note'=>'ユースケースリスト作成済み。','created_at'=>'2026-02-18','updated_at'=>'2026-02-23'],
-    ['id'=>'3','text'=>'あなたのAIを「最高の栄養士パートナー」にする方法','status'=>'構想中','note'=>'','created_at'=>'2026-02-20','updated_at'=>'2026-02-20'],
-    ['id'=>'4','text'=>'Claude Code × Telegram連携でiPhoneからプログラミングする方法','status'=>'構想中','note'=>'','created_at'=>'2026-02-21','updated_at'=>'2026-02-21'],
-    ['id'=>'5','text'=>'大麻と健康について正直に書く','status'=>'構想中','note'=>'','created_at'=>'2026-02-22','updated_at'=>'2026-02-22'],
+    ['id'=>'1','text'=>'Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。','status'=>'編集中','note'=>'全8回のデータあり。胃痛が交絡因子として判明。','github_path'=>'posts/draft-cannabis-hrv-experiment.php','created_at'=>'2026-02-22','updated_at'=>'2026-02-24'],
+    ['id'=>'2','text'=>'OpenClawってなに？何がすごいの？','status'=>'構想中','note'=>'ユースケースリスト作成済み。','github_path'=>'posts/draft-openclaw-article.php','created_at'=>'2026-02-18','updated_at'=>'2026-02-23'],
+    ['id'=>'3','text'=>'あなたのAIを「最高の栄養士パートナー」にする方法','status'=>'構想中','note'=>'','github_path'=>'posts/draft-ai-nutritionist.php','created_at'=>'2026-02-20','updated_at'=>'2026-02-20'],
+    ['id'=>'4','text'=>'Claude Code × Telegram連携でiPhoneからプログラミングする方法','status'=>'構想中','note'=>'','github_path'=>'posts/draft-iphone-programming.php','created_at'=>'2026-02-21','updated_at'=>'2026-02-21'],
+    ['id'=>'5','text'=>'大麻と健康について正直に書く','status'=>'構想中','note'=>'','github_path'=>'posts/draft-cannabis-article.php','created_at'=>'2026-02-22','updated_at'=>'2026-02-22'],
 ];
 
 // データディレクトリ初期化
