@@ -4,7 +4,7 @@
 // ============================================================
 $EDIT_TOKEN     = getenv('IDEA_EDIT_TOKEN')     ?: '4b2822e1085294169d23fc1257bab998';
 $SNAPSHOT_TOKEN = getenv('IDEA_SNAPSHOT_TOKEN') ?: 'bb54f8454f9e61fd';
-$IDEAS_FILE     = dirname(__DIR__) . '/data/ideas.json';
+$IDEAS_FILE     = dirname(__DIR__) . '/ideas.json';
 
 // 初期データ（初回のみ）
 $DEFAULT_ITEMS = [
