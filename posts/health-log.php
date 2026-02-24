@@ -333,6 +333,59 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-02-24</h2>
+  <pre>
+■ Morning Self-Check
+- Body: ?/10
+- Mind: ?/10
+- Spirit: ?/10
+
+■今日の積み上げ
+・理念：３年前の自分を救う
+・優先①：オフ会を定期開催
+・優先②：最速で拡大をする
+
+[高] 理念に直結するもの
+[ ] AIとコンテンツ作成
+[ ] メルマガで読者質問まとめて共有（次回メルマガ配信時に追記する）
+[ ] mblog.comをHetznerに移転しつつ、Claude Codeでセットアップする。現状のシステム設計とCSS設計が美しくないので、全てを作り替える。
+[ ] Hetznerに移転したmblogのセキュリティ設定（Tailscale）
+[ ] Hetznerに移転したmblogサーバーに、Claude Code Telegramを入れる
+[ ] 自分の相棒となるAIキャラを作る（そのキャラが音声配信、動画に登場などする。キャラ設定や声、性格など固める必要あり）
+
+[中] 理念を加速するもの
+[ ] スクリーンタイムをAIに同期できるか確認（スマホやPCの使い過ぎとHRVの相関を見ていく）
+[ ] ストレッチルーティンの見直し（更に良いストレッチがあるかリサーチする）
+[ ] 若い子を集めて教育する寺子屋をやりたい
+[ ] マナブッダをキャラクター化して動画配信 → AIが主役コンテンツ。新しい発信形態
+
+[低] いつでもいい
+[ ] スマートウォッチを買う
+[ ] mblog.comにダークモードを実装する
+[ ] GA4スプレッドシートに日付ディメンションを追加する（日次PV比較レポートに必要）
+
+■ ドラフト（下書き）
+- 構想中：<a href="/draft-openclaw-article">OpenClawってなに？何がすごいの？</a>
+- 構想中：<a href="/draft-cannabis-article">大麻関連の記事</a>
+- 編集中：<a href="/draft-cannabis-hrv-experiment">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
+- 構想中：<a href="/draft-ai-nutritionist">あなたのAIを「最高の栄養士パートナー」にする方法</a>
+- 構想中：<a href="/draft-iphone-programming">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+
+■ Food
+- Breakfast (09:00): 卵2個（目玉焼き）＋豚肉一人前（薄切り炒め ~150g）＋ライスベリーライス少し大盛り（~180g）＋納豆（1パック）＋キムチ（Jongga ~50g）
+  ~800kcal / P:50g / F:38g / C:65g
+  *Feedback from AI: [タンパク質ファースト朝食] 卵2個+豚肉でP:36gを一気に確保。豚肉のビタミンB1がエネルギー代謝を促進し、今日の活動燃料に。納豆のナットウキナーゼ+ビタミンK2で血流サポート。キムチの乳酸菌で腸活◎。ライスベリーライスのアントシアニンで抗酸化。昨日より卵1個少ないが豚肉でタンパク質は十分補完。脂質はやや多め（豚肉の脂身由来）。Running total: P:50g / 目標136gまで残り86g。
+
+■ Supplements
+
+■ Treatment
+
+■ Substances
+
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-02-22</h2>
   <pre>
 ■ Morning Self-Check
