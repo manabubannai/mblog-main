@@ -1,0 +1,2 @@
+<?php
+define('ANTHROPIC_API_KEY', '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');
