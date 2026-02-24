@@ -278,6 +278,9 @@ NAC 500 mg (Thorne)
 - Mind: 9/10
 - Spirit: 8/10
 
+■今日の積み上げ
+[x] アイデアページ（https://mblog.com/idea/）を作成した
+
 ■ Note
 ※note: アシュワガンダの量を考える。いつから飲み始めたか調べる。
 
