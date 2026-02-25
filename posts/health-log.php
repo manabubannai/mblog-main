@@ -271,6 +271,20 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-02-25</h2>
+  <pre>
+■今日の積み上げ
+[x] 犬とボール
+[x] オフ会のリマインド
+[→] 積み上げアプリ作成（進行中）
+[ ] ランチ 14時〜
+[ ] サウナ 16時〜
+[ ] AIのキャラ設計
+
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-02-24</h2>
   <pre>
 ■ Morning Self-Check
