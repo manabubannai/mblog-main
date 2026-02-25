@@ -273,6 +273,11 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-02-25</h2>
   <pre>
+■ Morning Self-Check
+- Body: 10/10
+- Mind: 8/10
+- Spirit: 8/10
+
 ■今日の積み上げ
 [x] 犬とボール
 [x] オフ会のリマインド
@@ -280,6 +285,16 @@ NAC 500 mg (Thorne)
 [ ] ランチ 14時〜
 [ ] サウナ 16時〜
 [ ] AIのキャラ設計
+
+■ Note
+※note: [Meditation Note] 集中力が下がっている。ひとまず、夜の草を減らしてみる。心拍数が草で上がるなら、寝る前は良くない。あとは食事中のスマホは禁止。最近は触ってしまっている。日常でもMeditativeを意識する。集中力や精神性が下がる日常ルーティンは、長期的にはCreativityとInstinctを失っている。最近は読書も減っていた。本日は読書もいれるべき。
+※note: 果たしてスマホは、何のためにある？友人や家族との連絡用。情報収集（空き時間）→ PCで良い(?)。→ スマホに関してマイルールを作る。→ 結論：スマホとPCを、常にセットで持ち歩く。
+※note: 昨夜からアシュワガンダを辞めた。飲み始めたと記載した日（2026-01-22）から飲み続けていたが昨夜から停止。
+
+■ Food
+- Breakfast (09:00): 卵3個＋納豆（1パック）＋キムチ（~50g）＋ライスベリーライス大盛り（~250g）＋グリーンサラダ（トマト少々＋レタス ~40g）＋味噌汁（春菊・豆腐・キノコ）＋Vital Proteins Collagen Peptides＋レモン＋ハニー
+  ~970kcal / P:58g / F:24g / C:125g
+  *Feedback from AI: [腸活フル装備の朝食] 卵3個でP:18g確保＋ライスベリーライス大盛りで今日のエネルギー基盤を構築。納豆のナットウキナーゼ+キムチの乳酸菌で腸活ダブル。春菊のビタミンK＋鉄分・キノコのβグルカンで免疫サポート。コラーゲン+ビタミンCで吸収効率UP。昨日のCannabis後の瞑想データが悪かったことを踏まえ、腸内環境を整える食事で今日のHRV回復を狙う。Running total: P:58g / 目標136gまで残り78g。
 
   </pre>
 
@@ -292,12 +307,22 @@ NAC 500 mg (Thorne)
 - Mind: 9/10
 - Spirit: 8/10
 
+■ Meditation (Oura Moment) — 08:36〜09:06（30分21秒）【Cannabis無し】
+- Lowest HR: 61bpm / Avg HR: ~63bpm
+- Avg HRV: ~25ms / Peak HRV: 33ms
+
+■ Meditation (Oura Moment) — 22:06〜22:13（7分）【Cannabis後：Indica 0.4g 18:00 + 0.6g 21:30】
+- Lowest HR: 83bpm / Avg HR: ~85bpm
+- Avg HRV: ~15ms / Peak HRV: 16ms
+※Cannabis後に心拍数が20bpm以上上昇、HRVは朝比-40%。Cannabis×瞑想実験 9回目。
+
 ■今日の積み上げ
 [x] アイデアページ（https://mblog.com/idea/）を作成した
 
 ■ Note
 ※note: アシュワガンダの量を考える。いつから飲み始めたか調べる。
 ※note: 大麻はビール。
+※note: 22:00頃 Meditation（Cannabis後）。やはり心拍数は高く、HRVは低かった。Cannabis Indica 合計1.0g投与後。朝Cannabis無しのHR 63bpm / HRV 25msに対し、Cannabis後はHR 85bpm / HRV 15ms。差異：HR +22bpm / HRV -40%。
 
 ■ Food
 - Breakfast (09:00): 卵2個（目玉焼き）＋豚肉一人前（薄切り炒め ~150g）＋ライスベリーライス少し大盛り（~180g）＋納豆（1パック）＋キムチ（Jongga ~50g）
