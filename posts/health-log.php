@@ -366,6 +366,23 @@ NAC 500 mg (Thorne)
 - Vital Proteins Collagen Peptides（朝食に混入済み）
 - Thorne NAC（N-Acetylcysteine）— 追加開始。ワークアウトがない日の朝食前に1カプセル服用予定。
 
+■ アイデア帳スナップショット（2026-02-26 23:00）
+[☐] AIキャラ設計（soulやmemory）を最適化
+[☐] Health Logページのリブランディング
+[☐] mblog.comにダークモードを実装する
+[☐] バイク保険に入る
+[☐] OpenClawのニュース収集を自動化する
+[☐] nginxの設定変更タスク
+[☐] 平和Twitterを作る
+[☐] 積み上げ内容をクリックできる仕様にする
+[☐] 積み上げアプリにノート欄を追加
+
+[編集中] <a href="https://github.com/manabubannai/mblog-main/commits/main/idea/drafts/cannabis-hrv-experiment.php" target="_blank">Cannabis×瞑想でHRV計測してみた。過去最悪のデータが出た話。</a>
+[編集中] <a href="https://github.com/manabubannai/mblog-main/commits/main/idea/drafts/openclaw-article.php" target="_blank">OpenClawってなに？何がすごいの？</a>
+[編集中] <a href="https://github.com/manabubannai/mblog-main/commits/main/idea/drafts/ai-nutritionist.php" target="_blank">あなたのAIを「最高の栄養士パートナー」にする方法</a>
+[編集中] <a href="https://github.com/manabubannai/mblog-main/commits/main/idea/drafts/iphone-programming.php" target="_blank">Claude Code × Telegram連携でiPhoneからプログラミングする方法</a>
+[編集中] <a href="https://github.com/manabubannai/mblog-main/commits/main/idea/drafts/cannabis-article.php" target="_blank">大麻関連の記事</a>
+
 ■ Substances
 -
 
