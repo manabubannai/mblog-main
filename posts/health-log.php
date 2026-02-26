@@ -278,6 +278,119 @@ NAC 500 mg (Thorne)
 - Mind: 8/10
 - Spirit: 7/10
 
+■ Body (Withings Body Scan) — 08:21
+- Weight: 61.5kg
+- Fat Mass: 5.84kg（Fat Ratio: 9.5%）
+- Fat Free Mass: 55.68kg
+- Muscle Mass: 52.86kg
+- Bone Mass: 2.82kg
+- Hydration: 40.35kg
+- Visceral Fat Index: 1.3
+- Pulse Wave Velocity (PWV): 6.127 m/s
+
+■ Sleep (Oura) — 2026-02-25 23:13 → 2026-02-26 07:57
+- Total: 8時間02分
+- Deep: 57分 / REM: 1時間52分
+- Efficiency: 92%
+- HRV avg: 65ms
+- Resting HR: 49bpm
+- Readiness: 92
+
+■ Meditation (Oura Ring)
+- Session: 08:33 → 09:20（47分）
+- Avg HR: ~64bpm
+- Avg HRV: ~22ms
+
+■今日の積み上げ
+[ ] AIキャラ設計（soulやmemory）を最適化
+[ ] Health Logページのリブランディング
+[ ] mblog.comにダークモードを実装する
+[ ] バイク保険に入る
+[ ] OpenClawのニュース収集を自動化する
+[ ] nginxの設定変更タスク
+[ ] 平和Twitterを作る
+[ ] 積み上げ内容をクリックできる仕様にする
+[ ] 積み上げアプリにノート欄を追加
+
+■ Workout — Arm Day（16:00頃〜、Oura Ring外してトレーニング）
+
+1. Barbell Curl → Dumbbell Curl（ドロップセット）
+   - BB 35kg×10 → DB 10kg×6
+   - BB 35kg×10 → DB 7.5kg×10（ネガティブゆっくり、フォーム意識）
+   - BB 35kg×10 → DB 7.5kg×(7+3C)
+   ※note: 完全に腕を伸ばしきるまで下げる
+
+2. Hammer Curl
+   - 17.5kg×10 / 17.5kg×10 / 17.5kg×10（反動多め）
+   ※note: トップで1秒待機
+
+3. 腕立て伏せ（上腕三頭筋フォーム）
+   - 40回 → 10回（膝つき）
+   ※note: 50回を目指す
+
+4. Press Down with Bar
+   - 55kg×10 / 55kg×10 / 55kg×(8+2C)
+
+5. Press Down with Rope
+   - 45kg×6 → 40kg×4（途中で重さ変更）
+   - 40kg×(8+2C)
+   - 35kg×(8+2C)
+   ※note: 腹圧を使うので腰ベルト必須
+
+■ Food
+
+- Breakfast (09:42) — オーツボウル: オーツ50g＋ヨーグルト150g＋ハニー15g＋ブルーベリー50g＋プロテイン1スクープ＋Pumpkin Seeds 20g＋くるみ20g＋Vital Proteins Collagen Peptides 20g＋Goji Berry 15g＋TOFUSAN（High Protein）100g（混ぜて摂取）
+  ~865kcal / P:67g / F:31g / C:80g
+  *Feedback from AI: [Gut Health + Antioxidant] オーツ+ヨーグルト+ブルーベリー+ゴジベリーで腸活×抗酸化フル装備。TOFUSANとCollagen Peptidesで朝からP:67g確保は◎。くるみ・Pumpkin Seedsのオメガ3・亜鉛・マグネシウムが神経系をサポート。ハニーの少量糖質がオーツのGI調整に効果的。Running total: P:67g / 目標136gまで残り69g。
+
+- Lunch (13:XX) — 発酵丼（ライスベリーご飯＋キムチ＋海藻＋海苔＋きゅうり＋鰹節＋なす）＋味噌汁（わかめ・豆腐）
+  ~380kcal / P:14g / F:2g / C:72g
+  *Feedback from AI: [Fermented Foods Stack] キムチ+海藻+みそ汁(わかめ)で発酵食材トリプル。ライスベリーのアントシアニンが抗酸化。このランチ単体はP薄め（14g）だが腸内環境へのアプローチとして◎。鰹節のイノシン酸が旨味×ミネラル補給。Running total: P:81g / 目標136gまで残り55g。
+
+- Workout中 (17:00): バナナ2本（~200g）
+  ~180kcal / P:2g / F:0g / C:46g
+  *Feedback from AI: [Quick Carb Fuel] C:46gの即効性補給◎。カリウムで筋肉の収縮をサポート。筋トレ中補給として理想的タイミング。
+
+- Post-Workout (18:00): Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+  ~120kcal / P:18g / F:5g / C:0g
+  *Feedback from AI: [Seed Protein Post-Workout] ヴィーガン由来P:18g。大豆フリー・グルテンフリーで消化負担低い。亜鉛（パンプキンシード由来）が筋肉回復と免疫をサポート。Running total: P:101g / 目標136gまで残り35g。
+
+- Dinner (19:45): ライス1杯（~200g）＋カボチャサラダ（~100g）＋ブロッコリー3個（~75g）＋トマト少し＋スープ（豆腐・パクチー・葉物）＋チキン200g＋たまねぎ
+  ~675kcal / P:57g / F:9g / C:83g
+  *Feedback from AI: [Protein Focused Dinner] チキン200gでP:44g一気に確保◎。カボチャのβカロテン（免疫）＋ブロッコリーのスルフォラファン（解毒・抗炎症）＋パクチーのデトックス効果。豆腐スープでプロバイオティクス追加。発酵丼ランチ→野菜+チキンディナーでバランス◎。ただしC・Fは目標未達。明日はナッツ・アボカドなどF多めの食材を意識すると良い。
+
+■ Supplements
+- Thorne Multi-Vitamin Elite（AM）
+- Nordic Naturals Omega-3
+- Thorne Creatine 5g
+- Vital Proteins Collagen Peptides（朝食に混入済み）
+- Thorne NAC（N-Acetylcysteine）— 追加開始。ワークアウトがない日の朝食前に1カプセル服用予定。
+
+■ Substances
+-
+
+■ Daily Summary (by AI)
+Arm Dayでパンプ。発酵食材丼ランチ×チキンディナーで腸活と筋肉回復を両立した日。プロテインは目標超過（116%）でバルクに◎。炭水化物と脂質が少なめだったので、明日はライス多め＋ナッツやオリーブオイルを足すと目標に近づく。
+
+食事    実績       目標       達成率
+カロリー  2,220kcal  2,650kcal   84% 📉
+P        158g       136g       116% ✅
+F         47g        74g        64% 📉
+C        281g       361g        78% 📉
+
+■ マナブの1日（AIが行動ログから生成）
+08:00 起床。Readiness 92。
+08:21 Withings Body Scan（体重61.5kg）
+08:33 瞑想（47分）
+09:42 朝食（オーツボウル）
+13:00 外出準備
+13:XX ランチ（発酵丼+味噌汁）
+16:XX 筋トレ開始（Arm Day）
+17:00 ワークアウト中バナナ2本
+18:00 プロテインドリンク（3 Seed）
+19:45 ディナー（チキン+野菜+ライス）
+この日の一言：「発酵食材を並べた丼と、腕をパンプアップさせた日。」
+
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
