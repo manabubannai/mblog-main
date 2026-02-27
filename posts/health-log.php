@@ -52,7 +52,7 @@ require dirname(__DIR__) . '/header.php';
       <div class="bc-label">Now</div>
       <div class="bc-date">Feb 2026</div>
       <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">61.6 kg</span></li>
+        <li><span>体重</span><span class="bc-val">61.4 kg</span></li>
         <li><span>目標</span><span class="bc-val">バルクアップ</span></li>
       </ul>
     </div>
@@ -273,6 +273,14 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-02-27</h2>
   <pre>
+■ Body Check Day
+<img src="img/health-log/20260227_front.jpg" alt="https://mblog.com/img/health-log/20260227_front.jpg">
+<img src="img/health-log/20260227_side.jpg" alt="https://mblog.com/img/health-log/20260227_side.jpg">
+<img src="img/health-log/20260227_back.jpg" alt="https://mblog.com/img/health-log/20260227_back.jpg">
+*source: https://mblog.com/img/health-log/20260227_front.jpg
+*source: https://mblog.com/img/health-log/20260227_side.jpg
+*source: https://mblog.com/img/health-log/20260227_back.jpg
+
 ■ Body (Withings Body Scan) — 08:03
 - Weight: 61.4kg
 - Fat Mass: 5.42kg（Fat Ratio: 8.8%）
