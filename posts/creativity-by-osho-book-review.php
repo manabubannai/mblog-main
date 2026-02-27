@@ -7,7 +7,7 @@ require dirname(__DIR__) . '/header.php';
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 <time>27 Feb, 2026</time>
 <h1 class="title">【Book Review】Creativity by OSHO【My Personal Note】</h1>
-<img src="/img/creativity-by-osho-book-review.jpg?v=3">
+<img src="/img/creativity-by-osho-book-review.jpg?v=4">
 
 <blockquote>
 <p>Watch yourself and see: 90% of your energy is wasted in activity. And because of this, when the moment for action comes you don't have any energy.</p>
