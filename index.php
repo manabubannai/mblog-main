@@ -62,6 +62,11 @@ require __DIR__ . '/header.php';
 <ul class="toppage">
 
 <li>
+<time datetime="2026-2-27">27 Feb, 2026</time>
+<a href="creativity-by-osho-book-review">Creativity by OSHO (Book Review) — My Personal Note</a>
+</li>
+
+<li>
 <time datetime="2026-1-4">4 Jan, 2026</time>
 <a href="siddhartha-hermann-hesse-book-review">Siddhartha (Hermann Hesse) — Book Review for Burned-Out Entrepreneurs</a>
 </li>
