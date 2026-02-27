@@ -63,7 +63,7 @@ require __DIR__ . '/header.php';
 
 <li>
 <time datetime="2026-2-27">27 Feb, 2026</time>
-<a href="creativity-by-osho-book-review">Creativity by OSHO (Book Review) — My Personal Note</a>
+<a href="creativity-by-osho-book-review">【Book Review】Creativity by OSHO【My Personal Note】</a>
 </li>
 
 <li>
