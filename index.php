@@ -20,11 +20,6 @@ require __DIR__ . '/header.php';
 <ul class="toppage">
 
 <li>
-<time datetime="2026-02-23">23 Feb, 2026</time>
-<a href="claude-code-telegram-setup">claude-code-telegramを安全に動かす設定メモ</a>
-</li>
-
-<li>
 <time datetime="2026-02-19">19 Feb, 2026</time>
 <a href="openclaw-setup">How to Run OpenClaw Safely — Hetzner VPS + Tailscale Setup</a>
 </li>
