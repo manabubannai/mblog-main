@@ -304,6 +304,37 @@ NAC 500 mg (Thorne)
 - Avg HR: ~66bpm
 - Avg HRV: ~24ms
 
+■ Workout — Back Day（16:20〜17:50、Oura Ring外してトレーニング）
+
+1. Chinning
+   - 10 / 10 / 10
+
+2. Deadlift
+   - 60kg×4（40kg+Bar 20kg）
+   - 80kg×4（60kg+Bar 20kg）
+   - 120kg×1（100kg+Bar 20kg）
+
+3. Bent Over Rowing with Smith Machine
+   - 40kg×10（30kg+Bar 10kg）
+   - 60kg×10（50kg+Bar 10kg）
+   - 75kg×6（65kg+Bar 10kg）
+   - 70kg×5（60kg+Bar 10kg）
+   - 65kg×6（55kg+Bar 10kg）
+   - 60kg×6（50kg+Bar 10kg）
+   ※note: 回数が崩れてる。次回は整える。最大重量に挑戦する。
+   ※note: 地面と直角くらいのフォームで、腕を伸ばしきる。
+   ※note: 高麗人参は飲んでおくべき。エネルギーが出る。
+
+4. T-Bar Row
+   - 35kg×10（slow）
+   - 35kg×(8+1c)（slow）
+   ※note: 40kgだと胸が痛いので重量を下げた。その代わり、ゆっくり効かせる。
+
+5. Lat Pull Down
+   - 45kg×10
+   - 45kg×(8+2c)
+   - 45kg×(9+1c)
+
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
