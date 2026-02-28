@@ -323,6 +323,11 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-02-27</h2>
   <pre>
+■ Morning Self-Check
+- Body: 10/10
+- Mind: 8/10
+- Spirit: 8/10
+
 ■ Body Check Day
 <img src="img/health-log/20260227_front.jpg" alt="https://mblog.com/img/health-log/20260227_front.jpg">
 <img src="img/health-log/20260227_side.jpg" alt="https://mblog.com/img/health-log/20260227_side.jpg">
@@ -353,6 +358,19 @@ NAC 500 mg (Thorne)
 - Session: 08:33 → 09:03（30分）
 - Avg HR: ~66bpm
 - Avg HRV: ~24ms
+※Meditation Note: 本日は、ある程度は深くまではMeditationできた。しかし、最近は全体的にMeditationの集中が減っている。明らかに、お腹を崩していると状態が下がるので、体調を整える。
+
+■ Stretch
+- 10:30（20分）
+
+■ Food
+
+- Breakfast (09:XX): 卵2個＋ライスベリーライス1杯（~200g）＋納豆（1パック）＋キムチ（~50g）＋オーツボウル（オーツ50g・ブルーベリー・くるみ・ヨーグルト100g・はちみつ・Pumpkin Seeds・Goji Berry・Vital Proteins Collagen Peptides 1スクープ・ピーナッツバター15g）
+  ~1,185kcal / P:63g / F:45g / C:132g
+  *Feedback from AI: [腸活×回復×抗酸化スタック] 納豆+キムチで腸活ダブル。コラーゲンペプチド+卵でコリン・プロリン補給し筋肉回復をサポート。オーツボウルのβグルカンで腸内善玉菌を育てる。Goji Berry+ブルーベリーのアントシアニンで抗酸化◎。ピーナッツバターのビオチンが脂質代謝を助ける。Back Day翌日の栄養補給として良いバランス。Running total: P:63g / 目標136gまで残り73g。
+
+■ Substances
+- 高麗人参（Korean Ginseng）— 筋トレ復帰1週目のエネルギー補給として追加。
 
 ■ Workout — Back Day（16:20〜17:50、Oura Ring外してトレーニング）
 
