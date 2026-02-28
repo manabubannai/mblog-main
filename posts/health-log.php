@@ -297,7 +297,8 @@ NAC 500 mg (Thorne)
 - Readiness: 86
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session: 08:29 → 09:00（30分）
+- HR avg: 64bpm / HRV: 26ms
 
 ■ Food
 
