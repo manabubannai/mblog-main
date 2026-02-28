@@ -298,7 +298,7 @@ NAC 500 mg (Thorne)
 
 ■ Meditation (Oura Ring)
 - Session: 08:29 → 09:00（30分）
-- HR avg: 64bpm / HRV: 26ms
+- HR avg: 65bpm / HRV: 26ms
 
 ■ Food
 
