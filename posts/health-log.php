@@ -333,6 +333,27 @@ SMI                8.4
 InBody点数     78点      78点      →
 
 *data: https://mblog.com/img/inbody_20260301.jpg
+
+■ Body (Withings Body Scan) — 08:04
+- Weight: 62.17kg
+- Fat Mass: 3.93kg（Fat Ratio: 6.3%）
+- Fat Free Mass: 58.23kg
+- Muscle Mass: 55.29kg
+- Bone Mass: 2.94kg
+- Hydration: 42.03kg
+- Visceral Fat Index: 1.0
+- Pulse Wave Velocity (PWV): 6.032 m/s
+
+■ Sleep (Oura Ring) — 2026-03-01 00:23 → 2026-03-01 08:05
+- Total: 6時間51分
+- Deep: 1時間11分 / REM: 1時間30分
+- Efficiency: 89%
+- HRV avg: 47ms
+- Resting HR: 53bpm
+- Readiness: 87
+
+■ Meditation (Oura Ring)
+- 記録なし
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
