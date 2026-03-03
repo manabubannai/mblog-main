@@ -309,6 +309,31 @@ NAC 500 mg (Thorne)
   ~930kcal / P:43g / F:18g / C:148g
   *Feedback from AI: [Omega-3×和食ダブル] 炙りサーモンのEPA/DHA+P:26gで筋修復サポート。ご飯のC:82gとざる蕎麦のC:55gで合計C:148g、3日連続筋トレの疲労回復用グリコーゲン補充◎。蕎麦のルチンで血管強化。ただし本日は朝食なしで1日トータルのP:101gが目標比74%と低め。明日は朝食でP:35g以上を意識して。
 
+■ Workout（Shoulder Day）
+
+1. Rear Raise（Target: Back → Side → 振るだけ）
+   Set 1: 10kg × 10 → 10kg × 10 → 10kg × 10
+   Set 2: 10kg × 10 → 10kg × 7  → 10kg × 10
+   Set 3: 10kg × 10 → 10kg × 10 → 10kg × 10
+
+2. Shoulder Press Machine
+   - 40kg × 10
+   - 60kg × 4
+   - 80kg × 3
+   - 80kg × 3
+   - 70kg × (5 + 3サポート)
+   - 60kg × (8 + 4サポート)
+   ※note: 肩は粘りを意識する。
+
+3. Dumbbell Shoulder Press
+   - 20kg × (6 + 2サポート)
+   - 20kg × (4 + 4サポート)
+
+4. Side Raise
+   Set 1: 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+   Set 2: 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+   Set 3: 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+
 ■今日のタスク
 ・肩トレーニング
 ・14時にはランチ
