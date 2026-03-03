@@ -273,11 +273,49 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-03-03</h2>
   <pre>
+■ Body (Withings Body Scan) — 08:02
+- Weight: 62.80kg
+- Fat Mass: 4.42kg（Fat Ratio: 7.0%）
+- Fat Free Mass: 58.38kg
+- Muscle Mass: 55.44kg
+- Bone Mass: 2.95kg
+- Hydration: 41.85kg
+- Visceral Fat Index: 1.1
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- Readiness: 89
+
+■ Meditation (Oura Ring)
+- 記録なし
+
 ■ Food
 
 - Lunch (14:33): サーモン焼き（200g）＋ケール（100g）＋ローストスイートポテト（さつまいも 150g）＋フェタチーズ（50g）＋アボカド（80g）＋ピクルスドレッドオニオン（40g）＋チェリートマト（50g）＋かぼちゃの種（10g）＋レモン（2切れ）＋ドレッシング（30ml）＋白米（150g）
   980kcal / P:58g / F:45g / C:82g
   *Feedback from AI: [Omega-3×地中海×和食フュージョン] サーモン200gでEPA/DHA+P:44g補給、Chest Day翌日の筋修復に◎。ケールのビタミンK+ルテインで眼・骨・抗酸化トリプルサポート。アボカドのオレイン酸+フェタチーズのCLAで良質な脂質構成。さつまいものβカロテン+食物繊維で腸の回復を後押し。かぼちゃの種の亜鉛でテストステロン&免疫サポート。白米でC:50g確保◎。Running total: P:58g / 目標136gまで残り78g。
+
+- Dinner (19:30頃): あぶりサーモン丼＋ざる蕎麦
+  ~930kcal / P:43g / F:18g / C:148g
+  *Feedback from AI: [Omega-3×和食ダブル] 炙りサーモンのEPA/DHA+P:26gで筋修復サポート。ご飯のC:82gとざる蕎麦のC:55gで合計C:148g、3日連続筋トレの疲労回復用グリコーゲン補充◎。蕎麦のルチンで血管強化。ただし本日は朝食なしで1日トータルのP:101gが目標比74%と低め。明日は朝食でP:35g以上を意識して。
+
+■ Daily Summary (by AI)
+Chest Day翌日のリカバリー食として質の高い食事。ただし朝食なし記録のため全体的にカロリー・タンパク質が不足気味。腸の回復中なので無理せずでもOK。
+
+食事    実績         目標       達成率
+カロリー  1,910kcal  2,650kcal   72% 📉
+P        101g        136g        74% 📉
+F         63g         74g        85%
+C        230g        361g        64% 📉
+食物繊維   15g         25g        60% 📉
+
+■ マナブの1日（AIが行動ログから生成）
+08:02 体重測定。62.80kg / Muscle 55.44kg（Chest Day翌日に増加傾向◎）。
+14:33 ランチ。サーモン×ケール×さつまいも×フェタチーズ丼。
+19:30 夕食。あぶりサーモン丼＋ざる蕎麦。
+この日の一言：「筋肉は増えている。腸を治せば、全部揃う。」
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
