@@ -271,6 +271,17 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-03</h2>
+  <pre>
+■ Food
+
+- Lunch (14:33): サーモン焼き（200g）＋ケール（100g）＋ローストスイートポテト（さつまいも 150g）＋フェタチーズ（50g）＋アボカド（80g）＋ピクルスドレッドオニオン（40g）＋チェリートマト（50g）＋かぼちゃの種（10g）＋レモン（2切れ）＋ドレッシング（30ml）＋白米（150g）
+  980kcal / P:58g / F:45g / C:82g
+  *Feedback from AI: [Omega-3×地中海×和食フュージョン] サーモン200gでEPA/DHA+P:44g補給、Chest Day翌日の筋修復に◎。ケールのビタミンK+ルテインで眼・骨・抗酸化トリプルサポート。アボカドのオレイン酸+フェタチーズのCLAで良質な脂質構成。さつまいものβカロテン+食物繊維で腸の回復を後押し。かぼちゃの種の亜鉛でテストステロン&免疫サポート。白米でC:50g確保◎。Running total: P:58g / 目標136gまで残り78g。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-02</h2>
   <pre>
 ■ Body (Withings Body Scan) — 07:54
