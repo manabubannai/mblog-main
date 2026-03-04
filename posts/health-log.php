@@ -287,14 +287,17 @@ NAC 500 mg (Thorne)
 - Hydration: 40.70kg
 - Visceral Fat Index: 1.2
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
-
-■ Readiness (Oura Ring)
+■ Sleep (Oura Ring) — 2026-03-03 23:34 → 2026-03-04 08:00
+- Total: 7時間42分
+- Deep: 59分 / REM: 1時間33分
+- Efficiency: 91%
+- HRV avg: 63ms
+- Resting HR: 55bpm
 - Readiness: 90
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session: 08:33 → 09:03（30分）
+- HR avg: 64bpm / HRV: 23ms
 
 ■ Food
 
@@ -393,7 +396,8 @@ C        268g        361g        74% 📉
 - Readiness: 89
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session: 08:31 → 09:01（30分）
+- HR avg: 61bpm / HRV: 27ms
 
 ■ Food
 
