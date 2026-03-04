@@ -271,6 +271,105 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-04</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 8/10
+- Mind: 7/10
+- Spirit: 7/10
+
+■ Body (Withings Body Scan) — 08:05
+- Weight: 61.89kg
+- Fat Mass: 5.29kg（Fat Ratio: 8.5%）
+- Fat Free Mass: 56.60kg
+- Muscle Mass: 53.73kg
+- Bone Mass: 2.86kg
+- Hydration: 40.70kg
+- Visceral Fat Index: 1.2
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- Readiness: 90
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+
+- Breakfast (09:30): オーツボウル（オーツ・ヨーグルト・りんご・はちみつ・ブルーベリー・Pumpkin Seeds・くるみ・ピーナッツクリーム）＋トマト＋卵2個＋チーズ＋ベーコン＋たまねぎ
+  ~1,060kcal / P:46g / F:63g / C:85g
+  *Feedback from AI: [パワー朝食 × Leg Day前] オーツのβ-グルカン+くるみ+Pumpkin Seedsで腸ケア継続◎。ベーコン+卵2個+チーズでP:27g補給、脚トレ前の筋合成準備。ピーナッツクリームの脂質で持続的エネルギー供給。ただし脂質F:63gは高め。ランチ以降は低脂質・高炭水化物で調整が必要（脚トレ後はC:200g以上を目標に）。Running total: P:46g / 目標136gまで残り90g。
+
+- Lunch (14:20): サーモン丼（ごはん大盛り）＋茶碗蒸し＋ねぎトロ巻き
+  ~1,070kcal / P:54g / F:22g / C:157g
+  *Feedback from AI: [和食三位一体 × 脚トレ後グリコーゲン補充] ごはん大盛り+酢飯でC:157g、Leg Day後のグリコーゲン補充に◎。サーモンのEPA/DHA+まぐろのタンパクでP:54g補給、筋修復を加速。茶碗蒸しのだし(グルタミン酸)で腸粘膜保護。Running total: P:100g / 目標136gまで残り36g。
+
+- Dinner (20:00): 納豆＋キムチ
+  ~120kcal / P:9g / F:5g / C:11g
+  *Feedback from AI: 納豆+キムチで腸活継続◎。ただし夕食が軽すぎてLeg Day後のP・カロリーが不足気味。明日は夕食でP:40g以上を意識して。
+
+■ Workout（Leg Day）
+
+1. Squat (without Smith Machine)
+   - 40kg + Bar(20kg) = 60kg  × 10（ウォームアップ）
+   - 60kg + Bar(20kg) = 80kg  × 10（ウォームアップ）
+   - 80kg + Bar(20kg) = 100kg × 3（MAX挑戦）
+   - 70kg + Bar(20kg) = 90kg  × 4
+   - 60kg + Bar(20kg) = 80kg  × 10
+   - 60kg + Bar(20kg) = 80kg  × 10
+
+2. Leg Curl
+   - 54kg × 12
+   - 61kg × (8 + 2c)
+   ※note: スクワットの時点で、脚のパンプを感じるレベルまで追い込む。Leg Curlは怪我しづらいので、高重量を狙う。
+
+3. Jump Squat → Leg Extension（スーパーセット）
+   - 10回 → 82kg × 10
+   - 10回 → 82kg × 10
+   - 10回 → 82kg × 10
+
+4. Calf Raise
+   - 40kg × 15（slow）
+   - 40kg × 15（slow）
+   - 40kg × 15（slow）
+
+■今日のタスク
+・脚トレーニング
+・Meditation
+・ストレッチ
+・14時にランチ
+・アプリ開発
+・空き時間に読書
+・オフ会のリマインド
+・Side Quest：楽しく法人を作る方法を考える → 結論：直前に考える
+
+■ Substances
+- Cannabis (19:00): Indica 0.5g
+
+■ Daily Summary (by AI)
+Leg Day。スクワット100kgにMAXチャレンジした日。夕食が軽いためC・P不足気味。ベーコン+チーズの朝食で脂質高め。
+
+食事    実績         目標       達成率
+カロリー  2,250kcal  2,650kcal   85%
+P        109g        136g        80%
+F         90g         74g       122% ⚠️
+C        253g        361g        70% 📉
+食物繊維   18g         25g        72%
+
+■ マナブの1日（AIが行動ログから生成）
+08:05 体重測定。61.89kg（Leg Day前）。
+09:30 朝食。オーツボウル+卵+チーズ+ベーコン。パワー朝食。
+14:20 ランチ。サーモン丼大盛り+茶碗蒸し+ねぎトロ巻き。
+（推定）午後 Leg Day筋トレ。スクワット100kgにMAXチャレンジ。
+19:00 Cannabis Indica 0.5g。
+20:00 夕食。納豆キムチ。
+この日の一言：「100kgのバーベルを背負った。それだけで十分だ。」
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-03</h2>
   <pre>
 ■ Morning Self-Check
