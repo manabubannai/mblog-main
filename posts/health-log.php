@@ -393,7 +393,8 @@ C        351g        361g        97%
 - Readiness: 93
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session: 08:18 → 08:48（30分）
+- HR avg: 64bpm / HRV: 18ms
 
 ■ Food
 
