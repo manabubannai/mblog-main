@@ -42,35 +42,6 @@ require dirname(__DIR__) . '/header.php';
     <li>Job: Ex-Influencer. Now I&#39;m resting</li>
   </ul>
 
-
-<div class="body-comparison">
-  <div class="bc-card">
-    <div class="bc-photo">
-      <img src="/img/body-now-2026.jpg" alt="Feb 2026">
-    </div>
-    <div class="bc-body">
-      <div class="bc-label">Now</div>
-      <div class="bc-date">Feb 2026</div>
-      <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">61.4 kg</span></li>
-        <li><span>目標</span><span class="bc-val">バルクアップ</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="bc-card bc-goal">
-    <div class="bc-photo">
-      <img src="/img/body-goal-2027.jpg" alt="Goal Feb 2027">
-    </div>
-    <div class="bc-body">
-      <div class="bc-label">Goal</div>
-      <div class="bc-date">Feb 2027</div>
-      <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">67 kg</span></li>
-        <li><span>体脂肪</span><span class="bc-val">10%</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
   <pre>
 ■ 理念
 ３年前の自分を救う
@@ -242,6 +213,35 @@ Breakfast/Lunch/Dinner (時刻): メニュー [Total: ~〇〇kcal, P: 〇g, F: �
       </tr>
     </table>
   </div>
+
+<div class="body-comparison">
+  <div class="bc-card">
+    <div class="bc-photo">
+      <img src="/img/body-now-2026.jpg" alt="Feb 2026">
+    </div>
+    <div class="bc-body">
+      <div class="bc-label">Now</div>
+      <div class="bc-date">Feb 2026</div>
+      <ul class="bc-stats">
+        <li><span>体重</span><span class="bc-val">61.4 kg</span></li>
+        <li><span>目標</span><span class="bc-val">バルクアップ</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bc-card bc-goal">
+    <div class="bc-photo">
+      <img src="/img/body-goal-2027.jpg" alt="Goal Feb 2027">
+    </div>
+    <div class="bc-body">
+      <div class="bc-label">Goal</div>
+      <div class="bc-date">Feb 2027</div>
+      <ul class="bc-stats">
+        <li><span>体重</span><span class="bc-val">67 kg</span></li>
+        <li><span>体脂肪</span><span class="bc-val">10%</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   <!-- 
 下記は、サプリが届いたら記載する
