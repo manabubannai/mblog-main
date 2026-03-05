@@ -100,8 +100,6 @@ require dirname(__DIR__) . '/header.php';
 </pre>
 
   <pre>
-🚩 2月の目標 : 姿勢を正す 🏋️
-
 🎯 目的
 ・Joyの最大化。あと暇だから
 ・バルクアップして、肉体美化
