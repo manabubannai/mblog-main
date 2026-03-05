@@ -105,8 +105,6 @@ require dirname(__DIR__) . '/header.php';
 ・バルクアップして、肉体美化
 ・肉体と精神エネルギーの強化
 →最も効果の高い施策をAIに聞きつつ実行
-
-
 </pre>
 
   <!-- AI Health Log Prompt Section -->
