@@ -427,6 +427,9 @@ AIに「この地域で、オススメのweed shopを教えて」
   ~1,070kcal / P:54g / F:22g / C:157g
   *Feedback from AI: [和食三位一体 × 脚トレ後グリコーゲン補充] ごはん大盛り+酢飯でC:157g、Leg Day後のグリコーゲン補充に◎。サーモンのEPA/DHA+まぐろのタンパクでP:54g補給、筋修復を加速。茶碗蒸しのだし(グルタミン酸)で腸粘膜保護。Running total: P:100g / 目標136gまで残り36g。
 
+- Intra-Workout: Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+  ~120kcal / P:18g / F:5g / C:0g
+
 - Dinner (20:00): 納豆＋キムチ＋Salmon In The Garden（サーモン・カーリーケール・ブロッコリー50g・ビーツ30g・フェタチーズ20g）＋バナナ2本
   ~897kcal / P:51g / F:40g / C:72g
   *Feedback from AI: [Omega-3×腸活×抗酸化フルコース] サーモンのEPA/DHA+P:32gで筋修復◎。ブロッコリーのスルフォラファン+ビーツの硝酸塩で抗炎症&血流改善。フェタチーズのCLAで良質脂質。ケールのビタミンK・ルテイン。納豆+キムチで腸活継続。バナナ2本でC:46g追加、Leg Day後のグリコーゲン補充◎。Running total: P:151g / 目標達成✅。
@@ -531,6 +534,9 @@ C        314g        361g        87%
 - Smoothie (Lunch後): バナナ＋ストロベリースムージー
   ~200kcal / P:2g / F:1g / C:48g
   *Feedback from AI: バナナのカリウム+ストロベリーのビタミンCでランチ後の消化を助ける。自然な糖質でエネルギー補給◎。Running total: P:90g / 目標136gまで残り46g。
+
+- Intra-Workout: Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+  ~120kcal / P:18g / F:5g / C:0g
 
 - Dinner (19:30頃): あぶりサーモン丼＋ざる蕎麦
   ~930kcal / P:43g / F:18g / C:148g
@@ -652,6 +658,9 @@ C        351g        361g        97%
 - Lunch (14:20): ロールキャベツ（4つ）＋ご飯1杯（~150g）＋フルーツ少し＋かまぼこ＋味噌きゅうり＋人参ごぼう＋味噌汁
   ~940kcal / P:44g / F:29g / C:125g
   *Feedback from AI: [和食バランス定食] ロールキャベツのキャベツ（ビタミンC・K）＋肉のタンパクでP:28g補給。かまぼこの魚肉タンパク追加。人参ごぼうのβカロテン+食物繊維で腸活継続。ご飯でC:56g確保しChest Day前のグリコーゲン補充に◎。Running total: P:70g / 目標136gまで残り66g。
+
+- Intra-Workout: Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+  ~120kcal / P:18g / F:5g / C:0g
 
 - Dinner (19:30): しゃぶしゃぶ（野菜たくさん＋豚肉1人前＋牛肉半人前＋ヌードル1人前）
   ~925kcal / P:51g / F:44g / C:73g
@@ -1030,6 +1039,9 @@ C        282g        361g        78%
 - Lunch (14:30) — MKレストラン: レバー＋魚＋わかめ＋カボチャ＋キノコ2種＋ローストチキンライス（ご飯~200g＋ローストチキン~150g＋青菜）
   ~950kcal / P:79g / F:26g / C:76g
   *Feedback from AI: [レバー×魚×鶏のタンパクトリプル] レバーのビタミンB12+鉄分+亜鉛が筋肉回復を加速。魚のオメガ3が炎症抑制。ローストチキンで即効性P:32g補充。カボチャのβカロテン＋キノコのβグルカンで免疫サポート。Running total: P:142g / 目標136gを早くも達成。
+
+- Intra-Workout (16:20頃): Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+  ~120kcal / P:18g / F:5g / C:0g
 
 - Dinner (21:00): ごはん1杯（~200g）＋味噌汁（ネギ・キノコ・ほうれん草）＋サーモンとササミの南蛮漬け＋わかめ＋きゅうり＋ナス＋ピーマン＋カボチャ
   ~679kcal / P:53g / F:9g / C:88g
