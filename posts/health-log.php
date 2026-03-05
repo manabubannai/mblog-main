@@ -271,6 +271,36 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-05</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 8/10
+- Mind: 8/10
+- Spirit: 8/10
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- Readiness: 91
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-04</h2>
   <pre>
 ■ Morning Self-Check
