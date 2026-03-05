@@ -253,14 +253,17 @@ NAC 500 mg (Thorne)
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
-
-■ Readiness (Oura Ring)
+■ Sleep (Oura Ring) — 2026-03-04 23:57 → 2026-03-05 08:45
+- Total: 7時間8分
+- Deep: 33分 / REM: 1時間55分
+- Efficiency: 81%
+- HRV avg: 57ms
+- Resting HR: 57bpm
 - Readiness: 91
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session 1: 09:00 → 09:30（30分）/ HR:65bpm / HRV:28ms
+- Session 2: 19:50 → 20:10（20分）/ HR:68bpm / HRV:38ms
 
 ■ Food
 
