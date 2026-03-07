@@ -194,13 +194,13 @@ Breakfast/Lunch/Dinner (時刻): メニュー [Total: ~〇〇kcal, P: 〇g, F: �
 <div class="body-comparison">
   <div class="bc-card">
     <div class="bc-photo">
-      <img src="/img/body-now-2026.jpg" alt="Feb 2026">
+      <img src="/img/body-now-2026.jpg?v=2" alt="Mar 2026">
     </div>
     <div class="bc-body">
       <div class="bc-label">Now</div>
-      <div class="bc-date">Feb 2026</div>
+      <div class="bc-date">Mar 2026</div>
       <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">61.4 kg</span></li>
+        <li><span>体重</span><span class="bc-val">62.6 kg</span></li>
         <li><span>目標</span><span class="bc-val">バルクアップ</span></li>
       </ul>
     </div>
@@ -240,6 +240,44 @@ Calcium AKG 700 mg (Codeage)
 Curcumin 500 mg (Thorne)
 NAC 500 mg (Thorne)
 -->
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-03-07</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- Readiness: 85
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Body Check Day
+<img src="img/health-log/20260307_front.jpg?v=1" alt="https://mblog.com/img/health-log/20260307_front.jpg">
+*source: https://mblog.com/img/health-log/20260307_front.jpg
+<img src="img/health-log/20260307_side.jpg?v=1" alt="https://mblog.com/img/health-log/20260307_side.jpg">
+*source: https://mblog.com/img/health-log/20260307_side.jpg
+<img src="img/health-log/20260307_back.jpg?v=1" alt="https://mblog.com/img/health-log/20260307_back.jpg">
+*source: https://mblog.com/img/health-log/20260307_back.jpg
+
+■ Food
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+  </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
