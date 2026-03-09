@@ -435,6 +435,7 @@ C        323g        361g         89%
 ・食材の写真から、プロンプトインジェクションされる可能性は？
 
 ■ Substances
+- Cannabis 0.5g Indica 20:00
 
 ■ Note
   </pre>
