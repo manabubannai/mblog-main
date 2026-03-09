@@ -89,14 +89,14 @@ a { flex: 1; }
 .jp-article h3::before { content: "\25A1  "; font-family: system-ui; }
 .jp-article h4 { font-size: 18px; font-weight: 600; margin: 40px 0 -5px; line-height: 1.7; }
 .jp-article h4::before { content: "\2713  "; font-family: system-ui; }
-.jp-article p { font-size: 16.5px; line-height: 1.7; margin: 20px 0 35px; }
+.jp-article p { font-size: 17px; line-height: 1.7; margin: 20px 0 35px; }
 .jp-article ul, .jp-article ol {
-  font-size: 16.5px; line-height: 2;
+  font-size: 16.8px; line-height: 2;
   padding: 20px 10px 20px 30px; margin: 20px 0 35px;
 }
 .jp-article ul.long_list li { line-height: 1.7; margin-bottom: 20px; }
 .jp-article blockquote { padding-left: 20px; border-left: 2.5px solid rgba(86,86,86,0.85); font-style: italic; margin: 20px 0 35px; }
-.jp-article blockquote p { margin: 0; font-size: 16.5px; }
+.jp-article blockquote p { margin: 0; font-size: 17px; }
 .jp-article blockquote p::before { content: "\00BB  "; }
 .jp-article a { color: #337ab7; text-decoration: underline; }
 .jp-article img { max-width: 75%; margin: auto auto 25px; }
