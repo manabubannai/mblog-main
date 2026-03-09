@@ -42,7 +42,7 @@ require __DIR__ . '/header.php';
 
 <li>
 <time datetime="2026-03-08">8 Mar, 2026</time>
-<a href="90-percent-poor-era">国民の９割が貧しくなる時代</a>
+<a href="permanent-underclass">国民の９割が貧しくなる時代</a>
 </li>
 
 <li>
