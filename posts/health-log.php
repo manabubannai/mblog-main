@@ -319,17 +319,27 @@ C        205g        361g         57% 📉
 ※情報ソース：Navalのツイート https://x.com/naval/status/2030679094623707600
 
 〜〜
-
-        小黒      マナブ    イケハヤ
-体力    9/10      7/10      5/10
-運動    9/10      7/10      5/10
-精神    9/10      8/10      9.5/10
-頭脳    9/10      7/10      9.5/10
-直感    6/10      8/10      8/10
-外見    7/10      7/10      4/10
-倫理    8/10      5/10      6/10
-*低くても強い
-
+  </pre>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 15px;font-family:Menlo,Monaco,Consolas,monospace;">
+    <thead>
+      <tr>
+        <th style="padding:10px 14px;border:1px solid #ccc;background:#f5f5f5;font-weight:600;text-align:left;"></th>
+        <th style="padding:10px 14px;border:1px solid #ccc;background:#f5f5f5;font-weight:600;text-align:center;">小黒</th>
+        <th style="padding:10px 14px;border:1px solid #ccc;background:#f5f5f5;font-weight:600;text-align:center;">マナブ</th>
+        <th style="padding:10px 14px;border:1px solid #ccc;background:#f5f5f5;font-weight:600;text-align:center;">イケハヤ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">体力</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">7/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">5/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">運動</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">7/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">5/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">精神</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">8/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9.5/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">頭脳</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">7/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">9.5/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">直感</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">6/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">8/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">8/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">外見</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">7/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">7/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">4/10</td></tr>
+      <tr><td style="padding:10px 14px;border:1px solid #ccc;font-weight:600;">倫理 <small>*低くても強い</small></td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">8/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">5/10</td><td style="padding:10px 14px;border:1px solid #ccc;text-align:center;">6/10</td></tr>
+    </tbody>
+  </table>
+  <pre>
 たべる君を倫理に反した方法でリリース(?)
   </pre>
 
