@@ -323,11 +323,15 @@ C        374g        361g        104% ✅
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
+■ Sleep (Oura Ring) — 2026-03-06 22:55 → 2026-03-07 08:02
+- Total: 8時間8分
+- Deep: 60分 / REM: 1時間33分
+- Efficiency: 89%
+- Score: 81
 
 ■ Readiness (Oura Ring)
 - Readiness: 85
+- HRV: 52ms / HR: 57bpm
 
 ■ Meditation (Oura Ring)
 - 記録なし
