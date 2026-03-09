@@ -250,14 +250,23 @@ NAC 500 mg (Thorne)
 - Mind: 
 - Spirit: 
 
-■ Body (Withings Body Scan)
-- 記録なし（未同期）
+■ Body (Withings Body Scan) — 08:52
+- Weight: 61.877kg
+- Fat Mass: 5.12kg（Fat Ratio: 8.3%）
+- Muscle Mass: 53.88kg
+- Bone Mass: 2.87kg
+- Hydration: 41.27kg
+- Visceral Fat Index: 1.2
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
+■ Sleep (Oura Ring) — 2026-03-08 01:15 → 2026-03-08 08:49
+- Total: 6時間33分
+- Deep: 45分 / REM: 1時間15分
+- Efficiency: 87%
+- HRV avg: 68ms / Resting HR: 53bpm
+- Score: 67
 
 ■ Readiness (Oura Ring)
-- 記録なし（未同期）
+- Readiness: 83
 
 ■ Meditation (Oura Ring)
 - 記録なし
@@ -320,8 +329,13 @@ C        374g        361g        104% ✅
 - Mind: 
 - Spirit: 
 
-■ Body (Withings Body Scan)
-- 記録なし（未同期）
+■ Body (Withings Body Scan) — 08:04
+- Weight: 62.346kg
+- Fat Mass: 5.0kg（Fat Ratio: 8.0%）
+- Muscle Mass: 54.45kg
+- Bone Mass: 2.90kg
+- Hydration: 41.66kg
+- Visceral Fat Index: 1.2
 
 ■ Sleep (Oura Ring) — 2026-03-06 22:55 → 2026-03-07 08:02
 - Total: 8時間8分
@@ -334,7 +348,7 @@ C        374g        361g        104% ✅
 - HRV: 52ms / HR: 57bpm
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session: 08:16 → 08:46（30分）
 
 ■ Body Check Day
 <img src="img/health-log/20260307_front.jpg?v=1" alt="https://mblog.com/img/health-log/20260307_front.jpg">
@@ -881,8 +895,11 @@ C        314g        361g        87%
 - Hydration: 41.85kg
 - Visceral Fat Index: 1.1
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
+■ Sleep (Oura Ring) — 2026-03-02 23:18 → 2026-03-03 08:03
+- Total: 7時間47分
+- Deep: 1時間13分 / REM: 2時間0分
+- Efficiency: 89%
+- HRV avg: 72ms / Resting HR: 57bpm
 
 ■ Readiness (Oura Ring)
 - Readiness: 89
@@ -1198,7 +1215,8 @@ InBody点数     78点      78点      →
 - Readiness: 87
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- Session 1: 08:41 → 09:07（26分）
+- Session 2: 09:08 → 09:12（4分）
 
 ■ Food
 
