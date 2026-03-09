@@ -243,6 +243,44 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-09</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- 記録なし（未同期）
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+まずは強い人材を集める
+一緒に筋トレして楽しむ
+そのうちアイデアは出る
+
+✔︎どういった強い人材？
+一緒にいて楽しい人
+つまり、一緒にいて楽しい人を増やす
+そして、一緒に遊んだり筋トレをする
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-08</h2>
   <pre>
 ■ Morning Self-Check
