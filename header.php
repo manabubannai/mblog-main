@@ -160,14 +160,14 @@ a { flex: 1; }
   ul.toppage li { padding: 5px 0; }
   .pc-br { display: none; }
   .sp-br { display: block; margin-bottom: 15px; }
-  .jp-article h1.title { font-size: 20px; margin-bottom: 25px; }
+  .jp-article h1.title { font-size: 22px; margin-bottom: 25px; }
   .jp-article h2 { font-size: 19px; }
   .jp-article h3 { font-size: 17px; }
   .jp-article h4 { font-size: 16px; }
-  .jp-article p { font-size: 15px; line-height: 1.6; margin: 12px 0 25px; }
-  .jp-article ul, .jp-article ol { font-size: 14.7px; line-height: 1.7; margin: 12px 0 25px; }
+  .jp-article p { font-size: 16px; line-height: 1.6; margin: 12px 0 25px; }
+  .jp-article ul, .jp-article ol { font-size: 15.7px; line-height: 1.7; margin: 12px 0 25px; }
   .jp-article blockquote { margin: 15px 0 22px; }
-  .jp-article blockquote p { font-size: 15px; }
+  .jp-article blockquote p { font-size: 16px; }
   .jp-article time { font-size: 12px; margin-bottom: 10px; }
   .jp-article img { max-width: 95%; }
   .jp-article table { font-size: 13px; }
