@@ -22,7 +22,11 @@ require dirname(__DIR__) . '/header.php';
 <p>僕の考えです。じゃあどうするか？<br>
 結論は、自分が救える層にリーチすること。</p>
 
+<hr>
+
 <p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p>
+
+<hr>
 
 <p>僕の脳内のマーケ設計を共有します。</p>
 
@@ -37,6 +41,8 @@ require dirname(__DIR__) . '/header.php';
 <p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p>
 
 <p>上記の通りで、仕方のない時代。多くの人はキャリア設計で行き詰まるし、厳しい時代です。</p>
+
+<hr>
 
 <p>じゃあ、どうしたらいいのか？ 筋トレです。</p>
 
