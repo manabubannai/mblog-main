@@ -24,7 +24,7 @@ require dirname(__DIR__) . '/header.php';
 
 <hr>
 
-<p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p>
+<blockquote><p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p></blockquote>
 
 <hr>
 
@@ -38,7 +38,7 @@ require dirname(__DIR__) . '/header.php';
 
 <p>なぜなら今後は発信のレベルを上げるから。振り落とされる人も増えると思う。</p>
 
-<p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p>
+<blockquote><p>» Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p></blockquote>
 
 <p>上記の通りで、仕方のない時代。多くの人はキャリア設計で行き詰まるし、厳しい時代です。</p>
 
