@@ -41,6 +41,11 @@ require __DIR__ . '/header.php';
 <ul class="toppage">
 
 <li>
+<time datetime="2026-03-07">7 Mar, 2026</time>
+<a href="90-percent-poor-era">国民の９割が貧しくなる時代</a>
+</li>
+
+<li>
 <time datetime="2026-02-18">18 Feb, 2026</time>
 <a href="end-of-nomad-era">ノマド時代は終わりますね。通勤しよう 😌🚃</a>
 </li>
