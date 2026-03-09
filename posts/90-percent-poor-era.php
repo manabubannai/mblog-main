@@ -40,7 +40,7 @@ require dirname(__DIR__) . '/header.php';
 
 <blockquote><p>Good doesn't happen just from good desires.（良い気持ちがあっても、良いことは起こりません）</p></blockquote>
 
-<p>上記の通りで、仕方のない時代。多くの人はキャリア設計で行き詰まるし、厳しい時代です。</p>
+<p>上記の通りで、仕方ない時代。多くの人はキャリア設計で行き詰まる、厳しい時代です。</p>
 
 <hr>
 
