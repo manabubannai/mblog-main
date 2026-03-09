@@ -243,6 +243,76 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-08</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- 記録なし（未同期）
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+Breakfast 10:30
+- オーツ 20g
+- ヨーグルト
+- Apple
+- イチゴ
+- ブルーベリー
+- チアシード
+- ナッツ類 10g
+- パンプキンシード
+→ 435kcal / P:14g / F:18g / C:61g / Fiber:12g
+
+Lunch 12:00
+- サーモン丼
+- 茶碗蒸し
+→ 666kcal / P:47g / F:15g / C:84g / Fiber:1g
+
+Dinner 20:00
+- しょうゆラーメン
+- 唐揚げ
+- 餃子
+- スタバのマフィン
+- スタバのクッキー
+→ 1,820kcal / P:63g / F:74g / C:229g / Fiber:7g
+
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー  2,921kcal   2,650kcal   110% ✅
+P        124g        136g         91%
+F        107g         74g        145% ⚠️
+C        374g        361g        104% ✅
+食物繊維   20g         25g         80%
+
+■今日のタスク
+・Meditation
+・ストレッチ → マッサージに変更
+・サウナ と Ice Bath
+・空き時間に読書
+・メルマガ執筆
+
+■ Substances
+- Cannabis 0.5g Indica 16:00
+- Cannabis 0.5g Indica 21:00
+- Cannabis 0.5g Indica 01:00（翌日）
+
+■ Note
+本日から、Thorne AM と Thorne PM のサプリを 3粒飲んでみる。今までは2粒 だった。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-07</h2>
   <pre>
 ■ Morning Self-Check
@@ -330,15 +400,16 @@ Dinner 20:00
 - 黒こしょう 1g
 - 納豆 1パック（45g）
 - キムチ 50g
-→ 528kcal / P:63g / F:22g / C:25g / Fiber:8g
+- ライスベリー ~150g
+→ 758kcal / P:68g / F:24g / C:72g / Fiber:10g
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー  1,987kcal   2,650kcal    75% 📉
-P        117g        136g         86%
-F         53g         74g         72%
-C        276g        361g         76%
-食物繊維   32g         25g        128% ✅
+カロリー  2,217kcal   2,650kcal    84% 📉
+P        122g        136g         90%
+F         55g         74g         74%
+C        323g        361g         89%
+食物繊維   34g         25g        136% ✅
 
 ■今日のタスク
 ・背中トレーニング
