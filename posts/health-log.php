@@ -388,6 +388,10 @@ Lunch 14:00
 - バナナ酵素ジュース 300ml
 → 692kcal / P:26g / F:10g / C:126g / Fiber:8g
 
+Intra-Workout
+- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+→ 120kcal / P:18g / F:5g / C:0g
+
 Dinner 20:00
 - サーモン（鮭）焼き 200g
 - キノコ（マッシュルーム）80g
@@ -405,9 +409,9 @@ Dinner 20:00
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー  2,217kcal   2,650kcal    84% 📉
-P        122g        136g         90%
-F         55g         74g         74%
+カロリー  2,337kcal   2,650kcal    88% 📉
+P        140g        136g        103% ✅
+F         60g         74g         81%
 C        323g        361g         89%
 食物繊維   34g         25g        136% ✅
 
