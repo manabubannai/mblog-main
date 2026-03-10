@@ -243,6 +243,65 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-10</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring) — 2026-03-09 21:10 → 2026-03-10 08:05
+- Total: 9時間45分
+- Deep: 1時間20分 / REM: 2時間19分
+- Efficiency: 89%
+- HRV avg: 57ms / Resting HR: 52bpm
+
+■ Readiness (Oura Ring)
+- Readiness: 94
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+Breakfast 10:00
+- うどん ~200g
+- 大根 ~100g
+- わかめ ~10g
+- 卵 1個
+- 豆腐 ~80g
+→ 445kcal / P:20g / F:9g / C:66g / Fiber:4g
+
+Lunch 16:00
+- バナナ 2本（~200g）
+- カイパロー（豚バラ+卵の甘辛煮）~250g
+- ご飯 1杯（~150g）
+→ 850kcal / P:31g / F:29g / C:117g / Fiber:5g
+
+Dinner 20:00
+- 寿司 10貫
+- サーモン丼（ごはん大盛り）
+→ 1,130kcal / P:68g / F:18g / C:169g / Fiber:2g
+
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー  2,425kcal   2,650kcal    91%
+P        119g        136g         88%
+F         56g         74g         76%
+C        352g        361g         97%
+食物繊維   11g         25g         44% 📉
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-09</h2>
   <pre>
 ■ Morning Self-Check
