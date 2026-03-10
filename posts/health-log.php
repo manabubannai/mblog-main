@@ -464,9 +464,8 @@ C        374g        361g        104% ✅
 ・メルマガ執筆
 
 ■ Substances
-- Cannabis 0.5g Indica 16:00
-- Cannabis 0.5g Indica 21:00
-- Cannabis 0.5g Indica 01:00（翌日）
+- Cannabis 0.4g Indica 16:00
+- Cannabis 0.3g Indica 21:30
 
 ■ Note
 本日から、Thorne AM と Thorne PM のサプリを 3粒飲んでみる。今までは2粒 だった。
