@@ -340,6 +340,12 @@ C        381g        361g        106% ✅
 ■ Substances
 
 ■ Note
+筋繊維に合わせてストレッチをする（胸の上部への効かせ方）
+→ iPhoneに復習用の動画あり
+
+新しいストレッチも導入する（iPhoneに写真あり）
+
+背中を伸ばすストレッチも導入する
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
@@ -405,12 +411,6 @@ C        352g        361g         97%
 ■ Substances
 
 ■ Note
-筋繊維に合わせてストレッチをする（胸の上部への効かせ方）
-→ iPhoneに復習用の動画あり
-
-新しいストレッチも導入する（iPhoneに写真あり）
-
-背中を伸ばすストレッチも導入する
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
