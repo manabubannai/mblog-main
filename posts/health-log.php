@@ -243,6 +243,73 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-11</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- 記録なし（未同期）
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+Breakfast
+- パッションフルーツジュース（果汁）200ml
+- パッションフルーツ（飾り・半切り）1個分（約60g）
+- 氷 適量
+- シロップ（砂糖）15g
+- ミックスグリーン（サラダ菜、ルッコラ等）80g
+- ビーツ（キューブ状、ロースト）100g
+- スライスアーモンド 10g
+- ドライクランベリー 10g
+- ラディッキオ（赤チコリ）20g
+- オレンジ果肉 20g
+- ドレッシング（バルサミコ系）15ml
+- 白身魚（タラ フィレ）200g
+- チェリートマト 100g
+- ブラックオリーブ 30g
+- ケッパー 10g
+- にんにく 5g
+- パセリ 5g
+- レモン 1切れ（20g）
+- オリーブオイル（ソース含む）30ml
+- 白ワインバターソース 100ml
+- 白米（炊飯済み）300g
+→ 1,605kcal / P:59g / F:60g / C:206g / Fiber:17g
+
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー  1,605kcal   2,650kcal    61%
+P         59g        136g         43%
+F         60g         74g         81%
+C        206g        361g         57%
+食物繊維   17g         25g         68%
+
+■今日のタスク
+・Meditation
+・Streach
+・マッサージ 90分
+・早めに眠る
+・空き時間に読書
+・明日の準備
+
+■ Substances
+
+■ Note
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-10</h2>
   <pre>
 ■ Morning Self-Check
