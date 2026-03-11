@@ -361,6 +361,8 @@ C        307g        361g         85%
 ・明日の準備
 
 ■ Substances
+- Cannabis 0.4g Indica 16:00
+- Cannabis 0.3g Indica 21:30
 
 ■ Note
 まずは強い人材を集める
