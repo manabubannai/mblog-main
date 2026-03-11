@@ -409,7 +409,7 @@ C        352g        361g         97%
 ・明日の準備
 
 ■ Substances
-- Cannabis 0.5g 21:00
+- Cannabis 0.5g Indica 21:00
 
 ■ Note
   </pre>
