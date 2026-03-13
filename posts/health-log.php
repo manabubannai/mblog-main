@@ -245,11 +245,6 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-03-13</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan) — 08:02
 - Weight: 62.981kg
 - Fat Mass: 5.24kg（Fat Ratio: 8.3%）
@@ -358,11 +353,6 @@ Self-Contlole して最高に整う日々から心や気持ちの余裕が生ま
 
   <h2># 2026-03-12</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
@@ -436,11 +426,6 @@ C        492g        361g        136% ✅
 
   <h2># 2026-03-11</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
@@ -542,11 +527,6 @@ C        381g        361g        106% ✅
 
   <h2># 2026-03-10</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
@@ -608,11 +588,6 @@ C        352g        361g         97%
 
   <h2># 2026-03-09</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan)
 - 記録なし（未同期）
 
@@ -703,11 +678,6 @@ C        307g        361g         85%
 
   <h2># 2026-03-08</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan) — 08:52
 - Weight: 61.877kg
 - Fat Mass: 5.12kg（Fat Ratio: 8.3%）
@@ -782,11 +752,6 @@ C        374g        361g        104% ✅
 
   <h2># 2026-03-07</h2>
   <pre>
-■ Morning Self-Check
-- Body: 
-- Mind: 
-- Spirit: 
-
 ■ Body (Withings Body Scan) — 08:04
 - Weight: 62.346kg
 - Fat Mass: 5.0kg（Fat Ratio: 8.0%）
