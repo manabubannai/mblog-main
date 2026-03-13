@@ -299,8 +299,6 @@ F         44g         74g         60%
 C        269g        361g         74%
 食物繊維   21g         25g         84%
 
-■今日のタスク
-
 ■ Substances
 
 ■ Note
@@ -377,8 +375,6 @@ Self-Contlole して最高に整う日々から心や気持ちの余裕が生ま
 ■ Food
 
 ■ Daily Summary
-
-■今日のタスク
 
 ■ Substances
 - Cannabis 0.6g Indica 16:00
@@ -480,8 +476,6 @@ P        199g        136g        146% ✅
 F        118g         74g        159% ⚠️
 C        381g        361g        106% ✅
 食物繊維   30g         25g        120% ✅
-
-■今日のタスク
 
 ■ Substances
 
