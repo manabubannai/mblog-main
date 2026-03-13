@@ -243,6 +243,78 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-13</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan) — 08:02
+- Weight: 62.981kg
+- Fat Mass: 5.24kg（Fat Ratio: 8.3%）
+- Muscle Mass: 54.83kg
+- Bone Mass: 2.92kg
+- Hydration: 41.21kg
+- Visceral Fat Index: 1.2
+
+■ Sleep (Oura Ring) — 2026-03-12 23:27 → 2026-03-13 07:59
+- Total: 7時間55分
+- Deep: 1時間28分 / REM: 1時間46分
+- Efficiency: 93%
+- HRV avg: 46ms / Resting HR: 54bpm
+
+■ Readiness (Oura Ring)
+- Readiness: 88
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+
+■ Daily Summary
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-03-12</h2>
+  <pre>
+■ Morning Self-Check
+- Body: 
+- Mind: 
+- Spirit: 
+
+■ Body (Withings Body Scan)
+- 記録なし（未同期）
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- Readiness: 87
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+
+■ Daily Summary
+
+■今日のタスク
+
+■ Substances
+
+■ Note
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-11</h2>
   <pre>
 ■ Morning Self-Check
