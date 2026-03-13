@@ -263,7 +263,7 @@ NAC 500 mg (Thorne)
 - Readiness: 88
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- 09:33→10:34（61分）
 
 ■ Food
 Breakfast 9:30
@@ -354,10 +354,13 @@ Self-Contlole して最高に整う日々から心や気持ちの余裕が生ま
   <h2># 2026-03-12</h2>
   <pre>
 ■ Body (Withings Body Scan)
-- 記録なし（未同期）
+- 記録なし
 
-■ Sleep (Oura Ring)
-- 記録なし（未同期）
+■ Sleep (Oura Ring) — 2026-03-12 01:26 → 2026-03-12 09:58
+- Total: 7時間22分
+- Deep: 1時間58分 / REM: 1時間28分
+- Efficiency: 86%
+- HRV avg: 52ms / Resting HR: 53bpm
 
 ■ Readiness (Oura Ring)
 - Readiness: 87
@@ -427,16 +430,16 @@ C        492g        361g        136% ✅
   <h2># 2026-03-11</h2>
   <pre>
 ■ Body (Withings Body Scan)
-- 記録なし（未同期）
+- 記録なし
 
 ■ Sleep (Oura Ring)
-- 記録なし（未同期）
+- 記録なし
 
 ■ Readiness (Oura Ring)
-- 記録なし（未同期）
+- Readiness: 85
 
 ■ Meditation (Oura Ring)
-- 記録なし
+- 09:13→09:43（30分）
 
 ■ Food
 Breakfast
