@@ -294,15 +294,16 @@ Dinner 19:00 Protein Bowl（Healthy Junk）
 - Grill Pineapple 150g
 - Air Fry Pumpkin 60g
 - Jasmine Rice 100g
-→ 855kcal / P:88g / F:15g / C:87g / Fiber:5g
+- バナナ1本
+→ 945kcal / P:89g / F:15g / C:109g / Fiber:6g
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    2,163kcal   2,650kcal    82%
-P          147g        136g        108% ✅
+カロリー    2,253kcal   2,650kcal    85%
+P          148g        136g        109% ✅
 F           57g         74g         77%
-C          267g        361g         74%
-食物繊維    16g          25g         64%
+C          289g        361g         80%
+食物繊維    17g          25g         68%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
