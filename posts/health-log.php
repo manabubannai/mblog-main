@@ -243,6 +243,48 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-14</h2>
+  <pre>
+■ Body (Withings Body Scan) — 08:04
+- Weight: 63.202kg
+- Fat Mass: 5.04kg（Fat Ratio: 8.0%）
+- Muscle Mass: 55.23kg
+- Bone Mass: 2.94kg
+- Hydration: 41.75kg
+- Visceral Fat Index: 1.2
+
+■ Sleep (Oura Ring)
+- 記録なし（未同期）
+
+■ Readiness (Oura Ring)
+- 記録なし（未同期）
+
+■ Meditation (Oura Ring)
+- 記録なし
+
+■ Food
+Breakfast 11:30
+- ヨーグルト 60g
+- オーツ 22g
+- はちみつ 14.5g
+- パンプキンシード 8.5g
+- ブラジルナッツ 15.5g
+- くるみ 9.5g
+- アーモンド 10g
+- ブルーベリー 48.5g
+→ 457kcal / P:14g / F:29g / C:42g / Fiber:6g
+
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー    457kcal   2,650kcal    17%
+P          14g        136g         10%
+F          29g         74g         39%
+C          42g        361g         12%
+食物繊維    6g          25g         25%
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-13</h2>
   <pre>
 ■ Body (Withings Body Scan) — 08:02
