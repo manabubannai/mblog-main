@@ -287,13 +287,22 @@ Snack 16:00 カオマンガイ
 - みかん2個
 → 520kcal / P:30g / F:2.7g / C:93g / Fiber:2g
 
+Dinner 19:00 Protein Bowl（Healthy Junk）
+- Chicken Breast 300g Raw（Air Fried）→ 調理後210g
+- Salmon 100g Raw（Air Fried）→ 調理後75g
+- Sweet Potato 150g（Air Fry）
+- Grill Pineapple 150g
+- Air Fry Pumpkin 60g
+- Jasmine Rice 100g
+→ 855kcal / P:88g / F:15g / C:87g / Fiber:5g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    1,308kcal   2,650kcal    49%
-P          59g         136g         43%
-F          42g          74g         57%
-C          180g        361g         50%
-食物繊維    11g          25g         44%
+カロリー    2,163kcal   2,650kcal    82%
+P          147g        136g        108% ✅
+F           57g         74g         77%
+C          267g        361g         74%
+食物繊維    16g          25g         64%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
