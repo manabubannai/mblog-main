@@ -295,15 +295,20 @@ Dinner 19:00 Protein Bowl（Healthy Junk）
 - Air Fry Pumpkin 60g
 - Jasmine Rice 100g
 - バナナ1本
-→ 945kcal / P:89g / F:15g / C:109g / Fiber:6g
+- ヨーグルト150g
+- はちみつ15g
+- オーツ30g
+- ブルーベリー70g
+- チアシード5g
+→ 1,350kcal / P:105g / F:23g / C:183g / Fiber:13g
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    2,253kcal   2,650kcal    85%
-P          148g        136g        109% ✅
-F           57g         74g         77%
-C          289g        361g         80%
-食物繊維    17g          25g         68%
+カロリー    2,658kcal   2,650kcal   100% ✅
+P          164g        136g        121% ✅
+F           65g         74g         88%
+C          363g        361g        101% ✅
+食物繊維    24g          25g         96%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
