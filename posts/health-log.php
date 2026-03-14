@@ -274,13 +274,18 @@ Breakfast 11:30
 - ブルーベリー 48.5g
 → 457kcal / P:14g / F:29g / C:42g / Fiber:6g
 
+Lunch 14:30
+- 卵2個
+- バナナ2本
+→ 330kcal / P:15g / F:10g / C:45g / Fiber:3g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    457kcal   2,650kcal    17%
-P          14g        136g         10%
-F          29g         74g         39%
-C          42g        361g         12%
-食物繊維    6g          25g         25%
+カロリー    787kcal   2,650kcal    30%
+P          29g        136g         21%
+F          39g         74g         53%
+C          87g        361g         24%
+食物繊維    9g          25g         36%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
