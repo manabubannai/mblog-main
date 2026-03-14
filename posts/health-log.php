@@ -279,13 +279,19 @@ Lunch 14:30
 - バナナ2本
 → 330kcal / P:15g / F:10g / C:45g / Fiber:3g
 
+Snack 16:00 カオマンガイ
+- ライス200g
+- 蒸し鶏82g
+- きゅうり少し
+→ 420kcal / P:24g / F:2.5g / C:73g / Fiber:0g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    787kcal   2,650kcal    30%
-P          29g        136g         21%
-F          39g         74g         53%
-C          87g        361g         24%
-食物繊維    9g          25g         36%
+カロリー    1,208kcal   2,650kcal    46%
+P          53g         136g         39%
+F          42g          74g         57%
+C          160g        361g         44%
+食物繊維    9g           25g         36%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
