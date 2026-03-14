@@ -284,15 +284,16 @@ Snack 16:00 カオマンガイ
 - 蒸し鶏82g
 - きゅうり少し
 - 鴨の血35g
-→ 440kcal / P:29g / F:2.5g / C:73g / Fiber:0g
+- みかん2個
+→ 520kcal / P:30g / F:2.7g / C:93g / Fiber:2g
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    1,228kcal   2,650kcal    46%
-P          58g         136g         43%
+カロリー    1,308kcal   2,650kcal    49%
+P          59g         136g         43%
 F          42g          74g         57%
-C          160g        361g         44%
-食物繊維    9g           25g         36%
+C          180g        361g         50%
+食物繊維    11g          25g         44%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
