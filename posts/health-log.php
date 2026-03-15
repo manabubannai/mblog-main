@@ -262,13 +262,21 @@ Lunch 13:45 カオマンガイ×2
 - 鴨の血7g×2
 → 848kcal / P:50g / F:5g / C:146g / Fiber:0g
 
+Intra-Workout
+- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+→ 120kcal / P:18g / F:5g / C:0g
+
+Post-Workout
+- ミニバナナ2本（120g）
+→ 108kcal / P:1g / F:0g / C:28g / Fiber:2g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    1,297kcal  2,650kcal    49%
-P          66g        136g         49%
-F          12g         74g         16%
-C          232g       361g         64%
-食物繊維    9g          25g         36%
+カロリー    1,525kcal  2,650kcal    58%
+P          85g        136g         63%
+F          17g         74g         23%
+C          260g       361g         72%
+食物繊維    11g         25g         44%
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
