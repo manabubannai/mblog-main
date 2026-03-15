@@ -270,12 +270,16 @@ Post-Workout
 - ミニバナナ2本（120g）
 → 108kcal / P:1g / F:0g / C:28g / Fiber:2g
 
+Dinner 19:30
+- 卵3個
+→ 225kcal / P:19g / F:15g / C:2g / Fiber:0g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    1,525kcal  2,650kcal    58%
-P          85g        136g         63%
-F          17g         74g         23%
-C          260g       361g         72%
+カロリー    1,750kcal  2,650kcal    66%
+P          104g       136g         76%
+F           32g        74g         43%
+C          262g       361g         73%
 食物繊維    11g         25g         44%
 
 ■ Substances
