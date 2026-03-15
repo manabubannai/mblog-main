@@ -279,6 +279,11 @@ Night
 - Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）1スクープ
 → 60kcal / P:9g / F:2.5g / C:0g
 
+■ Workout (Oura Ring)
+- Stretching 13:20〜13:45（25分）/ 94.7kcal / Moderate
+- Cycling 16:02〜16:20（18分）/ 70.4kcal / Moderate
+- Cycling 18:58〜19:22（24分）/ 71.3kcal / Moderate
+
 ■ Daily Summary
 食事    実績         目標         達成率
 カロリー    2,088kcal  2,650kcal    79%
