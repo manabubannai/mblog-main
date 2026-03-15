@@ -262,6 +262,10 @@ P          16g        136g         12%
 F           7g         74g          9%
 C          86g        361g         24%
 食物繊維    9g          25g         36%
+
+■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 1カプセル（朝食後）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
