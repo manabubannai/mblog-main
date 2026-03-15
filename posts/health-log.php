@@ -288,6 +288,42 @@ Night
 - Cycling 16:02〜16:20（18分）/ 70.4kcal / Moderate
 - Cycling 18:58〜19:22（24分）/ 71.3kcal / Moderate
 
+■ Arm Day
+1. Barbell Curl → Dumbbell Curl（ドロップセット）
+   30kg + Bar (10kg) x 6 → 10kg x (6 + 3c)
+   30kg + Bar (10kg) x (6+3c) → 10kg x (3 + 3c)
+   30kg + Bar (10kg) x (3+5c) → 10kg x 2 →[重さを下げた]→ 7.5kg × 3
+   ✓来週用のメモ 40kgで綺麗に6repのみ。10kgも綺麗に6repのみ。
+
+2. Hammer Curl
+   17.5kg × 12
+   17.5kg × 12
+   17.5kg × 15
+   *note: 次回は重さを上げる、回数を上げるか、フォームを更に意識する
+   *note: トップで１秒固定 → 下ろす局面は2〜3秒
+   *note: 1つ1つのトレーニングを調べて、効かせ方を考える。セルフィーを買う。
+   ✓来週用のメモ トップで１秒固定 → 下ろす局面は2〜3秒
+
+3. Narrow Bench Press (Smith Machine)
+   40kg + Bar (10kg) x 10
+   40kg + Bar (10kg) x 10
+   40kg + Bar (10kg) x 9
+   ✓来週用のメモ フォームを意識。10repをやり切る。
+
+4. Press Down with Bar
+   65kg x 10
+   65kg x 10
+   65kg x 10
+   *note: 次回は重さを上げる、回数を上げるか、フォームを更に意識する
+   ✓来週用のメモ 重さを上げる。
+
+5. Press Down with Rope
+   45kg x (8+2c)
+   45kg x (6+4c)
+   45kg x (7+3c)
+   *note: 手首を捻って、下に向けるフォームだと効く
+   ✓来週用のメモ チートを減らしていく
+
 ■ Daily Summary
 食事    実績         目標         達成率
 カロリー    2,678kcal  2,650kcal   101% ✅
