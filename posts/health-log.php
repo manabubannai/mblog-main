@@ -273,6 +273,7 @@ C          232g       361g         64%
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 1カプセル（朝食後）
+- 整腸剤 1カプセル（昼食後）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
