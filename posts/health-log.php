@@ -297,6 +297,7 @@ C          280g       361g         78%
 - 整腸剤 1カプセル（朝食後）
 - 整腸剤 1カプセル（昼食後）
 - 整腸剤 2カプセル（夕飯時）
+- Cannabis Indica 0.8g（21:00）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
