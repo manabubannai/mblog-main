@@ -272,15 +272,16 @@ Post-Workout
 
 Dinner 19:30
 - 卵3個
-→ 225kcal / P:19g / F:15g / C:2g / Fiber:0g
+- アボカド211g
+→ 563kcal / P:23g / F:46g / C:20g / Fiber:14g
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    1,750kcal  2,650kcal    66%
-P          104g       136g         76%
-F           32g        74g         43%
-C          262g       361g         73%
-食物繊維    11g         25g         44%
+カロリー    2,088kcal  2,650kcal    79%
+P          108g       136g         79%
+F           63g        74g         85%
+C          280g       361g         78%
+食物繊維    25g         25g        100% ✅
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
