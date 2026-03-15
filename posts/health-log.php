@@ -275,11 +275,15 @@ Dinner 19:30
 - アボカド211g
 → 563kcal / P:23g / F:46g / C:20g / Fiber:14g
 
+Night
+- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）1スクープ
+→ 60kcal / P:9g / F:2.5g / C:0g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    2,028kcal  2,650kcal    77%
-P           99g       136g         73%
-F           61g        74g         82%
+カロリー    2,088kcal  2,650kcal    79%
+P          108g       136g         79%
+F           64g        74g         86%
 C          280g       361g         78%
 食物繊維    25g         25g        100% ✅
 
