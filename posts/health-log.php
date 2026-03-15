@@ -313,6 +313,12 @@ C          363g        361g        101% ✅
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 2カプセル（朝食時）
+- 整腸剤 1カプセル（間食後）
+- Cannabis Indica 0.8g（18:30）
+- Cannabis Indica 0.8g（22:00）
+
+■ Note
+- 筋肉の成長では、フォームの美しさが大切そう。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
