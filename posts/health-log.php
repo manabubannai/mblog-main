@@ -255,12 +255,19 @@ Breakfast 12:00
 - ブルーベリー50g
 → 449kcal / P:16g / F:7g / C:86g / Fiber:9g
 
+Lunch 13:45 カオマンガイ×2
+- ライス200g×2
+- 蒸し鶏82g×2
+- きゅうり少し×2
+- 鴨の血7g×2
+→ 848kcal / P:50g / F:5g / C:146g / Fiber:0g
+
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    449kcal   2,650kcal    17%
-P          16g        136g         12%
-F           7g         74g          9%
-C          86g        361g         24%
+カロリー    1,297kcal  2,650kcal    49%
+P          66g        136g         49%
+F          12g         74g         16%
+C          232g       361g         64%
 食物繊維    9g          25g         36%
 
 ■ Substances
