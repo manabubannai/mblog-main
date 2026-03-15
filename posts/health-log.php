@@ -273,7 +273,11 @@ Post-Workout
 Dinner 19:30
 - 卵3個
 - アボカド211g
-→ 563kcal / P:23g / F:46g / C:20g / Fiber:14g
+- 納豆2パック（100g）
+- 豆腐200g
+- 白米200g
+- キムチ50g
+→ 1,153kcal / P:55g / F:63g / C:97g / Fiber:18g
 
 Night
 - Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）1スクープ
@@ -286,11 +290,11 @@ Night
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    2,088kcal  2,650kcal    79%
-P          108g       136g         79%
-F           64g        74g         86%
-C          280g       361g         78%
-食物繊維    25g         25g        100% ✅
+カロリー    2,678kcal  2,650kcal   101% ✅
+P          140g       136g        103% ✅
+F           81g        74g        109%
+C          357g       361g         99% ✅
+食物繊維    29g         25g        116% ✅
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
