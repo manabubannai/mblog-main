@@ -255,6 +255,10 @@ Lunch 13:00 MK Restaurant
 - Coconut Juice
 → 818kcal / P:41g / F:8g / C:133g / Fiber:8g
 
+Dinner
+- TOFUSAN No Sugar Added Organic Soymilk 250ml
+→ 110kcal / P:12g / F:4.5g / C:6g / Fiber:3g
+
 ■ Note
 またスマホを断捨離してみる？
 
