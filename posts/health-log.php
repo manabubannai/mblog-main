@@ -261,7 +261,15 @@ Dinner
 - 卵 3個
 - 白米 200g
 - 納豆 1パック（45g）+ キムチ 50g
-→ 900kcal / P:48g / F:24.5g / C:129g / Fiber:13.5g
+
+Dinner 2（Healthy Junk Protein Bowl）
+- Salmon 200g Raw Weight（Air Fried）
+- 100g Cooked Carrot
+- 150g Mashed Sweet Potato（20g Butter）
+- 100g Jasmine Rice
+- 60g Cooked Air Fry Pumpkin
+- Seasoning: Salt Pepper
+→ 1,641kcal / P:82g / F:55.5g / C:197g / Fiber:21g
 
 ■ Note
 またスマホを断捨離してみる？
