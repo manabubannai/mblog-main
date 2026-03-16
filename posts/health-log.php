@@ -280,6 +280,41 @@ Dinner 2（Healthy Junk Protein Bowl）
 - Seasoning: Salt Pepper
 → 1,641kcal / P:82g / F:55.5g / C:197g / Fiber:21g
 
+■ Back Day
+✓ 目標設定メモ
+2. Deadlift 120kgを2回目標
+3. Bent Over Rowing Machine 90kgにチャレンジ
+4. T-Bar Row 40kgで12repを綺麗に
+5. Lat Pull Down 限界までストレッチさせる。腕を伸ばし切る
+
+1. Chinning
+   10 / 10 / 10
+
+2. Deadlift
+   40kg + Bar(20kg) x 10
+   60kg + Bar(20kg) x 4
+   100kg + Bar(20kg) x 4
+
+3. Bent Over Rowing Machine
+   40kg × 10
+   70kg × 10
+   100kg × 4
+   100kg × 4
+   90kg × 6
+   80kg × (6+1c)
+   *note: 腕を伸ばし切るまでストレッチする
+   *note: この時点で背中のパンプが少なかったので、更に攻めれる
+
+4. T-Bar Row
+   40kg × 10
+   40kg × (7+3c)
+   *note: フォームを意識したら、この数字になった
+
+5. Lat Pull Down
+   54kg × (8+2c)
+   54kg × 6 → 47kg × 3
+   47kg × 6 → 40kg × (2+2c)
+
 ■ Daily Summary
 食事    実績         目標         達成率
 カロリー    3,285kcal  2,650kcal   124% ✅
