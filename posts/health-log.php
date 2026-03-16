@@ -246,6 +246,15 @@ NAC 500 mg (Thorne)
   <h2># 2026-03-16</h2>
   <pre>
 ■ Food
+Breakfast 8:40
+- バナナ 2本
+- 卵 3個
+- 白米 200g
+- キムチ 40g
+- 納豆 1パック（45g）
+- ジンジャーハニーティー
+→ 826kcal / P:34g / F:19.5g / C:132g / Fiber:10.5g
+
 Lunch 13:00 MK Restaurant
 - MK Roasted Duck with Rice（皮なし）
 - Congee お椀1杯（全粥 ~250g）
@@ -273,11 +282,16 @@ Dinner 2（Healthy Junk Protein Bowl）
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    2,459kcal  2,650kcal    93%
-P          123g       136g         90%
-F           64g        74g         86%
-C          330g       361g         91%
-食物繊維    29g         25g        116%
+カロリー    3,285kcal  2,650kcal   124% ✅
+P          157g       136g        115% ✅
+F           83g        74g        112% ⚠️
+C          462g       361g        128% ✅
+食物繊維    40g         25g        158% ✅
+
+■ Substances
+- Cannabis Indica 0.4g（1:16）
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 3カプセル（朝食時）
 
 ■ Note
 またスマホを断捨離してみる？
