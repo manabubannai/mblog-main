@@ -271,6 +271,14 @@ Dinner 2（Healthy Junk Protein Bowl）
 - Seasoning: Salt Pepper
 → 1,641kcal / P:82g / F:55.5g / C:197g / Fiber:21g
 
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー    2,459kcal  2,650kcal    93%
+P          123g       136g         90%
+F           64g        74g         86%
+C          330g       361g         91%
+食物繊維    29g         25g        116%
+
 ■ Note
 またスマホを断捨離してみる？
 
