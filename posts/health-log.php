@@ -258,7 +258,9 @@ Lunch 13:00 MK Restaurant
 Dinner
 - TOFUSAN No Sugar Added Organic Soymilk 250ml
 - バナナ 2本
-→ 320kcal / P:17g / F:5.5g / C:60g / Fiber:9g
+- 卵 3個
+- 白米 200g
+→ 790kcal / P:40g / F:20.5g / C:118g / Fiber:9.5g
 
 ■ Note
 またスマホを断捨離してみる？
