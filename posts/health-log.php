@@ -248,12 +248,12 @@ NAC 500 mg (Thorne)
 ■ Food
 Lunch 13:00 MK Restaurant
 - MK Roasted Duck with Rice（皮なし）
-- Congee お椀1杯（~250g）
+- Congee お椀1杯（全粥 ~250g）
 - Wakame（しゃぶしゃぶ）
 - King of Oyster Mushrooms（しゃぶしゃぶ）
 - Enokitake Mushrooms（しゃぶしゃぶ）
 - Coconut Juice
-→ 750kcal / P:41g / F:8g / C:119g / Fiber:8g
+→ 818kcal / P:41g / F:8g / C:133g / Fiber:8g
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
