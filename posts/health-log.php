@@ -243,6 +243,21 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-16</h2>
+  <pre>
+■ Food
+Lunch 13:00 MK Restaurant
+- MK Roasted Duck with Rice（皮なし）
+- Congee
+- Wakame（しゃぶしゃぶ）
+- King of Oyster Mushrooms（しゃぶしゃぶ）
+- Enokitake Mushrooms（しゃぶしゃぶ）
+- Coconut Juice
+→ 880kcal / P:50g / F:10g / C:128g / Fiber:7g
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-15</h2>
   <pre>
 ■ Food
