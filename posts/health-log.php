@@ -31,105 +31,18 @@ require dirname(__DIR__) . '/header.php';
 <div>
 
 
-  <!-- Supplement Stack Section -->
-  <div class="health-section hs-box hs-gray">
-    <p class="hs-title">💊 僕が飲んでいるサプリ一覧</p>
-    <p style="font-size: 13px; color: #888; margin-bottom: 16px;">毎朝、朝食と一緒に摂取しています。<br>※アフィリエイトリンクですが、利用者に割引が入るので使っています。使いたくない場合は、商品名で検索してください🙋‍♂️</p>
-    <table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7;">
-      <tr style="border-bottom: 1px solid #e0e0e0;">
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">1. マルチビタミン</td>
-        <td style="padding: 10px 0 10px 16px;">
-          <a href="https://www.iherb.com/pr/thorne-multi-vitamin-elite-a-m-p-m-2-bottles-90-capsules-each/71156?rcode=AOK5109" target="_blank">Thorne Multi-Vitamin Elite AM &amp; PM</a><br>
-          <span style="color: #666;">ベースとなるマルチビタミン。AM（朝用）は細胞エネルギー産生をサポート、PM（夜用）は睡眠の質を向上。Thorneは医療グレードの品質で信頼性が高い。</span>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid #e0e0e0;">
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">2. オメガ3</td>
-        <td style="padding: 10px 0 10px 16px;">
-          <a href="https://www.iherb.com/pr/nordic-naturals-ultimate-omega-lemon-60-soft-gels-640-mg-per-soft-gel/43654?rcode=AOK5109" target="_blank">Nordic Naturals Ultimate Omega（1280mg）</a><br>
-          <span style="color: #666;">EPA/DHAで抗炎症・脳機能サポート。心臓血管の健康維持にも。Nordic Naturalsはフィッシュオイルブランドで全米No.1。</span>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid #e0e0e0;">
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">3. NMN</td>
-        <td style="padding: 10px 0 10px 16px;">
-          <a href="https://www.iherb.com/pr/prohealth-longevity-nmn-pro-complete-120-capsules/127502?rcode=AOK5109" target="_blank">ProHealth NMN Pro Complete</a>（NMN 1g / Resveratrol 1g / TMG 0.5g）<br>
-          <span style="color: #666;">アンチエイジングの最前線。NMNがNAD+を補充し細胞のエネルギー産生を回復。レスベラトロールが長寿遺伝子（サーチュイン）を活性化。TMGがメチル化をサポート。この3つの組み合わせがポイント。</span>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid #e0e0e0;">
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">4. クレアチン</td>
-        <td style="padding: 10px 0 10px 16px;">
-          <a href="https://www.iherb.com/pr/thorne-creatine-16-oz-450-g/70006?rcode=AOK5109" target="_blank">Thorne Creatine（5g/日）</a><br>
-          <span style="color: #666;">筋力・筋肉量の増加をサポート。実はバルクアップだけでなく、脳のエネルギー産生にも効果があり認知機能も向上する。最も研究エビデンスが豊富なサプリの1つ。</span>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid #e0e0e0;">
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">5. コラーゲン</td>
-        <td style="padding: 10px 0 10px 16px;">
-          <a href="https://www.iherb.com/pr/great-lakes-gelatin-co-collagen-hydrolysate-beef-16-oz-454-g/52774?rcode=AOK5109" target="_blank">Great Lakes Collagen Peptides（20g/日）</a><br>
-          <span style="color: #666;">肌・髪・爪・関節のサポート。グラスフェド牛由来で品質が高い。ビタミンC（レモン汁）と一緒に摂ることでコラーゲン合成が促進される。</span>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 10px 0; font-weight: bold; vertical-align: top; white-space: nowrap;">6. レモン汁</td>
-        <td style="padding: 10px 0 10px 16px;">
-          レモン汁（大さじ1）を水に溶かして<br>
-          <span style="color: #666;">クエン酸がサプリに含まれる非ヘム鉄の吸収率を向上。ビタミンCがコラーゲン合成を促進。朝一番にサプリと一緒に飲む。</span>
-        </td>
-      </tr>
-    </table>
-  </div>
+<pre>
+■目標①：バルクアップ
+数字：67kg、体脂肪10~12%
+期限：2026年12月
+開始：2026年1月
 
-<div class="body-comparison">
-  <div class="bc-card">
-    <div class="bc-photo">
-      <img src="/img/body-now-2026.jpg?v=2" alt="Mar 2026">
-    </div>
-    <div class="bc-body">
-      <div class="bc-label">Now</div>
-      <div class="bc-date">Mar 2026</div>
-      <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">62.6 kg</span></li>
-        <li><span>目標</span><span class="bc-val">バルクアップ</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="bc-card bc-goal">
-    <div class="bc-photo">
-      <img src="/img/body-goal-2027.jpg" alt="Goal Feb 2027">
-    </div>
-    <div class="bc-body">
-      <div class="bc-label">Goal</div>
-      <div class="bc-date">Feb 2027</div>
-      <ul class="bc-stats">
-        <li><span>体重</span><span class="bc-val">67 kg</span></li>
-        <li><span>体脂肪</span><span class="bc-val">10%</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  <!-- 
-下記は、サプリが届いたら記載する
-■ Substances
-
-1. Foundation
-Omega3 EPA+DHA 1280 mg (Nordic)
-Multi-Vitamin Elite (Thorne)
-
-2. Performance
-Creatine 5g (Thorne)
-Collagen 20g (Great Lakes)
-Ginseng 3600 mg (Jung Kwan Jang)
-Ashwagandha 300 mg (Jarrow)
-
-3. Longevity
-NMN 1g / Res 1g / TMG 0.5g (ProHealth)
-Calcium AKG 700 mg (Codeage)
-Curcumin 500 mg (Thorne)
-NAC 500 mg (Thorne)
--->
+■目標②：Beingの最大化
+数字：毎日1時間半のMeditation
+理由：最もCompassionとCreativityが高まった時期のルーティンだから
+期限：なし（無期限）
+開始：2026年3月13日
+</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
