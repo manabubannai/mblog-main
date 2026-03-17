@@ -39,7 +39,7 @@ require dirname(__DIR__) . '/header.php';
 開始：2026年1月
 
 ■目標②：Beingの最大化
-数字：毎日1時間半のMeditation
+数字：毎日1時間のMeditation
 理由：最もCompassionとCreativityが高まった時期のルーティンだから
 期限：なし（無期限）
 開始：2026年3月13日
@@ -255,7 +255,7 @@ AIに聞いてばかりで、自分の思考が減る。
 ・自分の目標①：バルクアップ
   └ 目標の数字と期日
 ・自分の目標②：Beingの最大化
-  └ 毎日1時間半のMeditation
+  └ 毎日1時間のMeditation
   └ 理由：最もCompassionとCreativityが高まっていた期間のルーティン
 → 目標は最大2つまで（健康カテゴリの目標のみ）
 
