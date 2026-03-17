@@ -271,6 +271,10 @@ Lunch 2 16:00 カオマンガイ×2
 - きゅうり少し×2
 - 鴨の血 7g×2
 → 848kcal / P:50g / F:5g / C:146g / Fiber:1g
+
+■ Note
+明日から、このストレッチを試す
+https://zenmontpellier.net/eng/lotus/lotuseng.html
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
