@@ -97,7 +97,7 @@ C          379g       361g        105% ✅
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 1カプセル（朝食後）
 - NMN PRO COMPLETE POWDER 1スクープ（朝食後）
-- Cannabis 0.8g（12:00）
+- Cannabis 0.8g（22:00）
 - 整腸剤 1カプセル（昼食後）
 - Cannabis 1g（16:00）
 
