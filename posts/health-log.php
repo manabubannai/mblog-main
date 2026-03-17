@@ -93,6 +93,10 @@ F           69g        74g         93%
 C          379g       361g        105% ✅
 食物繊維    21g         25g         84%
 
+■ Substances
+- Cannabis 0.8g（12:00）
+- Cannabis 1g（16:00）
+
 ■ Note
 明日から、このストレッチを試す
 https://zenmontpellier.net/eng/lotus/lotuseng.html
