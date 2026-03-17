@@ -245,6 +245,12 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-03-16</h2>
   <pre>
+■ Body Check Day
+<img src="img/health-log/20260316_front.jpg?v=1" alt="Body Check 2026-03-16 Front">
+<img src="img/health-log/20260316_side.jpg?v=1" alt="Body Check 2026-03-16 Side">
+<img src="img/health-log/20260316_back.jpg?v=1" alt="Body Check 2026-03-16 Back">
+*source: https://mblog.com/img/health-log/20260316_front.jpg
+
 ■ Food
 Breakfast 8:40
 - バナナ 2本
@@ -273,12 +279,11 @@ Dinner
 
 Dinner 2（Healthy Junk Protein Bowl）
 - Salmon 200g Raw Weight（Air Fried）
-- 100g Cooked Carrot
-- 150g Mashed Sweet Potato（20g Butter）
+- 50g Cooked Carrot
+- 75g Mashed Sweet Potato（20g Butter）
 - 100g Jasmine Rice
-- 60g Cooked Air Fry Pumpkin
 - Seasoning: Salt Pepper
-→ 1,641kcal / P:82g / F:55.5g / C:197g / Fiber:21g
+→ 636kcal / P:33g / F:31g / C:48g / Fiber:3.5g
 
 ■ Back Day
 ✓ 目標設定メモ
@@ -317,11 +322,11 @@ Dinner 2（Healthy Junk Protein Bowl）
 
 ■ Daily Summary
 食事    実績         目標         達成率
-カロリー    3,285kcal  2,650kcal   124% ✅
-P          157g       136g        115% ✅
+カロリー    3,180kcal  2,650kcal   120% ✅
+P          156g       136g        115% ✅
 F           83g        74g        112% ⚠️
-C          462g       361g        128% ✅
-食物繊維    40g         25g        158% ✅
+C          442g       361g        122% ✅
+食物繊維    36g         25g        142% ✅
 
 ■ Substances
 - Cannabis Indica 0.4g（1:16）
