@@ -243,6 +243,38 @@ NAC 500 mg (Thorne)
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-17</h2>
+  <pre>
+■ Food
+Breakfast 10:00
+- バナナ 1本
+- ジンジャーハニーティー
+- ヨーグルト 80g
+- オーツ 30g
+- チアシード 10g
+- 蜂蜜 13g
+- パッションフルーツ 1個（10g）
+→ 404kcal / P:12g / F:7g / C:80g / Fiber:10g
+
+Lunch 12:00
+- 卵 1個
+- 納豆 1パック（45g）
+- キムチ 50g
+- 豆腐 200g
+- ライス 250g
+- TOFUSAN No Sugar Added Organic Soymilk 250ml
+→ 735kcal / P:44g / F:20.5g / C:94g / Fiber:8g
+
+Lunch 2 16:00 カオマンガイ×2
+- ライス 200g×2
+- 蒸し鶏 82g×2
+- きゅうり少し×2
+- 鴨の血 7g×2
+→ 848kcal / P:50g / F:5g / C:146g / Fiber:1g
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-16</h2>
   <pre>
 ■ Body (Withings Body Scan) — 07:56
