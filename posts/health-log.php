@@ -272,6 +272,23 @@ Lunch 2 16:00 カオマンガイ×2
 - 鴨の血 7g×2
 → 848kcal / P:50g / F:5g / C:146g / Fiber:1g
 
+Dinner 20:00 Healthy Junk
+- パッションフルーツソーダ
+- サーモン 70g（Air Fried）
+- ビーフ 100g（Air Fried）
+- 75g Mashed Sweet Potato（20g Butter）
+- 100g Jasmine Rice
+- Seasoning: Salt Pepper
+→ 739kcal / P:38g / F:36.5g / C:59g / Fiber:2g
+
+■ Daily Summary
+食事    実績         目標         達成率
+カロリー    2,726kcal  2,650kcal   103% ✅
+P          144g       136g        106% ✅
+F           69g        74g         93%
+C          379g       361g        105% ✅
+食物繊維    21g         25g         84%
+
 ■ Note
 明日から、このストレッチを試す
 https://zenmontpellier.net/eng/lotus/lotuseng.html
