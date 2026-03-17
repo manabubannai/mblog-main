@@ -245,6 +245,30 @@ NAC 500 mg (Thorne)
 
   <h2># 2026-03-16</h2>
   <pre>
+■ Body (Withings Body Scan) — 07:56
+- Weight: 63.49 kg
+- Fat Mass: 5.72 kg（Fat Ratio: 9.0%）
+- Fat Free Mass: 57.53 kg
+- Muscle Mass: 54.62 kg
+- Bone Mass: 2.96 kg
+- Hydration: 41.96 kg
+- Visceral Fat Index: 1.2
+- Pulse Wave Velocity (PWV): 5.875 m/s
+
+■ Sleep (Oura Ring) — 2026-03-16 23:38 → 2026-03-17 08:01
+- Total: 7時間40分
+- Deep: 1時間03分 / REM: 1時間27分
+- Efficiency: 92%
+- HRV avg: 57ms / Resting HR: 54bpm
+- Score: 90（翌朝のReadiness）
+
+■ Readiness (Oura Ring)
+- Readiness: 76（当日朝）
+
+■ Meditation (Oura Ring)
+- Session 1: 10:09→11:09（60分）/ HR avg: ~68bpm / HRV avg: ~37ms
+- Session 2: 20:27→20:58（30分）/ HR avg: ~75bpm / HRV avg: ~33ms
+
 ■ Body Check Day
 <img src="img/health-log/20260316_front.jpg?v=1" alt="Body Check 2026-03-16 Front">
 <img src="img/health-log/20260316_side.jpg?v=1" alt="Body Check 2026-03-16 Side">
