@@ -94,12 +94,22 @@ C          379g       361g        105% ✅
 食物繊維    21g         25g         84%
 
 ■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 1カプセル（朝食後）
+- NMN PRO COMPLETE POWDER 1スクープ（朝食後）
 - Cannabis 0.8g（12:00）
+- 整腸剤 1カプセル（昼食後）
 - Cannabis 1g（16:00）
 
 ■ Note
 明日から、このストレッチを試す
 https://zenmontpellier.net/eng/lotus/lotuseng.html
+
+ログを取りつつ、栄養学の基礎を学んでいきたい。AIに伝える。
+
+腸が回復してきたので、NMNから、まずは再開する。
+
+マッサージを入れるなら、17時くらいが良い。理由：この時間からストレスが上がるから。逆に、それ以外の時間では、「マッサージ ＜ 作業」になる。効率化と最適化の話。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
