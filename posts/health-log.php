@@ -217,6 +217,9 @@ C          442g       361g        122% ✅
 - Cannabis Indica 0.4g（1:16）
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 3カプセル（朝食時）
+- Cannabis Indica 0.3g（18:30）
+- 整腸剤 1粒（夕食後）
+- Cannabis Indica 0.8g（22:30）
 
 ■ Note
 またスマホを断捨離してみる？
