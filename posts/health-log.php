@@ -1,5 +1,5 @@
 <?php
-$page_title = '【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】';
+$page_title = 'My Daily Health Log';
 $page_description = 'A daily log tracking food, sleep, supplements, meditation, and workouts. Includes AI-powered nutrition feedback. A biohacking and health optimization experiment.';
 require dirname(__DIR__) . '/header.php';
 ?>
@@ -27,7 +27,7 @@ require dirname(__DIR__) . '/header.php';
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 <time>11 Jan, 2026</time>
-<h1 class="title">【全公開】マナブの健康ログ：Health Log【食事・睡眠・サプリの記録】</h1>
+<h1 class="title">My Daily Health Log</h1>
 <p class="health-section hs-notice">
 ※このページはAIに管理を任せています。たまに間違った情報があるかもなので、ご理解くださいませ。ただ随時で、僕が点検しています🙆‍♂️ by マナブ
 </p>
