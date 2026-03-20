@@ -50,8 +50,8 @@ require dirname(__DIR__) . '/header.php';
   <h2># 2026-03-20</h2>
   <pre>
 ■ Body (Withings Body Scan) — 01:03
-- Weight: 63.22 kg（7日平均 63.13kg / +0.09kg）
-- Muscle Mass: 55.06 kg（7日平均 54.97kg / +0.09kg）
+- Weight: 63.22 kg（直近７日の平均：63.13kg、増加率：+0.14%）
+- Muscle Mass: 55.06 kg（直近７日の平均：54.97kg、増加率：+0.16%）
 
 ■ Sleep (Oura Ring)
 - Total: 6時間07分
