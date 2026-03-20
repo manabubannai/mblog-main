@@ -48,7 +48,7 @@ hr { background: rgba(0,0,0,0.15); height: 1px; border: 0; margin: 25px 0; }
 img.logo { max-width: 120px; margin: 12px 0 25px; display: block; }
 
 /* English Article */
-h1.title { font-size: 27px; font-weight: 600; margin: 25px 0 27px; color: #454545; }
+h1.title { font-size: 32px; font-weight: 600; margin: 25px 0 27px; color: #454545; margin-top: 70px; }
 h2, h3 { font-weight: 600; }
 p { font-size: 17px; line-height: 1.75; }
 ul {
