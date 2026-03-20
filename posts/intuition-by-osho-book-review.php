@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>22 Dec, 2025</time>
 <h1 class="title">Intuition by OSHO (Book Review) — Why Intuition Matters in the Age of AI</h1>
 <img src="/img/intuition-by-osho-book-review.jpg">
 <p>I realized how foolish I was. <a href="https://www.amazon.com/dp/0312275676" target="new">This book</a> made me realize that I had not really seen anything with my own eyes.</p>

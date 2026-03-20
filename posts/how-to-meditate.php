@@ -8,7 +8,6 @@ require dirname(__DIR__) . '/header.php';
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 
 <div class="jp-article">
-<time>17 Feb, 2026</time>
 <h1 class="title">【挫折OK】瞑想のやり方【5億円を稼ぎ、心が壊れた僕の治し方】</h1>
 
 <p>こんにちは、マナブです。<br>

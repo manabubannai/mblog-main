@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>19 Feb, 2026</time>
 <h1 class="title">How to Run OpenClaw Safely — Hetzner VPS + Tailscale Setup</h1>
 
 <p>OpenClaw is a game changer. It is worth understanding.</p>

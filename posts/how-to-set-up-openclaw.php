@@ -7,7 +7,6 @@ require dirname(__DIR__) . '/header.php';
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 
 <div class="jp-article">
-<time>11 Feb, 2026</time>
 <h1 class="title">OpenClawの設定方法 — VPS＋Tailscaleで安全に動かす手順</h1>
 
 <p>OpenClawはゲームチェンジャーだと思う。<br>こういった技術はベースから理解することが大切。</p>

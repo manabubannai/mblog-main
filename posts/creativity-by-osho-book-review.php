@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>27 Feb, 2026</time>
 <h1 class="title">【Book Review】Creativity by OSHO【My Personal Note】</h1>
 <img src="/img/creativity-by-osho-book-review.jpg?v=8">
 

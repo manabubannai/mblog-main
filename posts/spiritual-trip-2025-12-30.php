@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>31 Dec, 2025</time>
 <h1 class="title">My Reflection on a Spiritual Trip (Personal Note)</h1>
 
 <p>Spiritual Trip — December 30, 2025</p>

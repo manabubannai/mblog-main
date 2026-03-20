@@ -100,7 +100,7 @@ a { flex: 1; }
 .jp-article blockquote p::before { content: "\00BB  "; }
 .jp-article a { color: #337ab7; text-decoration: underline; }
 .jp-article img { max-width: 75%; margin: auto auto 25px; }
-.jp-article time { display: none; }
+.jp-article time { font-size: 16.5px; margin-bottom: 20px; display: block; }
 .jp-article hr { background: rgba(0,0,0,0.1); margin: 30px 0; }
 .jp-article table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
 .jp-article th { background: #f5f5f5; font-weight: 600; text-align: left; padding: 10px 14px; border: 1px solid #e0e0e0; }
@@ -168,6 +168,7 @@ a { flex: 1; }
   .jp-article ul, .jp-article ol { font-size: 15.2px; line-height: 2; margin: 22px 0 30px; }
   .jp-article blockquote { margin: 15px 0 22px; }
   .jp-article blockquote p { font-size: 15.5px; }
+  .jp-article time { font-size: 12px; margin-bottom: 10px; }
   .jp-article img { max-width: 95%; }
   .jp-article table { font-size: 13px; }
   .jp-article th, .jp-article td { padding: 8px 10px; }

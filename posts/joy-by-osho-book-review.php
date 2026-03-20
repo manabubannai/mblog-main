@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>28 Dec, 2025</time>
 <h1 class="title">Joy by OSHO (Book Review) — Five Million Dollars Made Me Unhappy</h1>
 <img src="/img/joy-by-osho-book-review.jpg">
 

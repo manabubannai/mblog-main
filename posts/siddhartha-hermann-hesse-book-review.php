@@ -5,7 +5,6 @@ require dirname(__DIR__) . '/header.php';
 ?>
 
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
-<time>4 Jan, 2026</time>
 <h1 class="title">Siddhartha (Hermann Hesse) — Book Review for Burned-Out Entrepreneurs</h1>
 <img src="/img/siddhartha-hermann-hesse-book-review.jpg">
 <p><a href="https://www.amazon.com/dp/0812416643" target="new">This book</a> reminded me of my early days as an entrepreneur.</p>

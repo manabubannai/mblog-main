@@ -8,7 +8,6 @@ require dirname(__DIR__) . '/header.php';
 <a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
 
 <div class="jp-article">
-<time>8 Mar, 2026</time>
 <h1 class="title">国民の９割が貧しくなる時代</h1>
 
 <p>こんにちは、マナブです。<br>
