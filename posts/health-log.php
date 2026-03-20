@@ -65,9 +65,34 @@ require dirname(__DIR__) . '/header.php';
 - HRV: 63ms / HR: 51bpm
 - Sleep Score: 70 / Readiness: 84
 
+■ Food
+Breakfast 8:30
+- パイナップル 100g
+- 卵 3個
+- 白米 110g
+→ 445kcal / P:21g / F:15g / C:57g / Fiber:2g
+
+Lunch 12:20
+- オーツ 51g
+- ヨーグルト 10g
+- はちみつ 15g
+- パッションフルーツ 2個
+- くるみ 16g
+- バナナ 85g
+- チアシード 5g
+→ 568kcal / P:14g / F:17g / C:97g / Fiber:20g
+
+■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 1カプセル（朝食後）
+- 整腸剤 1カプセル（昼食後）
+- NMN PRO COMPLETE POWDER 1スクープ（昼食後）
+
 ■ Note
 筋肉留学を検討する。
 AI時代は、月100万円くらいの事業を複数作るのがいいかも
+日常の行動を、全てMeditationにする
+次のことは何も考えない → Action Totally
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
