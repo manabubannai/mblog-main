@@ -156,16 +156,16 @@ a { flex: 1; }
 
 /* Mobile */
 @media (max-width: 480px) {
-  img.logo { max-width: 120px; }
+  img.logo { max-width: 110px; }
   ul.toppage li { padding: 5px 0; }
   .pc-br { display: none; }
   .sp-br { display: block; margin-bottom: 15px; }
-  .jp-article h1.title { font-size: 22px; margin-bottom: 25px; }
+  .jp-article h1.title { font-size: 23px; margin-bottom: 25px; margin-top: 60px; }
   .jp-article h2 { font-size: 19px; }
   .jp-article h3 { font-size: 17px; }
   .jp-article h4 { font-size: 16px; }
-  .jp-article p { font-size: 15.5px; line-height: 1.6; margin: 12px 0 25px; }
-  .jp-article ul, .jp-article ol { font-size: 15.2px; line-height: 1.7; margin: 12px 0 25px; }
+  .jp-article p { font-size: 15.5px; line-height: 2; margin: 22px 0 30px; }
+  .jp-article ul, .jp-article ol { font-size: 15.2px; line-height: 2; margin: 22px 0 30px; }
   .jp-article blockquote { margin: 15px 0 22px; }
   .jp-article blockquote p { font-size: 15.5px; }
   .jp-article time { font-size: 12px; margin-bottom: 10px; }
