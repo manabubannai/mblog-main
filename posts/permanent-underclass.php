@@ -83,6 +83,16 @@ require dirname(__DIR__) . '/header.php';
 
 <p>マナブ</p>
 
+<hr>
+<p id="ps"><i>※追記：2026年3月14日<br>
+色々と考えたのですが、アプリは閉鎖します。</i></p>
+<blockquote><p>Software will proliferate just as videos, music, writing did. The market structure will shift from a "fat middle" to mega-aggregators and a long tail.</p></blockquote>
+<p><a href="https://x.com/naval/status/2030679094623707600" target="_blank">要約</a>すると「近未来ではアプリやWebサービスが、CDや音楽や記事と同じくらい溢れる」です。誰でも１秒でWebサービスを作れる時代。その未来で生き残ることは難しいです。</p>
+<ul>
+<li>開発したサービス：<a href="https://taberu-kun.com/" target="_blank">食べる君</a>（食事のログアプリ。AI連携しており、食事分析と栄養フィードバックが可能。新規登録は廃止済み🙇‍♂️）</li>
+</ul>
+<p>結局のところ、やることがない時代です。筋トレを頑張りつつ、最近は30分になっていた瞑想を、毎日１時間に戻します。以上です🧘</p>
+
 </div>
 
 <?php require dirname(__DIR__) . '/footer.php'; ?>
