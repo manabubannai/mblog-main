@@ -47,6 +47,45 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-19</h2>
+  <pre>
+■ Body (Withings Body Scan) — 00:59
+- Weight: 62.65 kg
+- Fat Mass: 4.84 kg（Fat Ratio: 7.73%）
+- Fat Free Mass: 57.81 kg
+- Muscle Mass: 54.89 kg
+- Bone Mass: 2.92 kg
+- Hydration: 41.76 kg
+- Visceral Fat Index: 1.2
+
+■ Sleep (Oura Ring) — 2026-03-19 03:30 → 2026-03-19 11:12
+- Total: 6時間33分
+- Deep: 0時間39分 / REM: 1時間19分
+- Efficiency: 85%
+- HRV: 44ms / HR: 60bpm
+- Sleep Score: 61 / Readiness: 68
+
+■ Food
+Breakfast 11:30
+- 白米 180g
+- パイナップル 100g
+- ジンジャーハニーティー
+- 豆腐 200g
+- パッションフルーツ 1個
+→ 575kcal / P:16g / F:8g / C:109g / Fiber:8g
+
+■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 1カプセル（前夜ディナー後）
+- 胃薬 3カプセル（前夜ディナー後）
+- NMN PRO COMPLETE POWDER 1スクープ（朝食後）
+
+■ Note
+昨夜は焼肉の油と、その後の酒のせいで帰宅後に吐いた
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-18</h2>
   <pre>
 ■ Food
