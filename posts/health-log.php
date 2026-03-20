@@ -85,17 +85,33 @@ Lunch 2
 - 白米 190g
 → 1,186kcal / P:79g / F:48g / C:101g / Fiber:4g
 
+Dinner 20:30
+- Chicken Breast 200g（Air Fried）
+- Salt & Pepper
+- Mashed Sweet Potato 150g（Butter 20g）
+- Jasmine Rice 100g
+- Black Olive 20g
+→ 761kcal / P:67g / F:26g / C:60g / Fiber:6g
+
 ■ Daily Summary
 食事          実績         目標         達成率
-カロリー    2,199kcal   3,000kcal      73% 📉
-P             114g        140g          81% 📉
-F              80g         80g         100%
-C             255g        430g          59% 📉
-食物繊維       26g         28g          93%
-亜鉛           10mg        11mg         91%
-マグネシウム   335mg       400mg         84% 📉
+カロリー    2,960kcal   3,000kcal      99%
+P             181g        140g         129% ✅
+F             106g         80g         133% ⚠️
+C             315g        430g          73% 📉
+食物繊維       32g         28g         114%
+亜鉛           13mg        11mg        118%
+マグネシウム   456mg       400mg        114%
 ビタミンD   1,200IU     2,000IU         60% 📉
-クレアチン      1.5g         5g          30% 📉
+クレアチン      2.2g         5g          44% 📉
+
+■ マナブの1日（AIが行動ログから生成）
+08:03 Withings計測。63.22kg / 筋肉量55.06kg。
+08:30 朝食。パイナップル・卵・白米。
+12:20 昼食。オーツ+フルーツボウル。
+13:00 第2ランチ（推定）。サーモン360g・白米190g。
+20:30 夕食。チキンブレスト（エアフライ）・スイートポテト・ジャスミンライス。
+この日の一言：「日常の行動を、全てMeditationにする。」
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
