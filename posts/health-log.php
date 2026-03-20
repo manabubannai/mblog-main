@@ -147,10 +147,6 @@ Lunch 2
 - Bike: 30 Calories
 - Rest: 3分 → 3セット（35分以内）
 
-Intra-Workout
-- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
-→ 120kcal / P:18g / F:5g / C:0g / Fiber:0g
-
 After Workout 18:00
 - バナナ 3本
 - TOFUSAN No Sugar Added Organic Soymilk 276ml
@@ -169,9 +165,9 @@ Dinner 2 23:40
 
 ■ Daily Summary
 食事          実績         目標         達成率
-カロリー    3,843kcal   3,000kcal     128% ✅
-P             194g        140g         139% ✅
-F              95g         80g         119% ⚠️
+カロリー    3,723kcal   3,000kcal     124% ✅
+P             176g        140g         126% ✅
+F              90g         80g         113% ⚠️
 C             544g        430g         127% ✅
 食物繊維       29g         28g         104% ✅
 亜鉛           12mg        11mg        109% ✅
