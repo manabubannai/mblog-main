@@ -45,7 +45,7 @@ img { max-width: 85%; margin: auto; display: block; }
 hr { background: rgba(0,0,0,0.15); height: 1px; border: 0; margin: 25px 0; }
 
 /* Logo */
-img.logo { max-width: 130px; margin: 12px 0 25px; display: block; }
+img.logo { max-width: 120px; margin: 12px 0 25px; display: block; }
 
 /* English Article */
 h1.title { font-size: 27px; font-weight: 600; margin: 25px 0 27px; color: #454545; }
@@ -82,7 +82,7 @@ a { flex: 1; }
   font-family: Noto, "Hiragino Sans", "Noto Sans JP", Helvetica, Arial, sans-serif;
   line-height: 2;
 }
-.jp-article h1.title { font-size: 26px; font-weight: 600; margin: 0 0 40px; line-height: 1.7; }
+.jp-article h1.title { font-size: 30px; font-weight: 600; margin: 0 0 40px; line-height: 1.7; margin-top: 80px; }
 .jp-article h2 { font-size: 24px; font-weight: 600; margin: 40px 0 15px; line-height: 1.7; }
 .jp-article h2::before { content: "\25A0  "; font-family: system-ui; }
 .jp-article h3 { font-size: 21px; font-weight: 600; margin: 40px 0 15px; line-height: 1.7; }
