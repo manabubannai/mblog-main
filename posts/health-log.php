@@ -70,6 +70,31 @@ Lunch 14:00
 - カボチャ 90g
 → 780kcal / P:47g / F:27g / C:86g / Fiber:17g
 
+Lunch 2 16:30
+- バナナ 2本
+→ 172kcal / P:2g / F:0g / C:44g / Fiber:2g
+
+Dinner 19:00
+- うどん 半人前
+- 牛肉 1人前
+→ 361kcal / P:19g / F:19g / C:28g / Fiber:1g
+
+Late Night
+- TOFUSAN No Sugar Added Organic Soymilk 250ml
+→ 125kcal / P:10g / F:5g / C:9g / Fiber:0g
+
+■ Daily Summary
+食事          実績         目標         達成率
+カロリー    2,349kcal   3,000kcal      78% 📉
+P             112g        140g          80% 📉
+F              72g         80g          90%
+C             313g        430g          73% 📉
+食物繊維       30g         28g         107% ✅
+亜鉛           13mg        11mg        118% ✅
+マグネシウム   394mg       400mg         99%
+ビタミンD    1,160IU    2,000IU         58% 📉
+クレアチン      1.4g         5g          28% 📉
+
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 1カプセル（朝食後）
@@ -77,19 +102,7 @@ Lunch 14:00
 
 ■ Note
 大麻を1日1g以下にする
-
-■ Mid-Day Check（朝食＋ランチ時点）
-食事          実績        目標        達成率
-カロリー    1,691kcal   3,000kcal    56%
-P              81g        140g       58%
-F              48g         80g       60%
-C             232g        430g       54%
-食物繊維       27g         28g       96%
-亜鉛            7mg        11mg      64%
-マグネシウム   274mg       400mg      69%
-ビタミンD    1,200IU    2,000IU      60%
-クレアチン      1g          5g       20%
-
+今後は寝る前に、豆腐200g or TOFUSANドリンクを飲む
 
   </pre>
 
