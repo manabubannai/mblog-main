@@ -74,14 +74,58 @@ Breakfast 11:30
 - パッションフルーツ 1個
 → 575kcal / P:16g / F:8g / C:109g / Fiber:8g
 
+Lunch 14:30
+- 白米 200g
+- 蒸し鶏 82g
+- きゅうり 少し
+- 鴨の血 7g
+- ミニバナナ 3本（130g）
+→ 553kcal / P:28g / F:3g / C:105g / Fiber:2g
+
+Intra-Workout
+- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+→ 120kcal / P:18g / F:5g / C:0g / Fiber:0g
+
+After Workout 18:00
+- バナナ 3本
+- TOFUSAN No Sugar Added Organic Soymilk 276ml
+→ 396kcal / P:14g / F:6g / C:76g / Fiber:5g
+
+Dinner 20:00
+- パッションフルーツ 1個
+- 親子丼 1人前
+- 豚汁 1人前
+- 梅干し 2つ
+→ 845kcal / P:36g / F:25g / C:115g / Fiber:10g
+
+Dinner 2 23:40
+- 白米 100g
+→ 168kcal / P:3g / F:0g / C:38g / Fiber:0g
+
+■ Daily Summary
+食事          実績         目標         達成率
+カロリー    2,657kcal   3,000kcal      89% 📉
+P             115g        140g          82% 📉
+F              47g         80g          59% 📉
+C             443g        430g         103% ✅
+食物繊維       25g         28g          89%
+亜鉛            8mg        11mg         73%
+マグネシウム   395mg       400mg         99%
+ビタミンD      80IU     2,000IU          4% 📉
+クレアチン      0.7g         5g          14% 📉
+
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
 - 整腸剤 1カプセル（前夜ディナー後）
 - 胃薬 3カプセル（前夜ディナー後）
 - NMN PRO COMPLETE POWDER 1スクープ（朝食後）
+- 整腸剤 2カプセル（昼食後）
+- 胃薬 3カプセル（昼食後）
 
 ■ Note
 昨夜は焼肉の油と、その後の酒のせいで帰宅後に吐いた
+奥さんの体調の回復の為に、全力を注ぎたい。どう考えても、これ以上に大切な事はない。
+戦争中の世界において、自分が出来る事を考える。三島由紀夫あたりの著書を読むのも良さそう。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
