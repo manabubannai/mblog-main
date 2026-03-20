@@ -132,6 +132,13 @@ Lunch 14:30
 - ミニバナナ 3本（130g）
 → 553kcal / P:28g / F:3g / C:105g / Fiber:2g
 
+■ Workout（CrossFit）
+- Running: 800m
+- Kettlebell: 12kg × 30 rep
+- 腹筋: 30回
+- Bike: 30 Calories
+- Rest: 3分 → 3セット（35分以内）
+
 Intra-Workout
 - Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
 → 120kcal / P:18g / F:5g / C:0g / Fiber:0g
