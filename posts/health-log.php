@@ -90,17 +90,18 @@ Dinner 20:30
 - Salt & Pepper
 - Mashed Sweet Potato 150g（Butter 20g）
 - Jasmine Rice 100g
+- Jasmine Rice 77g
 - Black Olive 20g
-→ 761kcal / P:67g / F:26g / C:60g / Fiber:6g
+→ 861kcal / P:69g / F:26g / C:82g / Fiber:6g
 
 ■ Daily Summary
-🔥 kcal  ▓▓▓▓▓▓▓▓▓░  99%  2,960kcal
-💪 P     ▓▓▓▓▓▓▓▓▓▓ 129% ✅ 181g
+🔥 kcal  ▓▓▓▓▓▓▓▓▓▓ 102%  3,060kcal
+💪 P     ▓▓▓▓▓▓▓▓▓▓ 131% ✅ 183g
 🥑 F     ▓▓▓▓▓▓▓▓▓▓ 133% ⚠️ 106g
-🍚 C     ▓▓▓▓▓▓▓░░░  73% 📉 315g
+🍚 C     ▓▓▓▓▓▓▓▓░░  78% 📉 337g
 🌿 繊維   ▓▓▓▓▓▓▓▓▓▓ 114%  32g
 🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 118%  13mg
-⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 114%  456mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 116%  465mg
 ☀️ VitD ▓▓▓▓▓▓░░░░  60% 📉 1,200IU
 💊 Cr   ▓▓▓▓░░░░░░  44% 📉 2.2g
 
