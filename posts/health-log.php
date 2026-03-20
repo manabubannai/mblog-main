@@ -53,12 +53,13 @@ require dirname(__DIR__) . '/header.php';
 - Weight: 63.22 kg（7日平均 63.13kg / +0.09kg）
 - Muscle Mass: 55.06 kg（7日平均 54.97kg / +0.09kg）
 
-■ Sleep (Oura Ring) — 2026-03-20 00:42 → 2026-03-20 08:05
+■ Sleep (Oura Ring)
 - Total: 6時間07分
-- Deep: 1時間21分 / REM: 1時間11分
-- Efficiency: 83%
+- Readiness: 84
+- Sleep Score: 70
+- Deep: 1時間21分
+- REM: 1時間11分
 - HRV: 63ms / HR: 51bpm
-- Sleep Score: 70 / Readiness: 84
 
 ■ Food
 Breakfast 8:30
