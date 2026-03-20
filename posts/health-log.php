@@ -47,6 +47,31 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-20</h2>
+  <pre>
+■ Body (Withings Body Scan) — 01:03
+- Weight: 63.22 kg
+- Fat Mass: 5.23 kg（Fat Ratio: 8.27%）
+- Fat Free Mass: 57.98 kg
+- Muscle Mass: 55.06 kg
+- Bone Mass: 2.93 kg
+- Hydration: 41.59 kg
+- Visceral Fat Index: 1.2
+
+■ Sleep (Oura Ring) — 2026-03-20 00:42 → 2026-03-20 08:05
+- Total: 6時間07分
+- Deep: 1時間21分 / REM: 1時間11分
+- Efficiency: 83%
+- HRV: 63ms / HR: 51bpm
+- Sleep Score: 70 / Readiness: 84
+
+■ Note
+筋肉留学を検討する。
+AI時代は、月100万円くらいの事業を複数作るのがいいかも
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-19</h2>
   <pre>
 ■ Body (Withings Body Scan) — 00:59
