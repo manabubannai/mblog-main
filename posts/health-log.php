@@ -48,6 +48,18 @@ require dirname(__DIR__) . '/header.php';
 
   <h2># 2026-03-21</h2>
   <pre>
+■ Body (Withings Body Scan) — 08:03
+- Weight: 63.00 kg
+- Muscle Mass: 54.10 kg
+
+■ Sleep (Oura Ring)
+- Total: 8時間03分
+- Readiness: 81
+- Sleep Score: 83
+- Deep: 1時間30分
+- REM: 2時間06分
+- HRV: 44ms / HR: 55bpm
+
 ■ Food
 Breakfast 10:46
 - オーツ 50g
