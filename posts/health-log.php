@@ -46,6 +46,20 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-21</h2>
+  <pre>
+■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 整腸剤 2カプセル（朝食前）
+
+■ Note
+ブリブリで眠るとREMが減っている。22時以降は基本的に大麻はNG。
+朝イチで日光に10分ほど浴びた。上裸で全身に浴びた。AIに聞いたところ、これでビタミンDの2000IUくらい摂取できてそう。
+本当に体の為になるルーティンを考える。朝イチは日光。そして散歩。そして朝食からの、ストレッチ（軽めの）かな。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-20</h2>
   <pre>
 ■ Body (Withings Body Scan) — 08:03
