@@ -120,6 +120,9 @@ Dinner 20:30
 - 整腸剤 1カプセル（昼食後）
 - NMN PRO COMPLETE POWDER 1スクープ（昼食後）
 - 整腸剤 2カプセル（第2ランチ後）
+- 整腸剤 3カプセル（ディナー後）
+- Cannabis 21:00 Indica 0.7g
+- Cannabis 22:30 Indica 0.7g
 
 ■ Note
 筋肉留学を検討する。
@@ -127,6 +130,8 @@ AI時代は、月100万円くらいの事業を複数作るのがいいかも
 AI時代は、今までと考え方を変えて、月100万の事業を10個作るのも良さそう
 日常の行動を、全てMeditationにする
 次のことは何も考えない → Action Totally
+AIエージェント（完全匿名）で、Xのフォロワーを伸ばしてみる。
+中島聡さんにYouTubeコンサルを営業する(?) カメラの撮り方やサムネ
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
