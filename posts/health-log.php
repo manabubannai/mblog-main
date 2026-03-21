@@ -60,6 +60,10 @@ require dirname(__DIR__) . '/header.php';
 - REM: 2時間06分
 - HRV: 44ms / HR: 55bpm
 
+■ Meditation (Oura Ring)
+- 2026-03-20 11:10 → 12:10 BKK（約60分）
+- Avg HR: 61bpm / Avg HRV: 42ms
+
 ■ Food
 Breakfast 10:46
 - オーツ 50g
