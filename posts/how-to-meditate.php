@@ -115,7 +115,7 @@ require dirname(__DIR__) . '/header.php';
 
 <p>僕は自己流で瞑想を始め、間違いも多かった。本記事では、３年の経験で学んだ本質を書いた。この方法なら、もっと早く心が整うと思う。</p>
 
-<p>なお瞑想してみて疑問に思ったら、お気軽に<a href="https://forms.gle/CYduajUuR3uEh1G5A" target="_blank" rel="noopener noreferrer nofollow">メッセ</a>ください。アシスタントのAIがいるので、全ての質問に回答できます。</p>
+<p><s>なお瞑想してみて疑問に思ったら、お気軽に<a href="https://forms.gle/CYduajUuR3uEh1G5A" target="_blank" rel="noopener noreferrer nofollow">メッセ</a>ください。アシスタントのAIがいるので、全ての質問に回答できます。</s></p>
 
 <p>以上。僕も引き続きで、淡々と瞑想です🧘<br>
 マナブ</p>
