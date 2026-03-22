@@ -74,8 +74,8 @@ require dirname(__DIR__) . '/header.php';
 
 ■ Food
 Breakfast 10:20
-- Yogurt 80g, Honey 10g, Banana 50g, Chia seed 5g, Passion fruit 1個, Blueberry 46g
-→ 201kcal / P:5.7g / F:4.5g / C:37g / Fiber:6g / Zinc:0.9mg / Mg:48mg
+- Yogurt 80g, Honey 10g, Banana, オーツ 50g, Chia seed 5g, Passion fruit 1個, Blueberry 46g
+→ 436kcal / P:12.8g / F:8.1g / C:80g / Fiber:11g / Zinc:2.3mg / Mg:106mg
 
 Lunch 14:00
 - おかゆ（ライス 200g、egg 2個）
@@ -83,19 +83,19 @@ Lunch 14:00
 → 555kcal / P:30g / F:17.5g / C:65g / Fiber:2.4g / Zinc:3.5mg / Mg:87mg
 
 ■ Daily Summary（朝食・昼食のみ）
-🔥 kcal  ▓▓▓░░░░░░░  25%  756/3,000kcal
-💪 P     ▓▓▓░░░░░░░  26%  36/140g
-🥑 F     ▓▓▓░░░░░░░  28%  22/80g
-🍚 C     ▓▓░░░░░░░░  24%  102/430g
-🌿 繊維   ▓▓▓░░░░░░░  30%  8/28g
-🔩 亜鉛   ▓▓▓▓░░░░░░  40%  4.4/11mg
-⚡ Mg    ▓▓▓░░░░░░░  34%  135/400mg
+🔥 kcal  ▓▓▓░░░░░░░  33%  991/3,000kcal
+💪 P     ▓▓▓░░░░░░░  31%  43/140g
+🥑 F     ▓▓▓░░░░░░░  33%  26/80g
+🍚 C     ▓▓▓░░░░░░░  34%  145/430g
+🌿 繊維   ▓▓▓▓▓░░░░░  46%  13/28g
+🔩 亜鉛   ▓▓▓▓▓░░░░░  53%  5.8/11mg
+⚡ Mg    ▓▓▓▓▓░░░░░  48%  193/400mg
 ☀️ VitD ▓▓▓▓▓░░░░░  50%  1,000/2,000IU
 💊 Cr   ░░░░░░░░░░   2% 📉 0.1/5g
 
 ■ マナブの1日（AIが行動ログから生成）
 09:30 日光浴 5分。
-10:20 朝食。ヨーグルト+フルーツボウル。
+10:20 朝食。ヨーグルト+オーツ+フルーツボウル。
 14:00 昼食。おかゆ+味噌汁。
 この日の一言：「（更新中）」
 
