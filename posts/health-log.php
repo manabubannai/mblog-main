@@ -60,9 +60,48 @@ require dirname(__DIR__) . '/header.php';
 - REM: 1h 54m
 - HRV: 52ms / HR: 52bpm
 
+■ Stretch (Oura Ring)
+—
+
 ■ Meditation (Oura Ring)
 - 2026-03-21 11:54〜12:55 BKK（約60分）
 - Avg HR: 65bpm / Avg HRV: 35ms
+
+■ Note
+おへその左上あたりが痛む。腸なのか？→ AIに聞いた結果、過敏性胃腸炎が近そう。
+筋トレ留学ではなく、筋トレ参加権方式で考える。リモートワーク環境とマッチする。
+今後はMeditation前に、１時間のstretchをする。Ouraで記録するからログにも記載するようにする。
+
+■ Food
+Breakfast 10:20
+- Yogurt 80g, Honey 10g, Banana 50g, Chia seed 5g, Passion fruit 1個, Blueberry 46g
+→ 201kcal / P:5.7g / F:4.5g / C:37g / Fiber:6g / Zinc:0.9mg / Mg:48mg
+
+Lunch 14:00
+- おかゆ（ライス 200g、egg 2個）
+- 味噌汁（とうふ 200g、ワカメ 68g）
+→ 555kcal / P:30g / F:17.5g / C:65g / Fiber:2.4g / Zinc:3.5mg / Mg:87mg
+
+■ Daily Summary（朝食・昼食のみ）
+🔥 kcal  ▓▓▓░░░░░░░  25%  756/3,000kcal
+💪 P     ▓▓▓░░░░░░░  26%  36/140g
+🥑 F     ▓▓▓░░░░░░░  28%  22/80g
+🍚 C     ▓▓░░░░░░░░  24%  102/430g
+🌿 繊維   ▓▓▓░░░░░░░  30%  8/28g
+🔩 亜鉛   ▓▓▓▓░░░░░░  40%  4.4/11mg
+⚡ Mg    ▓▓▓░░░░░░░  34%  135/400mg
+☀️ VitD ▓▓▓▓▓░░░░░  50%  1,000/2,000IU
+💊 Cr   ░░░░░░░░░░   2% 📉 0.1/5g
+
+■ マナブの1日（AIが行動ログから生成）
+09:30 日光浴 5分。
+10:20 朝食。ヨーグルト+フルーツボウル。
+14:00 昼食。おかゆ+味噌汁。
+この日の一言：「（更新中）」
+
+■ Substances
+- DS-01 SEED 2カプセル（朝食前）
+- 日光 5分 @ 9:30（VitD 約1,000IU）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
