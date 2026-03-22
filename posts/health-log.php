@@ -46,6 +46,27 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-22</h2>
+  <pre>
+■ Body (Withings Body Scan) — 09:13
+- Weight: 61.95 kg
+- Muscle Mass: 53.81 kg
+
+■ Sleep (Oura Ring)
+- Total: 7h 55m
+- Readiness: 88
+- Sleep Score: 81
+- Deep: 1h 11m
+- REM: 1h 54m
+- HRV: 52ms / HR: 52bpm
+
+■ Meditation (Oura Ring)
+- 2026-03-21 11:54〜12:55 BKK（約60分）
+- Avg HR: 65bpm / Avg HRV: 35ms
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-21</h2>
   <pre>
 ■ Body (Withings Body Scan) — 08:03
