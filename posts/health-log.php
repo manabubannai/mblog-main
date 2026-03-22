@@ -61,7 +61,8 @@ require dirname(__DIR__) . '/header.php';
 - HRV: 52ms / HR: 52bpm
 
 ■ Stretch (Oura Ring)
-—
+- 2026-03-22 11:32〜12:34 BKK（1時間02分）
+- Avg HR: 85bpm / Active Calories: 242kcal
 
 ■ Meditation (Oura Ring)
 - 2026-03-21 11:54〜12:55 BKK（約60分）
@@ -96,6 +97,7 @@ Lunch 14:00
 ■ マナブの1日（AIが行動ログから生成）
 09:30 日光浴 5分。
 10:20 朝食。ヨーグルト+オーツ+フルーツボウル。
+11:32 ストレッチ 1時間02分（Avg HR:85bpm）。
 14:00 昼食。おかゆ+味噌汁。
 この日の一言：「（更新中）」
 
