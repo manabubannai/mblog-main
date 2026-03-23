@@ -46,6 +46,60 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-23</h2>
+  <pre>
+■ Body (Withings Body Scan)
+—
+
+■ Sleep (Oura Ring)
+—
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+—
+
+■ Workout（Leg Day）
+Goal：
+- 1. Try 120kg
+- 2. 61kg × 12rep w good form
+- 3. 12rep w good form
+- 4. good and slow form
+
+1. Squat
+   40kg + Bar(20kg) × 8
+   60kg + Bar(20kg) × 4
+   100kg + Bar(20kg) × (3 + 1c)
+   90kg + Bar(20kg) × 6
+   80kg + Bar(20kg) × 8
+   70kg + Bar(20kg) × 10
+
+2. Leg Curl
+   61kg × 10
+   61kg × 10
+   61kg × (8 + 2c)
+   ※note：いつも足を攣りそうになるので、足の裏側ストレッチを強化。
+
+3. Leg Extension
+   89kg × 10
+   89kg × 12
+   89kg × (11 + 1c)
+
+4. Calf Raise
+   45kg × 10 (Slow) + 10 (Fast)
+   45kg × 10 (Slow) + 10 (Fast)
+   45kg × 10 (Slow) + 10 (Fast)
+
+5. Squat machine: 追い込み
+
+■ マナブの1日（AIが行動ログから生成）
+午後 Leg Day筋トレ。Squat / Leg Curl / Leg Extension / Calf Raise / Squat machine追い込み。
+この日の一言：「（更新中）」
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-22</h2>
   <pre>
 ■ Body (Withings Body Scan) — 09:13
