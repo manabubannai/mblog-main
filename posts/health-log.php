@@ -117,18 +117,18 @@ Lunch 14:00
 Dinner 20:00
 - TOFUSAN 100ml, Protein Drink（P:15g / F:2.5g / C:16g）
 - Yogurt 100g, オーツ 40g, はちみつ 19g, アーモンドミルク 15g
-- Passion fruit 2個, バナナ 85g
+- Passion fruit 2個, バナナ 85g, バナナ 112g, アーモンドミルク 75g
 - Rice 200g, 納豆 1パック, キムチ 50g
-→ 968kcal / P:44g / F:17g / C:160g / Fiber:14g / Zinc:3.7mg / Mg:126mg
+→ 1,075kcal / P:46g / F:18g / C:186g / Fiber:15g / Zinc:3.9mg / Mg:171mg
 
 ■ Daily Summary
-🔥 kcal  ▓▓▓▓▓▓▓░░░  66% 📉 1,983/3,000kcal
-💪 P     ▓▓▓▓▓▓▓▓░░  79%  110/140g
-🥑 F     ▓▓▓▓▓▓▓▓░░  76%  61/80g
-🍚 C     ▓▓▓▓▓▓░░░░  56% 📉 241/430g
-🌿 繊維   ▓▓▓▓▓▓▓▓░░  75%  21/28g
-🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 104%  11.4/11mg
-⚡ Mg    ▓▓▓▓▓▓▓▓░░  79%  317/400mg
+🔥 kcal  ▓▓▓▓▓▓▓░░░  70% 📉 2,090/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓░░  80%  112/140g
+🥑 F     ▓▓▓▓▓▓▓▓░░  78%  62/80g
+🍚 C     ▓▓▓▓▓▓░░░░  62% 📉 267/430g
+🌿 繊維   ▓▓▓▓▓▓▓▓░░  79%  22/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 106%  11.6/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓░  91%  362/400mg
 ☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100%  2,000/2,000IU
 💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
 
@@ -139,7 +139,7 @@ Dinner 20:00
 14:00 昼食。ライス＋卵3個＋味噌汁＋納豆＋キムチ。
 午後 Leg Day筋トレ。Squat / Leg Curl / Leg Extension / Calf Raise / Squat machine追い込み。
 18:30 Cannabis 0.3g Indica。
-20:00 夕食。TOFUSAN＋Protein Drink＋オーツボウル＋ライス＋納豆＋キムチ。
+20:00 夕食。TOFUSAN＋Protein Drink＋オーツボウル＋バナナ2本＋アーモンドミルク＋ライス＋納豆＋キムチ。
 この日の一言：「足の裏側ストレッチを強化する。」
 
 ■ Substances
