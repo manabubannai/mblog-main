@@ -93,9 +93,50 @@ Goal：
 
 5. Squat machine: 追い込み
 
+■ Note
+買い物：だし昆布（フジッコ）、とうふ
+
+■ Food
+Breakfast 10:00
+- Egg 2個
+- 味噌汁（ネギ 72g、とうふ 200g、ワカメ 33g）
+→ 303kcal / P:24g / F:17g / C:10g / Fiber:2g / Zinc:2.8mg / Mg:78mg
+
+Lunch 14:00
+- Rice 200g, Egg 3個, 味噌汁（とうふ 200g）, 納豆 1パック, キムチ 30g
+→ 712kcal / P:42g / F:27g / C:71g / Fiber:4.4g / Zinc:4.9mg / Mg:113mg
+
+Dinner 20:00
+- TOFUSAN 100ml, Protein Drink（P:15g / F:2.5g / C:16g）
+- Yogurt 100g, オーツ 40g, はちみつ 19g, アーモンドミルク 15g
+- Passion fruit 2個, バナナ 85g
+- Rice 200g, 納豆 1パック, キムチ 50g
+→ 968kcal / P:44g / F:17g / C:160g / Fiber:14g / Zinc:3.7mg / Mg:126mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓▓░░░  66% 📉 1,983/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓░░  79%  110/140g
+🥑 F     ▓▓▓▓▓▓▓▓░░  76%  61/80g
+🍚 C     ▓▓▓▓▓▓░░░░  56% 📉 241/430g
+🌿 繊維   ▓▓▓▓▓▓▓▓░░  75%  21/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 104%  11.4/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓░░  79%  317/400mg
+☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100%  2,000/2,000IU
+💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
+
 ■ マナブの1日（AIが行動ログから生成）
+起床直後 日光浴 10分。
+10:00 朝食。卵2個＋味噌汁（ネギ・とうふ・ワカメ）。
+14:00 昼食。ライス＋卵3個＋味噌汁＋納豆＋キムチ。
 午後 Leg Day筋トレ。Squat / Leg Curl / Leg Extension / Calf Raise / Squat machine追い込み。
-この日の一言：「（更新中）」
+18:30 Cannabis 0.3g Indica。
+20:00 夕食。TOFUSAN＋Protein Drink＋オーツボウル＋ライス＋納豆＋キムチ。
+この日の一言：「足の裏側ストレッチを強化する。」
+
+■ Substances
+- 日光 10分（起床直後）（VitD 約2,000IU）
+- DS-01 SEED 2カプセル（朝食前）
+- Cannabis 0.3g Indica（18:30）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
