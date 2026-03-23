@@ -48,17 +48,24 @@ require dirname(__DIR__) . '/header.php';
 
   <h2># 2026-03-23</h2>
   <pre>
-■ Body (Withings Body Scan)
-—
+■ Body (Withings Body Scan) — 08:04
+- Weight: 62.33 kg
+- Muscle Mass: 54.40 kg
 
 ■ Sleep (Oura Ring)
-—
+- Total: 8h5m
+- Readiness: 89
+- Sleep Score: 87
+- Deep: 0h59m
+- REM: 1h53m
+- HRV: 59ms / HR: 52bpm
 
 ■ Stretch (Oura Ring)
 —
 
 ■ Meditation (Oura Ring)
-—
+- 2026-03-22 12:37〜13:37 BKK（約60分）
+- Avg HR: 62bpm / Avg HRV: 42ms
 
 ■ Workout（Leg Day）
 ✓ 来週用のメモ：
@@ -128,6 +135,7 @@ Dinner 20:00
 💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
 
 ■ マナブの1日（AIが行動ログから生成）
+08:04 Withings計測。62.33kg / 筋肉量54.40kg。
 起床直後 日光浴 10分。
 10:00 朝食。卵2個＋味噌汁（ネギ・とうふ・ワカメ）。
 14:00 昼食。ライス＋卵3個＋味噌汁＋納豆＋キムチ。
