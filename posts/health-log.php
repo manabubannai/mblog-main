@@ -61,6 +61,9 @@ require dirname(__DIR__) . '/header.php';
 —
 
 ■ Workout（Leg Day）
+✓ 来週用のメモ：
+Squatはお尻の下げ方が足りない。膝が直角まで下げる。warmupの時点でフォームを撮影して、綺麗なフォームのまま維持するイメージを持つ。
+
 Goal：
 - 1. Try 120kg
 - 2. 61kg × 12rep w good form
