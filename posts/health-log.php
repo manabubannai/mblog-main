@@ -104,9 +104,6 @@ Goal：
 
 5. Squat machine: 追い込み
 
-■ Note
-買い物：だし昆布（フジッコ）、とうふ
-
 ■ Food
 Breakfast 10:00
 - Egg 2個
