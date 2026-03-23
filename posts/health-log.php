@@ -191,9 +191,13 @@ Goal：
    12.5kg × 10 → 80kg × 10
    12.5kg × 10 → 80kg × 10
 
+■ Note
+Find maximum benefit to ourselves and to everybody. — Sadhguru
+
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
 - 日光 5分 @ 9:30（VitD 約1,000IU）
+- Cannabis 0.4g Indica（19:00）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
