@@ -922,6 +922,30 @@ F         73g         74g         99% ✅
 C        358g        361g         99% ✅
 食物繊維   28g         25g        110% ✅
 
+■ Workout（Leg Day）
+1. Squat (without Smith Machine)
+   40kg + Bar(20kg) × 10
+   60kg + Bar(20kg) × 6
+   90kg + Bar(20kg) × 4 *2回がベスト回数
+   80kg + Bar(20kg) × 8 *4~6がベスト回数
+   80kg + Bar(20kg) × 8 *6~8回がベスト回数
+   70kg + Bar(20kg) × 12 *8~12回がベスト回数
+
+2. Leg Curl
+   61kg × 10 *足を攣りそうだったので休みつつ進めた
+   61kg × 10
+   61kg × (7 + 3c)
+
+3. Jump Squat → Leg Extension
+   10 → 89kg × (7 + 3c)
+   10 → 89kg × 10
+   10 → 89kg × 10
+
+4. Calf Raise
+   40kg × 15 (slow)
+   40kg × 15 (slow)
+   40kg × 15 (slow)
+
 ■ Substances
 - Cannabis 0.4g Indica 19:00
 - Cannabis 1g Indica 22:00
