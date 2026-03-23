@@ -61,7 +61,8 @@ require dirname(__DIR__) . '/header.php';
 - HRV: 59ms / HR: 52bpm
 
 ■ Stretch (Oura Ring)
-—
+- 2026-03-23 10:46〜11:45 BKK（約58分）
+- Avg HR: 85bpm / 227kcal
 
 ■ Meditation (Oura Ring)
 - 2026-03-22 12:37〜13:37 BKK（約60分）
