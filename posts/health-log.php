@@ -103,8 +103,39 @@ Dinner 19:20
 10:20 朝食。ヨーグルト+オーツ+フルーツボウル。
 11:32 ストレッチ 1時間02分（Avg HR:85bpm）。
 14:00 昼食。おかゆ+味噌汁。
+午後 Shoulder Day筋トレ。Barbell Rear Raise / Shoulder Press Machine / DB Shoulder Press / Side Raise→Cable Upright Row。
 19:20 夕食。チキン+バナナ+ライス。
 この日の一言：「Meditation前に、1時間のストレッチ。初日。」
+
+■ Workout（Shoulder Day）
+Goal：
+- Warm up = wall handstand
+- 1. 12rep w good form
+- 2. Try 85kg
+- 3. 10rep w good form
+- 4. good form
+
+1. Barbell Rear Raise
+   25kg × 20
+   30kg × 20
+   30kg × 20
+
+2. Shoulder Press Machine
+   40kg × 10
+   80kg × (1c + 3 Support)
+   70kg × (5 + 1c)
+   70kg × (3 + 3 Support)
+   60kg × (5 + 3 Support)
+   50kg × (6 + 6 Support)
+
+3. Dumbbell Shoulder Press
+   20kg × 5
+   20kg × 2 → 17.5kg × 2 → Dropset
+
+4. Side Raise → Cable Upright Row
+   12.5kg × 10 → 75kg × 10
+   12.5kg × 10 → 80kg × 10
+   12.5kg × 10 → 80kg × 10
 
 ■ Substances
 - DS-01 SEED 2カプセル（朝食前）
