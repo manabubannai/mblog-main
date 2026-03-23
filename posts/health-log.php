@@ -2837,6 +2837,31 @@ C         358g       361g       99%
   ~1,480kcal / P:61g / F:47g / C:188g
   *Feedback from AI: [植物性タンパク三重奏＋抗酸化サラダ] テンペ×豆腐×卵で植物性＋動物性タンパクを組み合わせ。大根おろしのジアスターゼで消化吸収を最適化。キノコカレーのβグルカンで免疫機能サポート＋カレースパイスのクルクミンが抗炎症。ローストベジタブルで食物繊維＋抗酸化ビタミンをまとめて摂取◎。トマトのリコペン＋ゆで卵でさらにタンパク追加。味噌汁の発酵菌で腸活の締め。バランスが非常に良い夕食。
 
+■ Workout（Leg Day）
+1. Squat (without Smith Machine)
+   40kg + Bar(20kg) × 10
+   50kg + Bar(20kg) × 4
+   80kg + Bar(20kg) × 4
+   80kg + Bar(20kg) × 4
+   60kg + Bar(20kg) × 7
+   60kg + Bar(20kg) × 8
+
+2. Leg Curl
+   61kg × 3 → 重すぎたので変更 → 54kg × 6
+   54kg × (6 + 1c)
+   54kg × 6
+
+3. Jump Squat → Leg Extension
+   10 → 75kg × 10
+   10 → 82kg × 10 *途中でRestあり
+   10 → 82kg × (5 + 5) *途中でRestあり
+   ※note：筋トレLIVE配信。動画をAI解析する。
+
+4. Calf Raise
+   30kg × 10 (Slow) → 30kg × 10 (Fast)
+   30kg × 10 (Slow) → 30kg × 10 (Fast)
+   30kg × 10 (Slow) → 30kg × 10 (Fast)
+
 ■ Substances
 - Cannabis: Indica 0.4g（18:00）
 - Cannabis: Indica 0.6g（21:30）
@@ -2856,6 +2881,7 @@ C         353g       361g       98%
 09:00 朝食（推定）。卵2個+豚肉+ライスベリーライス+納豆+キムチ。コラーゲンドリンクも。
 （午前） アイデアページ（mblog.com/idea/）を構築・公開。
 13:00 ランチ外食。サーモン丼＋茶碗蒸し＋エビサラダ。
+午後 Leg Day筋トレ（LIVE配信）。Squat / Leg Curl / Jump Squat→Leg Extension / Calf Raise。
 19:00 ディナー（推定）。テンペ+卵+豆腐+大根おろし丼＋ローストベジタブル＋キノコカレー＋ライスベリーライス＋味噌汁＋グリーンサラダ（ゆで卵+トマト）。
 この日の一言：「大麻はビール。」
 
