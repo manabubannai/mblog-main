@@ -314,6 +314,10 @@ Dinner 19:30
 この日の一言：「日常の行動を、全てMeditationにする。」
 
 ■ Workout（Chest Day）
+✓ 来週用のメモ：録画を見て考えた反省点
+Bench Pressではもっと背中を反らせて、みぞおちあたりに下げつつ、１点で押し返す
+Inclineも同じ。まず背中の反りが足りなすぎる。
+
 Goal：
 - 1. 80kgにトライ
 - 3. 50kg × 12rep w good form
