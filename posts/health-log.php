@@ -179,8 +179,45 @@ Dinner 19:30
 起床後すぐ 日光浴10分（上裸）。
 10:46 朝食。オーツ+フルーツボウル。
 13:30 昼食。味噌汁・ライス・卵3個。
+午後 Chest Day筋トレ。Bench Press / Dips / Incline Bench Press / Pec Fly / タバタ式。
 19:30 夕食。牛カレー丼・サバの塩焼き（特大）・冷奴。
 この日の一言：「日常の行動を、全てMeditationにする。」
+
+■ Workout（Chest Day）
+Goal：
+- 1. 80kgにトライ
+- 3. 50kg × 12rep w good form
+- 4. 31.5kg × 12rep w good form
+
+Warmup: push up 30rep
+
+1. Bench Press
+   40kg + Bar(20kg) × 10
+   50kg + Bar(20kg) × 3
+   60kg + Bar(20kg) × 0
+   55kg + Bar(20kg) × (1 + 3c)
+   50kg + Bar(20kg) × (3 + 3c)
+   45kg + Bar(20kg) × (4 + 4c)
+   （100kgを持ち、耐えてみた）
+   40kg + Bar(20kg) × (4 + 6c)
+
+2. Dips
+   10
+   8 with 5kg dumbbell
+   7 + 1c with 5kg dumbbell
+
+3. Incline Bench Press
+   20kg + Bar(20kg) × (6 + 1c)
+   20kg + Bar(20kg) × (4 + 4c)
+   20kg + Bar(20kg) × (4 + 4c)
+   *note: Inclineで粘りが足りない。負け癖がついてる。
+
+4. Pec Fly
+   31.5kg × (10 + 2c)
+   31.5kg × (8 + 4c)
+   38.3kg × 4 → 31.5kg × 3
+
+5. タバタ式 90sec
 
 ■ Substances
 - 日光浴（起床直後に10分）
