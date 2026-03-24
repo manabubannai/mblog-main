@@ -61,10 +61,11 @@ require dirname(__DIR__) . '/header.php';
 - HRV: 75ms / HR: 52bpm
 
 ■ Stretch (Oura Ring)
-—
+- 2026-03-24 11:34〜12:37 BKK（1h3m）/ 250kcal
+- 2026-03-24 12:52〜13:59 BKK（1h7m）/ 252kcal
 
 ■ Meditation (Oura Ring)
-—
+- 2026-03-24 14:07〜15:08 BKK（約1時間）
 
 ■ Food
 Breakfast 10:00
@@ -90,6 +91,9 @@ Lunch 15:30
 09:06 Withings計測。62.29kg / 筋肉量54.94kg。
 09:30 日光浴 5分。
 10:00 朝食。卵2個＋ライス250g＋納豆＋キムチ＋サーモン84g。
+11:34 Stretch①（1h3m）。
+12:52 Stretch②（1h7m）。
+14:07 瞑想（約1時間）。
 15:30 昼食。サーモン70g＋ライス250g＋卵2個。
 17:30 Probac7（ディナー前）。
 この日の一言：「Readiness 90。身体は整っている。」
@@ -120,8 +124,8 @@ Lunch 15:30
 - Avg HR: 85bpm / 227kcal
 
 ■ Meditation (Oura Ring)
-- 2026-03-22 12:37〜13:37 BKK（約60分）
-- Avg HR: 62bpm / Avg HRV: 42ms
+- 2026-03-23 11:59〜12:59 BKK（約1時間）
+- Avg HR: 60bpm
 
 ■ Workout（Leg Day）
 ✓ 来週用のメモ：
@@ -198,10 +202,13 @@ Dinner 20:00
 08:04 Withings計測。62.33kg / 筋肉量54.40kg。
 起床直後 日光浴 10分。
 10:00 朝食。卵2個＋味噌汁（ネギ・とうふ・ワカメ）。
+10:46 Stretch（58分）。
+11:59 瞑想（約1時間）。
 14:00 昼食。ライス＋卵3個＋味噌汁＋納豆＋キムチ。
 午後 Leg Day筋トレ。Squat / Leg Curl / Leg Extension / Calf Raise / Squat machine追い込み。
 18:30 Cannabis 0.3g Indica。
 20:00 夕食。TOFUSAN＋Protein Drink＋オーツボウル＋バナナ2本＋アーモンドミルク＋ライス＋納豆＋キムチ。
+22:40 Cannabis 1g Indica（22時超え）。
 この日の一言：「足の裏側ストレッチを強化する。」
 
 ■ Substances
