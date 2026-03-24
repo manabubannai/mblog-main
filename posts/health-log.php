@@ -67,6 +67,9 @@ require dirname(__DIR__) . '/header.php';
 ■ Meditation (Oura Ring)
 - 2026-03-24 14:07〜15:08 BKK（約1時間）
 
+■ Note
+食物繊維のために、オーツ50g（+5g）、チアシード10g（+3g）を朝食にする。
+
 ■ Food
 Breakfast 10:00
 - Egg 2個, Rice 250g, 納豆 1パック, キムチ 30g, サーモン 84g
