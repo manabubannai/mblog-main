@@ -153,6 +153,7 @@ Dinner 20:00
 - 日光 10分（起床直後）（VitD 約2,000IU）
 - DS-01 SEED 2カプセル（朝食前）
 - Cannabis 0.3g Indica（18:30）
+- Cannabis 1g Indica（22:40）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
