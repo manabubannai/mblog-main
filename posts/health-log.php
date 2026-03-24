@@ -46,6 +46,61 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-24</h2>
+  <pre>
+■ Body (Withings Body Scan) — 09:06
+- Weight: 62.29 kg
+- Muscle Mass: 54.94 kg
+
+■ Sleep (Oura Ring)
+- Total: 8h14m
+- Readiness: 90
+- Sleep Score: 85
+- Deep: 1h10m
+- REM: 2h7m
+- HRV: 75ms / HR: 52bpm
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+—
+
+■ Food
+Breakfast 10:00
+- Egg 2個, Rice 250g, 納豆 1パック, キムチ 30g, サーモン 84g
+→ 752kcal / P:44g / F:26g / C:81g / Fiber:4g / Zinc:4.2mg / Mg:114mg
+
+Lunch 15:30
+- サーモン 70g, Rice 250g, Egg 2個
+→ 616kcal / P:32g / F:19g / C:73g / Fiber:1g / Zinc:3.2mg / Mg:51mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓░░░░░  46% 📉 1,368/3,000kcal
+💪 P     ▓▓▓▓▓░░░░░  54% 📉 76/140g
+🥑 F     ▓▓▓▓▓▓░░░░  56% 📉 45/80g
+🍚 C     ▓▓▓▓░░░░░░  36% 📉 154/430g
+🌿 繊維   ▓▓░░░░░░░░  18% 📉 5/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓░░░  67% 📉 7.4/11mg
+⚡ Mg    ▓▓▓▓░░░░░░  41% 📉 165/400mg
+☀️ VitD ▓▓▓▓▓░░░░░  50% 📉 1,000/2,000IU
+💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
+
+■ マナブの1日（AIが行動ログから生成）
+09:06 Withings計測。62.29kg / 筋肉量54.94kg。
+09:30 日光浴 5分。
+10:00 朝食。卵2個＋ライス250g＋納豆＋キムチ＋サーモン84g。
+15:30 昼食。サーモン70g＋ライス250g＋卵2個。
+17:30 Probac7（ディナー前）。
+この日の一言：「Readiness 90。身体は整っている。」
+
+■ Substances
+- 日光 5分（09:30）（VitD 約1,000IU）
+- Probac7（17:30、ディナー前）
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-23</h2>
   <pre>
 ■ Body (Withings Body Scan) — 08:04
