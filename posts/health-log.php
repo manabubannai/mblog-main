@@ -70,6 +70,9 @@ require dirname(__DIR__) . '/header.php';
 ■ Note
 食物繊維のために、オーツ50g（+5g）、チアシード10g（+3g）を朝食にする。
 
+スマホでフリック入力を止める。なぜなら、話し言葉の方がAI時代において最適だから。完全にAI人間になる。
+https://youtu.be/5EjMUmHhdAs?si=yfNWaw7xnHRpmCeX
+
 ■ Food
 Breakfast 10:00
 - Egg 2個, Rice 250g, 納豆 1パック, キムチ 30g, サーモン 84g
