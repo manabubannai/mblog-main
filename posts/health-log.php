@@ -66,6 +66,11 @@ require dirname(__DIR__) . '/header.php';
 ■ Meditation (Oura Ring)
 - 2026-03-25 14:38〜15:37 BKK（約1時間）
 
+■ Note
+上を向いて歩くの忘れ、毎日がAからB地点。
+そして帰りはBからA、実は夢追いかけてたい。
+何故かチャンス逃してばかりで、笑いでごまかしてない？
+
 ■ Food
 Breakfast 11:00
 - オーツ 50g, チアシード 10g, ヨーグルト 60g, アーモンドミルク 63g, Passion Fruit 70g, はちみつ 22g, バナナ 133g（皮なし）
