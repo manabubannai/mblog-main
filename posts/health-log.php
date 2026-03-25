@@ -66,6 +66,43 @@ require dirname(__DIR__) . '/header.php';
 ■ Meditation (Oura Ring)
 - 2026-03-25 14:38〜15:37 BKK（約1時間）
 
+■ Workout（Arm Day）
+腕周り：右 33cm（筋トレ後：34.5cm）、左 31.5cm（筋トレ後：33.9cm）
+
+Goal：
+- 1. 40kg × 6
+- 2. 20kg × 6〜8
+- 3. 60kg × 10
+- 4. 65kg × 12
+- 5. 40kg × 12
+
+1. Barbell Curl → Dumbbell Curl（ドロップセット）
+   40kg × 6 → 10kg × 8
+   40kg × 6 → 10kg × (6+1c)
+   40kg × 6 → 10kg × 5
+
+2. Hammer Curl
+   20kg × 8
+   20kg × 8
+   20kg × 10
+   *note：次回は 10〜12 rep
+
+3. Narrow Bench Press (Smith Machine)
+   60kg × 5
+   60kg × (3 + 2 Support)
+   60kg × (6 + 2 Support)
+
+4. Press Down with Bar
+   65kg × 9
+   65kg × 12
+   65kg × 10
+   *note：背筋を伸ばして、顔が前を向く。お尻を突き出す
+
+5. Press Down with Rope
+   40kg × 10
+   40kg × (7+1c)
+   40kg × (7+1c)
+
 ■ Note
 上を向いて歩くの忘れ、毎日がAからB地点。
 そして帰りはBからA、実は夢追いかけてたい。
@@ -110,6 +147,7 @@ Dinner 19:30
 12:25 Stretch（57分）。
 13:30 昼食。卵5個＋ライス250g＋サーモン86g。
 14:38 瞑想（約1時間）。
+（推定）15:30〜 Arm Day筋トレ。Barbell Curl / Hammer Curl / Narrow Bench Press / Press Down with Bar / Press Down with Rope。
 18:00 Protein Drink。
 19:30 ProBac7 + 夕食。ライス250g＋豆腐400g＋納豆2パック＋味噌汁＋キムチ。
 この日の一言：「繊維とMgは今週最高。」
