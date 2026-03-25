@@ -2880,13 +2880,15 @@ C        296g       361g        82% 📉
 ■ Workout — Arm Day（16:00頃〜、Oura Ring外してトレーニング）
 
 1. Barbell Curl → Dumbbell Curl（ドロップセット）
-   - BB 35kg×10 → DB 10kg×6
-   - BB 35kg×10 → DB 7.5kg×10（ネガティブゆっくり、フォーム意識）
-   - BB 35kg×10 → DB 7.5kg×(7+3C)
+   25kg + Bar (10kg) x 10（反動多め） → 10kg x 6
+   25kg + Bar (10kg) x 10（反動多め） → 7.5kg x 10（ネガティブゆっくり、フォーム意識）
+   25kg + Bar (10kg) x 10（反動多め） → 7.5kg x (7+3c)
    ※note: 完全に腕を伸ばしきるまで下げる
 
 2. Hammer Curl
-   - 17.5kg×10 / 17.5kg×10 / 17.5kg×10（反動多め）
+   17.5kg×10（反動多め）
+   17.5kg×10（反動多め）
+   17.5kg×10（反動多め）
    ※note: トップで1秒待機
 
 3. 腕立て伏せ（上腕三頭筋フォーム）
@@ -2894,7 +2896,9 @@ C        296g       361g        82% 📉
    ※note: 50回を目指す
 
 4. Press Down with Bar
-   - 55kg×10 / 55kg×10 / 55kg×(8+2C)
+   - 55kg×10
+   - 55kg×10
+   - 55kg×(8+2c)
 
 5. Press Down with Rope
    - 45kg×6 → 40kg×4（途中で重さ変更）
