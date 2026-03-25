@@ -71,6 +71,10 @@ require dirname(__DIR__) . '/header.php';
 そして帰りはBからA、実は夢追いかけてたい。
 何故かチャンス逃してばかりで、笑いでごまかしてない？
 
+脱ガリロジックの動画をAIに学ばせて、自動で実行してもらう。
+
+買い物：三面鏡、Tofusanドリンク（MacroのEC）
+
 ■ Food
 Breakfast 11:00
 - オーツ 50g, チアシード 10g, ヨーグルト 60g, アーモンドミルク 63g, Passion Fruit 70g, はちみつ 22g, バナナ 133g（皮なし）
@@ -143,10 +147,6 @@ Dinner 19:30
 
 スマホでフリック入力を止める。なぜなら、話し言葉の方がAI時代において最適だから。完全にAI人間になる。
 https://youtu.be/5EjMUmHhdAs?si=yfNWaw7xnHRpmCeX
-
-脱ガリロジックの動画をAIに学ばせて、自動で実行してもらう。
-
-買い物：三面鏡、Tofusanドリンク（MacroのEC）
 
 ■ Food
 Breakfast 10:00
