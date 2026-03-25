@@ -73,7 +73,7 @@ require dirname(__DIR__) . '/header.php';
 
 脱ガリロジックの動画をAIに学ばせて、自動で実行してもらう。
 
-買い物：三面鏡、Tofusanドリンク（MacroのEC）
+買い物：三面鏡、Tofusanドリンク（MacroのEC）、タイの臭い醤油
 
 ■ Food
 Breakfast 11:00
