@@ -75,7 +75,7 @@ https://youtu.be/5EjMUmHhdAs?si=yfNWaw7xnHRpmCeX
 
 脱ガリロジックの動画をAIに学ばせて、自動で実行してもらう。
 
-買い物：三面鏡
+買い物：三面鏡、Tofusanドリンク（MacroのEC）
 
 ■ Food
 Breakfast 10:00
