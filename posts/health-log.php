@@ -73,6 +73,10 @@ require dirname(__DIR__) . '/header.php';
 スマホでフリック入力を止める。なぜなら、話し言葉の方がAI時代において最適だから。完全にAI人間になる。
 https://youtu.be/5EjMUmHhdAs?si=yfNWaw7xnHRpmCeX
 
+脱ガリロジックの動画をAIに学ばせて、自動で実行してもらう。
+
+買い物：三面鏡
+
 ■ Food
 Breakfast 10:00
 - Egg 2個, Rice 250g, 納豆 1パック, キムチ 30g, サーモン 84g
@@ -110,11 +114,17 @@ Dinner 17:30
 14:07 瞑想（約1時間）。
 15:30 昼食。サーモン70g＋ライス250g＋卵2個。
 17:30 Probac7 + 夕食（バナナ2本＋ライス270g＋Chicken Tikka Masala＋ガーリックナン＋バナナ220g）。
+19:30 Cannabis 0.7g Indica。
+21:20 Cannabis 0.95g Indica。
+22:00 Ashwagandha 1カプセル。
 この日の一言：「Readiness 90。身体は整っている。」
 
 ■ Substances
 - 日光 5分（09:30）（VitD 約1,000IU）
-- Probac7（17:30、ディナー前）
+- Probac7（17:30、ディナーと一緒に）
+- Cannabis 0.7g Indica（19:30）
+- Cannabis 0.95g Indica（21:20）
+- Ashwagandha 1カプセル（22:00）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
