@@ -154,12 +154,14 @@ Dinner 19:30
 （推定）15:30〜 Arm Day筋トレ。Barbell Curl / Hammer Curl / Narrow Bench Press / Press Down with Bar / Press Down with Rope。
 18:00 Protein Drink。
 19:30 ProBac7 + 夕食。ライス250g＋豆腐400g＋納豆2パック＋味噌汁＋キムチ＋バナナ285g。
+21:30 Cannabis 0.8g Indica。
 この日の一言：「繊維とMgは今週最高。」
 
 ■ Substances
 - 日光 5分（朝）（VitD 約1,000IU）
 - Probac7（11:00、朝食前）
 - Probac7（19:30、夕食と一緒に）
+- Cannabis 0.8g Indica（21:30）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
