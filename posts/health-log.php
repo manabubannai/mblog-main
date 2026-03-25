@@ -46,6 +46,72 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-25</h2>
+  <pre>
+■ Body (Withings Body Scan) — 10:36
+- Weight: 62.22 kg
+- Muscle Mass: 54.65 kg
+
+■ Sleep (Oura Ring)
+- Total: 8h38m
+- Readiness: 86
+- Sleep Score: 80
+- Deep: 1h0m
+- REM: 2h2m
+- HRV: 63ms / HR: 49bpm
+
+■ Stretch (Oura Ring)
+- 2026-03-25 12:25〜13:22 BKK（57分）/ 218kcal
+
+■ Meditation (Oura Ring)
+- 2026-03-25 14:38〜15:37 BKK（約1時間）
+
+■ Food
+Breakfast 11:00
+- オーツ 50g, チアシード 10g, ヨーグルト 60g, アーモンドミルク 63g, Passion Fruit 70g, はちみつ 22g, バナナ 133g（皮なし）
+→ 534kcal / P:14g / F:10g / C:105g / Fiber:18g / Zinc:2.3mg / Mg:162mg
+
+Lunch 13:30
+- Egg 5個, Rice 250g, サーモン 86g
+→ 859kcal / P:55g / F:36g / C:75g / Fiber:1g / Zinc:5.3mg / Mg:73mg
+
+Snack 18:00
+- Protein Drink（P:15g / F:2.5g / C:16g）
+→ 148kcal / P:15g / F:2.5g / C:16g / Fiber:0g / Zinc:0.5mg / Mg:15mg
+
+Dinner 19:30
+- Rice 250g, Tofu 400g, 納豆 2パック, 味噌汁（わかめ 7g, みそ 大さじ2杯）, キムチ 50g
+→ 913kcal / P:60g / F:28g / C:106g / Fiber:11g / Zinc:6.8mg / Mg:262mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓▓▓░░  82%  2,454/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓▓▓ 103% ✅ 144/140g
+🥑 F     ▓▓▓▓▓▓▓▓▓▓  96%  77/80g
+🍚 C     ▓▓▓▓▓▓▓░░░  70% 📉 302/430g
+🌿 繊維   ▓▓▓▓▓▓▓▓▓▓ 107%  30/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 135%  14.9/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 128%  512/400mg
+☀️ VitD ░░░░░░░░░░   0% 📉 0/2,000IU
+💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
+
+■ マナブの1日（AIが行動ログから生成）
+推定10:28 起床。
+10:36 Withings計測。62.22kg / 筋肉量54.65kg。
+11:00 ProBac7 + 朝食。オーツボウル（オーツ+チアシード+ヨーグルト+アーモンドミルク+パッションフルーツ+はちみつ+バナナ）。
+12:25 Stretch（57分）。
+13:30 昼食。卵5個＋ライス250g＋サーモン86g。
+14:38 瞑想（約1時間）。
+18:00 Protein Drink。
+19:30 ProBac7 + 夕食。ライス250g＋豆腐400g＋納豆2パック＋味噌汁＋キムチ。
+この日の一言：「繊維とMgは今週最高。」
+
+■ Substances
+- Probac7（11:00、朝食前）
+- Probac7（19:30、夕食と一緒に）
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-24</h2>
   <pre>
 ■ Body (Withings Body Scan) — 09:06
