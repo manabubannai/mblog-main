@@ -210,6 +210,7 @@ Goal：
    60kg × 5
    60kg × (3 + 2 Support)
    60kg × (6 + 2 Support)
+   *note: もっと背中を反らせて、ベンチプレスの姿勢で
 
 4. Press Down with Bar
    65kg × 9
