@@ -102,6 +102,8 @@ Learn how to sleep well。
 
 Create 大富豪 app that can play fun w/ friend。
 
+新たにApple Watchを買ったので、AIエージェントの構成を組み替える。具体的にはOpenClawじゃなく、Claude Codeを軸にする。Claude CodeにApple WatchやOura ring、そしてWithingsのデータを渡しつつ、ヘルスログのブログページも自動更新してもらうようにする。さらにClaude CodeをTelegramから操作できるようにする。そして週次で私が気づいていない健康面、もしくは食事面、もしくはトレーニング面に関するInsightを送ってもらう。
+
 買い物：間接照明
 
 ■ Food
