@@ -97,12 +97,55 @@ Goal：
    33kg × 12
    33kg × 12
 
+■ Note
+Learn how to sleep well。
+
+Create 大富豪 app that can play fun w/ friend。
+
+買い物：間接照明
+
+■ Food
+Breakfast 10:10
+- Yogurt 54g, オーツ 40g, チアシード 8g, アーモンドミルク 28g, はちみつ 16g, Passion Fruit 1個
+→ 294kcal / P:9g / F:8g / C:50g / Fiber:9g / Zinc:1.5mg / Mg:81mg
+
+10:50
+- Rice 220g, Salmon 110g, Egg 2個, のり 60g
+→ 771kcal / P:57g / F:26g / C:91g / Fiber:20g / Zinc:4.2mg / Mg:153mg
+
+Lunch 14:00
+- 味噌汁（King Oyster mushroom 270g, かぼちゃ 250g, Tofu 400g, みそ 大さじ2杯）※30%食べた
+- Rice 220g, 納豆 2パック, キムチ 50g
+→ 695kcal / P:36g / F:16g / C:103g / Fiber:13g / Zinc:4.7mg / Mg:189mg
+
+Intra-Workout
+- Dr. Murray's 3 Seed Protein（Pumpkin+Flax+Sunflower）2スクープ
+→ 120kcal / P:18g / F:5g / C:0g
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓░░░░  63% 📉 1,880/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓▓░  86%  120/140g
+🥑 F     ▓▓▓▓▓▓▓░░░  69% 📉 55/80g
+🍚 C     ▓▓▓▓▓▓░░░░  57% 📉 244/430g
+🌿 繊維   ▓▓▓▓▓▓▓▓▓▓ 150%  42/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓  95%  10.4/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 106%  423/400mg
+☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100%  2,000/2,000IU
+💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
+
 ■ マナブの1日（AIが行動ログから生成）
 02:27 就寝。
 09:29 起床（6h22m）。
 09:48 Withings計測。62.12kg / 筋肉量55.07kg。
-（推定）午前 Back Day筋トレ。Chinning / Bent Over Rowing Machine / T-Bar Row / Lat Pull Down。
+10:00 日光浴 10分。
+10:10 朝食。オーツボウル（ヨーグルト+オーツ+チアシード+アーモンドミルク+はちみつ+パッションフルーツ）。
+10:50 ライス220g＋サーモン110g＋卵2個＋のり60g。
+14:00 昼食。味噌汁（30%）＋ライス220g＋納豆2パック＋キムチ。
+（推定）午後 Back Day筋トレ。Chinning / Bent Over Rowing Machine / T-Bar Row / Lat Pull Down。
 この日の一言：「調整の日。半分の重さでフォームを磨く。」
+
+■ Substances
+- 日光 10分（10:00）（VitD 約2,000IU）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
