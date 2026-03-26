@@ -101,6 +101,7 @@ Goal：
 <img src="img/health-log/20260326_front.jpg?v=1" alt="Body Check 2026-03-26 Front">
 <img src="img/health-log/20260326_side.jpg?v=1" alt="Body Check 2026-03-26 Side">
 <img src="img/health-log/20260326_back.jpg?v=1" alt="Body Check 2026-03-26 Back">
+*source: https://mblog.com/img/health-log/20260326_front.jpg
 
 ■ Note
 Learn how to sleep well。
