@@ -46,6 +46,67 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-26</h2>
+  <pre>
+■ Body (Withings Body Scan) — 09:48
+- Weight: 62.12 kg
+- Muscle Mass: 55.07 kg
+
+■ Sleep (Oura Ring)
+- Total: 6h22m
+- Readiness: 80
+- Sleep Score: 63
+- Deep: 0h37m
+- REM: 1h29m
+- HRV: 70ms / HR: 51bpm
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+—
+
+■ Workout（Back Day）
+Goal：
+- 1. 12 w/ full stretch
+- 2. Skip for recovery
+- 3. Try 105kg
+- 4. 40kg × 12 w/ full stretch
+- 5. 54kg × 10 w/ full stretch
+→ 目標を変更：半分の重さで調整する日
+
+1. Chinning
+   12
+   10 + 2c
+   5 + 5c
+   *note: full stretch make this number
+
+3. Bent Over Rowing Machine
+   20kg × 12
+   30kg × 12
+   40kg × 12
+   50kg × 10
+   40kg × 10
+
+4. T-Bar Row
+   10kg × 12
+   20kg × 12
+
+5. Lat Pull Down
+   26kg × 12
+   33kg × 12
+   33kg × 12
+
+■ マナブの1日（AIが行動ログから生成）
+02:27 就寝。
+09:29 起床（6h22m）。
+09:48 Withings計測。62.12kg / 筋肉量55.07kg。
+（推定）午前 Back Day筋トレ。Chinning / Bent Over Rowing Machine / T-Bar Row / Lat Pull Down。
+この日の一言：「調整の日。半分の重さでフォームを磨く。」
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-25</h2>
   <pre>
 ■ Body (Withings Body Scan) — 10:36
