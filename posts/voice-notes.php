@@ -1,0 +1,21 @@
+<?php
+$page_title = 'Voice Notes — manablog';
+$page_description = '音声メモの記録。Voice Note plugin from Obsidian.';
+require dirname(__DIR__) . '/header.php';
+?>
+
+<a href="/"><img src="/img/logo.png" alt="manablog" class="logo"></a>
+<h1 class="title">Voice Notes</h1>
+<p style="font-size: 14px; color: #888; margin-bottom: 30px;">Obsidian Voice Note からの音声メモ。自動同期。</p>
+
+<style>
+.vn-entry { margin-bottom: 24px; }
+.vn-entry time { font-size: 13px; color: #888; display: block; margin-bottom: 4px; }
+.vn-entry pre { font-size: 14.5px; line-height: 1.7; padding: 16px; background: #f8f8f8; border: 1px solid #e8e8e8; white-space: pre-wrap; word-wrap: break-word; }
+</style>
+
+<div id="voice-notes">
+<!-- VOICE_NOTES_END -->
+</div>
+
+<?php require dirname(__DIR__) . '/footer.php'; ?>
