@@ -15,6 +15,16 @@ require dirname(__DIR__) . '/header.php';
 </style>
 
 <div id="voice-notes">
+<div class="vn-entry">
+<time datetime="2026-03-27">27 Mar, 2026</time>
+<pre>
+## 27 Mar 2026 at 18:07
+テストとしてまたまた音声を保存しています。テストです。
+## 27 Mar 2026 at 18:34
+半に卵を3つ、夕飯に卵を3つ
+</pre>
+</div>
+
 <!-- VOICE_NOTES_END -->
 </div>
 

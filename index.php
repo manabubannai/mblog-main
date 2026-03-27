@@ -9,11 +9,6 @@ require __DIR__ . '/header.php';
 <ul class="toppage">
 
 <li>
-<time datetime="2026-03-27">27 Mar, 2026</time>
-<a href="voice-notes">Voice Notes（音声メモの記録）</a>
-</li>
-
-<li>
 <time datetime="2026-1-4">11 Jan, 2026</time>
 <a href="health-log">My Daily Health Log</a>
 </li>
