@@ -6,22 +6,10 @@ require dirname(__DIR__) . '/header.php';
 
 <script>
   window.onload = function () {
-    // Copy AI prompt
-    var copyPromptBtn = document.getElementById('copyPromptBtn');
-    if (copyPromptBtn) {
-      copyPromptBtn.addEventListener('click', function () {
-        var promptEl = document.getElementById('ai-prompt');
-        navigator.clipboard.writeText(promptEl.textContent.trim()).then(function () {
-          copyPromptBtn.textContent = '✅ コピーしました！';
-          setTimeout(function () { copyPromptBtn.textContent = '📋 プロンプトをコピー'; }, 2000);
-        });
-      });
-    }
     document.querySelectorAll('pre').forEach(pre => {
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
       pre.innerHTML = pre.innerHTML.replace(regex, '<span class="jp-font">$1</span>');
     });
-
   };
 </script>
 
@@ -104,6 +92,7 @@ Dinner 21:00
 ■ Substances
 - 日光 5分（朝、寝起き）（VitD 約1,000IU）
 - ProBac7（日光浴後）
+- 大麻サティバ 0.6g（19:42頃）
 
 ■ Note
 筋トレ分析は12時開始だと間に合わなかった。次回からルーティンとして11時半には始めるようにする。
