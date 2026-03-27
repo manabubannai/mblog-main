@@ -46,6 +46,74 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-27</h2>
+  <pre>
+■ Body (Withings Body Scan) — 10:28
+- Weight: 62.18 kg
+- Muscle Mass: 54.80 kg
+
+■ Sleep (Oura Ring)
+- Total: 7h37m
+- Readiness: 87
+- Sleep Score: 76
+- Deep: 0h47m
+- REM: 2h4m
+- HRV: 75ms / HR: 51bpm
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+—
+
+■ Note
+筋トレ分析は12時開始だと間に合わなかった。次回からルーティンとして11時半には始めるようにする。
+
+Apple Watchを使ったHIITトレーニングと心拍数の測り方を調べる。
+
+血管年齢を若くする有酸素運動のやり方：Apple Watchを使ってやる方法を調べる。
+
+食事を食べながら歌詞を見るとインスピレーションが湧く。自分もそのような歌詞を書いてみたい。音楽では表現できないから、文字、そしてUIデザインを使いながら表現する。
+
+水道代の支払い。
+
+カセフさんの座りやすい椅子を買って、暖炉室に置くことを検討する。
+
+■ Food
+Breakfast 10:00
+- Rice 250g, 納豆 2パック, キムチ 50g, 豆腐 200g, パイナップル 数切れ（推定100g）
+→ 738kcal / P:39g / F:18g / C:105g / Fiber:10g / Zinc:4.7mg / Mg:189mg
+
+Lunch 15:00
+- Egg 3個, Salmon 132g, Rice 250g, 昨日の味噌汁（残り70%のうち40%）
+→ 1,000kcal / P:65g / F:38g / C:97g / Fiber:6g / Zinc:5.5mg / Mg:139mg
+
+■ Daily Summary（夕食未入力）
+🔥 kcal  ▓▓▓▓▓▓░░░░  58% 📉 1,738/3,000kcal
+💪 P     ▓▓▓▓▓▓▓░░░  74% 📉 104/140g
+🥑 F     ▓▓▓▓▓▓▓░░░  70% 📉 56/80g
+🍚 C     ▓▓▓▓▓░░░░░  47% 📉 202/430g
+🌿 繊維   ▓▓▓▓▓▓░░░░  57% 📉 16/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓░  93%  10.2/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓░░  82%  328/400mg
+☀️ VitD ▓▓▓▓▓░░░░░  50% 📉 1,000/2,000IU
+💊 Cr   ░░░░░░░░░░   4% 📉 0.2/5g
+
+■ マナブの1日（AIが行動ログから生成）
+01:58 就寝。
+10:18 起床（7h37m）。日光浴 5分 + ProBac7。
+10:28 Withings計測。62.18kg / 筋肉量54.80kg。
+10:00 朝食。ライス250g＋納豆2パック＋キムチ＋豆腐200g＋パイナップル。
+15:00 昼食。卵3個＋サーモン132g＋ライス250g＋昨日の味噌汁（残り70%の40%）。
+この日の一言：「分析の時間は11時半に固定する。」
+
+■ Substances
+- 日光 5分（朝、寝起き）（VitD 約1,000IU）
+- ProBac7（日光浴後）
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-26</h2>
   <pre>
 ■ Body (Withings Body Scan) — 09:48
@@ -161,6 +229,12 @@ Dinner 19:00
 
 ■ Substances
 - 日光 10分（10:00）（VitD 約2,000IU）
+- Cannabis 0.7g Indica（20:00）
+- Cannabis 0.7g Indica（21:30）※合計1.4g → 1g超過⚠️
+- Ashwagandha 1カプセル（22:30）
+- Cannabis 0.7g Indica（20:00）
+- Cannabis 0.7g Indica（21:30）※1日合計1.4g（1g超過）
+- Ashwagandha 1カプセル（22:30）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
