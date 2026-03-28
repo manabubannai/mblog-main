@@ -65,6 +65,26 @@ require dirname(__DIR__) . '/header.php';
 
   <h2># 2026-03-28</h2>
   <pre>
+■ Body (Withings Body Scan) — 09:34
+- Weight: 62.97 kg
+- Muscle Mass: 55.81 kg
+- Body Fat: 6.7%
+- Bone Mass: 2.97 kg
+
+■ Sleep (Oura Ring) — 02:14〜09:26
+- Total: 6h31m
+- Readiness: 77
+- Sleep Score: 67
+- Deep: 0h43m
+- REM: 1h20m
+- HRV: 111ms / HR: 48bpm
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+—
+
 ■ Food
 Breakfast 13:30
 - Oatmeal 46g, Almond Milk 36g, Yogurt 53g, Honey 20g, Coconut Fresh Juice 1個, Passion Fruit 1個, Walnuts 18g, Chia Seeds 5g, Blueberries 43g
@@ -88,6 +108,20 @@ Dinner 19:17
 ⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 323% ✅ 1,291/400mg
 ☀️ VitD ▓▓▓▓▓░░░░░  50% 📉 1,000/2,000IU
 💊 Cr   ░░░░░░░░░░   0% 📉 0/5g
+
+■ マナブの1日（AIが行動ログから生成）
+02:14 就寝。
+09:26 起床（6h31m）。ProBac7。
+09:34 Withings計測。62.97kg / 筋肉量55.81kg / 体脂肪6.7%。
+10:00 ボイスメモ開始。ProBac7の効果実感、ログ運用方針、筋トレ事業化の思考など。
+12:59 ブログ記事ごとのデザイン変更を構想。AIでモックアップ自動生成のアイデア。
+13:26 日光浴 5分。
+13:30 朝食。オートミール＋ヨーグルト＋フルーツ＋ナッツ。
+13:40 昼食。ライス250g＋卵4個＋納豆2パック＋キムチ。
+14:00 Claude Codeでブログの自動化システムを大幅に構築。ダッシュボード改善、ボイスメモ自動書き起こし、AIリサーチ機能、タスクキューシステムなど。
+19:17 夕食。味噌汁（豆腐＋エリンギ＋きくらげ＋わかめ＋エノキ）＋ライス250g＋卵2個＋サーモン79g。
+20:00 引き続きClaude Codeでヘルスログのフォーマット改善。Thought/Ideaセクション新設、AI実行キュー、バックアップ機能を実装。
+この日の一言：「AIでの自動化システム構築に集中した1日。」
 
 ■ Substances
 - ProBac7（朝食前）
