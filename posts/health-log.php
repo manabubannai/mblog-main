@@ -34,6 +34,16 @@ require dirname(__DIR__) . '/header.php';
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-03-28</h2>
+  <pre>
+■ Note
+OpenClawは、その便利さ故に瞬く間に広まりましたが、セキュリティへの配慮が十分にされていないことは、開発者自身が認めており、企業にとっては導入しにくいという問題があります。（中島聡さんのメルマガより）
+
+だからこそ、今の視点からOpenClawをガシガシ使って、個人としての強みを最大限に発揮する必要がある。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-03-27</h2>
   <pre>
 ■ Body (Withings Body Scan) — 10:28
