@@ -183,18 +183,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         $text = trim($_POST['text'] ?? '');
         $tag = $_POST['tag'] ?? 'food';
         if ($text) {
-            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
-            $now_date = date('Y-m-d');
-            $now_time = date('H:i');
-            $voice_log[] = [
-                'date' => $now_date,
-                'time' => $now_time,
-                'text' => $text,
-                'summary' => mb_strlen($text) > 30 ? mb_substr($text, 0, 30) . '...' : $text,
-                'file' => 'manual-' . time(),
-                'tag' => $tag
-            ];
-            file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            if ($tag === 'note') {
+                // Direct write to health-log.php Note section
+                $health_log_path = __DIR__ . '/../posts/health-log.php';
+                $health_log = file_get_contents($health_log_path);
+                $now_date = date('Y-m-d');
+                $date_header = '<h2># ' . $now_date . '</h2>';
+
+                if (strpos($health_log, $date_header) !== false) {
+                    $date_pos = strpos($health_log, $date_header);
+                    $pre_start = strpos($health_log, '<pre>', $date_pos);
+                    $pre_end = strpos($health_log, '</pre>', $pre_start);
+                    $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+                    $note_pos = strpos($pre_content, '■ Note');
+                    if ($note_pos !== false) {
+                        $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n\n" . $text . "\n" . substr($health_log, $insert_pos);
+                    } else {
+                        $insert_pos = $pre_end;
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n■ Note\n" . $text . "\n  " . substr($health_log, $insert_pos);
+                    }
+                } else {
+                    $first_h2 = strpos($health_log, '<h2>#');
+                    if ($first_h2 !== false) {
+                        $hr_before = strrpos(substr($health_log, 0, $first_h2), '<hr');
+                        if ($hr_before !== false) {
+                            $new_entry = "  $date_header\n  <pre>\n■ Note\n$text\n  </pre>\n\n  <hr style=\"border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;\">\n\n";
+                            $health_log = substr($health_log, 0, $hr_before) . $new_entry . substr($health_log, $hr_before);
+                        }
+                    }
+                }
+                file_put_contents($health_log_path, $health_log);
+
+                // Auto commit & push
+                chdir(__DIR__ . '/..');
+                shell_exec('git add -A && git commit -m "health-log: ' . $now_date . ' note" && git push origin main 2>&1');
+            } else {
+                // Add to voice-log.json for review
+                $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+                $now_date = date('Y-m-d');
+                $now_time = date('H:i');
+                $voice_log[] = [
+                    'date' => $now_date,
+                    'time' => $now_time,
+                    'text' => $text,
+                    'summary' => mb_strlen($text) > 30 ? mb_substr($text, 0, 30) . '...' : $text,
+                    'file' => 'manual-' . time(),
+                    'tag' => $tag
+                ];
+                file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            }
         }
         echo json_encode(['ok' => true]);
     } elseif ($action === 'edit_voice_meta') {
@@ -387,9 +425,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <?php endif; ?>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
+      <option value="note">Note</option>
       <option value="food">Food</option>
       <option value="substance">Substance</option>
-      <option value="health">Health</option>
     </select>
     <input type="text" id="new-health" placeholder="Add entry..." style="flex:2;">
     <button onclick="addHealthEntry()">Add</button>
@@ -401,9 +439,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <div class="empty">No entries yet.</div>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
+      <option value="note">Note</option>
       <option value="food">Food</option>
       <option value="substance">Substance</option>
-      <option value="health">Health</option>
     </select>
     <input type="text" id="new-health" placeholder="Add entry..." style="flex:2;">
     <button onclick="addHealthEntry()">Add</button>
