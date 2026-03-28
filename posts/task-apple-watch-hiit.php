@@ -19,6 +19,10 @@ $answer = json_decode(file_get_contents(dirname(__DIR__) . '/.github/task-answer
 
 <pre style="line-height: 1.9;">
 <?= htmlspecialchars($answer) ?>
+
+✓ 自転車HIITを取り入れる
+・攻める日：167bpmくらい（5分） × 3日
+・攻めない日：120bpmくらい × 2日
 </pre>
 
 <p style="margin-top: 40px;"><a href="/health-log">← Health Log</a></p>
