@@ -216,10 +216,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         $file = $_POST['file'] ?? '';
         $time = $_POST['time'] ?? '';
         $new_text = $_POST['new_text'] ?? '';
+        $new_summary = $_POST['new_summary'] ?? '';
         $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
         foreach ($voice_log as &$e) {
             if ($e['file'] === $file && $e['time'] === $time) {
-                $e['text'] = $new_text;
+                if ($new_text) $e['text'] = $new_text;
+                if ($new_summary) $e['summary'] = $new_summary;
                 break;
             }
         }
@@ -275,19 +277,16 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $date = htmlspecialchars($entry['date']);
     $time_short = htmlspecialchars(substr($entry['time'], 0, 5));
     $text = htmlspecialchars($entry['text']);
+    $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
+    $de = $show_date_edit ? 'true' : 'false';
     $html = '<div class="voice-entry">';
     $html .= '<span class="voice-time">' . $time_short . '</span>';
     if ($use_summary) {
-        $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
-        $html .= '<div class="note-wrapper">';
-        $html .= '<div class="note-summary" onclick="toggleNote(this)">' . $summary . '</div>';
-        $html .= '<div class="note-full" onclick="toggleNote(this)"><span>' . $text . '</span></div>';
-        $html .= '</div>';
+        $html .= '<span class="voice-text clickable-title" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'' . addslashes($summary) . '\')">' . $summary . '</span>';
     } else {
-        $html .= '<span class="voice-text">' . $text . '</span>';
+        $html .= '<span class="voice-text clickable-title" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'\')">' . $text . '</span>';
     }
     $html .= '<span class="entry-actions">';
-    $html .= '<button class="action-btn edit-btn" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . ($show_date_edit ? 'true' : 'false') . ')" title="Edit">✎</button>';
     if ($show_push) {
         $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="' . $file . '" data-time="' . $time . '" title="Push">↑</button>';
     }

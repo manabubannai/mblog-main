@@ -208,14 +208,6 @@
     },
     {
         "date": "2026-03-28",
-        "time": "13:40",
-        "text": "昼食\/夕食: ご飯250g, 卵4個, 納豆2パック, キムチ約50g。",
-        "summary": "昼食：ご飯＋卵4個＋納豆2P＋キムチ",
-        "file": "Recording 31",
-        "tag": "food"
-    },
-    {
-        "date": "2026-03-28",
         "time": "13:42",
         "text": "Pieter Levels氏の「Dangerous Skipping」の再現。Claudeの設定を、Pieter Levels氏のスタイルに合わせてMacBookのローカル環境でも構築・設定する。",
         "summary": "Pieter Levels流のClaude設定をローカルに構築",
