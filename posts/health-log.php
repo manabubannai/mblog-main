@@ -80,7 +80,7 @@ require dirname(__DIR__) . '/header.php';
 - HRV: 111ms / HR: 48bpm
 
 ■ Stretch (Oura Ring)
-—
+- 11:04〜12:14（1h10m） / 262kcal
 
 ■ Meditation (Oura Ring)
 - 15:28〜16:28（1h00m） / Avg HR:63bpm

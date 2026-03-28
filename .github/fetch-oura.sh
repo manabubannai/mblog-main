@@ -45,6 +45,10 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/session?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/session.json"
 
+curl -s -H "Authorization: Bearer $OURA_TOKEN" \
+  "https://api.ouraring.com/v2/usercollection/workout?start_date=$DATE&end_date=$NEXT_DATE" \
+  > "$TMPDIR/workout.json"
+
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
 import json, sys, os
@@ -61,6 +65,8 @@ with open(f"{tmpdir}/readiness.json") as f:
     readiness = json.load(f)
 with open(f"{tmpdir}/session.json") as f:
     session_data = json.load(f)
+with open(f"{tmpdir}/workout.json") as f:
+    workout_data = json.load(f)
 
 # 該当日のデータだけフィルタ（sleep は複数日分ある場合がある）
 sleep_sessions = [x for x in sleep_data.get("data", []) if x["day"] == target_date]
@@ -89,10 +95,11 @@ readiness_score = r["score"] if r else "—"
 bedtime_start = s["bedtime_start"][11:16]
 bedtime_end = s["bedtime_end"][11:16]
 
-# Parse sessions (meditation, breathing, stretch)
+# Parse sessions (meditation) and workouts (stretch)
 sessions = session_data.get("data", [])
 meditation_sessions = [x for x in sessions if x.get("type") == "meditation"]
-stretch_sessions = [x for x in sessions if x.get("type") == "stretching" or x.get("type") == "stretch"]
+workouts = workout_data.get("data", [])
+stretch_sessions = [x for x in workouts if x.get("activity") == "stretching" or x.get("activity") == "stretch"]
 
 def format_session(sess):
     start_dt = sess.get("start_datetime", "")
@@ -131,8 +138,10 @@ if stretch_sessions:
     parts = []
     for ss in stretch_sessions:
         dur, start, end, avg_hr = format_session(ss)
+        cal = int(ss.get("calories", 0))
         hr_str = f" / Avg HR:{avg_hr}bpm" if avg_hr else ""
-        parts.append(f"{start}〜{end}（{dur}）{hr_str}")
+        cal_str = f" / {cal}kcal" if cal else ""
+        parts.append(f"{start}〜{end}（{dur}）{hr_str}{cal_str}")
     stretch_line = ", ".join(parts)
 
 lines = [
