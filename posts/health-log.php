@@ -135,10 +135,10 @@ Dinner 19:17
 - HRV: 75ms / HR: 51bpm
 
 ■ Stretch (Oura Ring)
-—
+- 2026-03-27 13:02〜14:39 BKK（1h37m）/ Avg HR:74bpm / 382kcal
 
 ■ Meditation (Oura Ring)
-—
+- 2026-03-27 16:06〜17:06 BKK（約1時間）/ Avg HR:64bpm
 
 ■ Food
 Breakfast 10:00
@@ -171,7 +171,9 @@ Dinner 21:00
 10:18 起床（7h37m）。日光浴 5分 + ProBac7。
 10:28 Withings計測。62.18kg / 筋肉量54.80kg。
 10:00 朝食。ライス250g＋納豆2パック＋キムチ＋豆腐200g＋パイナップル。
+13:02 Stretch（1h37m / 382kcal）。
 15:00 昼食。卵3個＋サーモン132g＋ライス250g＋昨日の味噌汁（残り70%の40%）。
+16:06 瞑想（約1時間）。
 19:42 Cannabis Sativa 0.6g。
 21:00 夕食。カオマンガイ2人前＋味噌汁残り全て。
 22:00 Cannabis Indica 0.7g。
