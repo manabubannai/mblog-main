@@ -9,21 +9,12 @@
     },
     {
         "date": "2026-03-28",
-        "time": "13:37",
-        "text": "健康分野でポジションを確立するため、関連インフルエンサーを積極的にフォローし、情報を収集する。",
-        "summary": "健康系インフルエンサーをフォロー＆情報収集",
-        "file": "Recording 29",
+        "time": "18:04:57",
+        "text": "Oura Ringのメディテーションを自動検出してくれる設定をやっておく。Claude Codeで。",
+        "summary": "Oura Ringメディテーション自動検出の設定",
+        "file": "18-04-57.m4a",
         "tag": "task",
-        "answer": "■ 英語圏（必須フォロー）\n1. Andrew Huberman — YouTube: Huberman Lab（600万超）。睡眠・サプリ・運動を論文ベースで解説\n2. Peter Attia — Podcast: The Drive。長寿医学の第一人者。Zone 2、CGM、血液検査\n3. Bryan Johnson — blueprint.bryanjohnson.com。年200万ドルのエイジングリバーサル。プロトコル全公開\n4. Rhonda Patrick — YouTube: FoundMyFitness。サウナ・冷水浴・ビタミンD研究\n5. David Sinclair — NMN・レスベラトロールの老化研究。著書「LIFESPAN」\n6. Ben Greenfield — 実践的バイオハッキング（赤色光、サプリスタック）\n7. Thomas DeLauer — YouTube 300万超。断食・ケト・サプリを分かりやすく解説\n\n■ 日本語圏\n1. パレオな男（鈴木祐）— 日本最強の論文ベース健康ブログ\n2. 山本義徳 — サプリ・トレーニング専門知識が日本トップ\n3. 石黒成治（Dr.Ishiguro）— 消化器外科医。腸内環境・食事療法\n4. 予防医学ch（森勇磨）— エビデンスベースの予防医学\n\n■ プラットフォーム\nX: 上記全員フォロー。リスト「Health EN」「Health JP」で管理\nPodcast: Huberman Lab > The Drive > The Human Upgrade\nNewsletter: Examine.com（サプリエビデンス）、Peter Attia、Huberman Lab\nReddit: r\/Biohackers, r\/Nootropics, r\/QuantifiedSelf, r\/Longevity\n\n■ ポジショニング\n日本語圏で「バイオハッキング×Quantified Self×データ全公開」は競合が少ない。英語圏の最新研究を自分の実体験データと組み合わせて日本語発信するサイクルが最も差別化しやすい。タイ在住を活かした東南アジアの健康サービス体験も独自の切り口になる。"
-    },
-    {
-        "date": "2026-03-28",
-        "time": "12:59",
-        "text": "やっぱりマナブログは記事ごとにデザインを変えていこうと思う。トップページもやっぱり別のデザインに変える。それのモックアップを考える。これもボイスメモをAIが受け取った時点でパソコン側で作業を終わらせ作っておいてもらう感じ。",
-        "summary": "ブログを記事ごとに個別デザイン。AIでデザイン生成",
-        "file": "Recording 16",
-        "tag": "task",
-        "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?><\/style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss\/ディレクトリ作成 → header.phpでslug取得 → css\/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers\/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css\/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css\/ディレクトリ方式に移行\n3. トップページも専用CSS化"
+        "answer": "■ Oura Ringの自動検出について\nOura Ringはメディテーションを自動検出しない。睡眠・歩行・ランニングは自動検出されるが、瞑想は手動記録が必要。\n\n■ 記録方法\n1. Ouraアプリ → ホーム画面の「+」→「瞑想」→ タイマーで開始\n2. Apple Health連携: 他の瞑想アプリ（Headspace等）で記録 → Apple Health経由でOuraに同期可能\n\n■ APIでの取得\nOura API v2の session エンドポイントで手動記録した瞑想セッションは取得可能。\nGET https:\/\/api.ouraring.com\/v2\/usercollection\/session?start_date=YYYY-MM-DD\ntype: \"meditation\" のセッションが含まれる。\n\n■ fetch-oura.shへの統合\n既存スクリプトにsessionエンドポイントの呼び出しを追加すれば、手動記録した瞑想データは自動取得できる。\n\n■ 結論\n毎日アプリで手動記録 → fetch-oura.shで自動取得、が現実的な運用。"
     },
     {
         "date": "2026-03-28",
@@ -60,27 +51,20 @@
     },
     {
         "date": "2026-03-28",
+        "time": "12:59",
+        "text": "やっぱりマナブログは記事ごとにデザインを変えていこうと思う。トップページもやっぱり別のデザインに変える。それのモックアップを考える。これもボイスメモをAIが受け取った時点でパソコン側で作業を終わらせ作っておいてもらう感じ。",
+        "summary": "ブログを記事ごとに個別デザイン。AIでデザイン生成",
+        "file": "Recording 16",
+        "tag": "task",
+        "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?><\/style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss\/ディレクトリ作成 → header.phpでslug取得 → css\/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers\/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css\/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css\/ディレクトリ方式に移行\n3. トップページも専用CSS化"
+    },
+    {
+        "date": "2026-03-28",
         "time": "13:24",
         "text": "ツイートビューアみたいなアプリもローカルでガンガン開発して、そこでめちゃくちゃ使い心地の、場合によってはサービス化したり友達に使わせるとかしてもいいかも。でもとりあえず新しいPC買ってそこのローカルの部分にOpenClaw入れちゃって、そこがスタート地点な気がする。そこで全部実験したほうがいい。Claude Codeでもいいけど、OpenClawの方が権限ありまくりだから、あっちを作っていく。つまり、新しいパソコン買う。",
         "summary": "新PCのOpenClawでツイートビューア等を開発",
         "file": "Recording 21",
         "tag": "task",
         "answer": "■ OpenClawとは\nオープンソースAIエージェント（GitHub 31万スター超）。ブラウザ自動操作、ファイル操作、シェル実行、メッセージ連携が可能。Claude Codeがコーディング特化の「メス」なら、OpenClawは汎用の「スイスアーミーナイフ」。\n\n■ macOSインストール\ncurl -fsSL https:\/\/openclaw.ai\/install.sh | bash\nまたは npm install -g openclaw@latest\n前提: Node.js 22.16以上。--install-daemon で起動時自動起動も可能。\n\n■ ブラウザ操作\nChrome DevTools Protocol経由。タブ制御、クリック、テキスト入力、スクレイピング、スクリーンショット、PDF生成が可能。個人ブラウザとは分離された専用プロファイルで動作。\n\n■ ⚠️ セキュリティ上の重大な懸念\n- 512件の脆弱性が発見（うち8件クリティカル）\n- ClawHubに341件の悪質スキル（仮想通貨APIキー・ウォレット秘密鍵の窃取目的）\n- WebSocket経由でローカルのOpenClawを外部サイトから乗っ取り可能\n- 13.5万台が公開インターネット上に露出\n\n■ 推奨事項\n(1) 仮想通貨\/DeFi操作には絶対に使わない（資産喪失リスクが現実的）\n(2) 専用マシンで隔離（iCloud・パスワード同期しない）\n(3) ClawHubスキルは公式・検証済みのみ\n(4) ツイートビューア等の「読み取り専用」用途から始める\n(5) コーディングにはClaude Codeの方が安全かつ高品質"
-    },
-    {
-        "date": "2026-03-28",
-        "time": "18:04:57",
-        "text": "Oura Ringのメディテーションを自動検出してくれる設定をやっておく。Claude Codeで。",
-        "summary": "Oura Ringメディテーション自動検出の設定",
-        "file": "18-04-57.m4a",
-        "tag": "task"
-    },
-    {
-        "date": "2026-03-28",
-        "time": "18:16:33",
-        "text": "隣に引っ越してきた人のことを奥さんに伝える。",
-        "summary": "隣の引っ越しを奥さんに伝える",
-        "file": "18-16-33.m4a",
-        "tag": "task"
     }
 ]

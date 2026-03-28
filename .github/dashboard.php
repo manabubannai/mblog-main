@@ -497,6 +497,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         }
         file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'queue_ai') {
+        $queue_file = __DIR__ . '/task-queue.json';
+        $queue = file_exists($queue_file) ? json_decode(file_get_contents($queue_file), true) : [];
+        $file = $_POST['file'] ?? '';
+        $time = $_POST['time'] ?? '';
+        $task_name = $_POST['task'] ?? '';
+
+        // Find the entry details
+        $entry_text = '';
+        $entry_answer = '';
+        $entry_summary = '';
+        if ($task_name) {
+            $entry_text = $task_name;
+            $entry_summary = $task_name;
+            $entry_answer = $task_answers[$task_name] ?? '';
+        } else {
+            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+            foreach ($voice_log as $e) {
+                if ($e['file'] === $file && $e['time'] === $time) {
+                    $entry_text = $e['text'] ?? '';
+                    $entry_summary = $e['summary'] ?? $entry_text;
+                    $entry_answer = $e['answer'] ?? '';
+                    break;
+                }
+            }
+        }
+
+        $queue[] = [
+            'task' => $entry_summary,
+            'detail' => $entry_text,
+            'answer' => $entry_answer,
+            'status' => 'pending',
+            'queued_at' => date('Y-m-d H:i:s')
+        ];
+        file_put_contents($queue_file, json_encode($queue, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'get_voice') {
         $file = $_POST['file'] ?? '';
         $time = $_POST['time'] ?? '';
@@ -602,6 +638,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         $html .= '<div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">';
         $html .= '<input type="text" class="inline-action-input" placeholder="アクションを入力..." style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:8px;">';
         $html .= '<button class="inline-push-action" data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.12);color:#50c878;" onclick="pushAction(this)">↑ Push with AI Answer</button>';
+        $html .= '<button data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:8px;" onclick="queueForAI(this)">⚡ AIで実行</button>';
         $html .= '</div>';
         $html .= '</div>';
     }
@@ -629,7 +666,11 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
       <span class="voice-text clickable-title" onclick="editTask(this,'<?= htmlspecialchars(addslashes($task['text'])) ?>',<?= $answer ? 'true' : 'false' ?>)"><?= htmlspecialchars($task['text']) ?></span>
       <?php if ($answer): ?>
-        <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
+        <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+          <button data-task="<?= htmlspecialchars($task['text']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
+        </div>
+        </div>
       <?php endif; ?>
       <span class="entry-actions">
         <button class="action-btn done-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Toggle done"><?= $task['done'] ? '↩' : '✓' ?></button>
@@ -1155,6 +1196,22 @@ function pushAction(btn) {
   fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
+    .catch(() => { btn.textContent = '!'; btn.disabled = false; });
+}
+
+function queueForAI(btn) {
+  btn.disabled = true;
+  btn.textContent = '⏳ キューに追加中...';
+  const file = btn.dataset.file || '';
+  const time = btn.dataset.time || '';
+  const task = btn.dataset.task || '';
+  const form = new FormData();
+  if (file) form.append('file', file);
+  if (time) form.append('time', time);
+  if (task) form.append('task', task);
+  fetch('?action=queue_ai', { method: 'POST', body: form })
+    .then(r => r.json())
+    .then(() => { btn.textContent = '✅ キューに追加済み'; btn.style.opacity = '0.5'; })
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
 
