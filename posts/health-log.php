@@ -99,7 +99,8 @@ Lunch 13:40
 - 遊び優先の思考法。ボイチャ×ゲームアプリの構想 /thought-2026-03-28-cae80f
 - 地元の人には常に10%の上乗せで支払う /thought-2026-03-28-7938b4
 - 完了：音声メモ→AIが即座にメモ保存＋タスク実行
-- マナブゲームズ：自作ゲーム×ボイチャの遊び場 /thought-2026-03-28-8a0792</pre>
+- マナブゲームズ：自作ゲーム×ボイチャの遊び場 /thought-2026-03-28-8a0792
+- 新Mac購入→OpenClawでDeFi自動運用の実験 /thought-2026-03-28-4a64c6</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
