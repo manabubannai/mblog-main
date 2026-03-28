@@ -63,9 +63,101 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         file_put_contents($claude_md_path, $claude_md);
         echo json_encode(['ok' => true]);
     } elseif ($action === 'push') {
-        chdir(__DIR__ . '/..');
-        $output = shell_exec('git add -A && git commit -m "dashboard update" && git push origin main 2>&1');
-        echo json_encode(['ok' => true, 'output' => $output]);
+        // Push a specific voice-log entry to health-log.php, then remove from voice-log.json
+        $file = $_POST['file'] ?? '';
+        $time = $_POST['time'] ?? '';
+        $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+        $target = null;
+        $target_idx = null;
+        foreach ($voice_log as $i => $e) {
+            if ($e['file'] === $file && $e['time'] === $time) {
+                $target = $e;
+                $target_idx = $i;
+                break;
+            }
+        }
+
+        if ($target) {
+            $health_log_path = __DIR__ . '/../posts/health-log.php';
+            $health_log = file_get_contents($health_log_path);
+            $date = $target['date'];
+            $tag = $target['tag'] ?? '';
+            $text = $target['text'];
+            $entry_time = substr($target['time'], 0, 5);
+
+            // Determine which section to write to
+            $section = '';
+            $line = '';
+            if ($tag === 'food') {
+                $section = '■ Food';
+                $line = $entry_time . "\n- " . $text;
+            } elseif ($tag === 'substance' || $tag === 'health') {
+                $section = '■ Substances';
+                $line = '- ' . $text . '（' . $entry_time . '）';
+            } elseif ($tag === 'task') {
+                $section = '■ Note';
+                $line = $text;
+            } else {
+                $section = '■ Note';
+                $line = $text;
+            }
+
+            // Find or create date entry
+            $date_header = '<h2># ' . $date . '</h2>';
+            if (strpos($health_log, $date_header) !== false) {
+                // Date exists — find section and append
+                $date_pos = strpos($health_log, $date_header);
+                $pre_start = strpos($health_log, '<pre>', $date_pos);
+                $pre_end = strpos($health_log, '</pre>', $pre_start);
+                $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+
+                $section_pos = strpos($pre_content, $section);
+                if ($section_pos !== false) {
+                    // Section exists — find its end (next ■ or end of pre)
+                    $next_section = strpos($pre_content, "\n■", $section_pos + 1);
+                    if ($next_section === false) {
+                        // Last section — insert before </pre>
+                        $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n" . $line . "\n" . substr($health_log, $insert_pos);
+                    } else {
+                        // Insert before next section
+                        $insert_pos = $pre_start + 5 + $next_section;
+                        $health_log = substr($health_log, 0, $insert_pos) . $line . "\n\n" . substr($health_log, $insert_pos);
+                    }
+                } else {
+                    // Section doesn't exist — add it before </pre>
+                    $insert_pos = $pre_end;
+                    $health_log = substr($health_log, 0, $insert_pos) . "\n" . $section . "\n" . $line . "\n  " . substr($health_log, $insert_pos);
+                }
+            } else {
+                // Date doesn't exist — create new entry after the <hr> line (before first existing date)
+                $first_h2 = strpos($health_log, '<h2>#');
+                if ($first_h2 !== false) {
+                    // Find the <hr> before it
+                    $hr_before = strrpos(substr($health_log, 0, $first_h2), '<hr');
+                    if ($hr_before !== false) {
+                        $new_entry = "  $date_header\n  <pre>\n$section\n$line\n  </pre>\n\n  <hr style=\"border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;\">\n\n";
+                        $health_log = substr($health_log, 0, $hr_before) . $new_entry . substr($health_log, $hr_before);
+                    }
+                }
+            }
+
+            file_put_contents($health_log_path, $health_log);
+
+            // Remove from voice-log.json
+            array_splice($voice_log, $target_idx, 1);
+            file_put_contents($voice_log_file, json_encode(array_values($voice_log), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
+            // Git commit & push
+            chdir(__DIR__ . '/..');
+            $output = shell_exec('git add -A && git commit -m "health-log: ' . $date . ' ' . $tag . '" && git push origin main 2>&1');
+            echo json_encode(['ok' => true, 'output' => $output]);
+        } else {
+            // No voice entry — just push current changes
+            chdir(__DIR__ . '/..');
+            $output = shell_exec('git add -A && git commit -m "dashboard update" && git push origin main 2>&1');
+            echo json_encode(['ok' => true, 'output' => $output]);
+        }
     } elseif ($action === 'delete_voice') {
         $file = $_POST['file'] ?? '';
         $time = $_POST['time'] ?? '';
@@ -86,6 +178,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             }
         }
         file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        echo json_encode(['ok' => true]);
+    } elseif ($action === 'add_health') {
+        $text = trim($_POST['text'] ?? '');
+        $tag = $_POST['tag'] ?? 'food';
+        if ($text) {
+            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+            $now_date = date('Y-m-d');
+            $now_time = date('H:i');
+            $voice_log[] = [
+                'date' => $now_date,
+                'time' => $now_time,
+                'text' => $text,
+                'summary' => mb_strlen($text) > 30 ? mb_substr($text, 0, 30) . '...' : $text,
+                'file' => 'manual-' . time(),
+                'tag' => $tag
+            ];
+            file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        }
         echo json_encode(['ok' => true]);
     } elseif ($action === 'edit_voice_meta') {
         $file = $_POST['file'] ?? '';
@@ -171,7 +281,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
         $html .= '<div class="note-wrapper">';
         $html .= '<div class="note-summary" onclick="toggleNote(this)">' . $summary . '</div>';
-        $html .= '<div class="note-full"><span>' . $text . '</span><div class="note-close" onclick="closeNote(this)">▲ close</div></div>';
+        $html .= '<div class="note-full" onclick="toggleNote(this)"><span>' . $text . '</span></div>';
         $html .= '</div>';
     } else {
         $html .= '<span class="voice-text">' . $text . '</span>';
@@ -179,7 +289,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $html .= '<span class="entry-actions">';
     $html .= '<button class="action-btn edit-btn" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . ($show_date_edit ? 'true' : 'false') . ')" title="Edit">✎</button>';
     if ($show_push) {
-        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>';
+        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="' . $file . '" data-time="' . $time . '" title="Push">↑</button>';
     }
     $html .= '<button class="action-btn delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
     $html .= '</span>';
@@ -197,7 +307,6 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </head>
 <body>
 
-<h1>mblog local dashboard</h1>
 
 <!-- Tasks -->
 <div class="section">
@@ -217,15 +326,14 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <div class="list-item expandable-item <?= $is_done ? 'done' : '' ?>">
       <div class="note-wrapper">
         <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></div>
-        <div class="note-full">
-          <span class="editable" onclick="event.stopPropagation();" data-file="'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')"><?= htmlspecialchars($vt['text']) ?></span>
-          <div class="note-close" onclick="closeNote(this)">▲ close</div>
+        <div class="note-full" onclick="toggleNote(this)">
+          <span><?= htmlspecialchars($vt['text']) ?></span>
         </div>
       </div>
       <span class="entry-actions">
         <button class="action-btn edit-btn" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false)" title="Edit">✎</button>
         <button class="action-btn complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="<?= $is_done ? 'Undo' : 'Complete' ?>"><?= $is_done ? '↩' : '✓' ?></button>
-        <button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
     </div>
@@ -272,6 +380,29 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       <?php foreach ($entries as $entry) echo voice_entry_html($entry, true, true, true); ?>
     <?php endforeach; ?>
   <?php endif; ?>
+  <div class="add-form" style="flex-wrap:wrap;">
+    <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
+      <option value="food">Food</option>
+      <option value="substance">Substance</option>
+      <option value="health">Health</option>
+    </select>
+    <input type="text" id="new-health" placeholder="Add entry..." style="flex:2;">
+    <button onclick="addHealthEntry()">Add</button>
+  </div>
+</div>
+<?php else: ?>
+<div class="section">
+  <div class="section-title">Health Log</div>
+  <div class="empty">No entries yet.</div>
+  <div class="add-form" style="flex-wrap:wrap;">
+    <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
+      <option value="food">Food</option>
+      <option value="substance">Substance</option>
+      <option value="health">Health</option>
+    </select>
+    <input type="text" id="new-health" placeholder="Add entry..." style="flex:2;">
+    <button onclick="addHealthEntry()">Add</button>
+  </div>
 </div>
 <?php endif; ?>
 
@@ -294,9 +425,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
           <span class="voice-time"><?= $time_short ?></span>
           <div class="note-wrapper">
             <div class="note-summary" onclick="toggleNote(this)"><?= $summary ?></div>
-            <div class="note-full">
-              <span class="editable" onclick="editVoice(this,'<?= $file ?>','<?= $time ?>')"><?= $text ?></span>
-              <div class="note-close" onclick="closeNote(this)">▲ close</div>
+            <div class="note-full" onclick="toggleNote(this)">
+              <span><?= $text ?></span>
             </div>
           </div>
           <span class="entry-actions">
@@ -325,9 +455,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <div class="list-item expandable-item">
       <div class="note-wrapper">
         <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></div>
-        <div class="note-full">
+        <div class="note-full" onclick="toggleNote(this)">
           <span><?= htmlspecialchars($vs['text']) ?></span>
-          <div class="note-close" onclick="closeNote(this)">▲ close</div>
         </div>
       </div>
       <span class="entry-actions">
@@ -497,12 +626,28 @@ function editAll(btn, file, time, date, showDateEdit) {
 function pushToServer(btn) {
   btn.disabled = true;
   btn.textContent = '...';
-  fetch('?action=push', { method: 'POST' })
+  const file = btn.dataset.file || '';
+  const time = btn.dataset.time || '';
+  const form = new FormData();
+  if (file) form.append('file', file);
+  if (time) form.append('time', time);
+  fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
-    .then(() => { btn.textContent = '✓'; btn.classList.add('done'); })
+    .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
 
+function addHealthEntry() {
+  const text = document.getElementById('new-health').value.trim();
+  const tag = document.getElementById('new-health-tag').value;
+  if (!text) return;
+  const form = new FormData();
+  form.append('text', text);
+  form.append('tag', tag);
+  fetch('?action=add_health', { method: 'POST', body: form }).then(() => location.reload());
+}
+
+document.getElementById('new-health').addEventListener('keydown', e => { if (e.key === 'Enter') addHealthEntry(); });
 document.getElementById('new-task').addEventListener('keydown', e => { if (e.key === 'Enter') addItem('task'); });
 document.getElementById('new-shopping').addEventListener('keydown', e => { if (e.key === 'Enter') addItem('shopping'); });
 </script>

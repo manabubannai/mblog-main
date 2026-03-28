@@ -42,13 +42,13 @@ h1 { font-size: 24px; color: #fff; margin-bottom: 32px; font-weight: 600; letter
 .toggle-content { display: none; }
 .toggle-content.open { display: block; }
 .scheduled-date { font-size: 13px; color: rgba(255,255,255,0.25); margin-left: 6px; }
-.note-summary { color: rgba(255,255,255,0.6); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: all 0.2s; }
+.note-summary { color: rgba(255,255,255,0.75); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: all 0.2s; }
 .note-summary:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); }
-.note-full { display: none; color: rgba(255,255,255,0.75); white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
+.note-full { display: none; color: rgba(255,255,255,0.55); white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
 .note-full.open { display: block; }
 .note-wrapper { flex: 1; min-width: 0; }
-.note-close { color: rgba(255,255,255,0.25); font-size: 14px; cursor: pointer; padding: 12px 0 4px; user-select: none; display: inline-block; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 8px 16px; margin-top: 8px; transition: all 0.2s; }
-.note-close:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
+.note-full { cursor: pointer; }
+.note-full:hover { background: rgba(255,255,255,0.02); border-radius: 8px; }
 /* Inline edit */
 .inline-edit { width: 100%; padding: 4px 0; }
 .inline-edit-row { display: flex; gap: 10px; margin-bottom: 10px; }
