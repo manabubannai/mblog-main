@@ -39,8 +39,10 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/daily_readiness?start_date=$DATE&end_date=$DATE" \
   > "$TMPDIR/readiness.json"
 
+# session の end_date は翌日を指定（Oura APIは end_date 排他的）
+NEXT_DATE=$(date -j -v+1d -f "%Y-%m-%d" "$DATE" '+%Y-%m-%d')
 curl -s -H "Authorization: Bearer $OURA_TOKEN" \
-  "https://api.ouraring.com/v2/usercollection/session?start_date=$DATE&end_date=$DATE" \
+  "https://api.ouraring.com/v2/usercollection/session?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/session.json"
 
 # Python でパース・フォーマット
@@ -93,25 +95,44 @@ meditation_sessions = [x for x in sessions if x.get("type") == "meditation"]
 stretch_sessions = [x for x in sessions if x.get("type") == "stretching" or x.get("type") == "stretch"]
 
 def format_session(sess):
-    dur = sec_to_hm(sess.get("duration", 0)) if sess.get("duration") else "—"
-    start = sess.get("start_datetime", "")[11:16] if sess.get("start_datetime") else ""
-    cal = sess.get("calories", 0)
-    return dur, start, cal
+    start_dt = sess.get("start_datetime", "")
+    end_dt = sess.get("end_datetime", "")
+    start_time = start_dt[11:16] if start_dt else ""
+    end_time = end_dt[11:16] if end_dt else ""
+    # Calculate duration from start/end
+    if start_dt and end_dt:
+        from datetime import datetime
+        fmt = "%Y-%m-%dT%H:%M"
+        try:
+            s_dt = datetime.strptime(start_dt[:16], fmt)
+            e_dt = datetime.strptime(end_dt[:16], fmt)
+            dur_sec = int((e_dt - s_dt).total_seconds())
+            dur = sec_to_hm(dur_sec)
+        except:
+            dur = "—"
+    else:
+        dur = "—"
+    # Avg heart rate
+    hr_items = [x for x in (sess.get("heart_rate", {}).get("items", []) or []) if x]
+    avg_hr = int(sum(hr_items) / len(hr_items)) if hr_items else 0
+    return dur, start_time, end_time, avg_hr
 
 med_line = "—"
 if meditation_sessions:
     parts = []
     for ms in meditation_sessions:
-        dur, start, cal = format_session(ms)
-        parts.append(f"{dur}（{start}）{cal}kcal" if start else f"{dur} {cal}kcal")
+        dur, start, end, avg_hr = format_session(ms)
+        hr_str = f" / Avg HR:{avg_hr}bpm" if avg_hr else ""
+        parts.append(f"{start}〜{end}（{dur}）{hr_str}")
     med_line = ", ".join(parts)
 
 stretch_line = "—"
 if stretch_sessions:
     parts = []
     for ss in stretch_sessions:
-        dur, start, cal = format_session(ss)
-        parts.append(f"{dur}（{start}）{cal}kcal" if start else f"{dur} {cal}kcal")
+        dur, start, end, avg_hr = format_session(ss)
+        hr_str = f" / Avg HR:{avg_hr}bpm" if avg_hr else ""
+        parts.append(f"{start}〜{end}（{dur}）{hr_str}")
     stretch_line = ", ".join(parts)
 
 lines = [
