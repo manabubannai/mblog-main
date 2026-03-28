@@ -9,17 +9,14 @@ $task_answers_path = dirname(__DIR__) . '/.github/task-answers.json';
 $task_answers = file_exists($task_answers_path) ? json_decode(file_get_contents($task_answers_path), true) : [];
 ?>
 <style>
-.task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.2); text-underline-offset: 3px; cursor: pointer; }
-.task-link:hover { text-decoration-color: rgba(0,0,0,0.5); }
-.task-detail { display: none; background: rgba(0,0,0,0.03); border-left: 2px solid rgba(0,0,0,0.1); padding: 12px 16px; margin: 8px 0; font-size: 14px; line-height: 1.8; white-space: pre-wrap; border-radius: 0 6px 6px 0; }
-.task-detail.open { display: block; }
+.task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.25); text-underline-offset: 3px; }
+.task-link:hover { text-decoration-color: rgba(0,0,0,0.6); }
 </style>
 <script>
-  const taskAnswers = <?= json_encode($task_answers, JSON_UNESCAPED_UNICODE) ?>;
+  const taskAnswers = <?= json_encode(array_keys($task_answers), JSON_UNESCAPED_UNICODE) ?>;
 
   window.onload = function () {
     document.querySelectorAll('pre').forEach(pre => {
-      // Make task lines clickable
       let html = pre.innerHTML;
       const taskSection = html.indexOf('■ タスク');
       if (taskSection !== -1) {
@@ -27,17 +24,13 @@ $task_answers = file_exists($task_answers_path) ? json_decode(file_get_contents(
         let after = html.substring(taskSection);
         after = after.replace(/^- (.+)$/gm, (match, taskName) => {
           const clean = taskName.replace(/<[^>]+>/g, '');
-          if (taskAnswers[clean]) {
-            const id = 'task-' + Math.random().toString(36).substr(2, 6);
-            const answer = taskAnswers[clean].replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            return '<span class="task-link" onclick="document.getElementById(\'' + id + '\').classList.toggle(\'open\')">' + match + '</span><div id="' + id + '" class="task-detail">' + answer + '</div>';
+          if (taskAnswers.includes(clean)) {
+            return '- <a class="task-link" href="/task-answers?q=' + encodeURIComponent(clean) + '">' + taskName + '</a>';
           }
           return match;
         });
         html = before + after;
       }
-
-      // Japanese font replacement
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
       html = html.replace(regex, '<span class="jp-font">$1</span>');
       pre.innerHTML = html;

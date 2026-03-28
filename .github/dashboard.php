@@ -103,6 +103,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         $claude_md = str_replace("- [x] $text\n", '', $claude_md);
         file_put_contents($claude_md_path, $claude_md);
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'reorder_shopping') {
+        $text = $_POST['text'] ?? '';
+        $dir = $_POST['dir'] ?? '';
+        $source = $_POST['source'] ?? 'claude';
+
+        if ($source === 'voice') {
+            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+            $indices = [];
+            foreach ($voice_log as $i => $e) {
+                if (($e['tag'] ?? '') === 'shopping' && empty($e['show_after'])) $indices[] = $i;
+            }
+            $current_pos = null;
+            foreach ($indices as $pos => $idx) {
+                if (($voice_log[$idx]['file'] ?? '') === ($_POST['file'] ?? '') && ($voice_log[$idx]['time'] ?? '') === ($_POST['time'] ?? '')) {
+                    $current_pos = $pos;
+                    break;
+                }
+            }
+            if ($current_pos !== null) {
+                $swap_pos = $dir === 'up' ? $current_pos - 1 : $current_pos + 1;
+                if ($swap_pos >= 0 && $swap_pos < count($indices)) {
+                    $a = $indices[$current_pos];
+                    $b = $indices[$swap_pos];
+                    $tmp = $voice_log[$a];
+                    $voice_log[$a] = $voice_log[$b];
+                    $voice_log[$b] = $tmp;
+                    file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+                }
+            }
+        } else {
+            preg_match('/## 買い物リスト\n([\s\S]*?)(?=\n##|\z)/', $claude_md, $shop_match);
+            if (!empty($shop_match[1])) {
+                preg_match_all('/- \[[ x]\] (.+)\n/', $shop_match[1], $matches, PREG_SET_ORDER);
+                $lines = [];
+                foreach ($matches as $m) $lines[] = $m[0];
+                $current_idx = null;
+                foreach ($lines as $i => $line) {
+                    if (strpos($line, $text) !== false) { $current_idx = $i; break; }
+                }
+                if ($current_idx !== null) {
+                    $swap_idx = $dir === 'up' ? $current_idx - 1 : $current_idx + 1;
+                    if ($swap_idx >= 0 && $swap_idx < count($lines)) {
+                        $tmp = $lines[$current_idx];
+                        $lines[$current_idx] = $lines[$swap_idx];
+                        $lines[$swap_idx] = $tmp;
+                        $new_list = implode('', $lines);
+                        $claude_md = preg_replace('/(## 買い物リスト\n)((?:- \[[ x]\] .+\n)+)/', '${1}' . $new_list, $claude_md);
+                        file_put_contents($claude_md_path, $claude_md);
+                    }
+                }
+            }
+        }
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'add_shopping') {
         $text = trim($_POST['text'] ?? '');
         if ($text) {
@@ -829,6 +882,16 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     }
     document.addEventListener('click', closeOnOutside);
   }, 100);
+}
+
+function reorderTask(text, dir, source, file, time) {
+  const form = new FormData();
+  form.append('text', text);
+  form.append('dir', dir);
+  form.append('source', source);
+  if (file) form.append('file', file);
+  if (time) form.append('time', time);
+  fetch('?action=reorder_task', { method: 'POST', body: form }).then(() => location.reload());
 }
 
 function pushToServer(btn, useSummary) {
