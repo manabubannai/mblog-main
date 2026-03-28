@@ -217,8 +217,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $health_log = file_get_contents($health_log_path);
             $date = $target['date'];
             $tag = $target['tag'] ?? '';
-            $use_summary = ($_POST['use_summary'] ?? '') === '1';
-            $text = $use_summary ? ($target['summary'] ?? $target['text']) : $target['text'];
+            $use_summary_val = $_POST['use_summary'] ?? '';
+            $use_summary = $use_summary_val === '1';
+            $use_both = $use_summary_val === 'both';
+            if ($use_both) {
+                $text = ($target['summary'] ?? $target['text']);
+            } else {
+                $text = $use_summary ? ($target['summary'] ?? $target['text']) : $target['text'];
+            }
             $entry_time = substr($target['time'], 0, 5);
 
             // Determine which section to write to
@@ -235,7 +241,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $line = '- ' . $text;
             } else {
                 $section = '■ Thought';
-                $line = $text;
+                if ($use_both) {
+                    $original = $target['text'] ?? '';
+                    $line = '- ' . $text . "\n  :: " . $original;
+                } else {
+                    $line = '- ' . $text;
+                }
             }
 
             // Find or create date entry
