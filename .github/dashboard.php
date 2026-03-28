@@ -664,7 +664,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $answer = $task_answers[$task['text']] ?? null;
   ?>
     <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="editTask(this,'<?= htmlspecialchars(addslashes($task['text'])) ?>',<?= $answer ? 'true' : 'false' ?>)"><?= htmlspecialchars($task['text']) ?></span>
+      <span class="voice-text clickable-title" onclick="<?= $answer ? 'toggleAnswer(this,event)' : 'editTask(this,\'' . htmlspecialchars(addslashes($task['text'])) . '\',false)' ?>"><?= htmlspecialchars($task['text']) ?></span>
       <?php if ($answer): ?>
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?>
         <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
@@ -683,9 +683,13 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <?php endforeach; ?>
   <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); $vt_answer = $vt['answer'] ?? null; ?>
     <div class="list-item <?= $is_done ? 'done' : '' ?> <?= $vt_answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
+      <span class="voice-text clickable-title" onclick="<?= $vt_answer ? 'toggleAnswer(this,event)' : 'editAll(this,\'' . htmlspecialchars(addslashes($vt['file'])) . '\',\'' . htmlspecialchars($vt['time']) . '\',\'' . htmlspecialchars($vt['date'] ?? '') . '\',false,\'' . htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) . '\')' ?>"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
       <?php if ($vt_answer): ?>
-        <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?></div>
+        <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+          <button data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
+        </div>
+        </div>
       <?php endif; ?>
       <span class="entry-actions">
         <button class="action-btn done-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Toggle done"><?= $is_done ? '↩' : '✓' ?></button>
