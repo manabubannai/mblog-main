@@ -367,7 +367,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       <span class="entry-actions">
         <button class="action-btn edit-btn" onclick="editListItem(this,'task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Edit">✎</button>
         <button class="action-btn complete-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="<?= $task['done'] ? 'Undo' : 'Complete' ?>"><?= $task['done'] ? '↩' : '✓' ?></button>
-        <button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
     </div>
