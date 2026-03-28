@@ -71,6 +71,8 @@ Breakfast 13:30
 
 Lunch 13:40
 - Rice 250g, Egg 4個, 納豆 2パック, キムチ 50g
+19:17
+- 夕食: 味噌汁 + 米250g + 卵2個
 
 ■ Substances
 - ProBac7（朝食前）
