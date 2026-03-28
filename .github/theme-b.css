@@ -1,0 +1,50 @@
+/* Theme B: Warm Dark — 暖色アクセントのダーク */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif; background: #12110f; color: #d4cec4; padding: 24px; max-width: 760px; margin: 0 auto; font-size: 16px; }
+h1 { font-size: 22px; color: #c8a96e; margin-bottom: 32px; font-weight: 500; }
+.section { margin-bottom: 28px; background: #1c1a17; border-radius: 12px; padding: 24px; border: 1px solid #2a2620; }
+.section-title { font-size: 13px; color: #8a7e6a; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #2a2620; font-weight: 600; }
+.sub-title { color: #8a7e6a; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-weight: 600; }
+.sub-title-border { margin: 20px 0 10px; padding-top: 16px; border-top: 1px solid #2a2620; }
+.voice-date { font-size: 13px; color: #6a6050; margin: 14px 0 8px; font-weight: 500; }
+.voice-date:first-child { margin-top: 0; }
+.voice-entry { display: flex; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid #22201c; align-items: flex-start; }
+.voice-entry:last-child { border-bottom: none; }
+.voice-time { color: #7a7060; font-size: 14px; white-space: nowrap; min-width: 48px; padding-top: 2px; font-weight: 500; }
+.voice-text { color: #c8c0b4; flex: 1; }
+.editable { cursor: pointer; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: background 0.15s; }
+.editable:hover { background: #252220; }
+.edit-input { background: #15130f; border: 1px solid #3a3530; color: #d4cec4; padding: 10px 14px; border-radius: 8px; font-size: 16px; font-family: inherit; width: 100%; line-height: 1.7; resize: vertical; }
+.entry-actions { display: flex; gap: 6px; white-space: nowrap; align-items: center; }
+.list-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid #22201c; }
+.list-item:last-of-type { border-bottom: none; }
+.list-item.done { color: #5a5548; text-decoration: line-through; }
+.list-item .editable { flex: 1; }
+.delete-btn { background: #2a2018; border: none; color: #c47a5a; cursor: pointer; font-size: 18px; padding: 8px 14px; line-height: 1; border-radius: 8px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.delete-btn:hover { background: #3a2820; color: #e08a5a; }
+.push-item-btn { background: #1a2a18; border: none; color: #7ab870; cursor: pointer; font-size: 18px; padding: 8px 14px; line-height: 1; border-radius: 8px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.push-item-btn:hover { background: #223a20; }
+.complete-btn { background: #1a2530; border: none; color: #6aace0; cursor: pointer; font-size: 16px; padding: 8px 14px; line-height: 1; border-radius: 8px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.complete-btn:hover { background: #203040; }
+.push-item-btn.done { color: #4a4540; }
+.add-form { display: flex; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid #2a2620; }
+.add-form input[type="text"] { flex: 1; background: #15130f; border: 1px solid #3a3530; color: #d4cec4; padding: 12px 16px; border-radius: 8px; font-size: 16px; font-family: inherit; }
+.add-form input[type="text"]:focus { outline: none; border-color: #c8a96e; }
+.add-form button { background: #2a2620; color: #a09080; border: none; padding: 12px 22px; border-radius: 8px; cursor: pointer; font-size: 15px; font-family: inherit; transition: all 0.15s; }
+.add-form button:hover { background: #3a3428; color: #c8a96e; }
+.empty { color: #5a5548; font-size: 14px; font-style: italic; }
+.toggle { color: #7a7060; font-size: 14px; cursor: pointer; padding: 12px 0 6px; user-select: none; }
+.toggle:hover { color: #a09080; }
+.toggle-content { display: none; }
+.toggle-content.open { display: block; }
+.scheduled-date { font-size: 13px; color: #5a5548; margin-left: 6px; }
+.note-summary { color: #a09888; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: all 0.15s; }
+.note-summary:hover { background: #252220; color: #d4cec4; }
+.note-full { display: none; color: #b8b0a4; white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
+.note-full.open { display: block; }
+.note-wrapper { flex: 1; min-width: 0; }
+.note-close { color: #6a6050; font-size: 13px; cursor: pointer; padding: 8px 0 2px; user-select: none; }
+.note-close:hover { color: #a09080; }
+.theme-nav { text-align: center; margin-bottom: 20px; }
+.theme-nav a { color: #6a6050; text-decoration: none; font-size: 13px; margin: 0 8px; padding: 4px 12px; border-radius: 6px; }
+.theme-nav a:hover, .theme-nav a.active { color: #c8a96e; background: #2a2620; }

@@ -1,0 +1,50 @@
+/* Theme A: Glassmorphism — Apple風の半透明カード */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'SF Pro Display', 'Hiragino Sans', sans-serif; background: linear-gradient(135deg, #0f0f1a 0%, #1a1025 50%, #0d1520 100%); color: #e8e8ef; padding: 24px; max-width: 760px; margin: 0 auto; font-size: 16px; min-height: 100vh; }
+h1 { font-size: 24px; color: #fff; margin-bottom: 32px; font-weight: 600; letter-spacing: -0.5px; }
+.section { margin-bottom: 28px; background: rgba(255,255,255,0.06); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+.section-title { font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.sub-title { color: rgba(255,255,255,0.4); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+.sub-title-border { margin: 20px 0 10px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+.voice-date { font-size: 13px; color: rgba(255,255,255,0.3); margin: 14px 0 8px; }
+.voice-date:first-child { margin-top: 0; }
+.voice-entry { display: flex; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid rgba(255,255,255,0.04); align-items: flex-start; }
+.voice-entry:last-child { border-bottom: none; }
+.voice-time { color: rgba(255,255,255,0.35); font-size: 14px; white-space: nowrap; min-width: 48px; padding-top: 2px; }
+.voice-text { color: rgba(255,255,255,0.8); flex: 1; }
+.editable { cursor: pointer; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: background 0.2s; }
+.editable:hover { background: rgba(255,255,255,0.06); }
+.edit-input { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15); color: #e8e8ef; padding: 10px 14px; border-radius: 10px; font-size: 16px; font-family: inherit; width: 100%; line-height: 1.7; resize: vertical; }
+.entry-actions { display: flex; gap: 6px; white-space: nowrap; align-items: center; }
+.list-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.list-item:last-of-type { border-bottom: none; }
+.list-item.done { color: rgba(255,255,255,0.25); text-decoration: line-through; }
+.list-item .editable { flex: 1; }
+.delete-btn { background: rgba(255,80,80,0.1); border: none; color: #ff6b6b; cursor: pointer; font-size: 18px; padding: 8px 14px; line-height: 1; border-radius: 10px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.delete-btn:hover { background: rgba(255,80,80,0.2); }
+.push-item-btn { background: rgba(80,200,120,0.1); border: none; color: #50c878; cursor: pointer; font-size: 18px; padding: 8px 14px; line-height: 1; border-radius: 10px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.push-item-btn:hover { background: rgba(80,200,120,0.2); }
+.complete-btn { background: rgba(74,158,255,0.1); border: none; color: #4a9eff; cursor: pointer; font-size: 16px; padding: 8px 14px; line-height: 1; border-radius: 10px; min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.complete-btn:hover { background: rgba(74,158,255,0.2); }
+.push-item-btn.done { color: rgba(255,255,255,0.2); }
+.add-form { display: flex; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+.add-form input[type="text"] { flex: 1; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #e8e8ef; padding: 12px 16px; border-radius: 10px; font-size: 16px; font-family: inherit; }
+.add-form input[type="text"]:focus { outline: none; border-color: rgba(74,158,255,0.4); }
+.add-form button { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); border: none; padding: 12px 22px; border-radius: 10px; cursor: pointer; font-size: 15px; font-family: inherit; transition: all 0.2s; }
+.add-form button:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.empty { color: rgba(255,255,255,0.25); font-size: 14px; font-style: italic; }
+.toggle { color: rgba(255,255,255,0.35); font-size: 14px; cursor: pointer; padding: 12px 0 6px; user-select: none; }
+.toggle:hover { color: rgba(255,255,255,0.6); }
+.toggle-content { display: none; }
+.toggle-content.open { display: block; }
+.scheduled-date { font-size: 13px; color: rgba(255,255,255,0.25); margin-left: 6px; }
+.note-summary { color: rgba(255,255,255,0.6); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: all 0.2s; }
+.note-summary:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); }
+.note-full { display: none; color: rgba(255,255,255,0.75); white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
+.note-full.open { display: block; }
+.note-wrapper { flex: 1; min-width: 0; }
+.note-close { color: rgba(255,255,255,0.3); font-size: 13px; cursor: pointer; padding: 8px 0 2px; user-select: none; }
+.note-close:hover { color: rgba(255,255,255,0.6); }
+.theme-nav { text-align: center; margin-bottom: 20px; }
+.theme-nav a { color: rgba(255,255,255,0.3); text-decoration: none; font-size: 13px; margin: 0 8px; padding: 4px 12px; border-radius: 6px; }
+.theme-nav a:hover, .theme-nav a.active { color: #fff; background: rgba(255,255,255,0.1); }
