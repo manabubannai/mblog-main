@@ -22,17 +22,15 @@ h1 { font-size: 24px; color: #fff; margin-bottom: 32px; font-weight: 600; letter
 .list-item .editable { flex: 1; }
 /* Action buttons — consistent sizing */
 .action-btn { border: none; cursor: pointer; font-size: 16px; padding: 10px 14px; line-height: 1; border-radius: 10px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-.delete-btn { background: rgba(255,80,80,0.1); color: #ff6b6b; }
-.delete-btn:hover { background: rgba(255,80,80,0.2); }
-.push-item-btn { background: rgba(80,200,120,0.1); color: #50c878; }
-.push-item-btn:hover { background: rgba(80,200,120,0.2); }
-.complete-btn { background: rgba(74,158,255,0.1); color: #4a9eff; }
-.complete-btn:hover { background: rgba(74,158,255,0.2); }
-.edit-btn { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
-.edit-btn:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
-.push-item-btn { filter: grayscale(1) brightness(2); }
-.push-item-btn:hover { filter: grayscale(0); }
+.delete-btn { background: rgba(255,80,80,0.12); color: #ff5050; }
+.delete-btn:hover { background: rgba(255,80,80,0.25); }
+.push-item-btn { background: rgba(74,158,255,0.15); color: #4a9eff; }
+.push-item-btn:hover { background: rgba(74,158,255,0.3); }
 .push-item-btn.done { color: rgba(255,255,255,0.2); }
+.done-btn { background: rgba(80,200,120,0.15); color: #50c878; }
+.done-btn:hover { background: rgba(80,200,120,0.3); }
+.reorder-btn { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.35); }
+.reorder-btn:hover { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
 .add-form { display: flex; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
 .add-form input[type="text"] { flex: 1; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #e8e8ef; padding: 12px 16px; border-radius: 10px; font-size: 16px; font-family: inherit; }
 .add-form input[type="text"]:focus { outline: none; border-color: rgba(74,158,255,0.4); }

@@ -588,7 +588,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
-        <button class="action-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Toggle done"><?= $task['done'] ? '↩' : '✓' ?></button>
+        <button class="action-btn done-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Toggle done"><?= $task['done'] ? '↩' : '✓' ?></button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','up','claude')" title="Up">▲</button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','down','claude')" title="Down">▼</button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-task="<?= htmlspecialchars($task['text']) ?>" title="Push">🚀</button>
@@ -603,7 +603,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
-        <button class="action-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Toggle done"><?= $is_done ? '↩' : '✓' ?></button>
+        <button class="action-btn done-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Toggle done"><?= $is_done ? '↩' : '✓' ?></button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','up','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Up">▲</button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','down','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Down">▼</button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">🚀</button>
