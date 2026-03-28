@@ -5,12 +5,14 @@ $q = $_GET['q'] ?? '';
 $answer = $answers[$q] ?? null;
 
 // Debug: remove after confirming
-if (!$answer && isset($_GET['debug'])) {
-    header('Content-Type: text/plain');
+if (isset($_GET['debug'])) {
+    header('Content-Type: text/plain; charset=utf-8');
     echo "file_exists: " . (file_exists($data_file) ? 'YES' : 'NO') . "\n";
-    echo "path: $data_file\n";
+    echo "realpath: " . realpath($data_file) . "\n";
     echo "q: [$q]\n";
-    echo "keys: " . implode(', ', array_keys($answers)) . "\n";
+    echo "answer_found: " . ($answer ? 'YES' : 'NO') . "\n";
+    echo "num_keys: " . count($answers) . "\n";
+    foreach (array_keys($answers) as $k) echo "key: [$k]\n";
     exit;
 }
 
