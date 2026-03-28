@@ -155,6 +155,79 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             chdir(__DIR__ . '/..');
             $output = shell_exec('git add -A && git commit -m "health-log: ' . $date . ' ' . $tag . '" && git push origin main 2>&1');
             echo json_encode(['ok' => true, 'output' => $output]);
+        } elseif (!empty($_POST['task'])) {
+            // CLAUDE.md task — push to health-log.php
+            $task_text = $_POST['task'];
+            $health_log_path = __DIR__ . '/../posts/health-log.php';
+            $health_log = file_get_contents($health_log_path);
+            $date = date('Y-m-d');
+            $date_header = '<h2># ' . $date . '</h2>';
+
+            // Determine content: task text → タスク, AI answer → Note
+            $task_answer = $task_answers[$task_text] ?? null;
+            $task_line = '- ' . $task_text;
+
+            if (strpos($health_log, $date_header) !== false) {
+                $date_pos = strpos($health_log, $date_header);
+                $pre_start = strpos($health_log, '<pre>', $date_pos);
+                $pre_end = strpos($health_log, '</pre>', $pre_start);
+                $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+
+                // Add task text to ■ タスク
+                $section_pos = strpos($pre_content, '■ タスク');
+                if ($section_pos !== false) {
+                    $next_section = strpos($pre_content, "\n■", $section_pos + 1);
+                    if ($next_section === false) {
+                        $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n" . $task_line . "\n" . substr($health_log, $insert_pos);
+                    } else {
+                        $insert_pos = $pre_start + 5 + $next_section;
+                        $health_log = substr($health_log, 0, $insert_pos) . $task_line . "\n\n" . substr($health_log, $insert_pos);
+                    }
+                } else {
+                    $insert_pos = $pre_end;
+                    $health_log = substr($health_log, 0, $insert_pos) . "\n■ タスク\n" . $task_line . "\n  " . substr($health_log, $insert_pos);
+                }
+
+                // If AI answer exists, add to ■ Note
+                if ($task_answer) {
+                    // Re-parse since content shifted
+                    $pre_start = strpos($health_log, '<pre>', $date_pos);
+                    $pre_end = strpos($health_log, '</pre>', $pre_start);
+                    $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+
+                    $note_pos = strpos($pre_content, '■ Note');
+                    $answer_text = '【' . $task_text . '】' . "\n" . $task_answer;
+                    if ($note_pos !== false) {
+                        $next_section = strpos($pre_content, "\n■", $note_pos + 1);
+                        if ($next_section === false) {
+                            $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
+                            $health_log = substr($health_log, 0, $insert_pos) . "\n\n" . $answer_text . "\n" . substr($health_log, $insert_pos);
+                        } else {
+                            $insert_pos = $pre_start + 5 + $next_section;
+                            $health_log = substr($health_log, 0, $insert_pos) . "\n" . $answer_text . "\n" . substr($health_log, $insert_pos);
+                        }
+                    }
+                }
+            }
+
+            file_put_contents($health_log_path, $health_log);
+
+            // Mark task as done in CLAUDE.md
+            $claude_md = file_get_contents($claude_md_path);
+            $claude_md = str_replace("- [ ] $task_text\n", "- [x] $task_text\n", $claude_md);
+            file_put_contents($claude_md_path, $claude_md);
+
+            // Remove from task-answers.json
+            if ($task_answer) {
+                unset($task_answers[$task_text]);
+                file_put_contents($task_answers_file, json_encode($task_answers, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            }
+
+            // Git commit & push
+            chdir(__DIR__ . '/..');
+            $output = shell_exec('git add -A && git commit -m "health-log: ' . $date . ' task push" && git push origin main 2>&1');
+            echo json_encode(['ok' => true, 'output' => $output]);
         } else {
             // No voice entry — just push current changes
             chdir(__DIR__ . '/..');
@@ -374,7 +447,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
-        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-task="<?= htmlspecialchars($task['text']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
     </div>
@@ -736,9 +809,11 @@ function pushToServer(btn, useSummary) {
   if (parent) parent.querySelectorAll('.push-item-btn').forEach(b => { b.disabled = true; });
   const file = btn.dataset.file || '';
   const time = btn.dataset.time || '';
+  const task = btn.dataset.task || '';
   const form = new FormData();
   if (file) form.append('file', file);
   if (time) form.append('time', time);
+  if (task) form.append('task', task);
   if (useSummary !== undefined) form.append('use_summary', useSummary ? '1' : '0');
   fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
