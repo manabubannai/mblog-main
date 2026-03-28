@@ -4,6 +4,16 @@ $answers = file_exists($data_file) ? json_decode(file_get_contents($data_file), 
 $q = $_GET['q'] ?? '';
 $answer = $answers[$q] ?? null;
 
+// Debug: remove after confirming
+if (!$answer && isset($_GET['debug'])) {
+    header('Content-Type: text/plain');
+    echo "file_exists: " . (file_exists($data_file) ? 'YES' : 'NO') . "\n";
+    echo "path: $data_file\n";
+    echo "q: [$q]\n";
+    echo "keys: " . implode(', ', array_keys($answers)) . "\n";
+    exit;
+}
+
 if (!$answer) {
     $page_title = 'Task Not Found';
     $page_description = 'The requested task was not found.';
