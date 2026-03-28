@@ -563,12 +563,15 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $text = htmlspecialchars($entry['text']);
     $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
     $de = $show_date_edit ? 'true' : 'false';
-    $html = '<div class="voice-entry">';
+    $has_answer = !empty($entry['answer']);
+    $html = '<div class="voice-entry' . ($has_answer ? ' has-answer' : '') . '">';
     $html .= '<span class="voice-time">' . $time_short . '</span>';
     if ($use_summary) {
-        $html .= '<span class="voice-text clickable-title" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'' . addslashes($summary) . '\')">' . $summary . '</span>';
+        $onclick = $has_answer ? 'toggleAnswer(this,event)' : 'editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'' . addslashes($summary) . '\')';
+        $html .= '<span class="voice-text clickable-title" onclick="' . $onclick . '">' . $summary . '</span>';
     } else {
-        $html .= '<span class="voice-text clickable-title" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'\')">' . $text . '</span>';
+        $onclick = $has_answer ? 'toggleAnswer(this,event)' : 'editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . $de . ',\'\')';
+        $html .= '<span class="voice-text clickable-title" onclick="' . $onclick . '">' . $text . '</span>';
     }
     $html .= '<span class="entry-actions">';
     if ($show_push) {
@@ -576,6 +579,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     }
     $html .= '<button class="action-btn delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
     $html .= '</span>';
+    $entry_answer = $entry['answer'] ?? null;
+    if ($entry_answer) {
+        $html .= '<div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 ' . nl2br(htmlspecialchars($entry['text'])) . '</div>' . nl2br(htmlspecialchars($entry_answer)) . '</div>';
+    }
     $html .= '</div>';
     return $html;
 }
