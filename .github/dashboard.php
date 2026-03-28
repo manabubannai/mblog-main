@@ -826,7 +826,6 @@ function editTask(el, oldText, hasAnswer) {
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin:12px 0 4px;display:block;">AI Answer</label>';
     html += '<textarea class="inline-textarea inline-answer">' + oldAnswer.replace(/</g,'&lt;') + '</textarea>';
   }
-  html += '<div class="inline-edit-actions"><button class="inline-save">Save</button></div>';
   form.innerHTML = html;
 
   entry.innerHTML = '';
@@ -835,31 +834,33 @@ function editTask(el, oldText, hasAnswer) {
   textareas.forEach(ta => { ta.style.height = Math.max(50, ta.scrollHeight) + 'px'; });
   textareas[0].focus();
 
-  form.querySelector('.inline-save').onclick = () => {
-    const newText = textareas[0].value.trim();
-    const newAnswer = hasAnswer ? (form.querySelector('.inline-answer')?.value.trim() ?? '') : '';
-    const promises = [];
-    if (newText && newText !== oldText) {
-      const f = new FormData();
-      f.append('old_text', oldText);
-      f.append('new_text', newText);
-      promises.push(fetch('?action=edit_task', { method: 'POST', body: f }));
-    }
-    if (hasAnswer && newAnswer !== oldAnswer) {
-      const f2 = new FormData();
-      f2.append('task_name', newText || oldText);
-      f2.append('new_answer', newAnswer);
-      f2.append('source', 'claude');
-      // If task name changed, also update the key
-      if (newText && newText !== oldText) f2.append('old_task_name', oldText);
-      promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f2 }));
-    }
-    if (promises.length) {
-      Promise.all(promises).then(() => location.reload());
-    } else {
-      entry.innerHTML = originalHTML;
-    }
-  };
+  // Auto-save with debounce
+  let saveTimer = null;
+  function autoSave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      const newText = textareas[0].value.trim();
+      const newAnswer = hasAnswer ? (form.querySelector('.inline-answer')?.value.trim() ?? '') : '';
+      const promises = [];
+      if (newText && newText !== oldText) {
+        const f = new FormData();
+        f.append('old_text', oldText);
+        f.append('new_text', newText);
+        promises.push(fetch('?action=edit_task', { method: 'POST', body: f }));
+        oldText = newText;
+      }
+      if (hasAnswer && newAnswer !== oldAnswer) {
+        const f2 = new FormData();
+        f2.append('task_name', newText || oldText);
+        f2.append('new_answer', newAnswer);
+        f2.append('source', 'claude');
+        if (newText && newText !== oldText) f2.append('old_task_name', oldText);
+        promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f2 }));
+      }
+      if (promises.length) Promise.all(promises);
+    }, 800);
+  }
+  form.querySelectorAll('textarea').forEach(ta => ta.addEventListener('input', autoSave));
   textareas[0].addEventListener('keydown', e => {
     if (e.key === 'Escape') entry.innerHTML = originalHTML;
   });
@@ -942,9 +943,6 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin:12px 0 4px;display:block;">AI Answer</label>';
     html += '<textarea class="inline-textarea inline-answer">' + oldAnswer.replace(/</g,'&lt;') + '</textarea>';
   }
-  html += '<div class="inline-edit-actions">';
-  html += '<button class="inline-save">Save</button>';
-  html += '</div>';
   form.innerHTML = html;
 
   entry.innerHTML = '';
@@ -959,10 +957,12 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     .then(data => {
       textarea.value = data.text || originalText;
       textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
+      textarea.dataset.original = textarea.value;
     })
     .catch(() => {
       textarea.value = originalText;
       textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
+      textarea.dataset.original = textarea.value;
     });
   // Auto-size answer textarea
   const answerTaInit = form.querySelector('.inline-answer');
@@ -972,42 +972,47 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
 
   if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
   form.querySelector('.inline-push-o').onclick = function() { pushToServer(this, false); };
-  form.querySelector('.inline-save').onclick = () => {
-    const newText = textarea.value.trim();
-    const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
-    const promises = [];
-    const f = new FormData();
-    f.append('file', file); f.append('time', time);
-    let hasChange = false;
-    if (newText) { f.append('new_text', newText); hasChange = true; }
-    if (newSummary && newSummary !== currentSummary) { f.append('new_summary', newSummary); hasChange = true; }
-    if (hasChange) promises.push(fetch('?action=edit_voice', { method: 'POST', body: f }));
-    if (showDateEdit) {
-      const nd = form.querySelector('.inline-date').value;
-      const nt = form.querySelector('.inline-time').value;
-      if (nd !== date || nt !== time) {
-        const f2 = new FormData();
-        f2.append('file', file); f2.append('time', time); f2.append('new_date', nd); f2.append('new_time', nt);
-        promises.push(fetch('?action=edit_voice_meta', { method: 'POST', body: f2 }));
+
+  // Auto-save with debounce
+  let saveTimer = null;
+  function autoSave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      const newText = textarea.value.trim();
+      const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
+      const promises = [];
+      const f = new FormData();
+      f.append('file', file); f.append('time', time);
+      let hasChange = false;
+      if (newText && newText !== (textarea.dataset.original || '')) { f.append('new_text', newText); hasChange = true; }
+      if (newSummary && newSummary !== currentSummary) { f.append('new_summary', newSummary); hasChange = true; }
+      if (hasChange) promises.push(fetch('?action=edit_voice', { method: 'POST', body: f }));
+      if (showDateEdit) {
+        const nd = form.querySelector('.inline-date').value;
+        const nt = form.querySelector('.inline-time').value;
+        if (nd !== date || nt !== time) {
+          const f2 = new FormData();
+          f2.append('file', file); f2.append('time', time); f2.append('new_date', nd); f2.append('new_time', nt);
+          promises.push(fetch('?action=edit_voice_meta', { method: 'POST', body: f2 }));
+        }
       }
-    }
-    const answerTa = form.querySelector('.inline-answer');
-    if (answerTa) {
-      const newAnswer = answerTa.value.trim();
-      if (newAnswer !== oldAnswer) {
-        const f3 = new FormData();
-        f3.append('task_name', currentSummary || originalText);
-        f3.append('new_answer', newAnswer);
-        f3.append('source', 'voice');
-        f3.append('file', file);
-        f3.append('time', time);
-        promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f3 }));
-        hasChange = true;
+      const answerTa = form.querySelector('.inline-answer');
+      if (answerTa) {
+        const newAnswer = answerTa.value.trim();
+        if (newAnswer !== oldAnswer) {
+          const f3 = new FormData();
+          f3.append('task_name', currentSummary || originalText);
+          f3.append('new_answer', newAnswer);
+          f3.append('source', 'voice');
+          f3.append('file', file);
+          f3.append('time', time);
+          promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f3 }));
+        }
       }
-    }
-    if (promises.length > 0) Promise.all(promises).then(() => location.reload());
-    else entry.innerHTML = originalHTML;
-  };
+      if (promises.length > 0) Promise.all(promises);
+    }, 800);
+  }
+  form.querySelectorAll('input, textarea').forEach(el => el.addEventListener('input', autoSave));
   textarea.addEventListener('keydown', e => { if (e.key === 'Escape') entry.innerHTML = originalHTML; });
   setTimeout(() => {
     function closeOnOutside(e) {
