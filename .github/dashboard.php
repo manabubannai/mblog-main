@@ -18,8 +18,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         echo json_encode(['ok' => true]);
     } elseif ($action === 'complete_task') {
         $text = $_POST['text'] ?? '';
-        $claude_md = str_replace("- [ ] $text\n", "- [x] $text\n", $claude_md);
+        if (strpos($claude_md, "- [ ] $text\n") !== false) {
+            $claude_md = str_replace("- [ ] $text\n", "- [x] $text\n", $claude_md);
+        } else {
+            $claude_md = str_replace("- [x] $text\n", "- [ ] $text\n", $claude_md);
+        }
         file_put_contents($claude_md_path, $claude_md);
+        echo json_encode(['ok' => true]);
+    } elseif ($action === 'edit_task') {
+        $old = $_POST['old_text'] ?? '';
+        $new = trim($_POST['new_text'] ?? '');
+        if ($old && $new) {
+            $claude_md = str_replace("- [ ] $old\n", "- [ ] $new\n", $claude_md);
+            $claude_md = str_replace("- [x] $old\n", "- [x] $new\n", $claude_md);
+            file_put_contents($claude_md_path, $claude_md);
+        }
+        echo json_encode(['ok' => true]);
+    } elseif ($action === 'edit_shopping') {
+        $old = $_POST['old_text'] ?? '';
+        $new = trim($_POST['new_text'] ?? '');
+        if ($old && $new) {
+            $claude_md = str_replace("- [ ] $old\n", "- [ ] $new\n", $claude_md);
+            $claude_md = str_replace("- [x] $old\n", "- [x] $new\n", $claude_md);
+            file_put_contents($claude_md_path, $claude_md);
+        }
         echo json_encode(['ok' => true]);
     } elseif ($action === 'delete_task') {
         $text = $_POST['text'] ?? '';
@@ -59,7 +81,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
         foreach ($voice_log as &$e) {
             if ($e['file'] === $file && $e['time'] === $time) {
-                $e['done'] = true;
+                $e['done'] = empty($e['done']);
+                break;
+            }
+        }
+        file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        echo json_encode(['ok' => true]);
+    } elseif ($action === 'edit_voice_meta') {
+        $file = $_POST['file'] ?? '';
+        $time = $_POST['time'] ?? '';
+        $new_date = $_POST['new_date'] ?? '';
+        $new_time = $_POST['new_time'] ?? '';
+        $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+        foreach ($voice_log as &$e) {
+            if ($e['file'] === $file && $e['time'] === $time) {
+                if ($new_date) $e['date'] = $new_date;
+                if ($new_time) $e['time'] = $new_time;
                 break;
             }
         }
@@ -122,23 +159,29 @@ foreach ($voice_notes as $e) $notes_by_date[$e['date']][] = $e;
 krsort($notes_by_date);
 
 // Helper: render voice entry with edit/delete/push
-function voice_entry_html($entry, $show_push = false) {
+function voice_entry_html($entry, $show_push = false, $use_summary = true, $show_date_edit = false) {
     $file = htmlspecialchars(addslashes($entry['file']));
     $time = htmlspecialchars($entry['time']);
+    $date = htmlspecialchars($entry['date']);
     $time_short = htmlspecialchars(substr($entry['time'], 0, 5));
     $text = htmlspecialchars($entry['text']);
-    $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
     $html = '<div class="voice-entry">';
     $html .= '<span class="voice-time">' . $time_short . '</span>';
-    $html .= '<div class="note-wrapper">';
-    $html .= '<div class="note-summary" onclick="toggleNote(this)">' . $summary . '</div>';
-    $html .= '<div class="note-full"><span class="editable" onclick="event.stopPropagation();editVoice(this,\'' . $file . '\',\'' . $time . '\')">' . $text . '</span><div class="note-close" onclick="closeNote(this)">▲ close</div></div>';
-    $html .= '</div>';
-    $html .= '<span class="entry-actions">';
-    if ($show_push) {
-        $html .= '<button class="push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>';
+    if ($use_summary) {
+        $summary = isset($entry['summary']) ? htmlspecialchars($entry['summary']) : $text;
+        $html .= '<div class="note-wrapper">';
+        $html .= '<div class="note-summary" onclick="toggleNote(this)">' . $summary . '</div>';
+        $html .= '<div class="note-full"><span>' . $text . '</span><div class="note-close" onclick="closeNote(this)">▲ close</div></div>';
+        $html .= '</div>';
+    } else {
+        $html .= '<span class="voice-text">' . $text . '</span>';
     }
-    $html .= '<button class="delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
+    $html .= '<span class="entry-actions">';
+    $html .= '<button class="action-btn edit-btn" onclick="editAll(this,\'' . $file . '\',\'' . $time . '\',\'' . $date . '\',' . ($show_date_edit ? 'true' : 'false') . ')" title="Edit">✎</button>';
+    if ($show_push) {
+        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>';
+    }
+    $html .= '<button class="action-btn delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
     $html .= '</span>';
     $html .= '</div>';
     return $html;
@@ -150,54 +193,7 @@ function voice_entry_html($entry, $show_push = false) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif; background: #0d0d0d; color: #e0e0e0; padding: 20px; max-width: 760px; margin: 0 auto; font-size: 16px; }
-  h1 { font-size: 15px; color: #666; margin-bottom: 28px; font-weight: normal; }
-  .section { margin-bottom: 28px; background: #1a1a1a; border-radius: 10px; padding: 24px; }
-  .section-title { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid #2a2a2a; }
-  .sub-title { color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-  .sub-title-border { margin: 20px 0 10px; padding-top: 16px; border-top: 1px solid #2a2a2a; }
-  .voice-date { font-size: 13px; color: #555; margin: 14px 0 8px; }
-  .voice-date:first-child { margin-top: 0; }
-  .voice-entry { display: flex; gap: 12px; padding: 10px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid #1f1f1f; align-items: flex-start; }
-  .voice-entry:last-child { border-bottom: none; }
-  .voice-time { color: #666; font-size: 14px; white-space: nowrap; min-width: 48px; padding-top: 2px; }
-  .voice-text { color: #ccc; flex: 1; }
-  .editable { cursor: pointer; border-radius: 4px; padding: 4px 6px; margin: -4px -6px; }
-  .editable:hover { background: #222; }
-  .edit-input { background: #111; border: 1px solid #444; color: #ccc; padding: 8px 12px; border-radius: 6px; font-size: 16px; font-family: inherit; width: 100%; line-height: 1.7; resize: vertical; }
-  .entry-actions { display: flex; gap: 2px; white-space: nowrap; align-items: center; }
-  .list-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 16px; line-height: 1.7; border-bottom: 1px solid #1f1f1f; }
-  .list-item:last-of-type { border-bottom: none; }
-  .list-item.done { color: #555; text-decoration: line-through; }
-  .list-item .editable { flex: 1; }
-  .delete-btn { background: #2a2a2a; border: none; color: #888; cursor: pointer; font-size: 18px; padding: 6px 12px; line-height: 1; border-radius: 6px; min-width: 36px; min-height: 36px; display: flex; align-items: center; justify-content: center; }
-  .delete-btn:hover { background: #3a1a1a; color: #e55; }
-  .push-item-btn { background: #1a2a1a; border: none; color: #5cb85c; cursor: pointer; font-size: 18px; padding: 6px 12px; line-height: 1; border-radius: 6px; min-width: 36px; min-height: 36px; display: flex; align-items: center; justify-content: center; }
-  .push-item-btn:hover { background: #1f3a1f; }
-  .complete-btn { background: #1a2a3a; border: none; color: #4a9eff; cursor: pointer; font-size: 16px; padding: 6px 12px; line-height: 1; border-radius: 6px; min-width: 36px; min-height: 36px; display: flex; align-items: center; justify-content: center; }
-  .complete-btn:hover { background: #1a3a4a; }
-  .push-item-btn.done { background: #1a1a1a; color: #555; }
-  .add-form { display: flex; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid #2a2a2a; }
-  .add-form input[type="text"] { flex: 1; background: #111; border: 1px solid #333; color: #ccc; padding: 10px 14px; border-radius: 6px; font-size: 16px; font-family: inherit; }
-  .add-form input[type="text"]:focus { outline: none; border-color: #555; }
-  .add-form button { background: #2a2a2a; color: #aaa; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 15px; font-family: inherit; }
-  .add-form button:hover { background: #333; color: #ccc; }
-  .empty { color: #444; font-size: 14px; font-style: italic; }
-  .toggle { color: #666; font-size: 14px; cursor: pointer; padding: 12px 0 6px; user-select: none; }
-  .toggle:hover { color: #999; }
-  .toggle-content { display: none; }
-  .toggle-content.open { display: block; }
-  .scheduled-date { font-size: 13px; color: #555; margin-left: 6px; }
-  .note-summary { color: #999; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 4px; padding: 4px 6px; margin: -4px -6px; }
-  .note-summary:hover { background: #222; color: #ccc; }
-  .note-full { display: none; color: #ccc; white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
-  .note-full.open { display: block; }
-  .note-wrapper { flex: 1; min-width: 0; }
-  .note-close { color: #555; font-size: 13px; cursor: pointer; padding: 8px 0 2px; user-select: none; }
-  .note-close:hover { color: #888; }
-</style>
+<link rel="stylesheet" href="theme-a.css">
 </head>
 <body>
 
@@ -210,10 +206,10 @@ function voice_entry_html($entry, $show_push = false) {
     <div class="list-item <?= $task['done'] ? 'done' : '' ?>">
       <span><?= htmlspecialchars($task['text']) ?></span>
       <span class="entry-actions">
-        <?php if (!$task['done']): ?>
-          <button class="complete-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Complete">✓</button>
-        <?php endif; ?>
-        <button class="delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
+        <button class="action-btn edit-btn" onclick="editListItem(this,'task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Edit">✎</button>
+        <button class="action-btn complete-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="<?= $task['done'] ? 'Undo' : 'Complete' ?>"><?= $task['done'] ? '↩' : '✓' ?></button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>
+        <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
     </div>
   <?php endforeach; ?>
@@ -222,15 +218,15 @@ function voice_entry_html($entry, $show_push = false) {
       <div class="note-wrapper">
         <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></div>
         <div class="note-full">
-          <span class="editable" onclick="event.stopPropagation();editVoice(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')"><?= htmlspecialchars($vt['text']) ?></span>
+          <span class="editable" onclick="event.stopPropagation();" data-file="'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')"><?= htmlspecialchars($vt['text']) ?></span>
           <div class="note-close" onclick="closeNote(this)">▲ close</div>
         </div>
       </div>
       <span class="entry-actions">
-        <?php if (!$is_done): ?>
-          <button class="complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Complete">✓</button>
-        <?php endif; ?>
-        <button class="delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
+        <button class="action-btn edit-btn" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false)" title="Edit">✎</button>
+        <button class="action-btn complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="<?= $is_done ? 'Undo' : 'Complete' ?>"><?= $is_done ? '↩' : '✓' ?></button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this)" title="Push">↑</button>
+        <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
     </div>
   <?php endforeach; ?>
@@ -241,7 +237,7 @@ function voice_entry_html($entry, $show_push = false) {
         <div class="list-item">
           <span class="editable" onclick="editVoice(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')"><?= htmlspecialchars($vt['text']) ?></span>
           <span class="scheduled-date"><?= htmlspecialchars($vt['show_after']) ?></span>
-          <button class="delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
+          <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
         </div>
       <?php endforeach; ?>
     </div>
@@ -250,50 +246,11 @@ function voice_entry_html($entry, $show_push = false) {
     <input type="text" id="new-task" placeholder="Add task...">
     <button onclick="addItem('task')">Add</button>
   </div>
-  <button class="push-item-btn" style="width:100%;margin-top:12px;padding:10px;font-size:14px;" onclick="pushToServer(this)">↑ Push to Server</button>
-</div>
 
-<!-- Shopping -->
-<div class="section">
-  <div class="section-title">Shopping</div>
-  <?php foreach ($shopping as $item): ?>
-    <div class="list-item <?= $item['done'] ? 'done' : '' ?>">
-      <span><?= htmlspecialchars($item['text']) ?></span>
-      <button class="delete-btn" onclick="deleteItem('shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')">×</button>
-    </div>
-  <?php endforeach; ?>
-  <?php foreach ($voice_shopping as $vs): ?>
-    <div class="list-item expandable-item">
-      <div class="note-wrapper">
-        <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></div>
-        <div class="note-full">
-          <span class="editable" onclick="event.stopPropagation();editVoice(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')"><?= htmlspecialchars($vs['text']) ?></span>
-          <div class="note-close" onclick="closeNote(this)">▲ close</div>
-        </div>
-      </div>
-      <button class="delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
-    </div>
-  <?php endforeach; ?>
-  <?php if (!empty($voice_shopping_scheduled)): ?>
-    <div class="toggle" onclick="this.nextElementSibling.classList.toggle('open')">▶ Scheduled (<?= count($voice_shopping_scheduled) ?>)</div>
-    <div class="toggle-content">
-      <?php foreach ($voice_shopping_scheduled as $vs): ?>
-        <div class="list-item">
-          <span class="editable" onclick="editVoice(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')"><?= htmlspecialchars($vs['text']) ?></span>
-          <span class="scheduled-date"><?= htmlspecialchars($vs['show_after']) ?></span>
-          <button class="delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  <?php endif; ?>
-  <div class="add-form">
-    <input type="text" id="new-shopping" placeholder="Add item...">
-    <button onclick="addItem('shopping')">Add</button>
-  </div>
 </div>
 
 <!-- Health Log -->
-<?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): ?>
+<?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): $all_sub = array_merge($voice_health, $voice_substance); ?>
 <div class="section">
   <div class="section-title">Health Log</div>
 
@@ -302,25 +259,17 @@ function voice_entry_html($entry, $show_push = false) {
     <?php $food_by_date = []; foreach ($voice_food as $e) $food_by_date[$e['date']][] = $e; krsort($food_by_date);
       foreach ($food_by_date as $date => $entries): ?>
       <div class="voice-date"><?= htmlspecialchars($date) ?></div>
-      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true); ?>
+      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true, false, true); ?>
     <?php endforeach; ?>
   <?php endif; ?>
 
-  <?php if (!empty($voice_health)): ?>
-    <div class="sub-title sub-title-border">Health</div>
-    <?php $hbd = []; foreach ($voice_health as $e) $hbd[$e['date']][] = $e; krsort($hbd);
-      foreach ($hbd as $date => $entries): ?>
-      <div class="voice-date"><?= htmlspecialchars($date) ?></div>
-      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true); ?>
-    <?php endforeach; ?>
-  <?php endif; ?>
-
-  <?php if (!empty($voice_substance)): ?>
+  <?php $all_substance = array_merge($voice_health, $voice_substance);
+    if (!empty($all_substance)): ?>
     <div class="sub-title sub-title-border">Substance</div>
-    <?php $sbd = []; foreach ($voice_substance as $e) $sbd[$e['date']][] = $e; krsort($sbd);
+    <?php $sbd = []; foreach ($all_substance as $e) $sbd[$e['date']][] = $e; krsort($sbd);
       foreach ($sbd as $date => $entries): ?>
       <div class="voice-date"><?= htmlspecialchars($date) ?></div>
-      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true); ?>
+      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true, true, true); ?>
     <?php endforeach; ?>
   <?php endif; ?>
 </div>
@@ -351,12 +300,58 @@ function voice_entry_html($entry, $show_push = false) {
             </div>
           </div>
           <span class="entry-actions">
-            <button class="delete-btn" onclick="deleteVoice('<?= $file ?>','<?= $time ?>')" title="Delete">×</button>
+            <button class="action-btn edit-btn" onclick="editAll(this,'<?= $file ?>','<?= $time ?>','<?= htmlspecialchars($entry['date']) ?>',false)" title="Edit">✎</button>
+            <button class="action-btn delete-btn" onclick="deleteVoice('<?= $file ?>','<?= $time ?>')" title="Delete">×</button>
           </span>
         </div>
       <?php endforeach; ?>
     <?php endforeach; ?>
   <?php endif; ?>
+</div>
+
+<!-- Shopping -->
+<div class="section">
+  <div class="section-title">Shopping</div>
+  <?php foreach ($shopping as $item): ?>
+    <div class="list-item <?= $item['done'] ? 'done' : '' ?>">
+      <span><?= htmlspecialchars($item['text']) ?></span>
+      <span class="entry-actions">
+        <button class="action-btn edit-btn" onclick="editListItem(this,'shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')" title="Edit">✎</button>
+        <button class="action-btn delete-btn" onclick="deleteItem('shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')">×</button>
+      </span>
+    </div>
+  <?php endforeach; ?>
+  <?php foreach ($voice_shopping as $vs): ?>
+    <div class="list-item expandable-item">
+      <div class="note-wrapper">
+        <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></div>
+        <div class="note-full">
+          <span><?= htmlspecialchars($vs['text']) ?></span>
+          <div class="note-close" onclick="closeNote(this)">▲ close</div>
+        </div>
+      </div>
+      <span class="entry-actions">
+        <button class="action-btn edit-btn" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>','<?= htmlspecialchars($vs['date']) ?>',false)" title="Edit">✎</button>
+        <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
+      </span>
+    </div>
+  <?php endforeach; ?>
+  <?php if (!empty($voice_shopping_scheduled)): ?>
+    <div class="toggle" onclick="this.nextElementSibling.classList.toggle('open')">▶ Scheduled (<?= count($voice_shopping_scheduled) ?>)</div>
+    <div class="toggle-content">
+      <?php foreach ($voice_shopping_scheduled as $vs): ?>
+        <div class="list-item">
+          <span class="editable" onclick="editVoice(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')"><?= htmlspecialchars($vs['text']) ?></span>
+          <span class="scheduled-date"><?= htmlspecialchars($vs['show_after']) ?></span>
+          <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+  <div class="add-form">
+    <input type="text" id="new-shopping" placeholder="Add item...">
+    <button onclick="addItem('shopping')">Add</button>
+  </div>
 </div>
 
 <script>
@@ -384,48 +379,19 @@ function deleteVoice(file, time) {
   fetch('?action=delete_voice', { method: 'POST', body: form }).then(() => location.reload());
 }
 
-function editVoice(el, file, time) {
-  if (el.querySelector('textarea')) return;
-  const original = el.textContent;
-  const textarea = document.createElement('textarea');
-  textarea.className = 'edit-input';
-  textarea.value = original;
-  textarea.rows = Math.max(2, Math.ceil(original.length / 40));
-  el.textContent = '';
-  el.appendChild(textarea);
-  textarea.focus();
-
-  function save() {
-    const newText = textarea.value.trim();
-    if (newText && newText !== original) {
-      const form = new FormData();
-      form.append('file', file);
-      form.append('time', time);
-      form.append('new_text', newText);
-      fetch('?action=edit_voice', { method: 'POST', body: form }).then(() => location.reload());
-    } else {
-      el.textContent = original;
-    }
-  }
-
-  textarea.addEventListener('blur', save);
-  textarea.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); save(); }
-    if (e.key === 'Escape') { el.textContent = original; }
-  });
-}
 
 function toggleNote(el) {
-  const full = el.nextElementSibling;
-  full.classList.toggle('open');
-  el.style.display = full.classList.contains('open') ? 'none' : '';
-}
-
-function closeNote(el) {
-  const full = el.parentElement;
-  const summary = full.previousElementSibling;
-  full.classList.remove('open');
-  summary.style.display = '';
+  const wrapper = el.closest('.note-wrapper');
+  const summary = wrapper.querySelector('.note-summary');
+  const full = wrapper.querySelector('.note-full');
+  const isOpen = full.classList.contains('open');
+  if (isOpen) {
+    full.classList.remove('open');
+    summary.style.display = '';
+  } else {
+    full.classList.add('open');
+    summary.style.display = 'none';
+  }
 }
 
 function completeItem(type, text) {
@@ -439,6 +405,93 @@ function completeVoice(file, time) {
   form.append('file', file);
   form.append('time', time);
   fetch('?action=complete_voice', { method: 'POST', body: form }).then(() => location.reload());
+}
+
+function editListItem(btn, type, oldText) {
+  const entry = btn.closest('.list-item');
+  if (entry.querySelector('.inline-edit')) return;
+  const originalHTML = entry.innerHTML;
+
+  const form = document.createElement('div');
+  form.className = 'inline-edit';
+  form.innerHTML = '<textarea class="inline-textarea">' + oldText.replace(/</g,'&lt;') + '</textarea>' +
+    '<div class="inline-edit-actions"><button class="inline-save">Save</button><button class="inline-cancel">Cancel</button></div>';
+
+  entry.innerHTML = '';
+  entry.appendChild(form);
+  const textarea = form.querySelector('.inline-textarea');
+  textarea.style.height = Math.max(50, textarea.scrollHeight) + 'px';
+  textarea.focus();
+
+  form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
+  form.querySelector('.inline-save').onclick = () => {
+    const newText = textarea.value.trim();
+    if (newText && newText !== oldText) {
+      const f = new FormData();
+      f.append('old_text', oldText);
+      f.append('new_text', newText);
+      fetch('?action=edit_' + type, { method: 'POST', body: f }).then(() => location.reload());
+    } else {
+      entry.innerHTML = originalHTML;
+    }
+  };
+  textarea.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.querySelector('.inline-save').click(); }
+    if (e.key === 'Escape') entry.innerHTML = originalHTML;
+  });
+}
+
+function editAll(btn, file, time, date, showDateEdit) {
+  const entry = btn.closest('.voice-entry') || btn.closest('.list-item');
+  if (entry.querySelector('.inline-edit')) return;
+  const textEl = entry.querySelector('.voice-text, .note-full span, .note-summary');
+  const originalText = textEl ? textEl.textContent : '';
+  const originalHTML = entry.innerHTML;
+
+  const form = document.createElement('div');
+  form.className = 'inline-edit';
+  let html = '';
+  if (showDateEdit) {
+    html += '<div class="inline-edit-row">';
+    html += '<input type="date" class="inline-date" value="' + date + '">';
+    html += '<input type="time" class="inline-time" value="' + time + '">';
+    html += '</div>';
+  }
+  html += '<textarea class="inline-textarea">' + originalText.replace(/</g,'&lt;') + '</textarea>';
+  html += '<div class="inline-edit-actions">';
+  html += '<button class="inline-save">Save</button>';
+  html += '<button class="inline-cancel">Cancel</button>';
+  html += '</div>';
+  form.innerHTML = html;
+
+  entry.innerHTML = '';
+  entry.appendChild(form);
+  const textarea = form.querySelector('.inline-textarea');
+  textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
+  textarea.focus();
+
+  form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
+  form.querySelector('.inline-save').onclick = () => {
+    const newText = textarea.value.trim();
+    const promises = [];
+    if (newText && newText !== originalText) {
+      const f = new FormData();
+      f.append('file', file); f.append('time', time); f.append('new_text', newText);
+      promises.push(fetch('?action=edit_voice', { method: 'POST', body: f }));
+    }
+    if (showDateEdit) {
+      const nd = form.querySelector('.inline-date').value;
+      const nt = form.querySelector('.inline-time').value;
+      if (nd !== date || nt !== time) {
+        const f2 = new FormData();
+        f2.append('file', file); f2.append('time', time); f2.append('new_date', nd); f2.append('new_time', nt);
+        promises.push(fetch('?action=edit_voice_meta', { method: 'POST', body: f2 }));
+      }
+    }
+    if (promises.length > 0) Promise.all(promises).then(() => location.reload());
+    else entry.innerHTML = originalHTML;
+  };
+  textarea.addEventListener('keydown', e => { if (e.key === 'Escape') entry.innerHTML = originalHTML; });
 }
 
 function pushToServer(btn) {
