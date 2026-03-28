@@ -7,10 +7,6 @@ require dirname(__DIR__) . '/header.php';
 <style>
 .task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.25); text-underline-offset: 3px; }
 .task-link:hover { text-decoration-color: rgba(0,0,0,0.6); }
-.thought-toggle { cursor: pointer; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px; }
-.thought-toggle:hover { text-decoration-color: rgba(0,0,0,0.4); }
-.thought-detail { display: none; color: #666; font-size: 14px; line-height: 1.8; padding: 4px 0 4px 16px; border-left: 2px solid rgba(0,0,0,0.08); margin: 2px 0 6px 2px; }
-.thought-detail.open { display: block; }
 </style>
 <script>
   const taskPages = {
@@ -35,13 +31,8 @@ require dirname(__DIR__) . '/header.php';
         });
         html = before + after;
       }
-      // Thought: summary + collapsible original (:: prefix)
-      html = html.replace(/^(- )(.+)\n  :: (.+)$/gm, (match, dash, summary, original) => {
-        const id = 'th-' + Math.random().toString(36).substr(2, 6);
-        return dash + '<span class="thought-toggle" onclick="document.getElementById(\'' + id + '\').classList.toggle(\'open\')">' + summary + '</span>\n<span id="' + id + '" class="thought-detail">' + original + '</span>';
-      });
-      // Auto-link: "text https://url" → text becomes the link, URL hidden
-      html = html.replace(/^(- )(.+?) (https?:\/\/[^\s<]+)$/gm, '$1<a class="task-link" href="$3" target="_blank">$2</a>');
+      // Auto-link: "- text /path" or "- text https://url" → text becomes link, path/URL hidden
+      html = html.replace(/^(- )(.+?) ((?:https?:\/\/[^\s<]+)|(?:\/thought-[^\s<]+))$/gm, '$1<a class="task-link" href="$3" target="_blank">$2</a>');
       // Auto-link: standalone URLs
       html = html.replace(/(?<!href="|">)(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:#2121d3d9;">$1</a>');
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
