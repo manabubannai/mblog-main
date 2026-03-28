@@ -96,8 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $section = '■ Substances';
                 $line = '- ' . $text . '（' . $entry_time . '）';
             } elseif ($tag === 'task') {
-                $section = '■ Note';
-                $line = $text;
+                $section = '■ タスク';
+                $line = '- ' . $text;
             } else {
                 $section = '■ Note';
                 $line = $text;
