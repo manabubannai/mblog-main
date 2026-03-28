@@ -14,4 +14,5 @@ jobs:
           echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/mblog && git fetch origin main && git reset --hard origin/main && php -r 'opcache_reset();' 2>/dev/null; systemctl reload php8.3-fpm 2>/dev/null || systemctl reload php-fpm 2>/dev/null || systemctl restart apache2 2>/dev/null || true"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/mblog && git fetch origin main && git reset --hard origin/main"
+          curl -s "https://mblog.com/opcache-reset.php?token=mblog-deploy-2026" || true
