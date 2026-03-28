@@ -19,7 +19,10 @@ $answer = json_decode(file_get_contents(dirname(__DIR__) . '/.github/task-answer
 
 <pre style="line-height: 1.9;">
 <?= htmlspecialchars($answer) ?>
+</pre>
 
+<pre style="line-height: 1.9; background: #f0f4e8; outline: 1px solid rgba(100,140,60,0.3);">
+<strong>■ マナブの結論</strong>
 ✓ 自転車HIITを取り入れる
 ・攻める日：167bpmくらい（5分） × 3日
 ・攻めない日：120bpmくらい × 2日
