@@ -31,8 +31,10 @@ require dirname(__DIR__) . '/header.php';
         });
         html = before + after;
       }
-      // Auto-link URLs
-      html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:#2121d3d9;">$1</a>');
+      // Auto-link: "text https://url" → text becomes the link, URL hidden
+      html = html.replace(/^(- )(.+?) (https?:\/\/[^\s<]+)$/gm, '$1<a class="task-link" href="$3" target="_blank">$2</a>');
+      // Auto-link: standalone URLs
+      html = html.replace(/(?<!href="|">)(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:#2121d3d9;">$1</a>');
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
       html = html.replace(regex, '<span class="jp-font">$1</span>');
       pre.innerHTML = html;
