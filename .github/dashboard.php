@@ -935,8 +935,12 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   html += '<textarea class="inline-textarea"></textarea>';
   html += '<div class="inline-btn-row">';
   html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">↑ Push Original</button>';
-  html += '<button class="inline-save">Save</button>';
   html += '</div>';
+  if (currentSummary) {
+    html += '<div class="inline-btn-row">';
+    html += '<button class="inline-push-so" data-file="' + file + '" data-time="' + time + '" style="background:rgba(160,120,200,0.12);color:#a078c8;">↑ Push Summary & Original</button>';
+    html += '</div>';
+  }
   // Check for answer panel
   const answerPanel = entry.querySelector('.answer-panel');
   const oldAnswer = answerPanel ? answerPanel.textContent.trim() : '';
@@ -971,6 +975,7 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
 
   if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
   form.querySelector('.inline-push-o').onclick = function() { pushToServer(this, false); };
+  if (form.querySelector('.inline-push-so')) form.querySelector('.inline-push-so').onclick = function() { pushToServer(this, 'both'); };
   function doSave() {
     const newText = textarea.value.trim();
     const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';

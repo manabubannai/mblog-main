@@ -91,8 +91,6 @@ Lunch 13:40
 - Apple Watch × HIIT心拍数測定方法を調べる
 - Claude Code と Withings を連携する
 - Pieter Levels流のClaude設定を実行 https://x.com/levelsio/status/2034698084853133419
-
-
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
