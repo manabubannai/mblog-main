@@ -1055,7 +1055,8 @@ function pushToServer(btn, useSummary) {
   if (file) form.append('file', file);
   if (time) form.append('time', time);
   if (task) form.append('task', task);
-  if (useSummary !== undefined) form.append('use_summary', useSummary ? '1' : '0');
+  if (useSummary === 'both') form.append('use_summary', 'both');
+  else if (useSummary !== undefined) form.append('use_summary', useSummary ? '1' : '0');
   fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
