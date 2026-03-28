@@ -100,7 +100,10 @@ Lunch 13:40
 - 地元の人には常に10%の上乗せで支払う /thought-2026-03-28-7938b4
 - 寝る前の腹式呼吸5分 + 肋骨下のセルフリリース
 - マナブゲームズ：自作ゲーム×ボイチャの遊び場 /thought-2026-03-28-8a0792
-- 新Mac購入→OpenClawでDeFi自動運用の実験 /thought-2026-03-28-4a64c6</pre>
+- 新Mac購入→OpenClawでDeFi自動運用の実験 /thought-2026-03-28-4a64c6
+
+te
+</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 

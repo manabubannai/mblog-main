@@ -5,6 +5,9 @@ $voice_log_file = __DIR__ . '/voice-log.json';
 $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
 $task_answers_file = __DIR__ . '/task-answers.json';
 $task_answers = file_exists($task_answers_file) ? json_decode(file_get_contents($task_answers_file), true) : [];
+$queue_file = __DIR__ . '/task-queue.json';
+$task_queue = file_exists($queue_file) ? json_decode(file_get_contents($queue_file), true) : [];
+$queued_tasks = array_column(array_filter($task_queue, fn($q) => ($q['status'] ?? '') === 'pending'), 'task');
 
 // Handle API requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
