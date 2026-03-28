@@ -1,4 +1,5 @@
 <?php
+if (function_exists('opcache_invalidate')) opcache_invalidate(__FILE__, true);
 $data_file = __DIR__ . '/../.github/task-answers.json';
 $answers = file_exists($data_file) ? json_decode(file_get_contents($data_file), true) : [];
 $q = $_GET['q'] ?? '';
