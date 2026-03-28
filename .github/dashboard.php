@@ -528,13 +528,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             }
         }
 
-        $queue[] = [
+        $instruction = $_POST['instruction'] ?? '';
+        $item = [
             'task' => $entry_summary,
             'detail' => $entry_text,
             'answer' => $entry_answer,
             'status' => 'pending',
             'queued_at' => date('Y-m-d H:i:s')
         ];
+        if ($instruction) $item['instruction'] = $instruction;
+        $queue[] = $item;
         file_put_contents($queue_file, json_encode($queue, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         echo json_encode(['ok' => true]);
     } elseif ($action === 'get_voice') {
@@ -649,7 +652,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         } elseif (in_array($entry_summary, $queued_pending)) {
             $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);margin-top:8px;opacity:0.5;">⏳ 実行待ち</button>';
         } else {
-            $html .= '<button data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:8px;" onclick="queueForAI(this)">⚡ AIで実行</button>';
+            $html .= '<input type="text" class="ai-instruction" placeholder="AIへの指示（任意）" style="width:100%;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:13px;font-family:inherit;margin-top:8px;">';
+            $html .= '<button data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:4px;" onclick="queueForAI(this)">⚡ AIで実行</button>';
         }
         $html .= '</div>';
         $html .= '</div>';
@@ -685,7 +689,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
           <?php elseif (in_array($task['text'], $queued_pending)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
-          <button data-task="<?= htmlspecialchars($task['text']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
+          <input type="text" class="ai-instruction" placeholder="AIへの指示（任意）" style="width:100%;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:13px;font-family:inherit;">
+          <button data-task="<?= htmlspecialchars($task['text']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:4px;" onclick="queueForAI(this)">⚡ AIで実行</button>
           <?php endif; ?>
         </div>
         </div>
@@ -710,7 +715,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
           <?php elseif (in_array($vt_summary, $queued_pending)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
-          <button data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
+          <input type="text" class="ai-instruction" placeholder="AIへの指示（任意）" style="width:100%;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:13px;font-family:inherit;">
+          <button data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:4px;" onclick="queueForAI(this)">⚡ AIで実行</button>
           <?php endif; ?>
         </div>
         </div>
@@ -1233,10 +1239,13 @@ function queueForAI(btn) {
   const file = btn.dataset.file || '';
   const time = btn.dataset.time || '';
   const task = btn.dataset.task || '';
+  const instructionInput = btn.parentElement.querySelector('.ai-instruction');
+  const instruction = instructionInput ? instructionInput.value.trim() : '';
   const form = new FormData();
   if (file) form.append('file', file);
   if (time) form.append('time', time);
   if (task) form.append('task', task);
+  if (instruction) form.append('instruction', instruction);
   fetch('?action=queue_ai', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✅ キューに追加済み'; btn.style.opacity = '0.5'; })
