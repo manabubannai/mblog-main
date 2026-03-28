@@ -220,7 +220,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $use_summary_val = $_POST['use_summary'] ?? '';
             $use_summary = $use_summary_val === '1';
             $use_both = $use_summary_val === 'both';
-            if ($use_both) {
+            $use_action = $use_summary_val === 'action';
+            $action_text = $_POST['action_text'] ?? '';
+            if ($use_action && $action_text) {
+                $text = $action_text;
+            } elseif ($use_both) {
                 $text = ($target['summary'] ?? $target['text']);
             } else {
                 $text = $use_summary ? ($target['summary'] ?? $target['text']) : $target['text'];
@@ -256,11 +260,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 }
             } else {
                 $section = '■ Thought';
-                if ($use_both) {
+                if ($use_action && $action_text) {
+                    // Push user's action text + AI answer as detail page
+                    $answer = $target['answer'] ?? '';
+                    $slug = 'thought-' . $date . '-' . substr(md5($action_text), 0, 6);
+                    $page_path = __DIR__ . '/../posts/' . $slug . '.php';
+                    if (!file_exists($page_path)) {
+                        $detail_content = ($target['text'] ?? '') . "\n\n" . $answer;
+                        $page_content = "<?php\n\$page_title = " . var_export($action_text, true) . ";\n\$page_description = \$page_title;\nrequire dirname(__DIR__) . '/header.php';\n?>\n\n<script>\n  window.onload = function () {\n    document.querySelectorAll('pre').forEach(pre => {\n      const regex = /([\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FFF]+)/g;\n      pre.innerHTML = pre.innerHTML.replace(regex, '<span class=\"jp-font\">\$1</span>');\n    });\n  };\n</script>\n\n<a href=\"/\"><img src=\"/img/logo.png\" alt=\"manablog\" class=\"logo\"></a>\n<h1 class=\"title\">" . htmlspecialchars($action_text) . "</h1>\n\n<pre style=\"line-height: 1.9;\">\n" . htmlspecialchars($detail_content) . "\n</pre>\n\n<p style=\"margin-top: 40px;\"><a href=\"/health-log\">&larr; Health Log</a></p>\n\n<?php require dirname(__DIR__) . '/footer.php'; ?>\n";
+                        file_put_contents($page_path, $page_content);
+                    }
+                    $line = '- ' . $action_text . ' /' . $slug;
+                } elseif ($use_both) {
                     $original = $target['text'] ?? '';
                     $summary = $target['summary'] ?? $text;
                     $slug = 'thought-' . $date . '-' . substr(md5($summary), 0, 6);
-                    // Generate thought detail page
                     $page_path = __DIR__ . '/../posts/' . $slug . '.php';
                     if (!file_exists($page_path)) {
                         $page_content = "<?php\n\$page_title = " . var_export($summary, true) . ";\n\$page_description = \$page_title;\nrequire dirname(__DIR__) . '/header.php';\n?>\n\n<script>\n  window.onload = function () {\n    document.querySelectorAll('pre').forEach(pre => {\n      const regex = /([\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FFF]+)/g;\n      pre.innerHTML = pre.innerHTML.replace(regex, '<span class=\"jp-font\">\$1</span>');\n    });\n  };\n</script>\n\n<a href=\"/\"><img src=\"/img/logo.png\" alt=\"manablog\" class=\"logo\"></a>\n<h1 class=\"title\">" . htmlspecialchars($summary) . "</h1>\n\n<pre style=\"line-height: 1.9;\">\n" . htmlspecialchars($original) . "\n</pre>\n\n<p style=\"margin-top: 40px;\"><a href=\"/health-log\">&larr; Health Log</a></p>\n\n<?php require dirname(__DIR__) . '/footer.php'; ?>\n";
@@ -581,7 +595,14 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $html .= '</span>';
     $entry_answer = $entry['answer'] ?? null;
     if ($entry_answer) {
-        $html .= '<div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 ' . nl2br(htmlspecialchars($entry['text'])) . '</div>' . nl2br(htmlspecialchars($entry_answer)) . '</div>';
+        $html .= '<div class="answer-panel">';
+        $html .= '<div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 ' . nl2br(htmlspecialchars($entry['text'])) . '</div>';
+        $html .= nl2br(htmlspecialchars($entry_answer));
+        $html .= '<div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">';
+        $html .= '<input type="text" class="inline-action-input" placeholder="アクションを入力..." style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:8px;">';
+        $html .= '<button class="inline-push-action" data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.12);color:#50c878;" onclick="pushAction(this)">↑ Push with AI Answer</button>';
+        $html .= '</div>';
+        $html .= '</div>';
     }
     $html .= '</div>';
     return $html;
@@ -1111,6 +1132,25 @@ function pushToServer(btn, useSummary) {
   if (task) form.append('task', task);
   if (useSummary === 'both') form.append('use_summary', 'both');
   else if (useSummary !== undefined) form.append('use_summary', useSummary ? '1' : '0');
+  fetch('?action=push', { method: 'POST', body: form })
+    .then(r => r.json())
+    .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
+    .catch(() => { btn.textContent = '!'; btn.disabled = false; });
+}
+
+function pushAction(btn) {
+  const input = btn.parentElement.querySelector('.inline-action-input');
+  const actionText = input ? input.value.trim() : '';
+  if (!actionText) { input.focus(); return; }
+  btn.disabled = true;
+  btn.textContent = '...';
+  const file = btn.dataset.file || '';
+  const time = btn.dataset.time || '';
+  const form = new FormData();
+  form.append('file', file);
+  form.append('time', time);
+  form.append('use_summary', 'action');
+  form.append('action_text', actionText);
   fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
