@@ -62,5 +62,9 @@ h1 { font-size: 24px; color: #fff; margin-bottom: 32px; font-weight: 600; letter
 .inline-edit-actions button { flex: 1; padding: 12px; border: none; border-radius: 10px; cursor: pointer; font-size: 15px; font-family: inherit; transition: all 0.2s; }
 .inline-save { background: rgba(74,158,255,0.2); color: #4a9eff; }
 .inline-save:hover { background: rgba(74,158,255,0.3); }
+.inline-push-s { background: rgba(80,200,120,0.15); color: #50c878; }
+.inline-push-s:hover { background: rgba(80,200,120,0.25); }
+.inline-push-o { background: rgba(200,160,80,0.15); color: #c8a050; }
+.inline-push-o:hover { background: rgba(200,160,80,0.25); }
 .inline-cancel { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
 .inline-cancel:hover { background: rgba(255,255,255,0.1); }

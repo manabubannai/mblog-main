@@ -82,7 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $health_log = file_get_contents($health_log_path);
             $date = $target['date'];
             $tag = $target['tag'] ?? '';
-            $text = $target['text'];
+            $use_summary = ($_POST['use_summary'] ?? '') === '1';
+            $text = $use_summary ? ($target['summary'] ?? $target['text']) : $target['text'];
             $entry_time = substr($target['time'], 0, 5);
 
             // Determine which section to write to
@@ -338,7 +339,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     }
     $html .= '<span class="entry-actions">';
     if ($show_push) {
-        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="' . $file . '" data-time="' . $time . '" title="Push">↑</button>';
+        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="' . $file . '" data-time="' . $time . '" title="Push">↑</button>';
     }
     $html .= '<button class="action-btn delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
     $html .= '</span>';
@@ -376,7 +377,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
       <span class="entry-actions">
         <button class="action-btn complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="<?= $is_done ? 'Undo' : 'Complete' ?>"><?= $is_done ? '↩' : '✓' ?></button>
-        <button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
     </div>
@@ -626,6 +627,8 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   html += '<textarea class="inline-textarea"></textarea>';
   html += '<div class="inline-edit-actions">';
   html += '<button class="inline-save">Save</button>';
+  html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '">↑ Push Summary</button>';
+  html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">↑ Push Original</button>';
   html += '<button class="inline-cancel">Cancel</button>';
   html += '</div>';
   form.innerHTML = html;
@@ -651,6 +654,8 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   else textarea.focus();
 
   form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
+  form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
+  form.querySelector('.inline-push-o').onclick = function() { pushToServer(this, false); };
   form.querySelector('.inline-save').onclick = () => {
     const newText = textarea.value.trim();
     const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
@@ -676,14 +681,18 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   textarea.addEventListener('keydown', e => { if (e.key === 'Escape') entry.innerHTML = originalHTML; });
 }
 
-function pushToServer(btn) {
+function pushToServer(btn, useSummary) {
   btn.disabled = true;
   btn.textContent = '...';
+  // Disable sibling push button if exists
+  const parent = btn.parentElement;
+  if (parent) parent.querySelectorAll('.push-item-btn').forEach(b => { b.disabled = true; });
   const file = btn.dataset.file || '';
   const time = btn.dataset.time || '';
   const form = new FormData();
   if (file) form.append('file', file);
   if (time) form.append('time', time);
+  if (useSummary !== undefined) form.append('use_summary', useSummary ? '1' : '0');
   fetch('?action=push', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✓'; btn.classList.add('done'); setTimeout(() => location.reload(), 500); })
