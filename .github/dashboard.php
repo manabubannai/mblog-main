@@ -3,6 +3,8 @@ $claude_md_path = __DIR__ . '/../CLAUDE.md';
 $claude_md = file_get_contents($claude_md_path);
 $voice_log_file = __DIR__ . '/voice-log.json';
 $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+$task_answers_file = __DIR__ . '/task-answers.json';
+$task_answers = file_exists($task_answers_file) ? json_decode(file_get_contents($task_answers_file), true) : [];
 
 // Handle API requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
@@ -301,6 +303,7 @@ if ($shop_match) {
 $voice_notes = []; $voice_tasks = []; $voice_tasks_scheduled = [];
 $voice_shopping = []; $voice_shopping_scheduled = [];
 $voice_food = []; $voice_health = []; $voice_substance = [];
+$voice_ideas = [];
 $today = date('Y-m-d');
 
 foreach ($voice_log as $entry) {
@@ -313,6 +316,7 @@ foreach ($voice_log as $entry) {
         case 'food': $voice_food[] = $entry; break;
         case 'health': $voice_health[] = $entry; break;
         case 'substance': $voice_substance[] = $entry; break;
+        case 'idea': $voice_ideas[] = $entry; break;
         default: $voice_notes[] = $entry; break;
     }
 }
@@ -361,22 +365,27 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 <!-- Tasks -->
 <div class="section">
   <div class="section-title">Tasks</div>
-  <?php foreach ($tasks as $task): ?>
-    <div class="list-item <?= $task['done'] ? 'done' : '' ?>">
-      <span><?= htmlspecialchars($task['text']) ?></span>
+  <?php foreach ($tasks as $task):
+    $answer = $task_answers[$task['text']] ?? null;
+  ?>
+    <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
+      <span class="voice-text clickable-title" onclick="<?= $answer ? 'toggleAnswer(this)' : 'editListItem(this,\'task\',\'' . htmlspecialchars(addslashes($task['text'])) . '\')' ?>"><?= htmlspecialchars($task['text']) ?><?= $answer ? ' <span class="answer-badge">AI</span>' : '' ?></span>
+      <?php if ($answer): ?>
+        <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
+      <?php endif; ?>
       <span class="entry-actions">
-        <button class="action-btn edit-btn" onclick="editListItem(this,'task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Edit">✎</button>
-        <button class="action-btn complete-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="<?= $task['done'] ? 'Undo' : 'Complete' ?>"><?= $task['done'] ? '↩' : '✓' ?></button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
     </div>
   <?php endforeach; ?>
-  <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); ?>
-    <div class="list-item <?= $is_done ? 'done' : '' ?>">
-      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
+  <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); $vt_answer = $vt['answer'] ?? null; ?>
+    <div class="list-item <?= $is_done ? 'done' : '' ?> <?= $vt_answer ? 'has-answer' : '' ?>">
+      <span class="voice-text clickable-title" onclick="<?= $vt_answer ? 'toggleAnswer(this)' : 'editAll(this,\'' . htmlspecialchars(addslashes($vt['file'])) . '\',\'' . htmlspecialchars($vt['time']) . '\',\'' . htmlspecialchars($vt['date'] ?? '') . '\',false,\'' . htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) . '\')' ?>"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?><?= $vt_answer ? ' <span class="answer-badge">AI</span>' : '' ?></span>
+      <?php if ($vt_answer): ?>
+        <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?></div>
+      <?php endif; ?>
       <span class="entry-actions">
-        <button class="action-btn complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="<?= $is_done ? 'Undo' : 'Complete' ?>"><?= $is_done ? '↩' : '✓' ?></button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
@@ -450,6 +459,27 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 <?php endif; ?>
 
+<!-- Ideas -->
+<div class="section">
+  <div class="section-title">Ideas</div>
+  <?php if (empty($voice_ideas)): ?>
+    <div class="empty">No ideas yet.</div>
+  <?php else: ?>
+    <?php foreach ($voice_ideas as $vi): ?>
+      <div class="list-item">
+        <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vi['file'])) ?>','<?= htmlspecialchars($vi['time']) ?>','<?= htmlspecialchars($vi['date']) ?>',false,'<?= htmlspecialchars(addslashes($vi['summary'] ?? $vi['text'])) ?>')"><?= htmlspecialchars($vi['summary'] ?? $vi['text']) ?></span>
+        <span class="entry-actions">
+          <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vi['file'])) ?>','<?= htmlspecialchars($vi['time']) ?>')">×</button>
+        </span>
+      </div>
+    <?php endforeach; ?>
+  <?php endif; ?>
+  <div class="add-form">
+    <input type="text" id="new-idea" placeholder="Add idea...">
+    <button onclick="addIdea()">Add</button>
+  </div>
+</div>
+
 <!-- Voice Notes -->
 <div class="section">
   <div class="section-title">Voice Notes</div>
@@ -482,9 +512,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <div class="section-title">Shopping</div>
   <?php foreach ($shopping as $item): ?>
     <div class="list-item <?= $item['done'] ? 'done' : '' ?>">
-      <span><?= htmlspecialchars($item['text']) ?></span>
+      <span class="voice-text clickable-title" onclick="editListItem(this,'shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')"><?= htmlspecialchars($item['text']) ?></span>
       <span class="entry-actions">
-        <button class="action-btn edit-btn" onclick="editListItem(this,'shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')" title="Edit">✎</button>
         <button class="action-btn delete-btn" onclick="deleteItem('shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')">×</button>
       </span>
     </div>
@@ -516,6 +545,14 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 
 <script>
+function toggleAnswer(el) {
+  const item = el.closest('.list-item');
+  const panel = item.querySelector('.answer-panel');
+  if (panel) {
+    panel.classList.toggle('open');
+  }
+}
+
 function addItem(type) {
   const input = document.getElementById('new-' + type);
   const text = input.value.trim();
@@ -576,7 +613,7 @@ function editListItem(btn, type, oldText) {
   const form = document.createElement('div');
   form.className = 'inline-edit';
   form.innerHTML = '<textarea class="inline-textarea">' + oldText.replace(/</g,'&lt;') + '</textarea>' +
-    '<div class="inline-edit-actions"><button class="inline-save">Save</button><button class="inline-cancel">Cancel</button></div>';
+    '<div class="inline-edit-actions"><button class="inline-save">Save</button></div>';
 
   entry.innerHTML = '';
   entry.appendChild(form);
@@ -584,7 +621,6 @@ function editListItem(btn, type, oldText) {
   textarea.style.height = Math.max(50, textarea.scrollHeight) + 'px';
   textarea.focus();
 
-  form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
   form.querySelector('.inline-save').onclick = () => {
     const newText = textarea.value.trim();
     if (newText && newText !== oldText) {
@@ -600,6 +636,12 @@ function editListItem(btn, type, oldText) {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.querySelector('.inline-save').click(); }
     if (e.key === 'Escape') entry.innerHTML = originalHTML;
   });
+  setTimeout(() => {
+    function closeOnOutside(e) {
+      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
+    }
+    document.addEventListener('click', closeOnOutside);
+  }, 100);
 }
 
 function editAll(el, file, time, date, showDateEdit, currentSummary) {
@@ -621,15 +663,15 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   }
   if (currentSummary) {
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Summary</label>';
-    html += '<input type="text" class="inline-summary" value="' + currentSummary.replace(/"/g,'&quot;') + '" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:16px;font-family:inherit;margin-bottom:10px;">';
+    html += '<input type="text" class="inline-summary" value="' + currentSummary.replace(/"/g,'&quot;') + '" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:16px;font-family:inherit;">';
+    html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '" style="width:100%;margin:8px 0 16px;">↑ Push Summary</button>';
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Original</label>';
   }
   html += '<textarea class="inline-textarea"></textarea>';
+  html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '" style="width:100%;margin:8px 0 16px;">↑ Push Original</button>';
   html += '<div class="inline-edit-actions">';
   html += '<button class="inline-save">Save</button>';
-  html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '">↑ Push Summary</button>';
-  html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">↑ Push Original</button>';
-  html += '<button class="inline-cancel">Cancel</button>';
+  html += '';
   html += '</div>';
   form.innerHTML = html;
 
@@ -653,8 +695,7 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   if (form.querySelector('.inline-summary')) form.querySelector('.inline-summary').focus();
   else textarea.focus();
 
-  form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
-  form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
+  if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
   form.querySelector('.inline-push-o').onclick = function() { pushToServer(this, false); };
   form.querySelector('.inline-save').onclick = () => {
     const newText = textarea.value.trim();
@@ -679,6 +720,12 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     else entry.innerHTML = originalHTML;
   };
   textarea.addEventListener('keydown', e => { if (e.key === 'Escape') entry.innerHTML = originalHTML; });
+  setTimeout(() => {
+    function closeOnOutside(e) {
+      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
+    }
+    document.addEventListener('click', closeOnOutside);
+  }, 100);
 }
 
 function pushToServer(btn, useSummary) {
@@ -709,6 +756,16 @@ function addHealthEntry() {
   fetch('?action=add_health', { method: 'POST', body: form }).then(() => location.reload());
 }
 
+function addIdea() {
+  const text = document.getElementById('new-idea').value.trim();
+  if (!text) return;
+  const form = new FormData();
+  form.append('text', text);
+  form.append('tag', 'idea');
+  fetch('?action=add_health', { method: 'POST', body: form }).then(() => location.reload());
+}
+
+document.getElementById('new-idea').addEventListener('keydown', e => { if (e.key === 'Enter') addIdea(); });
 document.getElementById('new-health').addEventListener('keydown', e => { if (e.key === 'Enter') addHealthEntry(); });
 document.getElementById('new-task').addEventListener('keydown', e => { if (e.key === 'Enter') addItem('task'); });
 document.getElementById('new-shopping').addEventListener('keydown', e => { if (e.key === 'Enter') addItem('shopping'); });
