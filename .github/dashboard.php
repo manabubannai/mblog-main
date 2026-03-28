@@ -36,6 +36,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             file_put_contents($claude_md_path, $claude_md);
         }
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'edit_task_answer') {
+        $task_name = $_POST['task_name'] ?? '';
+        $new_answer = $_POST['new_answer'] ?? '';
+        $source = $_POST['source'] ?? 'claude';
+        if ($source === 'voice') {
+            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+            $file = $_POST['file'] ?? '';
+            $time = $_POST['time'] ?? '';
+            foreach ($voice_log as &$e) {
+                if ($e['file'] === $file && $e['time'] === $time) {
+                    if ($new_answer) { $e['answer'] = $new_answer; } else { unset($e['answer']); }
+                    break;
+                }
+            }
+            file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        } else {
+            $old_task_name = $_POST['old_task_name'] ?? '';
+            if ($old_task_name && $old_task_name !== $task_name && isset($task_answers[$old_task_name])) {
+                unset($task_answers[$old_task_name]);
+            }
+            if ($new_answer) {
+                $task_answers[$task_name] = $new_answer;
+            } else {
+                unset($task_answers[$task_name]);
+            }
+            file_put_contents($task_answers_file, json_encode($task_answers, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        }
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'edit_shopping') {
         $old = $_POST['old_text'] ?? '';
         $new = trim($_POST['new_text'] ?? '');
@@ -520,7 +548,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $answer = $task_answers[$task['text']] ?? null;
   ?>
     <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="<?= $answer ? 'toggleAnswer(this,event)' : 'editListItem(this,\'task\',\'' . htmlspecialchars(addslashes($task['text'])) . '\')' ?>"><?= htmlspecialchars($task['text']) ?></span>
+      <span class="voice-text clickable-title" onclick="editTask(this,'<?= htmlspecialchars(addslashes($task['text'])) ?>',<?= $answer ? 'true' : 'false' ?>)"><?= htmlspecialchars($task['text']) ?></span>
       <?php if ($answer): ?>
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
       <?php endif; ?>
@@ -765,6 +793,66 @@ function completeVoice(file, time) {
   fetch('?action=complete_voice', { method: 'POST', body: form }).then(() => location.reload());
 }
 
+function editTask(el, oldText, hasAnswer) {
+  const entry = el.closest('.list-item');
+  if (entry.querySelector('.inline-edit')) return;
+  const originalHTML = entry.innerHTML;
+  const answerPanel = entry.querySelector('.answer-panel');
+  const oldAnswer = answerPanel ? answerPanel.textContent.trim() : '';
+
+  const form = document.createElement('div');
+  form.className = 'inline-edit';
+  let html = '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Task</label>';
+  html += '<textarea class="inline-textarea">' + oldText.replace(/</g,'&lt;') + '</textarea>';
+  if (hasAnswer) {
+    html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin:12px 0 4px;display:block;">AI Answer</label>';
+    html += '<textarea class="inline-textarea inline-answer">' + oldAnswer.replace(/</g,'&lt;') + '</textarea>';
+  }
+  html += '<div class="inline-edit-actions"><button class="inline-save">Save</button></div>';
+  form.innerHTML = html;
+
+  entry.innerHTML = '';
+  entry.appendChild(form);
+  const textareas = form.querySelectorAll('.inline-textarea');
+  textareas.forEach(ta => { ta.style.height = Math.max(50, ta.scrollHeight) + 'px'; });
+  textareas[0].focus();
+
+  form.querySelector('.inline-save').onclick = () => {
+    const newText = textareas[0].value.trim();
+    const newAnswer = hasAnswer ? (form.querySelector('.inline-answer')?.value.trim() ?? '') : '';
+    const promises = [];
+    if (newText && newText !== oldText) {
+      const f = new FormData();
+      f.append('old_text', oldText);
+      f.append('new_text', newText);
+      promises.push(fetch('?action=edit_task', { method: 'POST', body: f }));
+    }
+    if (hasAnswer && newAnswer !== oldAnswer) {
+      const f2 = new FormData();
+      f2.append('task_name', newText || oldText);
+      f2.append('new_answer', newAnswer);
+      f2.append('source', 'claude');
+      // If task name changed, also update the key
+      if (newText && newText !== oldText) f2.append('old_task_name', oldText);
+      promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f2 }));
+    }
+    if (promises.length) {
+      Promise.all(promises).then(() => location.reload());
+    } else {
+      entry.innerHTML = originalHTML;
+    }
+  };
+  textareas[0].addEventListener('keydown', e => {
+    if (e.key === 'Escape') entry.innerHTML = originalHTML;
+  });
+  setTimeout(() => {
+    function closeOnOutside(e) {
+      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
+    }
+    document.addEventListener('click', closeOnOutside);
+  }, 100);
+}
+
 function editListItem(btn, type, oldText) {
   const entry = btn.closest('.list-item');
   if (entry.querySelector('.inline-edit')) return;
@@ -829,9 +917,15 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   }
   html += '<textarea class="inline-textarea"></textarea>';
   html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '" style="width:100%;margin:8px 0 16px;">↑ Push Original</button>';
+  // Check for answer panel
+  const answerPanel = entry.querySelector('.answer-panel');
+  const oldAnswer = answerPanel ? answerPanel.textContent.trim() : '';
+  if (answerPanel) {
+    html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin:12px 0 4px;display:block;">AI Answer</label>';
+    html += '<textarea class="inline-textarea inline-answer">' + oldAnswer.replace(/</g,'&lt;') + '</textarea>';
+  }
   html += '<div class="inline-edit-actions">';
   html += '<button class="inline-save">Save</button>';
-  html += '';
   html += '</div>';
   form.innerHTML = html;
 
@@ -852,6 +946,9 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
       textarea.value = originalText;
       textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
     });
+  // Auto-size answer textarea
+  const answerTaInit = form.querySelector('.inline-answer');
+  if (answerTaInit) answerTaInit.style.height = Math.max(120, answerTaInit.scrollHeight) + 'px';
   if (form.querySelector('.inline-summary')) form.querySelector('.inline-summary').focus();
   else textarea.focus();
 
@@ -874,6 +971,20 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
         const f2 = new FormData();
         f2.append('file', file); f2.append('time', time); f2.append('new_date', nd); f2.append('new_time', nt);
         promises.push(fetch('?action=edit_voice_meta', { method: 'POST', body: f2 }));
+      }
+    }
+    const answerTa = form.querySelector('.inline-answer');
+    if (answerTa) {
+      const newAnswer = answerTa.value.trim();
+      if (newAnswer !== oldAnswer) {
+        const f3 = new FormData();
+        f3.append('task_name', currentSummary || originalText);
+        f3.append('new_answer', newAnswer);
+        f3.append('source', 'voice');
+        f3.append('file', file);
+        f3.append('time', time);
+        promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f3 }));
+        hasChange = true;
       }
     }
     if (promises.length > 0) Promise.all(promises).then(() => location.reload());

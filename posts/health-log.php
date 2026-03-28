@@ -91,6 +91,8 @@ Lunch 13:40
 ■ タスク
 - 高城剛・ホリエモンのメルマガを再購読
 - Apple Watch × HIIT心拍数測定方法を調べる
+- Claude Code と Withings を連携する
+
 
 
 
