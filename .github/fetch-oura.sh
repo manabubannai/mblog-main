@@ -39,6 +39,10 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/daily_readiness?start_date=$DATE&end_date=$DATE" \
   > "$TMPDIR/readiness.json"
 
+curl -s -H "Authorization: Bearer $OURA_TOKEN" \
+  "https://api.ouraring.com/v2/usercollection/session?start_date=$DATE&end_date=$DATE" \
+  > "$TMPDIR/session.json"
+
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
 import json, sys, os
@@ -53,6 +57,8 @@ with open(f"{tmpdir}/daily_sleep.json") as f:
     daily_sleep = json.load(f)
 with open(f"{tmpdir}/readiness.json") as f:
     readiness = json.load(f)
+with open(f"{tmpdir}/session.json") as f:
+    session_data = json.load(f)
 
 # 該当日のデータだけフィルタ（sleep は複数日分ある場合がある）
 sleep_sessions = [x for x in sleep_data.get("data", []) if x["day"] == target_date]
@@ -81,6 +87,33 @@ readiness_score = r["score"] if r else "—"
 bedtime_start = s["bedtime_start"][11:16]
 bedtime_end = s["bedtime_end"][11:16]
 
+# Parse sessions (meditation, breathing, stretch)
+sessions = session_data.get("data", [])
+meditation_sessions = [x for x in sessions if x.get("type") == "meditation"]
+stretch_sessions = [x for x in sessions if x.get("type") == "stretching" or x.get("type") == "stretch"]
+
+def format_session(sess):
+    dur = sec_to_hm(sess.get("duration", 0)) if sess.get("duration") else "—"
+    start = sess.get("start_datetime", "")[11:16] if sess.get("start_datetime") else ""
+    cal = sess.get("calories", 0)
+    return dur, start, cal
+
+med_line = "—"
+if meditation_sessions:
+    parts = []
+    for ms in meditation_sessions:
+        dur, start, cal = format_session(ms)
+        parts.append(f"{dur}（{start}）{cal}kcal" if start else f"{dur} {cal}kcal")
+    med_line = ", ".join(parts)
+
+stretch_line = "—"
+if stretch_sessions:
+    parts = []
+    for ss in stretch_sessions:
+        dur, start, cal = format_session(ss)
+        parts.append(f"{dur}（{start}）{cal}kcal" if start else f"{dur} {cal}kcal")
+    stretch_line = ", ".join(parts)
+
 lines = [
     f"DATE={s['day']}",
     f"BEDTIME_START={bedtime_start}",
@@ -92,6 +125,8 @@ lines = [
     f"REM={rem}",
     f"HRV={hrv}",
     f"HR={hr}",
+    f"MEDITATION={med_line}",
+    f"STRETCH={stretch_line}",
     "",
     "--- FORMATTED ---",
     f"■ Sleep (Oura Ring) — {bedtime_start}〜{bedtime_end}",
@@ -101,6 +136,12 @@ lines = [
     f"- Deep: {deep}",
     f"- REM: {rem}",
     f"- HRV: {hrv}ms / HR: {hr}bpm",
+    "",
+    f"■ Stretch (Oura Ring)",
+    f"- {stretch_line}",
+    "",
+    f"■ Meditation (Oura Ring)",
+    f"- {med_line}",
     "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",

@@ -7,7 +7,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 STATE_FILE="$SCRIPT_DIR/voice-log-state.txt"
 LOG_FILE="$SCRIPT_DIR/voice-log.json"
 WHISPER="$HOME/Library/Python/3.9/bin/mlx_whisper"
-WHISPER_MODEL="mlx-community/whisper-small"
+WHISPER_MODEL="mlx-community/whisper-small-mlx"
 
 # Load .env for HF_TOKEN
 ENV_FILE="$SCRIPT_DIR/../.env"
@@ -52,7 +52,7 @@ for file in "${new_files[@]}"; do
     cp "$file" "$tmp_file"
 
     # Transcribe
-    "$WHISPER" --language ja --output-format txt --output-dir /tmp "$tmp_file" 2>/dev/null
+    "$WHISPER" --model "$WHISPER_MODEL" --language ja --output-format txt --output-dir /tmp "$tmp_file" 2>/dev/null
     txt_file="/tmp/jpr_${file_name}.txt"
     if [ -f "$txt_file" ]; then
         text=$(cat "$txt_file")
