@@ -7,6 +7,16 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 STATE_FILE="$SCRIPT_DIR/voice-log-state.txt"
 LOG_FILE="$SCRIPT_DIR/voice-log.json"
 WHISPER="$HOME/Library/Python/3.9/bin/mlx_whisper"
+WHISPER_MODEL="mlx-community/whisper-small"
+
+# Load .env for HF_TOKEN
+ENV_FILE="$SCRIPT_DIR/../.env"
+if [ -f "$ENV_FILE" ]; then
+    export $(grep -v '^#' "$ENV_FILE" | grep 'HF_TOKEN' | xargs)
+fi
+if [ -n "$HF_TOKEN" ]; then
+    export HUGGING_FACE_HUB_TOKEN="$HF_TOKEN"
+fi
 
 # Initialize state file if not exists
 [ -f "$STATE_FILE" ] || touch "$STATE_FILE"

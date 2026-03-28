@@ -68,12 +68,15 @@ require dirname(__DIR__) . '/header.php';
 ■ Food
 Breakfast 13:30
 - Oatmeal 46g, Almond Milk 36g, Yogurt 53g, Honey 20g, Coconut Fresh Juice 1個, Passion Fruit 1個, Walnuts 18g, Chia Seeds 5g, Blueberries 43g
+→ 508kcal / P:14g / F:19g / C:74g / Fiber:13g / Zinc:3.2mg / Mg:152mg
 
 Lunch 13:40
 - Rice 250g, Egg 4個, 納豆 2パック, キムチ 50g
+→ 830kcal / P:50g / F:31g / C:89g / Fiber:7g / Zinc:6.6mg / Mg:176mg
 
 Dinner 19:17
 - 味噌汁（豆腐 400g, エリンギ 180g, きくらげ 83g, 乾燥わかめ 73g, エノキ 55g, 味噌 大さじ2）, Rice 250g, Egg 2個
+→ 1,064kcal / P:76g / F:34g / C:142g / Fiber:44g / Zinc:9.7mg / Mg:963mg
 
 ■ Substances
 - ProBac7（朝食前）
@@ -101,19 +104,7 @@ Dinner 19:17
 - 地元の人には常に10%の上乗せで支払う /thought-2026-03-28-7938b4
 - 寝る前の腹式呼吸5分 + 肋骨下のセルフリリース
 - マナブゲームズ：自作ゲーム×ボイチャの遊び場 /thought-2026-03-28-8a0792
-- 新Mac購入→OpenClawでDeFi自動運用の実験 /thought-2026-03-28-4a64c6
-
-te
-
-te
-
-test
-
-テスト
-
-
-
-</pre>
+- 新Mac購入→OpenClawでDeFi自動運用の実験 /thought-2026-03-28-4a64c6</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
