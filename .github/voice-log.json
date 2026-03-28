@@ -60,7 +60,7 @@
         "date": "2026-03-28",
         "time": "12:59",
         "text": "やっぱりマナブログは記事ごとにデザインを変えていこうと思う。トップページもやっぱり別のデザインに変える。それのモックアップを考える。これもボイスメモをAIが受け取った時点でパソコン側で作業を終わらせ作っておいてもらう感じ。",
-        "summary": "ブログを記事ごとに個別デザイン。AIでモックアップ生成",
+        "summary": "ブログを記事ごとに個別デザイン。AIでデザイン生成",
         "file": "Recording 16",
         "tag": "task",
         "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?><\/style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss\/ディレクトリ作成 → header.phpでslug取得 → css\/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers\/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css\/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css\/ディレクトリ方式に移行\n3. トップページも専用CSS化"

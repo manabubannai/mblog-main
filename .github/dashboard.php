@@ -234,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $section = '■ タスク';
                 $line = '- ' . $text;
             } else {
-                $section = '■ Note';
+                $section = '■ Thought';
                 $line = $text;
             }
 
@@ -393,7 +393,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                     $pre_start = strpos($health_log, '<pre>', $date_pos);
                     $pre_end = strpos($health_log, '</pre>', $pre_start);
                     $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
-                    $note_pos = strpos($pre_content, '■ Note');
+                    $note_pos = strpos($pre_content, '■ Thought');
                     if ($note_pos !== false) {
                         $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
                         $health_log = substr($health_log, 0, $insert_pos) . "\n\n" . $text . "\n" . substr($health_log, $insert_pos);
@@ -636,7 +636,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <?php endif; ?>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
-      <option value="note">Note</option>
+      <option value="note">Thought</option>
       <option value="food">Food</option>
       <option value="substance">Substance</option>
     </select>
@@ -650,7 +650,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <div class="empty">No entries yet.</div>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
-      <option value="note">Note</option>
+      <option value="note">Thought</option>
       <option value="food">Food</option>
       <option value="substance">Substance</option>
     </select>
