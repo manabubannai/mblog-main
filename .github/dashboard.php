@@ -163,9 +163,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $date = date('Y-m-d');
             $date_header = '<h2># ' . $date . '</h2>';
 
-            // Determine content: task text → タスク, AI answer → Note
             $task_answer = $task_answers[$task_text] ?? null;
-            $task_line = '- ' . $task_text;
+
+            // If AI answer exists, save to completed-tasks.json for the detail page
+            $completed_file = __DIR__ . '/completed-tasks.json';
+            $completed = file_exists($completed_file) ? json_decode(file_get_contents($completed_file), true) : [];
+            if ($task_answer) {
+                $completed[] = ['name' => $task_text, 'answer' => $task_answer, 'date' => $date];
+                file_put_contents($completed_file, json_encode($completed, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+                $task_line = '- <a href="/task-answers?q=' . rawurlencode($task_text) . '">' . htmlspecialchars($task_text) . '</a>';
+            } else {
+                $task_line = '- ' . htmlspecialchars($task_text);
+            }
 
             if (strpos($health_log, $date_header) !== false) {
                 $date_pos = strpos($health_log, $date_header);
@@ -173,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $pre_end = strpos($health_log, '</pre>', $pre_start);
                 $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
 
-                // Add task text to ■ タスク
+                // Add task to ■ タスク as a link (if answer exists) or plain text
                 $section_pos = strpos($pre_content, '■ タスク');
                 if ($section_pos !== false) {
                     $next_section = strpos($pre_content, "\n■", $section_pos + 1);
@@ -187,27 +196,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 } else {
                     $insert_pos = $pre_end;
                     $health_log = substr($health_log, 0, $insert_pos) . "\n■ タスク\n" . $task_line . "\n  " . substr($health_log, $insert_pos);
-                }
-
-                // If AI answer exists, add to ■ Note
-                if ($task_answer) {
-                    // Re-parse since content shifted
-                    $pre_start = strpos($health_log, '<pre>', $date_pos);
-                    $pre_end = strpos($health_log, '</pre>', $pre_start);
-                    $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
-
-                    $note_pos = strpos($pre_content, '■ Note');
-                    $answer_text = '【' . $task_text . '】' . "\n" . $task_answer;
-                    if ($note_pos !== false) {
-                        $next_section = strpos($pre_content, "\n■", $note_pos + 1);
-                        if ($next_section === false) {
-                            $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
-                            $health_log = substr($health_log, 0, $insert_pos) . "\n\n" . $answer_text . "\n" . substr($health_log, $insert_pos);
-                        } else {
-                            $insert_pos = $pre_start + 5 + $next_section;
-                            $health_log = substr($health_log, 0, $insert_pos) . "\n" . $answer_text . "\n" . substr($health_log, $insert_pos);
-                        }
-                    }
                 }
             }
 
@@ -442,8 +430,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $answer = $task_answers[$task['text']] ?? null;
   ?>
     <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="<?= $answer ? 'toggleAnswer(this)' : 'editListItem(this,\'task\',\'' . htmlspecialchars(addslashes($task['text'])) . '\')' ?>"><?= htmlspecialchars($task['text']) ?><?= $answer ? ' <span class="answer-badge">AI</span>' : '' ?></span>
-      <?php if ($answer): ?>
+      <span class="voice-text clickable-title" onclick="editListItem(this,'task','<?= htmlspecialchars(addslashes($task['text'])) ?>')"><?= htmlspecialchars($task['text']) ?></span><?php if ($answer): ?><span class="answer-badge" onclick="toggleAnswer(this,event)" style="cursor:pointer;margin-left:6px;">AI</span>
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
@@ -454,8 +441,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <?php endforeach; ?>
   <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); $vt_answer = $vt['answer'] ?? null; ?>
     <div class="list-item <?= $is_done ? 'done' : '' ?> <?= $vt_answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="<?= $vt_answer ? 'toggleAnswer(this)' : 'editAll(this,\'' . htmlspecialchars(addslashes($vt['file'])) . '\',\'' . htmlspecialchars($vt['time']) . '\',\'' . htmlspecialchars($vt['date'] ?? '') . '\',false,\'' . htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) . '\')' ?>"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?><?= $vt_answer ? ' <span class="answer-badge">AI</span>' : '' ?></span>
-      <?php if ($vt_answer): ?>
+      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span><?php if ($vt_answer): ?><span class="answer-badge" onclick="toggleAnswer(this,event)" style="cursor:pointer;margin-left:6px;">AI</span>
         <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
@@ -618,7 +604,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 
 <script>
-function toggleAnswer(el) {
+function toggleAnswer(el, e) {
+  if (e) e.stopPropagation();
   const item = el.closest('.list-item');
   const panel = item.querySelector('.answer-panel');
   if (panel) {
