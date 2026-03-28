@@ -86,6 +86,8 @@ Lunch 13:40
 - 高城剛・ホリエモンのメルマガを再購読
 - Apple Watch × HIIT心拍数測定方法を調べる
 - Claude Code と Withings を連携する
+- https://x.com/levelsio/status/2034698084853133419
+
 
 
 
