@@ -4,36 +4,11 @@ $page_description = 'A daily log tracking food, sleep, supplements, meditation, 
 require dirname(__DIR__) . '/header.php';
 ?>
 
-<?php
-$task_answers_path = dirname(__DIR__) . '/.github/task-answers.json';
-$task_answers = file_exists($task_answers_path) ? json_decode(file_get_contents($task_answers_path), true) : [];
-?>
-<style>
-.task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.25); text-underline-offset: 3px; }
-.task-link:hover { text-decoration-color: rgba(0,0,0,0.6); }
-</style>
 <script>
-  const taskAnswers = <?= json_encode(array_keys($task_answers), JSON_UNESCAPED_UNICODE) ?>;
-
   window.onload = function () {
     document.querySelectorAll('pre').forEach(pre => {
-      let html = pre.innerHTML;
-      const taskSection = html.indexOf('■ タスク');
-      if (taskSection !== -1) {
-        const before = html.substring(0, taskSection);
-        let after = html.substring(taskSection);
-        after = after.replace(/^- (.+)$/gm, (match, taskName) => {
-          const clean = taskName.replace(/<[^>]+>/g, '');
-          if (taskAnswers.includes(clean)) {
-            return '- <a class="task-link" href="/task-answers?q=' + encodeURIComponent(clean) + '">' + taskName + '</a>';
-          }
-          return match;
-        });
-        html = before + after;
-      }
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
-      html = html.replace(regex, '<span class="jp-font">$1</span>');
-      pre.innerHTML = html;
+      pre.innerHTML = pre.innerHTML.replace(regex, '<span class="jp-font">$1</span>');
     });
   };
 </script>

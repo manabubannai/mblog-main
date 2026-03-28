@@ -1,21 +1,9 @@
 <?php
-if (function_exists('opcache_invalidate')) opcache_invalidate(__FILE__, true);
 $data_file = __DIR__ . '/../.github/task-answers.json';
 $answers = file_exists($data_file) ? json_decode(file_get_contents($data_file), true) : [];
 $q = $_GET['q'] ?? '';
 $answer = $answers[$q] ?? null;
 
-// Debug: remove after confirming
-if (isset($_GET['debug'])) {
-    header('Content-Type: text/plain; charset=utf-8');
-    echo "file_exists: " . (file_exists($data_file) ? 'YES' : 'NO') . "\n";
-    echo "realpath: " . realpath($data_file) . "\n";
-    echo "q: [$q]\n";
-    echo "answer_found: " . ($answer ? 'YES' : 'NO') . "\n";
-    echo "num_keys: " . count($answers) . "\n";
-    foreach (array_keys($answers) as $k) echo "key: [$k]\n";
-    exit;
-}
 
 if (!$answer) {
     $page_title = 'Task Not Found';

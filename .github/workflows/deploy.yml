@@ -15,4 +15,3 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/mblog && git fetch origin main && git reset --hard origin/main"
-          curl -s "https://mblog.com/opcache-reset.php?token=mblog-deploy-2026" || true
