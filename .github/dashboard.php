@@ -271,13 +271,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                     // Section exists — find its end (next ■ or end of pre)
                     $next_section = strpos($pre_content, "\n■", $section_pos + 1);
                     if ($next_section === false) {
-                        // Last section — insert before </pre>
+                        // Last section — append after last content line
                         $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
-                        $health_log = substr($health_log, 0, $insert_pos) . "\n" . $line . "\n" . substr($health_log, $insert_pos);
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n" . $line . substr($health_log, $insert_pos);
                     } else {
-                        // Insert before next section
+                        // Insert before next section (keep exactly 1 blank line)
                         $insert_pos = $pre_start + 5 + $next_section;
-                        $health_log = substr($health_log, 0, $insert_pos) . $line . "\n\n" . substr($health_log, $insert_pos);
+                        $health_log = substr($health_log, 0, $insert_pos) . $line . "\n" . substr($health_log, $insert_pos);
                     }
                 } else {
                     // Section doesn't exist — add it before </pre>
