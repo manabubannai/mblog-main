@@ -1039,12 +1039,17 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     if (promises.length > 0) Promise.all(promises).then(() => location.reload());
     else entry.innerHTML = originalHTML;
   }
-  form.querySelector('.inline-save').onclick = doSave;
-  if (form.querySelector('.inline-save-summary')) form.querySelector('.inline-save-summary').onclick = doSave;
-  textarea.addEventListener('keydown', e => { if (e.key === 'Escape') entry.innerHTML = originalHTML; });
+  // Auto-save with debounce
+  let saveTimer = null;
+  function autoSave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(doSave, 800);
+  }
+  form.querySelectorAll('input, textarea').forEach(el => el.addEventListener('input', autoSave));
+  textarea.addEventListener('keydown', e => { if (e.key === 'Escape') { clearTimeout(saveTimer); entry.innerHTML = originalHTML; } });
   setTimeout(() => {
     function closeOnOutside(e) {
-      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
+      if (!entry.contains(e.target)) { clearTimeout(saveTimer); doSave(); document.removeEventListener('click', closeOnOutside); }
     }
     document.addEventListener('click', closeOnOutside);
   }, 100);
