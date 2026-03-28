@@ -669,6 +669,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <div class="list-item <?= $item['done'] ? 'done' : '' ?>">
       <span class="voice-text clickable-title" onclick="editListItem(this,'shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')"><?= htmlspecialchars($item['text']) ?></span>
       <span class="entry-actions">
+        <button class="action-btn reorder-btn" onclick="reorderShopping('<?= htmlspecialchars(addslashes($item['text'])) ?>','up','claude')" title="Up">▲</button>
+        <button class="action-btn reorder-btn" onclick="reorderShopping('<?= htmlspecialchars(addslashes($item['text'])) ?>','down','claude')" title="Down">▼</button>
         <button class="action-btn delete-btn" onclick="deleteItem('shopping','<?= htmlspecialchars(addslashes($item['text'])) ?>')">×</button>
       </span>
     </div>
@@ -677,6 +679,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <div class="list-item">
       <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>','<?= htmlspecialchars($vs['date']) ?>',false,'<?= htmlspecialchars(addslashes($vs['summary'] ?? $vs['text'])) ?>')"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></span>
       <span class="entry-actions">
+        <button class="action-btn reorder-btn" onclick="reorderShopping('<?= htmlspecialchars(addslashes($vs['summary'] ?? $vs['text'])) ?>','up','voice','<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')" title="Up">▲</button>
+        <button class="action-btn reorder-btn" onclick="reorderShopping('<?= htmlspecialchars(addslashes($vs['summary'] ?? $vs['text'])) ?>','down','voice','<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')" title="Down">▼</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
       </span>
     </div>
@@ -892,6 +896,16 @@ function reorderTask(text, dir, source, file, time) {
   if (file) form.append('file', file);
   if (time) form.append('time', time);
   fetch('?action=reorder_task', { method: 'POST', body: form }).then(() => location.reload());
+}
+
+function reorderShopping(text, dir, source, file, time) {
+  const form = new FormData();
+  form.append('text', text);
+  form.append('dir', dir);
+  form.append('source', source);
+  if (file) form.append('file', file);
+  if (time) form.append('time', time);
+  fetch('?action=reorder_shopping', { method: 'POST', body: form }).then(() => location.reload());
 }
 
 function pushToServer(btn, useSummary) {
