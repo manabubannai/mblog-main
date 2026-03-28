@@ -7,7 +7,8 @@ $task_answers_file = __DIR__ . '/task-answers.json';
 $task_answers = file_exists($task_answers_file) ? json_decode(file_get_contents($task_answers_file), true) : [];
 $queue_file = __DIR__ . '/task-queue.json';
 $task_queue = file_exists($queue_file) ? json_decode(file_get_contents($queue_file), true) : [];
-$queued_tasks = array_column(array_filter($task_queue, fn($q) => ($q['status'] ?? '') === 'pending'), 'task');
+$queued_pending = array_column(array_filter($task_queue, fn($q) => ($q['status'] ?? '') === 'pending'), 'task');
+$queued_done = array_column(array_filter($task_queue, fn($q) => ($q['status'] ?? '') === 'done'), 'task');
 
 // Handle API requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
@@ -610,7 +611,7 @@ krsort($notes_by_date);
 
 // Helper: render voice entry with edit/delete/push
 function voice_entry_html($entry, $show_push = false, $use_summary = true, $show_date_edit = false) {
-    global $queued_tasks;
+    global $queued_pending, $queued_done;
     $file = htmlspecialchars(addslashes($entry['file']));
     $time = htmlspecialchars($entry['time']);
     $date = htmlspecialchars($entry['date']);
@@ -643,9 +644,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         $html .= '<input type="text" class="inline-action-input" placeholder="アクションを入力..." style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:8px;">';
         $html .= '<button class="inline-push-action" data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.12);color:#50c878;" onclick="pushAction(this)">↑ Push with AI Answer</button>';
         $entry_summary = $entry['summary'] ?? $entry['text'] ?? '';
-        $is_queued = in_array($entry_summary, $queued_tasks);
-        if ($is_queued) {
-            $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.08);color:rgba(255,160,60,0.5);margin-top:8px;opacity:0.5;">✅ キューに追加済み</button>';
+        if (in_array($entry_summary, $queued_done)) {
+            $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);margin-top:8px;opacity:0.5;">✅ 実行済み</button>';
+        } elseif (in_array($entry_summary, $queued_pending)) {
+            $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);margin-top:8px;opacity:0.5;">⏳ 実行待ち</button>';
         } else {
             $html .= '<button data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:8px;" onclick="queueForAI(this)">⚡ AIで実行</button>';
         }
@@ -678,8 +680,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       <?php if ($answer): ?>
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?>
         <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
-          <?php if (in_array($task['text'], $queued_tasks)): ?>
-          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.08);color:rgba(255,160,60,0.5);opacity:0.5;">✅ キューに追加済み</button>
+          <?php if (in_array($task['text'], $queued_done)): ?>
+          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);opacity:0.5;">✅ 実行済み</button>
+          <?php elseif (in_array($task['text'], $queued_pending)): ?>
+          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
           <button data-task="<?= htmlspecialchars($task['text']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
           <?php endif; ?>
@@ -701,8 +705,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       <?php if ($vt_answer): ?>
         <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?>
         <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
-          <?php $vt_summary = $vt['summary'] ?? $vt['text']; if (in_array($vt_summary, $queued_tasks)): ?>
-          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.08);color:rgba(255,160,60,0.5);opacity:0.5;">✅ キューに追加済み</button>
+          <?php $vt_summary = $vt['summary'] ?? $vt['text']; if (in_array($vt_summary, $queued_done)): ?>
+          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);opacity:0.5;">✅ 実行済み</button>
+          <?php elseif (in_array($vt_summary, $queued_pending)): ?>
+          <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
           <button data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;" onclick="queueForAI(this)">⚡ AIで実行</button>
           <?php endif; ?>
