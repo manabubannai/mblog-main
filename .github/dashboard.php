@@ -557,7 +557,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     }
     $html .= '<span class="entry-actions">';
     if ($show_push) {
-        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="' . $file . '" data-time="' . $time . '" title="Push">↑</button>';
+        $html .= '<button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="' . $file . '" data-time="' . $time . '" title="Push">🚀</button>';
     }
     $html .= '<button class="action-btn delete-btn" onclick="deleteVoice(\'' . $file . '\',\'' . $time . '\')" title="Delete">×</button>';
     $html .= '</span>';
@@ -591,7 +591,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <button class="action-btn" onclick="completeItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')" title="Toggle done"><?= $task['done'] ? '↩' : '✓' ?></button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','up','claude')" title="Up">▲</button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','down','claude')" title="Down">▼</button>
-        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-task="<?= htmlspecialchars($task['text']) ?>" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-task="<?= htmlspecialchars($task['text']) ?>" title="Push">🚀</button>
         <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
     </div>
@@ -606,7 +606,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <button class="action-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Toggle done"><?= $is_done ? '↩' : '✓' ?></button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','up','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Up">▲</button>
         <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','down','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Down">▼</button>
-        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
+        <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">🚀</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
     </div>
