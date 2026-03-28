@@ -793,8 +793,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 <script>
 function toggleAnswer(el, e) {
   if (e) e.stopPropagation();
-  const item = el.closest('.list-item');
-  const panel = item.querySelector('.answer-panel');
+  const item = el.closest('.list-item') || el.closest('.voice-entry');
+  const panel = item ? item.querySelector('.answer-panel') : null;
   if (panel) {
     panel.classList.toggle('open');
   }
