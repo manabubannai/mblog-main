@@ -892,8 +892,21 @@ function toggleAnswer(el, e) {
   if (e) e.stopPropagation();
   const item = el.closest('.list-item') || el.closest('.voice-entry');
   const panel = item ? item.querySelector('.answer-panel') : null;
-  if (panel) {
-    panel.classList.toggle('open');
+  if (!panel) return;
+  const isOpen = panel.classList.contains('open');
+  if (isOpen) {
+    panel.classList.remove('open');
+  } else {
+    panel.classList.add('open');
+    setTimeout(() => {
+      function closeOnOutside(ev) {
+        if (!item.contains(ev.target)) {
+          panel.classList.remove('open');
+          document.removeEventListener('click', closeOnOutside);
+        }
+      }
+      document.addEventListener('click', closeOnOutside);
+    }, 100);
   }
 }
 
