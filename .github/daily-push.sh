@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /Users/manabu/mblog-main
 
+# バックアップ
+bash .github/backup.sh 2>/dev/null || true
+
 # データ取得（エラーがあっても続行）
 bash .github/fetch-oura.sh 2>/dev/null || true
 bash .github/fetch-withings.sh 2>/dev/null || true
