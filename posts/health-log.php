@@ -92,6 +92,8 @@ Lunch 13:40
 - ボイスメモを思考の宝箱に。AI学習→ログ生成 /thought-2026-03-28-voice-memo
 - 遊び優先の思考法。ボイチャ×ゲームアプリの構想 /thought-2026-03-28-cae80f
 - 地元の人には常に10%の上乗せで支払う /thought-2026-03-28-7938b4
+
+■ Idea
 - 記事：AIで脳を整理するシステム /thought-2026-03-28-1de00b</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

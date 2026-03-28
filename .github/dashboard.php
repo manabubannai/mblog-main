@@ -239,6 +239,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             } elseif ($tag === 'task') {
                 $section = '■ タスク';
                 $line = '- ' . $text;
+            } elseif ($tag === 'idea') {
+                $section = '■ Idea';
+                if ($use_both) {
+                    $original = $target['text'] ?? '';
+                    $summary = $target['summary'] ?? $text;
+                    $slug = 'thought-' . $date . '-' . substr(md5($summary), 0, 6);
+                    $page_path = __DIR__ . '/../posts/' . $slug . '.php';
+                    if (!file_exists($page_path)) {
+                        $page_content = "<?php\n\$page_title = " . var_export($summary, true) . ";\n\$page_description = \$page_title;\nrequire dirname(__DIR__) . '/header.php';\n?>\n\n<script>\n  window.onload = function () {\n    document.querySelectorAll('pre').forEach(pre => {\n      const regex = /([\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FFF]+)/g;\n      pre.innerHTML = pre.innerHTML.replace(regex, '<span class=\"jp-font\">\$1</span>');\n    });\n  };\n</script>\n\n<a href=\"/\"><img src=\"/img/logo.png\" alt=\"manablog\" class=\"logo\"></a>\n<h1 class=\"title\">" . htmlspecialchars($summary) . "</h1>\n\n<pre style=\"line-height: 1.9;\">\n" . htmlspecialchars($original) . "\n</pre>\n\n<p style=\"margin-top: 40px;\"><a href=\"/health-log\">&larr; Health Log</a></p>\n\n<?php require dirname(__DIR__) . '/footer.php'; ?>\n";
+                        file_put_contents($page_path, $page_content);
+                    }
+                    $line = '- ' . $summary . ' /' . $slug;
+                } else {
+                    $line = '- ' . $text;
+                }
             } else {
                 $section = '■ Thought';
                 if ($use_both) {
