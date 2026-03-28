@@ -992,9 +992,18 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   if (form.querySelector('.inline-summary')) form.querySelector('.inline-summary').focus();
   else textarea.focus();
 
-  if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { pushToServer(this, true); };
-  form.querySelector('.inline-push-o').onclick = function() { pushToServer(this, false); };
-  if (form.querySelector('.inline-push-so')) form.querySelector('.inline-push-so').onclick = function() { pushToServer(this, 'both'); };
+  function saveFirst() {
+    const newText = textarea.value.trim();
+    const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
+    const f = new FormData();
+    f.append('file', file); f.append('time', time);
+    if (newText) f.append('new_text', newText);
+    if (newSummary) f.append('new_summary', newSummary);
+    return fetch('?action=edit_voice', { method: 'POST', body: f });
+  }
+  if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, true)); };
+  form.querySelector('.inline-push-o').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, false)); };
+  if (form.querySelector('.inline-push-so')) form.querySelector('.inline-push-so').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, 'both')); };
   function doSave() {
     const newText = textarea.value.trim();
     const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
