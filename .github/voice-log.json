@@ -9,15 +9,6 @@
     },
     {
         "date": "2026-03-28",
-        "time": "18:04:57",
-        "text": "Oura Ringのメディテーションを自動検出してくれる設定をやっておく。Claude Codeで。",
-        "summary": "Oura Ringメディテーション自動検出の設定",
-        "file": "18-04-57.m4a",
-        "tag": "task",
-        "answer": "■ Oura Ringの自動検出について\nOura Ringはメディテーションを自動検出しない。睡眠・歩行・ランニングは自動検出されるが、瞑想は手動記録が必要。\n\n■ 記録方法\n1. Ouraアプリ → ホーム画面の「+」→「瞑想」→ タイマーで開始\n2. Apple Health連携: 他の瞑想アプリ（Headspace等）で記録 → Apple Health経由でOuraに同期可能\n\n■ APIでの取得\nOura API v2の session エンドポイントで手動記録した瞑想セッションは取得可能。\nGET https:\/\/api.ouraring.com\/v2\/usercollection\/session?start_date=YYYY-MM-DD\ntype: \"meditation\" のセッションが含まれる。\n\n■ fetch-oura.shへの統合\n既存スクリプトにsessionエンドポイントの呼び出しを追加すれば、手動記録した瞑想データは自動取得できる。\n\n■ 結論\n毎日アプリで手動記録 → fetch-oura.shで自動取得、が現実的な運用。"
-    },
-    {
-        "date": "2026-03-28",
         "time": "13:27",
         "text": "お米を買う。",
         "summary": "お米",

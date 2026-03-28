@@ -100,6 +100,7 @@ Dinner 19:17
 - Claude Code と Withings を連携する
 - Pieter Levels流のClaude設定を実行 https://x.com/levelsio/status/2034698084853133419
 - 完了：音声メモ→AIが即座にメモ保存＋タスク実行
+- Oura Ringメディテーション自動検出の設定
 
 ■ Idea
 - 記事：AIで脳を整理するシステム /thought-2026-03-28-1de00b
