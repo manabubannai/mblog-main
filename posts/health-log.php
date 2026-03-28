@@ -4,11 +4,43 @@ $page_description = 'A daily log tracking food, sleep, supplements, meditation, 
 require dirname(__DIR__) . '/header.php';
 ?>
 
+<?php
+$task_answers_path = dirname(__DIR__) . '/.github/task-answers.json';
+$task_answers = file_exists($task_answers_path) ? json_decode(file_get_contents($task_answers_path), true) : [];
+?>
+<style>
+.task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.2); text-underline-offset: 3px; cursor: pointer; }
+.task-link:hover { text-decoration-color: rgba(0,0,0,0.5); }
+.task-detail { display: none; background: rgba(0,0,0,0.03); border-left: 2px solid rgba(0,0,0,0.1); padding: 12px 16px; margin: 8px 0; font-size: 14px; line-height: 1.8; white-space: pre-wrap; border-radius: 0 6px 6px 0; }
+.task-detail.open { display: block; }
+</style>
 <script>
+  const taskAnswers = <?= json_encode($task_answers, JSON_UNESCAPED_UNICODE) ?>;
+
   window.onload = function () {
     document.querySelectorAll('pre').forEach(pre => {
+      // Make task lines clickable
+      let html = pre.innerHTML;
+      const taskSection = html.indexOf('■ タスク');
+      if (taskSection !== -1) {
+        const before = html.substring(0, taskSection);
+        let after = html.substring(taskSection);
+        after = after.replace(/^- (.+)$/gm, (match, taskName) => {
+          const clean = taskName.replace(/<[^>]+>/g, '');
+          if (taskAnswers[clean]) {
+            const id = 'task-' + Math.random().toString(36).substr(2, 6);
+            const answer = taskAnswers[clean].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return '<span class="task-link" onclick="document.getElementById(\'' + id + '\').classList.toggle(\'open\')">' + match + '</span><div id="' + id + '" class="task-detail">' + answer + '</div>';
+          }
+          return match;
+        });
+        html = before + after;
+      }
+
+      // Japanese font replacement
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
-      pre.innerHTML = pre.innerHTML.replace(regex, '<span class="jp-font">$1</span>');
+      html = html.replace(regex, '<span class="jp-font">$1</span>');
+      pre.innerHTML = html;
     });
   };
 </script>
@@ -53,7 +85,6 @@ Lunch 13:40
 
 ■ Note
 >OpenClawは、その便利さ故に瞬く間に広まりましたが、セキュリティへの配慮が十分にされていないことは、開発者自身が認めており、企業にとっては導入しにくいという問題があります。（中島聡さんのメルマガより）
-
 だからこそ、今の視点からOpenClawをガシガシ使って、個人としての強みを最大限に発揮する必要がある。
 
 ストレッチを筋トレと同じように捉え、伸ばしている筋肉に意識を向け、最大収縮と最大伸展を行う。呼吸への意識も忘れないようにする。
@@ -61,6 +92,8 @@ Lunch 13:40
 ✓ 自転車HIITを取り入れる
 ・攻める日：167bpmくらい（5分） × 3日
 ・攻めない日：120bpmくらい × 2日
+周りへの恩返しとして筋トレをガチでやる。めちゃくちゃ価値の成果を出す。そこから事業化につなげていく。
+
 
 ■ タスク
 - 高城剛・ホリエモンのメルマガを再購読

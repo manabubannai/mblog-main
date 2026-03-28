@@ -14,22 +14,7 @@
         "summary": "Kindleで脳に優しい読書方法を検討",
         "file": "Recording 5",
         "tag": "task",
-        "answer": "■ 方法1: Kindle に Web記事を送る\n(1) Send to Kindle（Amazon公式）— Chrome拡張でワンクリック送信。メールでも可能（xxx@kindle.com）\n(2) Instapaper — 記事保存→広告除去→Kindleへ自動配信（毎日/週1回）。無料\n(3) Calibre — オープンソース。RSSフィードをePub化してKindleに転送。最も柔軟\n\n■ 方法2: E-Inkタブレットで直接読む\n(1) BOOX — Android搭載E-Ink。Google Playで好きなアプリ利用可。3〜8万円\n(2) Kobo — Pocket連携が標準搭載。Web記事を読む用途に最適。2〜4万円\n(3) reMarkable — 手書きノート特化。Chrome拡張でWeb記事をPDF送信可能\n\n■ おすすめ\n【手軽】Instapaper + Kindle — 無料、今日から開始可。記事をワンクリック保存→自動でKindleに届く\n【本格】BOOX + Pocket/RSSリーダー — Webブラウジングも可能。最も柔軟"
-    },
-    {
-        "date": "2026-03-28",
-        "time": "10:05",
-        "text": "周りへの恩返しとして筋トレをガチでやる。めちゃくちゃ価値の成果を出す。そこから事業化につなげていく。",
-        "summary": "筋トレを本気でやり、成果を事業化へ",
-        "file": "Recording 6"
-    },
-    {
-        "date": "2026-03-28",
-        "time": "10:06",
-        "text": "ProBac7を飲んでから多分今4日か5日目ぐらい。前回と同様に驚くほど効果が効いている。ただまだ万全の腸の状態にはなっていないので、そこだけ検討。",
-        "summary": "ProBac7の効果実感（4-5日目）、腸は改善途中",
-        "file": "Recording 7",
-        "tag": "health"
+        "answer": "■ 方法1: Kindle に Web記事を送る\n(1) Send to Kindle（Amazon公式）— Chrome拡張でワンクリック送信。メールでも可能（xxx@kindle.com）\n(2) Instapaper — 記事保存→広告除去→Kindleへ自動配信（毎日\/週1回）。無料\n(3) Calibre — オープンソース。RSSフィードをePub化してKindleに転送。最も柔軟\n\n■ 方法2: E-Inkタブレットで直接読む\n(1) BOOX — Android搭載E-Ink。Google Playで好きなアプリ利用可。3〜8万円\n(2) Kobo — Pocket連携が標準搭載。Web記事を読む用途に最適。2〜4万円\n(3) reMarkable — 手書きノート特化。Chrome拡張でWeb記事をPDF送信可能\n\n■ おすすめ\n【手軽】Instapaper + Kindle — 無料、今日から開始可。記事をワンクリック保存→自動でKindleに届く\n【本格】BOOX + Pocket\/RSSリーダー — Webブラウジングも可能。最も柔軟"
     },
     {
         "date": "2026-03-28",
@@ -87,7 +72,7 @@
         "summary": "ブログを記事ごとに個別デザイン化。AIでモックアップ自動生成",
         "file": "Recording 16",
         "tag": "task",
-        "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?></style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss/ディレクトリ作成 → header.phpでslug取得 → css/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css/ディレクトリ方式に移行\n3. トップページも専用CSS化"
+        "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?><\/style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss\/ディレクトリ作成 → header.phpでslug取得 → css\/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers\/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css\/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css\/ディレクトリ方式に移行\n3. トップページも専用CSS化"
     },
     {
         "date": "2026-03-28",
@@ -110,7 +95,7 @@
         "summary": "新PC→OpenClawでツイートビューア等を開発",
         "file": "Recording 21",
         "tag": "task",
-        "answer": "■ OpenClawとは\nオープンソースAIエージェント（GitHub 31万スター超）。ブラウザ自動操作、ファイル操作、シェル実行、メッセージ連携が可能。Claude Codeがコーディング特化の「メス」なら、OpenClawは汎用の「スイスアーミーナイフ」。\n\n■ macOSインストール\ncurl -fsSL https://openclaw.ai/install.sh | bash\nまたは npm install -g openclaw@latest\n前提: Node.js 22.16以上。--install-daemon で起動時自動起動も可能。\n\n■ ブラウザ操作\nChrome DevTools Protocol経由。タブ制御、クリック、テキスト入力、スクレイピング、スクリーンショット、PDF生成が可能。個人ブラウザとは分離された専用プロファイルで動作。\n\n■ ⚠️ セキュリティ上の重大な懸念\n- 512件の脆弱性が発見（うち8件クリティカル）\n- ClawHubに341件の悪質スキル（仮想通貨APIキー・ウォレット秘密鍵の窃取目的）\n- WebSocket経由でローカルのOpenClawを外部サイトから乗っ取り可能\n- 13.5万台が公開インターネット上に露出\n\n■ 推奨事項\n(1) 仮想通貨/DeFi操作には絶対に使わない（資産喪失リスクが現実的）\n(2) 専用マシンで隔離（iCloud・パスワード同期しない）\n(3) ClawHubスキルは公式・検証済みのみ\n(4) ツイートビューア等の「読み取り専用」用途から始める\n(5) コーディングにはClaude Codeの方が安全かつ高品質"
+        "answer": "■ OpenClawとは\nオープンソースAIエージェント（GitHub 31万スター超）。ブラウザ自動操作、ファイル操作、シェル実行、メッセージ連携が可能。Claude Codeがコーディング特化の「メス」なら、OpenClawは汎用の「スイスアーミーナイフ」。\n\n■ macOSインストール\ncurl -fsSL https:\/\/openclaw.ai\/install.sh | bash\nまたは npm install -g openclaw@latest\n前提: Node.js 22.16以上。--install-daemon で起動時自動起動も可能。\n\n■ ブラウザ操作\nChrome DevTools Protocol経由。タブ制御、クリック、テキスト入力、スクレイピング、スクリーンショット、PDF生成が可能。個人ブラウザとは分離された専用プロファイルで動作。\n\n■ ⚠️ セキュリティ上の重大な懸念\n- 512件の脆弱性が発見（うち8件クリティカル）\n- ClawHubに341件の悪質スキル（仮想通貨APIキー・ウォレット秘密鍵の窃取目的）\n- WebSocket経由でローカルのOpenClawを外部サイトから乗っ取り可能\n- 13.5万台が公開インターネット上に露出\n\n■ 推奨事項\n(1) 仮想通貨\/DeFi操作には絶対に使わない（資産喪失リスクが現実的）\n(2) 専用マシンで隔離（iCloud・パスワード同期しない）\n(3) ClawHubスキルは公式・検証済みのみ\n(4) ツイートビューア等の「読み取り専用」用途から始める\n(5) コーディングにはClaude Codeの方が安全かつ高品質"
     },
     {
         "date": "2026-03-28",
@@ -159,7 +144,7 @@
         "summary": "健康系インフルエンサーをフォロー＆情報収集",
         "file": "Recording 29",
         "tag": "task",
-        "answer": "■ 英語圏（必須フォロー）\n1. Andrew Huberman — YouTube: Huberman Lab（600万超）。睡眠・サプリ・運動を論文ベースで解説\n2. Peter Attia — Podcast: The Drive。長寿医学の第一人者。Zone 2、CGM、血液検査\n3. Bryan Johnson — blueprint.bryanjohnson.com。年200万ドルのエイジングリバーサル。プロトコル全公開\n4. Rhonda Patrick — YouTube: FoundMyFitness。サウナ・冷水浴・ビタミンD研究\n5. David Sinclair — NMN・レスベラトロールの老化研究。著書「LIFESPAN」\n6. Ben Greenfield — 実践的バイオハッキング（赤色光、サプリスタック）\n7. Thomas DeLauer — YouTube 300万超。断食・ケト・サプリを分かりやすく解説\n\n■ 日本語圏\n1. パレオな男（鈴木祐）— 日本最強の論文ベース健康ブログ\n2. 山本義徳 — サプリ・トレーニング専門知識が日本トップ\n3. 石黒成治（Dr.Ishiguro）— 消化器外科医。腸内環境・食事療法\n4. 予防医学ch（森勇磨）— エビデンスベースの予防医学\n\n■ プラットフォーム\nX: 上記全員フォロー。リスト「Health EN」「Health JP」で管理\nPodcast: Huberman Lab > The Drive > The Human Upgrade\nNewsletter: Examine.com（サプリエビデンス）、Peter Attia、Huberman Lab\nReddit: r/Biohackers, r/Nootropics, r/QuantifiedSelf, r/Longevity\n\n■ ポジショニング\n日本語圏で「バイオハッキング×Quantified Self×データ全公開」は競合が少ない。英語圏の最新研究を自分の実体験データと組み合わせて日本語発信するサイクルが最も差別化しやすい。タイ在住を活かした東南アジアの健康サービス体験も独自の切り口になる。"
+        "answer": "■ 英語圏（必須フォロー）\n1. Andrew Huberman — YouTube: Huberman Lab（600万超）。睡眠・サプリ・運動を論文ベースで解説\n2. Peter Attia — Podcast: The Drive。長寿医学の第一人者。Zone 2、CGM、血液検査\n3. Bryan Johnson — blueprint.bryanjohnson.com。年200万ドルのエイジングリバーサル。プロトコル全公開\n4. Rhonda Patrick — YouTube: FoundMyFitness。サウナ・冷水浴・ビタミンD研究\n5. David Sinclair — NMN・レスベラトロールの老化研究。著書「LIFESPAN」\n6. Ben Greenfield — 実践的バイオハッキング（赤色光、サプリスタック）\n7. Thomas DeLauer — YouTube 300万超。断食・ケト・サプリを分かりやすく解説\n\n■ 日本語圏\n1. パレオな男（鈴木祐）— 日本最強の論文ベース健康ブログ\n2. 山本義徳 — サプリ・トレーニング専門知識が日本トップ\n3. 石黒成治（Dr.Ishiguro）— 消化器外科医。腸内環境・食事療法\n4. 予防医学ch（森勇磨）— エビデンスベースの予防医学\n\n■ プラットフォーム\nX: 上記全員フォロー。リスト「Health EN」「Health JP」で管理\nPodcast: Huberman Lab > The Drive > The Human Upgrade\nNewsletter: Examine.com（サプリエビデンス）、Peter Attia、Huberman Lab\nReddit: r\/Biohackers, r\/Nootropics, r\/QuantifiedSelf, r\/Longevity\n\n■ ポジショニング\n日本語圏で「バイオハッキング×Quantified Self×データ全公開」は競合が少ない。英語圏の最新研究を自分の実体験データと組み合わせて日本語発信するサイクルが最も差別化しやすい。タイ在住を活かした東南アジアの健康サービス体験も独自の切り口になる。"
     },
     {
         "date": "2026-03-28",
@@ -168,7 +153,7 @@
         "summary": "Pieter Levels流のClaude設定をローカルに構築",
         "file": "Recording 32",
         "tag": "task",
-        "answer": "■ Dangerous Skippingとは\nPieter Levels (@levelsio) が実践する手法。Claude Codeの --dangerously-skip-permissions を常時ONにし、許可確認を一切スキップしてAIに完全自律性を与える。「100x faster」と本人談。\n\n■ Levels氏のエイリアス（~/.zshrcに追加）\nc() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }\n→ ターミナルで c と1文字打つだけで起動。--continueで前回セッション継続。\n\n■ 彼のワークフロー\nHetzner VPS ($5〜)にSSH → Claude Codeで自然言語指示 → 本番サーバー上で直接開発（\"rawdog vibecoding\"）。fun VPS（遊び用）で実行することを強調。\n\n■ ローカルMacでの再現方法\n\n【方法1】bypassPermissions（Levels式そのまま）\nc() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }\nリスク: ファイル削除・環境変数漏洩の危険。Git管理が前提。\n\n【方法2】autoモード（2026年3月リリース、推奨）\nclaude --enable-auto-mode\nまたは起動後 Shift+Tab で切替。破壊的操作（force push、大量削除、認証情報送信等）だけ自動ブロック、それ以外は許可なしで実行。\n.claude/settings.json: {\"permissions\":{\"defaultMode\":\"auto\"}}\n\n【方法3】acceptEdits + allowルール（最も安全）\nファイル編集は自動承認、シェルコマンドはallowリスト一致のみ承認。\n\n■ 推奨エイリアス（使い分け）\nc() { claude --continue --permission-mode acceptEdits \"$@\"; }  # 通常\nca() { claude --continue --enable-auto-mode \"$@\"; }  # auto\ncy() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }  # yolo"
+        "answer": "■ Dangerous Skippingとは\nPieter Levels (@levelsio) が実践する手法。Claude Codeの --dangerously-skip-permissions を常時ONにし、許可確認を一切スキップしてAIに完全自律性を与える。「100x faster」と本人談。\n\n■ Levels氏のエイリアス（~\/.zshrcに追加）\nc() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }\n→ ターミナルで c と1文字打つだけで起動。--continueで前回セッション継続。\n\n■ 彼のワークフロー\nHetzner VPS ($5〜)にSSH → Claude Codeで自然言語指示 → 本番サーバー上で直接開発（\"rawdog vibecoding\"）。fun VPS（遊び用）で実行することを強調。\n\n■ ローカルMacでの再現方法\n\n【方法1】bypassPermissions（Levels式そのまま）\nc() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }\nリスク: ファイル削除・環境変数漏洩の危険。Git管理が前提。\n\n【方法2】autoモード（2026年3月リリース、推奨）\nclaude --enable-auto-mode\nまたは起動後 Shift+Tab で切替。破壊的操作（force push、大量削除、認証情報送信等）だけ自動ブロック、それ以外は許可なしで実行。\n.claude\/settings.json: {\"permissions\":{\"defaultMode\":\"auto\"}}\n\n【方法3】acceptEdits + allowルール（最も安全）\nファイル編集は自動承認、シェルコマンドはallowリスト一致のみ承認。\n\n■ 推奨エイリアス（使い分け）\nc() { claude --continue --permission-mode acceptEdits \"$@\"; }  # 通常\nca() { claude --continue --enable-auto-mode \"$@\"; }  # auto\ncy() { IS_SANDBOX=1 claude --continue --dangerously-skip-permissions \"$@\"; }  # yolo"
     },
     {
         "date": "2026-03-28",

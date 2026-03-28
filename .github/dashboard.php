@@ -45,6 +45,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             file_put_contents($claude_md_path, $claude_md);
         }
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'reorder_task') {
+        $text = $_POST['text'] ?? '';
+        $dir = $_POST['dir'] ?? ''; // 'up' or 'down'
+        $source = $_POST['source'] ?? 'claude'; // 'claude' or 'voice'
+
+        if ($source === 'voice') {
+            $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+            // Find indices of task-tagged entries
+            $task_indices = [];
+            foreach ($voice_log as $i => $e) {
+                if (($e['tag'] ?? '') === 'task' && empty($e['show_after'])) $task_indices[] = $i;
+            }
+            $current_pos = null;
+            foreach ($task_indices as $pos => $idx) {
+                if (($voice_log[$idx]['file'] ?? '') === ($_POST['file'] ?? '') && ($voice_log[$idx]['time'] ?? '') === ($_POST['time'] ?? '')) {
+                    $current_pos = $pos;
+                    break;
+                }
+            }
+            if ($current_pos !== null) {
+                $swap_pos = $dir === 'up' ? $current_pos - 1 : $current_pos + 1;
+                if ($swap_pos >= 0 && $swap_pos < count($task_indices)) {
+                    $a = $task_indices[$current_pos];
+                    $b = $task_indices[$swap_pos];
+                    $tmp = $voice_log[$a];
+                    $voice_log[$a] = $voice_log[$b];
+                    $voice_log[$b] = $tmp;
+                    file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+                }
+            }
+        } else {
+            // CLAUDE.md tasks
+            preg_match_all('/- \[[ x]\] (.+)\n/', $claude_md, $matches, PREG_SET_ORDER);
+            $task_lines = [];
+            foreach ($matches as $m) $task_lines[] = $m[0];
+            $current_idx = null;
+            foreach ($task_lines as $i => $line) {
+                if (strpos($line, $text) !== false) { $current_idx = $i; break; }
+            }
+            if ($current_idx !== null) {
+                $swap_idx = $dir === 'up' ? $current_idx - 1 : $current_idx + 1;
+                if ($swap_idx >= 0 && $swap_idx < count($task_lines)) {
+                    $tmp = $task_lines[$current_idx];
+                    $task_lines[$current_idx] = $task_lines[$swap_idx];
+                    $task_lines[$swap_idx] = $tmp;
+                    $new_list = implode('', $task_lines);
+                    $claude_md = preg_replace('/(## タスクリスト\n)((?:- \[[ x]\] .+\n)+)/', '${1}' . $new_list, $claude_md);
+                    file_put_contents($claude_md_path, $claude_md);
+                }
+            }
+        }
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'delete_task') {
         $text = $_POST['text'] ?? '';
         $claude_md = str_replace("- [ ] $text\n", '', $claude_md);
@@ -163,18 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $date = date('Y-m-d');
             $date_header = '<h2># ' . $date . '</h2>';
 
-            $task_answer = $task_answers[$task_text] ?? null;
-
-            // If AI answer exists, save to completed-tasks.json for the detail page
-            $completed_file = __DIR__ . '/completed-tasks.json';
-            $completed = file_exists($completed_file) ? json_decode(file_get_contents($completed_file), true) : [];
-            if ($task_answer) {
-                $completed[] = ['name' => $task_text, 'answer' => $task_answer, 'date' => $date];
-                file_put_contents($completed_file, json_encode($completed, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                $task_line = '- <a href="/task-answers?q=' . rawurlencode($task_text) . '">' . htmlspecialchars($task_text) . '</a>';
-            } else {
-                $task_line = '- ' . htmlspecialchars($task_text);
-            }
+            $task_line = '- ' . $task_text;
 
             if (strpos($health_log, $date_header) !== false) {
                 $date_pos = strpos($health_log, $date_header);
@@ -206,11 +247,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $claude_md = str_replace("- [ ] $task_text\n", "- [x] $task_text\n", $claude_md);
             file_put_contents($claude_md_path, $claude_md);
 
-            // Remove from task-answers.json
-            if ($task_answer) {
-                unset($task_answers[$task_text]);
-                file_put_contents($task_answers_file, json_encode($task_answers, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-            }
+            // Keep task-answers.json intact so AI summary remains visible after completion
 
             // Git commit & push
             chdir(__DIR__ . '/..');
@@ -430,10 +467,13 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     $answer = $task_answers[$task['text']] ?? null;
   ?>
     <div class="list-item <?= $task['done'] ? 'done' : '' ?> <?= $answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="editListItem(this,'task','<?= htmlspecialchars(addslashes($task['text'])) ?>')"><?= htmlspecialchars($task['text']) ?></span><?php if ($answer): ?><span class="answer-badge" onclick="toggleAnswer(this,event)" style="cursor:pointer;margin-left:6px;">AI</span>
+      <span class="voice-text clickable-title" onclick="<?= $answer ? 'toggleAnswer(this,event)' : 'editListItem(this,\'task\',\'' . htmlspecialchars(addslashes($task['text'])) . '\')' ?>"><?= htmlspecialchars($task['text']) ?></span>
+      <?php if ($answer): ?>
         <div class="answer-panel"><?= nl2br(htmlspecialchars($answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
+        <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','up','claude')" title="Up">▲</button>
+        <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($task['text'])) ?>','down','claude')" title="Down">▼</button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-task="<?= htmlspecialchars($task['text']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteItem('task','<?= htmlspecialchars(addslashes($task['text'])) ?>')">×</button>
       </span>
@@ -441,10 +481,13 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <?php endforeach; ?>
   <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); $vt_answer = $vt['answer'] ?? null; ?>
     <div class="list-item <?= $is_done ? 'done' : '' ?> <?= $vt_answer ? 'has-answer' : '' ?>">
-      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span><?php if ($vt_answer): ?><span class="answer-badge" onclick="toggleAnswer(this,event)" style="cursor:pointer;margin-left:6px;">AI</span>
+      <span class="voice-text clickable-title" onclick="<?= $vt_answer ? 'toggleAnswer(this,event)' : 'editAll(this,\'' . htmlspecialchars(addslashes($vt['file'])) . '\',\'' . htmlspecialchars($vt['time']) . '\',\'' . htmlspecialchars($vt['date'] ?? '') . '\',false,\'' . htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) . '\')' ?>"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
+      <?php if ($vt_answer): ?>
         <div class="answer-panel"><div style="opacity:0.6;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);">📝 <?= nl2br(htmlspecialchars($vt['text'])) ?></div><?= nl2br(htmlspecialchars($vt_answer)) ?></div>
       <?php endif; ?>
       <span class="entry-actions">
+        <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','up','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Up">▲</button>
+        <button class="action-btn reorder-btn" onclick="reorderTask('<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>','down','voice','<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="Down">▼</button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this,true)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
       </span>
