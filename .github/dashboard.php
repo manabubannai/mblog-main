@@ -946,18 +946,18 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Summary</label>';
     html += '<input type="text" class="inline-summary" value="' + currentSummary.replace(/"/g,'&quot;') + '" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:16px;font-family:inherit;">';
     html += '<div class="inline-btn-row">';
-    html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '">↑ Push Summary</button>';
+    html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '">🚀 Push Summary</button>';
     html += '<button class="inline-save-summary">Save</button>';
     html += '</div>';
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Original</label>';
   }
   html += '<textarea class="inline-textarea"></textarea>';
   html += '<div class="inline-btn-row">';
-  html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">↑ Push Original</button>';
+  html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">🚀 Push Original</button>';
   html += '</div>';
   if (currentSummary) {
     html += '<div class="inline-btn-row">';
-    html += '<button class="inline-push-so" data-file="' + file + '" data-time="' + time + '" style="background:rgba(160,120,200,0.12);color:#a078c8;">↑ Push Summary & Original</button>';
+    html += '<button class="inline-push-so" data-file="' + file + '" data-time="' + time + '" style="background:rgba(160,120,200,0.12);color:#a078c8;">🚀 Push Summary & Original</button>';
     html += '</div>';
   }
   // Check for answer panel
