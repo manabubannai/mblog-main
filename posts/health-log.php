@@ -36,17 +36,20 @@ require dirname(__DIR__) . '/header.php';
 
   <h2># 2026-03-28</h2>
   <pre>
+■ Food
+Breakfast 13:30
+- Oatmeal 46g, Almond Milk 36g, Yogurt 53g, Honey 20g, Coconut Fresh Juice 1個, Passion Fruit 1個, Walnuts 18g, Chia Seeds 5g, Blueberries 43g
+
+Lunch 13:40
+- Rice 250g, Egg 4個, 納豆 2パック, キムチ 50g
+
+■ Substances
+- ProBac7（朝食前）
+
 ■ Note
 OpenClawは、その便利さ故に瞬く間に広まりましたが、セキュリティへの配慮が十分にされていないことは、開発者自身が認めており、企業にとっては導入しにくいという問題があります。（中島聡さんのメルマガより）
 
 だからこそ、今の視点からOpenClawをガシガシ使って、個人としての強みを最大限に発揮する必要がある。
-  
-■ Food
-13:30
-- 朝食: オートミール46g, アーモンドミルク36g, ヨーグルト53g, はちみつ20g, ココナッツフレッシュジュース1個, パッションフルーツ1個, くるみ18g, チアシード5g, ブルーベリー43g。
-13:40
-- 昼食/夕食: ご飯250g, 卵4個, 納豆2パック, キムチ約50g。
-
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

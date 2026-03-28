@@ -212,6 +212,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         }
         file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'get_voice') {
+        $file = $_POST['file'] ?? '';
+        $time = $_POST['time'] ?? '';
+        $voice_log = file_exists($voice_log_file) ? json_decode(file_get_contents($voice_log_file), true) : [];
+        $result = ['text' => '', 'summary' => ''];
+        foreach ($voice_log as $e) {
+            if ($e['file'] === $file && $e['time'] === $time) {
+                $result = ['text' => $e['text'] ?? '', 'summary' => $e['summary'] ?? ''];
+                break;
+            }
+        }
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
     } elseif ($action === 'edit_voice') {
         $file = $_POST['file'] ?? '';
         $time = $_POST['time'] ?? '';
@@ -322,15 +334,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     </div>
   <?php endforeach; ?>
   <?php foreach ($voice_tasks as $vt): $is_done = !empty($vt['done']); ?>
-    <div class="list-item expandable-item <?= $is_done ? 'done' : '' ?>">
-      <div class="note-wrapper">
-        <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></div>
-        <div class="note-full" onclick="toggleNote(this)">
-          <span><?= htmlspecialchars($vt['text']) ?></span>
-        </div>
-      </div>
+    <div class="list-item <?= $is_done ? 'done' : '' ?>">
+      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false,'<?= htmlspecialchars(addslashes($vt['summary'] ?? $vt['text'])) ?>')"><?= htmlspecialchars($vt['summary'] ?? $vt['text']) ?></span>
       <span class="entry-actions">
-        <button class="action-btn edit-btn" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>','<?= htmlspecialchars($vt['date'] ?? '') ?>',false)" title="Edit">✎</button>
         <button class="action-btn complete-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')" title="<?= $is_done ? 'Undo' : 'Complete' ?>"><?= $is_done ? '↩' : '✓' ?></button>
         <button class="action-btn push-item-btn" onclick="pushToServer(this)" data-file="<?= htmlspecialchars(addslashes($vt['file'])) ?>" data-time="<?= htmlspecialchars($vt['time']) ?>" title="Push">↑</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')">×</button>
@@ -422,14 +428,8 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       ?>
         <div class="voice-entry">
           <span class="voice-time"><?= $time_short ?></span>
-          <div class="note-wrapper">
-            <div class="note-summary" onclick="toggleNote(this)"><?= $summary ?></div>
-            <div class="note-full" onclick="toggleNote(this)">
-              <span><?= $text ?></span>
-            </div>
-          </div>
+          <span class="voice-text clickable-title" onclick="editAll(this,'<?= $file ?>','<?= $time ?>','<?= htmlspecialchars($entry['date']) ?>',false,'<?= htmlspecialchars(addslashes($entry['summary'] ?? $entry['text'])) ?>')"><?= $summary ?></span>
           <span class="entry-actions">
-            <button class="action-btn edit-btn" onclick="editAll(this,'<?= $file ?>','<?= $time ?>','<?= htmlspecialchars($entry['date']) ?>',false)" title="Edit">✎</button>
             <button class="action-btn delete-btn" onclick="deleteVoice('<?= $file ?>','<?= $time ?>')" title="Delete">×</button>
           </span>
         </div>
@@ -451,15 +451,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     </div>
   <?php endforeach; ?>
   <?php foreach ($voice_shopping as $vs): ?>
-    <div class="list-item expandable-item">
-      <div class="note-wrapper">
-        <div class="note-summary" onclick="toggleNote(this)"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></div>
-        <div class="note-full" onclick="toggleNote(this)">
-          <span><?= htmlspecialchars($vs['text']) ?></span>
-        </div>
-      </div>
+    <div class="list-item">
+      <span class="voice-text clickable-title" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>','<?= htmlspecialchars($vs['date']) ?>',false,'<?= htmlspecialchars(addslashes($vs['summary'] ?? $vs['text'])) ?>')"><?= htmlspecialchars($vs['summary'] ?? $vs['text']) ?></span>
       <span class="entry-actions">
-        <button class="action-btn edit-btn" onclick="editAll(this,'<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>','<?= htmlspecialchars($vs['date']) ?>',false)" title="Edit">✎</button>
         <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($vs['file'])) ?>','<?= htmlspecialchars($vs['time']) ?>')">×</button>
       </span>
     </div>
@@ -569,13 +563,14 @@ function editListItem(btn, type, oldText) {
   });
 }
 
-function editAll(btn, file, time, date, showDateEdit) {
-  const entry = btn.closest('.voice-entry') || btn.closest('.list-item');
+function editAll(el, file, time, date, showDateEdit, currentSummary) {
+  const entry = el.closest('.voice-entry') || el.closest('.list-item');
   if (entry.querySelector('.inline-edit')) return;
-  const textEl = entry.querySelector('.voice-text, .note-full span, .note-summary');
+  const textEl = entry.querySelector('.voice-text, .clickable-title');
   const originalText = textEl ? textEl.textContent : '';
   const originalHTML = entry.innerHTML;
 
+  // Fetch full text from server
   const form = document.createElement('div');
   form.className = 'inline-edit';
   let html = '';
@@ -585,7 +580,12 @@ function editAll(btn, file, time, date, showDateEdit) {
     html += '<input type="time" class="inline-time" value="' + time + '">';
     html += '</div>';
   }
-  html += '<textarea class="inline-textarea">' + originalText.replace(/</g,'&lt;') + '</textarea>';
+  if (currentSummary) {
+    html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Summary</label>';
+    html += '<input type="text" class="inline-summary" value="' + currentSummary.replace(/"/g,'&quot;') + '" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:16px;font-family:inherit;margin-bottom:10px;">';
+    html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Original</label>';
+  }
+  html += '<textarea class="inline-textarea"></textarea>';
   html += '<div class="inline-edit-actions">';
   html += '<button class="inline-save">Save</button>';
   html += '<button class="inline-cancel">Cancel</button>';
@@ -594,19 +594,35 @@ function editAll(btn, file, time, date, showDateEdit) {
 
   entry.innerHTML = '';
   entry.appendChild(form);
+
+  // Load full text via fetch
   const textarea = form.querySelector('.inline-textarea');
-  textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
-  textarea.focus();
+  const fd = new FormData();
+  fd.append('file', file); fd.append('time', time);
+  fetch('?action=get_voice', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(data => {
+      textarea.value = data.text || originalText;
+      textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
+    })
+    .catch(() => {
+      textarea.value = originalText;
+      textarea.style.height = Math.max(60, textarea.scrollHeight) + 'px';
+    });
+  if (form.querySelector('.inline-summary')) form.querySelector('.inline-summary').focus();
+  else textarea.focus();
 
   form.querySelector('.inline-cancel').onclick = () => { entry.innerHTML = originalHTML; };
   form.querySelector('.inline-save').onclick = () => {
     const newText = textarea.value.trim();
+    const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
     const promises = [];
-    if (newText && newText !== originalText) {
-      const f = new FormData();
-      f.append('file', file); f.append('time', time); f.append('new_text', newText);
-      promises.push(fetch('?action=edit_voice', { method: 'POST', body: f }));
-    }
+    const f = new FormData();
+    f.append('file', file); f.append('time', time);
+    let hasChange = false;
+    if (newText) { f.append('new_text', newText); hasChange = true; }
+    if (newSummary && newSummary !== currentSummary) { f.append('new_summary', newSummary); hasChange = true; }
+    if (hasChange) promises.push(fetch('?action=edit_voice', { method: 'POST', body: f }));
     if (showDateEdit) {
       const nd = form.querySelector('.inline-date').value;
       const nt = form.querySelector('.inline-time').value;

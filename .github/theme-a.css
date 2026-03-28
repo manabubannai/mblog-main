@@ -42,6 +42,8 @@ h1 { font-size: 24px; color: #fff; margin-bottom: 32px; font-weight: 600; letter
 .toggle-content { display: none; }
 .toggle-content.open { display: block; }
 .scheduled-date { font-size: 13px; color: rgba(255,255,255,0.25); margin-left: 6px; }
+.clickable-title { cursor: pointer; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: background 0.2s; }
+.clickable-title:hover { background: rgba(255,255,255,0.06); }
 .note-summary { color: rgba(255,255,255,0.75); cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; border-radius: 6px; padding: 4px 8px; margin: -4px -8px; transition: all 0.2s; }
 .note-summary:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); }
 .note-full { display: none; color: rgba(255,255,255,0.55); white-space: pre-wrap; line-height: 1.8; padding: 10px 0 6px; flex: 1; }
