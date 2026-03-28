@@ -296,7 +296,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             $date = date('Y-m-d');
             $date_header = '<h2># ' . $date . '</h2>';
 
-            $task_line = '- ' . $task_text;
+            $task_answer = $task_answers[$task_text] ?? null;
+            if ($task_answer) {
+                $task_line = '- <a href="/task-answers?q=' . rawurlencode($task_text) . '">' . htmlspecialchars($task_text) . '</a>';
+            } else {
+                $task_line = '- ' . htmlspecialchars($task_text);
+            }
+
+            // Skip if already in health-log (duplicate prevention)
+            if (strpos($health_log, htmlspecialchars($task_text)) !== false) {
+                $claude_md = file_get_contents($claude_md_path);
+                $claude_md = str_replace("- [ ] $task_text\n", "- [x] $task_text\n", $claude_md);
+                file_put_contents($claude_md_path, $claude_md);
+                chdir(__DIR__ . '/..');
+                $output = shell_exec('git add -A && git commit -m "health-log: ' . $date . ' task done" && git push origin main 2>&1');
+                echo json_encode(['ok' => true, 'output' => $output]);
+                exit;
+            }
 
             if (strpos($health_log, $date_header) !== false) {
                 $date_pos = strpos($health_log, $date_header);
