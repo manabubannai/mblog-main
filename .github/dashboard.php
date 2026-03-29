@@ -459,6 +459,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             }
         }
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'get_health_log') {
+        $date = $_POST['date'] ?? date('Y-m-d');
+        $health_log_path = __DIR__ . '/../posts/health-log.php';
+        $health_log = file_get_contents($health_log_path);
+        $date_header = '<h2># ' . $date . '</h2>';
+        $content = '';
+        if (strpos($health_log, $date_header) !== false) {
+            $date_pos = strpos($health_log, $date_header);
+            $pre_start = strpos($health_log, '<pre>', $date_pos);
+            $pre_end = strpos($health_log, '</pre>', $pre_start);
+            if ($pre_start !== false && $pre_end !== false) {
+                $content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+                $content = trim($content);
+            }
+        }
+        // Get available dates
+        preg_match_all('/<h2># (\d{4}-\d{2}-\d{2})<\/h2>/', $health_log, $matches);
+        echo json_encode(['content' => $content, 'dates' => $matches[1] ?? []], JSON_UNESCAPED_UNICODE);
+    } elseif ($action === 'save_health_log') {
+        $date = $_POST['date'] ?? '';
+        $content = $_POST['content'] ?? '';
+        if ($date && $content !== '') {
+            $health_log_path = __DIR__ . '/../posts/health-log.php';
+            $health_log = file_get_contents($health_log_path);
+            $date_header = '<h2># ' . $date . '</h2>';
+            $date_pos = strpos($health_log, $date_header);
+            if ($date_pos !== false) {
+                $pre_start = strpos($health_log, '<pre>', $date_pos);
+                $pre_end = strpos($health_log, '</pre>', $pre_start);
+                if ($pre_start !== false && $pre_end !== false) {
+                    $health_log = substr($health_log, 0, $pre_start + 5) . "\n" . $content . "\n  " . substr($health_log, $pre_end);
+                    file_put_contents($health_log_path, $health_log);
+                }
+            }
+        }
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'add_health') {
         $text = trim($_POST['text'] ?? '');
         $tag = $_POST['tag'] ?? 'food';
@@ -603,16 +639,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
 // Parse lists from CLAUDE.md
 preg_match('/## タスクリスト\n([\s\S]*?)(?=\n##|\z)/', $claude_md, $task_match);
 $tasks = [];
+$tasks_scheduled = [];
+$today = date('Y-m-d');
 if ($task_match) {
     preg_match_all('/- \[([ x])\] (.+)/', $task_match[1], $matches, PREG_SET_ORDER);
-    foreach ($matches as $m) $tasks[] = ['done' => $m[1] === 'x', 'text' => trim($m[2])];
+    foreach ($matches as $m) {
+        $text = trim($m[2]);
+        $show_after = null;
+        if (preg_match('/ @(\d{4}-\d{2}-\d{2})$/', $text, $dm)) {
+            $show_after = $dm[1];
+            $text = trim(preg_replace('/ @\d{4}-\d{2}-\d{2}$/', '', $text));
+        }
+        $item = ['done' => $m[1] === 'x', 'text' => $text, 'show_after' => $show_after];
+        if ($show_after && $show_after > $today) {
+            $tasks_scheduled[] = $item;
+        } else {
+            $tasks[] = $item;
+        }
+    }
 }
 
 preg_match('/## 買い物リスト\n([\s\S]*?)(?=\n##|\z)/', $claude_md, $shop_match);
 $shopping = [];
+$shopping_scheduled = [];
 if ($shop_match) {
     preg_match_all('/- \[([ x])\] (.+)/', $shop_match[1], $matches, PREG_SET_ORDER);
-    foreach ($matches as $m) $shopping[] = ['done' => $m[1] === 'x', 'text' => trim($m[2])];
+    foreach ($matches as $m) {
+        $text = trim($m[2]);
+        $show_after = null;
+        if (preg_match('/ @(\d{4}-\d{2}-\d{2})$/', $text, $dm)) {
+            $show_after = $dm[1];
+            $text = trim(preg_replace('/ @\d{4}-\d{2}-\d{2}$/', '', $text));
+        }
+        $item = ['done' => $m[1] === 'x', 'text' => $text, 'show_after' => $show_after];
+        if ($show_after && $show_after > $today) {
+            $shopping_scheduled[] = $item;
+        } else {
+            $shopping[] = $item;
+        }
+    }
 }
 
 // Separate voice logs by tag
@@ -763,9 +828,16 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
       </span>
     </div>
   <?php endforeach; ?>
-  <?php if (!empty($voice_tasks_scheduled)): ?>
-    <div class="toggle" onclick="this.nextElementSibling.classList.toggle('open')">▶ Scheduled (<?= count($voice_tasks_scheduled) ?>)</div>
+  <?php $all_scheduled_count = count($tasks_scheduled) + count($voice_tasks_scheduled);
+    if ($all_scheduled_count > 0): ?>
+    <div class="toggle" onclick="this.nextElementSibling.classList.toggle('open')">▶ Scheduled (<?= $all_scheduled_count ?>)</div>
     <div class="toggle-content">
+      <?php foreach ($tasks_scheduled as $ts): ?>
+        <div class="list-item">
+          <span class="voice-text"><?= htmlspecialchars($ts['text']) ?></span>
+          <span class="scheduled-date"><?= htmlspecialchars($ts['show_after']) ?></span>
+        </div>
+      <?php endforeach; ?>
       <?php foreach ($voice_tasks_scheduled as $vt): ?>
         <div class="list-item">
           <span class="editable" onclick="editVoice(this,'<?= htmlspecialchars(addslashes($vt['file'])) ?>','<?= htmlspecialchars($vt['time']) ?>')"><?= htmlspecialchars($vt['text']) ?></span>
@@ -782,10 +854,20 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 
 </div>
 
+<!-- Health Log Editor -->
+<div class="section" id="health-log-editor" style="display:none;">
+  <div class="section-title">Edit Health Log <button onclick="closeEditor()" style="float:right;background:none;border:none;color:#e8e8ef;font-size:18px;cursor:pointer;">✕</button></div>
+  <div style="margin-bottom:10px;">
+    <select id="editor-date" onchange="loadHealthLog(this.value)" style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:14px;font-family:inherit;"></select>
+    <span id="editor-status" style="margin-left:10px;font-size:12px;color:rgba(255,255,255,0.3);"></span>
+  </div>
+  <textarea id="editor-textarea" style="width:100%;min-height:500px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:14px;border-radius:10px;font-size:14px;font-family:'SFMono-Regular',Consolas,Menlo,monospace;line-height:1.7;resize:vertical;white-space:pre-wrap;" oninput="editorAutoSave()"></textarea>
+</div>
+
 <!-- Health Log -->
 <?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): ?>
 <div class="section">
-  <div class="section-title">Health Log</div>
+  <div class="section-title">Health Log <button onclick="openEditor()" style="background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);padding:4px 10px;border-radius:6px;font-size:12px;cursor:pointer;margin-left:8px;">✏️ Edit</button></div>
 
   <?php if (!empty($voice_food)): ?>
     <div class="sub-title">Food</div>
@@ -928,6 +1010,28 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 
 <script>
+// Global close-on-outside manager: only one active at a time
+let _activeCloseHandler = null;
+function registerCloseOnOutside(container, onClose) {
+  // Remove previous handler
+  if (_activeCloseHandler) {
+    document.removeEventListener('click', _activeCloseHandler);
+    _activeCloseHandler = null;
+  }
+  setTimeout(() => {
+    function handler(ev) {
+      if (container.contains(ev.target)) return;
+      // Ignore clicks on inputs/textareas/buttons that may have been dynamically added
+      if (ev.target.closest('.inline-edit, .answer-panel')) return;
+      onClose();
+      document.removeEventListener('click', handler);
+      _activeCloseHandler = null;
+    }
+    _activeCloseHandler = handler;
+    document.addEventListener('click', handler);
+  }, 200);
+}
+
 function toggleAnswer(el, e) {
   if (e) e.stopPropagation();
   const item = el.closest('.list-item') || el.closest('.voice-entry');
@@ -938,15 +1042,7 @@ function toggleAnswer(el, e) {
     panel.classList.remove('open');
   } else {
     panel.classList.add('open');
-    setTimeout(() => {
-      function closeOnOutside(ev) {
-        if (!item.contains(ev.target)) {
-          panel.classList.remove('open');
-          document.removeEventListener('click', closeOnOutside);
-        }
-      }
-      document.addEventListener('click', closeOnOutside);
-    }, 100);
+    registerCloseOnOutside(item, () => panel.classList.remove('open'));
   }
 }
 
@@ -1050,12 +1146,7 @@ function editTask(el, oldText, hasAnswer) {
   textareas[0].addEventListener('keydown', e => {
     if (e.key === 'Escape') entry.innerHTML = originalHTML;
   });
-  setTimeout(() => {
-    function closeOnOutside(e) {
-      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
-    }
-    document.addEventListener('click', closeOnOutside);
-  }, 100);
+  registerCloseOnOutside(entry, () => { entry.innerHTML = originalHTML; });
 }
 
 function editListItem(btn, type, oldText) {
@@ -1089,12 +1180,7 @@ function editListItem(btn, type, oldText) {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.querySelector('.inline-save').click(); }
     if (e.key === 'Escape') entry.innerHTML = originalHTML;
   });
-  setTimeout(() => {
-    function closeOnOutside(e) {
-      if (!entry.contains(e.target)) { entry.innerHTML = originalHTML; document.removeEventListener('click', closeOnOutside); }
-    }
-    document.addEventListener('click', closeOnOutside);
-  }, 100);
+  registerCloseOnOutside(entry, () => { entry.innerHTML = originalHTML; });
 }
 
 function editAll(el, file, time, date, showDateEdit, currentSummary) {
@@ -1207,8 +1293,7 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
         promises.push(fetch('?action=edit_task_answer', { method: 'POST', body: f3 }));
       }
     }
-    if (promises.length > 0) Promise.all(promises).then(() => location.reload());
-    else entry.innerHTML = originalHTML;
+    if (promises.length > 0) Promise.all(promises);
   }
   // Auto-save with debounce
   let saveTimer = null;
@@ -1218,12 +1303,7 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   }
   form.querySelectorAll('input, textarea').forEach(el => el.addEventListener('input', autoSave));
   textarea.addEventListener('keydown', e => { if (e.key === 'Escape') { clearTimeout(saveTimer); entry.innerHTML = originalHTML; } });
-  setTimeout(() => {
-    function closeOnOutside(e) {
-      if (!entry.contains(e.target)) { clearTimeout(saveTimer); doSave(); document.removeEventListener('click', closeOnOutside); }
-    }
-    document.addEventListener('click', closeOnOutside);
-  }, 100);
+  registerCloseOnOutside(entry, () => { clearTimeout(saveTimer); doSave(); entry.innerHTML = originalHTML; });
 }
 
 function reorderTask(text, dir, source, file, time) {
@@ -1304,6 +1384,75 @@ function queueForAI(btn) {
     .then(() => { btn.textContent = '✅ キューに追加済み'; btn.style.opacity = '0.5'; })
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
+
+// Health Log Editor
+let _editorSaveTimer = null;
+let _editorDate = '';
+
+function openEditor() {
+  document.getElementById('health-log-editor').style.display = '';
+  const fd = new FormData();
+  fd.append('date', '');
+  fetch('?action=get_health_log', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(data => {
+      const sel = document.getElementById('editor-date');
+      sel.innerHTML = '';
+      (data.dates || []).forEach(d => {
+        const opt = document.createElement('option');
+        opt.value = d; opt.textContent = d;
+        sel.appendChild(opt);
+      });
+      if (data.dates && data.dates.length > 0) {
+        _editorDate = data.dates[0];
+        loadHealthLog(_editorDate);
+      }
+    });
+}
+
+function closeEditor() {
+  document.getElementById('health-log-editor').style.display = 'none';
+}
+
+function loadHealthLog(date) {
+  _editorDate = date;
+  const fd = new FormData();
+  fd.append('date', date);
+  fetch('?action=get_health_log', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('editor-textarea').value = data.content || '';
+      document.getElementById('editor-status').textContent = '';
+    });
+}
+
+function editorAutoSave() {
+  clearTimeout(_editorSaveTimer);
+  document.getElementById('editor-status').textContent = '...';
+  _editorSaveTimer = setTimeout(() => {
+    const fd = new FormData();
+    fd.append('date', _editorDate);
+    fd.append('content', document.getElementById('editor-textarea').value);
+    fetch('?action=save_health_log', { method: 'POST', body: fd })
+      .then(() => { document.getElementById('editor-status').textContent = '✓ 保存済み'; })
+      .catch(() => { document.getElementById('editor-status').textContent = '! エラー'; });
+  }, 1000);
+}
+
+// Cmd+S / Ctrl+S to save
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+    e.preventDefault();
+    if (document.getElementById('health-log-editor').style.display !== 'none') {
+      clearTimeout(_editorSaveTimer);
+      const fd = new FormData();
+      fd.append('date', _editorDate);
+      fd.append('content', document.getElementById('editor-textarea').value);
+      fetch('?action=save_health_log', { method: 'POST', body: fd })
+        .then(() => { document.getElementById('editor-status').textContent = '✓ 保存済み'; });
+    }
+  }
+});
 
 function sendPanelText(btn) {
   const input = btn.parentElement.querySelector('.panel-text-input');

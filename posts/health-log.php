@@ -63,21 +63,60 @@ require dirname(__DIR__) . '/header.php';
 
     <h2># 2026-03-29</h2>
   <pre>
+■ Body (Withings Body Scan) — 09:14
+- Weight: 62.26 kg
+- Muscle Mass: 55.07 kg
+- Body Fat: 6.9%
+- Bone Mass: 2.93 kg
+
+■ Sleep (Oura Ring) — 00:29〜09:05
+- Total: 7h40m
+- Readiness: 83
+- Sleep Score: 76
+- Deep: 1h28m
+- REM: 1h23m
+- HRV: 84ms / HR: 49bpm
+
+■ Stretch (Oura Ring)
+- 10:33〜11:35（1h02m） / 234kcal
+
+■ Meditation (Oura Ring)
+- 11:44〜12:44（1h00m） / Avg HR:61bpm
+
 ■ Food
 Lunch 13:01
 - 味噌汁1/3（豆腐 200g, エリンギ 71g, きくらげ 40.3g, 乾燥わかめ 7.8g, エノキ 22g, 味噌 大さじ1）, 納豆 1パック, キムチ 25g, 目玉焼き（Egg 2個）, Rice 200g
+→ 663kcal / P:34g / F:18g / C:90g / Fiber:8g / Zinc:4.4mg / Mg:136mg
 
 Post-Workout 19:54
 - TOFUSAN プロテインドリンク 250ml, 豆腐 200g
+→ 244kcal / P:24g / F:12g / C:10g / Fiber:1g / Zinc:1mg / Mg:60mg
 
 Dinner 20:37
 - Salmon 刺身 8切れ, Rice 171g, 味噌汁（豆腐 120g, エリンギ 54g, きくらげ 24.9g, 乾燥わかめ 21.9g, エノキ 16.5g, 味噌 大さじ0.6）
-21:22
+→ 556kcal / P:35g / F:14g / C:70g / Fiber:3g / Zinc:2.3mg / Mg:92mg
+
+Night 21:22
 - バナナ 2本（260g 皮付き）
+→ 153kcal / P:2g / F:0.3g / C:39g / Fiber:3g / Zinc:0.3mg / Mg:46mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓░░░░░  54%  1,616/3,000kcal
+💪 P     ▓▓▓▓▓▓▓░░░  68%  95/140g
+🥑 F     ▓▓▓▓▓▓░░░░  55%  44/80g
+🍚 C     ▓▓▓▓▓░░░░░  49% 📉 209/430g
+🌿 繊維   ▓▓▓▓▓░░░░░  54%  15/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓░░░  73%  8/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓░░  84%  334/400mg
+☀️ VitD ░░░░░░░░░░   0% 📉 0/2,000IU
+💊 Cr   ░░░░░░░░░░   0% 📉 0/5g
 
 ■ Substances
 *一旦増量はあきらめて、体重が維持できればいいぐらいな感じにする。完全に腸が治るまではこの状態を維持。
 *昨夜寝る前に腹式呼吸をやってみたら、めちゃくちゃよく寝れたので、これは継続していく。あと、朝歩きながらブレスワークするのもいいと思った。
+
+■ タスク
+- ダッシュボードにどこからでもアクセスできるようにする → Cloudflare Tunnelでローカルサーバーを利用
 
 ■ Thought
 - 座らない生活は可能か？結論：座りすぎは有害だが、立ちっぱなしも同様に体に悪い。最適解：座る・立つ・動くの組み合わせ。スタンディングデスクは「30分立つ→30分座る」の交互が推奨

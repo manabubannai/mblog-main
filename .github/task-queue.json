@@ -5,5 +5,13 @@
         "answer": "■ Oura Ringの自動検出について\nOura Ringはメディテーションを自動検出しない。睡眠・歩行・ランニングは自動検出されるが、瞑想は手動記録が必要。\n\n■ 記録方法\n1. Ouraアプリ → ホーム画面の「+」→「瞑想」→ タイマーで開始\n2. Apple Health連携: 他の瞑想アプリ（Headspace等）で記録 → Apple Health経由でOuraに同期可能\n\n■ APIでの取得\nOura API v2の session エンドポイントで手動記録した瞑想セッションは取得可能。\nGET https:\/\/api.ouraring.com\/v2\/usercollection\/session?start_date=YYYY-MM-DD\ntype: \"meditation\" のセッションが含まれる。\n\n■ fetch-oura.shへの統合\n既存スクリプトにsessionエンドポイントの呼び出しを追加すれば、手動記録した瞑想データは自動取得できる。\n\n■ 結論\n毎日アプリで手動記録 → fetch-oura.shで自動取得、が現実的な運用。",
         "status": "done",
         "queued_at": "2026-03-28 13:36:55"
+    },
+    {
+        "task": "ヘルスログ全文エディタの動作確認・改善",
+        "detail": "ヘルスログ全文エディタの動作確認・改善",
+        "answer": "■ 現状\nダッシュボードに「✏️ Edit」ボタンを追加済み。日付選択で該当日のエントリをtextareaで全文編集可能。自動保存（1秒debounce）+ Cmd+S対応。\n\n■ 確認項目\n・日付切り替えが正しく動作するか\n・自動保存が確実に動くか（保存済み表示の確認）\n・長いエントリの編集時にパフォーマンス問題がないか\n・スマホ（dashboard.mblog.com）からも使えるか\n\n■ 改善候補\n・シンタックスハイライト（■セクション名を太字化等）\n・行番号表示\n・Undo\/Redo対応\n・新しい日付のエントリ作成機能",
+        "status": "pending",
+        "queued_at": "2026-03-29 15:21:46",
+        "instruction": "どこにボタンがあるのか謎。"
     }
 ]
