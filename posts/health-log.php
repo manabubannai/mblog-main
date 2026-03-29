@@ -97,8 +97,6 @@ Lunch 13:40
 Dinner 19:17
 - 味噌汁（豆腐 400g, エリンギ 180g, きくらげ 83g, 乾燥わかめ 73g, エノキ 55g, 味噌 大さじ2）※半分残し, Rice 250g, Egg 2個, Salmon 79g
 → 912kcal / P:57g / F:25g / C:114g / Fiber:18g / Zinc:5.6mg / Mg:405mg
-21:08
-- 夕飯の味噌汁は半分残した
 
 ■ Daily Summary
 🔥 kcal  ▓▓▓▓▓▓▓░░░  75%  2,250/3,000kcal
@@ -861,8 +859,8 @@ Inclineも同じ。まず背中の反りが足りなすぎる。
 
 Goal：
 - 1. 80kgにトライ
-- 3. 50kg × 12rep w good form
-- 4. 31.5kg × 12rep w good form
+- 3. 40kg × 10rep w good form
+- 4. 38.3kg × 12rep w good form
 
 Warmup: push up 30rep
 
