@@ -61,7 +61,16 @@ require dirname(__DIR__) . '/header.php';
 開始：2026年3月13日
 </pre>
 
+    <h2># 2026-03-29</h2>
+  <pre>
+■ Food
+13:01
+- 昼食: 味噌汁1/3 + 納豆キムチ目玉焼き + 米200g
+  </pre>
+
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+<hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
   <h2># 2026-03-28</h2>
   <pre>
