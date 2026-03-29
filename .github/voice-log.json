@@ -52,14 +52,6 @@
     },
     {
         "date": "2026-03-28",
-        "time": "21:30",
-        "text": "ProBac7（夕食前）",
-        "summary": "ProBac7（夕食前）",
-        "file": "21-30-11.m4a",
-        "tag": "substance"
-    },
-    {
-        "date": "2026-03-28",
         "time": "22:32",
         "text": "Cannabis 1g Indica（22:32）",
         "summary": "Cannabis 1g Indica",
@@ -159,5 +151,11 @@
         "summary": "お手拭き",
         "file": "20-10-46.m4a",
         "tag": "shopping"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "20:57:38",
+        "text": "昨日の味噌汁の残りのキュウワリを食べた。",
+        "file": "20-57-38.m4a"
     }
 ]
