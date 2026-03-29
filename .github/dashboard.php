@@ -430,6 +430,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         }
         file_put_contents($voice_log_file, json_encode($voice_log, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         echo json_encode(['ok' => true]);
+    } elseif ($action === 'add_health_note') {
+        // Add *note directly under Substances section in health-log.php
+        $text = trim($_POST['text'] ?? '');
+        if ($text) {
+            $health_log_path = __DIR__ . '/../posts/health-log.php';
+            $health_log = file_get_contents($health_log_path);
+            $now_date = date('Y-m-d');
+            $date_header = '<h2># ' . $now_date . '</h2>';
+            if (strpos($health_log, $date_header) !== false) {
+                $date_pos = strpos($health_log, $date_header);
+                $pre_start = strpos($health_log, '<pre>', $date_pos);
+                $pre_end = strpos($health_log, '</pre>', $pre_start);
+                $pre_content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
+                $sub_pos = strpos($pre_content, '■ Substances');
+                if ($sub_pos !== false) {
+                    // Find end of Substances section (next ■ or end)
+                    $next_section = strpos($pre_content, "\n■", $sub_pos + 1);
+                    if ($next_section !== false) {
+                        $insert_pos = $pre_start + 5 + $next_section;
+                        $health_log = substr($health_log, 0, $insert_pos) . '*' . $text . "\n" . substr($health_log, $insert_pos);
+                    } else {
+                        $insert_pos = $pre_start + 5 + strlen(rtrim($pre_content));
+                        $health_log = substr($health_log, 0, $insert_pos) . "\n*" . $text . substr($health_log, $insert_pos);
+                    }
+                    file_put_contents($health_log_path, $health_log);
+                }
+            }
+        }
+        echo json_encode(['ok' => true]);
     } elseif ($action === 'add_health') {
         $text = trim($_POST['text'] ?? '');
         $tag = $_POST['tag'] ?? 'food';
@@ -1284,8 +1313,7 @@ function sendPanelText(btn) {
   btn.textContent = '...';
   const form = new FormData();
   form.append('text', text);
-  form.append('tag', 'note');
-  fetch('?action=add_health', { method: 'POST', body: form })
+  fetch('?action=add_health_note', { method: 'POST', body: form })
     .then(() => { btn.textContent = '✓'; input.value = ''; setTimeout(() => { btn.textContent = '送信'; btn.disabled = false; }, 1000); })
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
