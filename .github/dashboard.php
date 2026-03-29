@@ -656,6 +656,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
             $html .= '<button data-file="' . $file . '" data-time="' . $time . '" style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit;background:rgba(255,160,60,0.12);color:#ffa03c;margin-top:4px;" onclick="queueForAI(this)">⚡ AIで実行</button>';
         }
         $html .= '</div>';
+        $html .= '<div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);display:flex;gap:6px;">';
+        $html .= '<input type="text" class="panel-text-input" placeholder="テキストを入力..." style="flex:1;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:13px;font-family:inherit;">';
+        $html .= '<button style="padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;background:rgba(255,255,255,0.1);color:#e8e8ef;white-space:nowrap;" onclick="sendPanelText(this)">送信</button>';
+        $html .= '</div>';
         $html .= '</div>';
     }
     $html .= '</div>';
@@ -1269,6 +1273,20 @@ function queueForAI(btn) {
   fetch('?action=queue_ai', { method: 'POST', body: form })
     .then(r => r.json())
     .then(() => { btn.textContent = '✅ キューに追加済み'; btn.style.opacity = '0.5'; })
+    .catch(() => { btn.textContent = '!'; btn.disabled = false; });
+}
+
+function sendPanelText(btn) {
+  const input = btn.parentElement.querySelector('.panel-text-input');
+  const text = input ? input.value.trim() : '';
+  if (!text) { input.focus(); return; }
+  btn.disabled = true;
+  btn.textContent = '...';
+  const form = new FormData();
+  form.append('text', text);
+  form.append('tag', 'note');
+  fetch('?action=add_health', { method: 'POST', body: form })
+    .then(() => { btn.textContent = '✓'; input.value = ''; setTimeout(() => { btn.textContent = '送信'; btn.disabled = false; }, 1000); })
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
 

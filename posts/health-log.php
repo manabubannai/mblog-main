@@ -68,6 +68,9 @@ require dirname(__DIR__) . '/header.php';
 - 昼食: 味噌汁1/3 + 納豆キムチ目玉焼き + 米200g
 19:54
 - 筋トレ後: TOFUSANドリンク + 豆腐200g
+  
+■ Note
+一旦増量はあきらめて、体重が維持できればいいぐらいな感じにする。完全に腸が治るまではこの状態を維持。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
