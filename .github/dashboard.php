@@ -750,7 +750,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 
 <!-- Health Log -->
-<?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): $all_sub = array_merge($voice_health, $voice_substance); ?>
+<?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): ?>
 <div class="section">
   <div class="section-title">Health Log</div>
 
@@ -763,11 +763,18 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
     <?php endforeach; ?>
   <?php endif; ?>
 
-  <?php $all_substance = array_merge($voice_health, $voice_substance);
-    if (!empty($all_substance)): ?>
+  <?php if (!empty($voice_substance)): ?>
     <div class="sub-title sub-title-border">Substance</div>
-    <?php $sbd = []; foreach ($all_substance as $e) $sbd[$e['date']][] = $e; krsort($sbd);
+    <?php $sbd = []; foreach ($voice_substance as $e) $sbd[$e['date']][] = $e; krsort($sbd);
       foreach ($sbd as $date => $entries): ?>
+      <div class="voice-date"><?= htmlspecialchars($date) ?></div>
+      <?php foreach ($entries as $entry) echo voice_entry_html($entry, true, true, true); ?>
+    <?php endforeach; ?>
+  <?php endif; ?>
+  <?php if (!empty($voice_health)): ?>
+    <div class="sub-title sub-title-border">Health Notes</div>
+    <?php $hbd = []; foreach ($voice_health as $e) $hbd[$e['date']][] = $e; krsort($hbd);
+      foreach ($hbd as $date => $entries): ?>
       <div class="voice-date"><?= htmlspecialchars($date) ?></div>
       <?php foreach ($entries as $entry) echo voice_entry_html($entry, true, true, true); ?>
     <?php endforeach; ?>

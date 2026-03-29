@@ -66,6 +66,8 @@ require dirname(__DIR__) . '/header.php';
 ■ Food
 13:01
 - 昼食: 味噌汁1/3 + 納豆キムチ目玉焼き + 米200g
+19:54
+- 筋トレ後: TOFUSANドリンク + 豆腐200g
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
