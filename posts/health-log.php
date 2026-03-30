@@ -1,8 +1,103 @@
 <?php
 $page_title = 'My Daily Health Log';
 $page_description = 'A daily log tracking food, sleep, supplements, meditation, and workouts. Includes AI-powered nutrition feedback. A biohacking and health optimization experiment.';
+$is_local = in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1']);
+
+// Handle save from inline editor (local only)
+if ($is_local && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_editor_action'])) {
+    header('Content-Type: application/json');
+    $self = __FILE__;
+    $content = file_get_contents($self);
+    $date = $_POST['date'] ?? '';
+    $new_content = $_POST['content'] ?? '';
+    $date_header = '<h2># ' . $date . '</h2>';
+    $date_pos = strpos($content, $date_header);
+    if ($date_pos !== false && $new_content !== '') {
+        $pre_start = strpos($content, '<pre>', $date_pos);
+        $pre_end = strpos($content, '</pre>', $pre_start);
+        if ($pre_start !== false && $pre_end !== false) {
+            $content = substr($content, 0, $pre_start + 5) . "\n" . $new_content . "\n  " . substr($content, $pre_end);
+            file_put_contents($self, $content);
+        }
+    }
+    echo json_encode(['ok' => true]);
+    exit;
+}
+
+// Get dates for editor (local only)
+if ($is_local && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_editor_load'])) {
+    header('Content-Type: application/json');
+    $self = __FILE__;
+    $content = file_get_contents($self);
+    $date = $_POST['date'] ?? '';
+    preg_match_all('/<h2># (\d{4}-\d{2}-\d{2})<\/h2>/', $content, $matches);
+    $dates = $matches[1] ?? [];
+    $entry_content = '';
+    if ($date) {
+        $date_header = '<h2># ' . $date . '</h2>';
+        $date_pos = strpos($content, $date_header);
+        if ($date_pos !== false) {
+            $pre_start = strpos($content, '<pre>', $date_pos);
+            $pre_end = strpos($content, '</pre>', $pre_start);
+            if ($pre_start !== false && $pre_end !== false) {
+                $entry_content = trim(substr($content, $pre_start + 5, $pre_end - $pre_start - 5));
+            }
+        }
+    }
+    echo json_encode(['dates' => $dates, 'content' => $entry_content], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 require dirname(__DIR__) . '/header.php';
 ?>
+
+<?php if ($is_local): ?>
+<style>
+.le-editor { background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:16px;margin:10px 0 20px;display:none; }
+.le-editor textarea { width:100%;min-height:400px;font-family:'SFMono-Regular',Consolas,Menlo,monospace;font-size:14px;line-height:1.7;padding:12px;border:1px solid #ccc;border-radius:6px;resize:vertical;white-space:pre-wrap; }
+.le-edit-btn { background:#333;color:#fff;border:none;padding:4px 14px;border-radius:6px;font-size:12px;cursor:pointer;margin-left:8px; }
+</style>
+<script>
+let _leTimers={};
+function leToggle(date){
+  const el=document.getElementById('le-'+date);
+  if(el.style.display==='none'||!el.style.display){
+    el.style.display='block';
+    const ta=el.querySelector('textarea');
+    if(!ta.dataset.loaded){
+      const fd=new FormData();fd.append('_editor_load','1');fd.append('date',date);
+      fetch(location.href,{method:'POST',body:fd}).then(r=>r.json()).then(d=>{
+        ta.value=d.content||'';ta.dataset.loaded='1';
+      });
+    }
+  } else { el.style.display='none'; }
+}
+function leAutoSave(date){
+  clearTimeout(_leTimers[date]);
+  const st=document.getElementById('le-status-'+date);
+  st.textContent='...';
+  _leTimers[date]=setTimeout(()=>{
+    const ta=document.querySelector('#le-'+date+' textarea');
+    const fd=new FormData();fd.append('_editor_action','1');fd.append('date',date);
+    fd.append('content',ta.value);
+    fetch(location.href,{method:'POST',body:fd}).then(()=>{st.textContent='✓ 保存済み';});
+  },1000);
+}
+document.addEventListener('keydown',e=>{
+  if((e.metaKey||e.ctrlKey)&&e.key==='s'){
+    e.preventDefault();
+    document.querySelectorAll('.le-editor[style*="block"] textarea').forEach(ta=>{
+      const date=ta.closest('.le-editor').id.replace('le-','');
+      clearTimeout(_leTimers[date]);
+      const fd=new FormData();fd.append('_editor_action','1');fd.append('date',date);
+      fd.append('content',ta.value);
+      const st=document.getElementById('le-status-'+date);
+      fetch(location.href,{method:'POST',body:fd}).then(()=>{st.textContent='✓ 保存済み';});
+    });
+  }
+});
+</script>
+<?php endif; ?>
 
 <style>
 .task-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,0.25); text-underline-offset: 3px; }
@@ -39,6 +134,24 @@ require dirname(__DIR__) . '/header.php';
       html = html.replace(regex, '<span class="jp-font">$1</span>');
       pre.innerHTML = html;
     });
+    <?php if ($is_local): ?>
+    // Add edit button + editor after each date h2
+    document.querySelectorAll('h2').forEach(h2 => {
+      const m = h2.textContent.match(/# (\d{4}-\d{2}-\d{2})/);
+      if (!m) return;
+      const date = m[1];
+      const btn = document.createElement('button');
+      btn.className = 'le-edit-btn';
+      btn.textContent = '✏️ Edit';
+      btn.onclick = () => leToggle(date);
+      h2.appendChild(btn);
+      const editor = document.createElement('div');
+      editor.className = 'le-editor';
+      editor.id = 'le-' + date;
+      editor.innerHTML = '<div style="margin-bottom:8px;"><span id="le-status-' + date + '" style="font-size:12px;color:#999;"></span></div><textarea oninput="leAutoSave(\'' + date + '\')"></textarea>';
+      h2.after(editor);
+    });
+    <?php endif; ?>
   };
 </script>
 
@@ -99,6 +212,8 @@ Dinner 20:37
 Night 21:22
 - バナナ 2本（260g 皮付き）
 → 153kcal / P:2g / F:0.3g / C:39g / Fiber:3g / Zinc:0.3mg / Mg:46mg
+22:18
+- Snack: コカコーラ 250ml
 
 ■ Daily Summary
 🔥 kcal  ▓▓▓▓▓░░░░░  54%  1,616/3,000kcal

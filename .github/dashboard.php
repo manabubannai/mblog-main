@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             file_put_contents($claude_md_path, $claude_md);
         }
         echo json_encode(['ok' => true]);
-    } elseif ($action === 'complete_task') {
+    } elseif ($action === 'complete_task' || $action === 'complete_monthly') {
         $text = $_POST['text'] ?? '';
         if (strpos($claude_md, "- [ ] $text\n") !== false) {
             $claude_md = str_replace("- [ ] $text\n", "- [x] $text\n", $claude_md);
@@ -783,6 +783,21 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </head>
 <body>
 
+
+<?php if (!empty($recurring_tasks)): ?>
+<!-- Recurring Tasks -->
+<div class="section" style="<?= $days_until_1st <= 3 ? 'border:1px solid rgba(255,100,100,0.4);background:rgba(255,100,100,0.05);' : '' ?>">
+  <div class="section-title">Monthly Tasks <?php if ($days_until_1st <= 3): ?><span style="font-size:12px;color:#ff6464;margin-left:8px;"><?= $days_until_1st === 0 ? '⚠️ 今日！' : '⚠️ あと' . $days_until_1st . '日' ?></span><?php endif; ?></div>
+  <?php foreach ($recurring_tasks as $rt): ?>
+    <div class="list-item <?= $rt['done'] ? 'done' : '' ?>" style="<?= (!$rt['done'] && $days_until_1st <= 3) ? 'color:#ff6464;' : '' ?>">
+      <span class="voice-text"><?= htmlspecialchars($rt['text']) ?></span>
+      <span class="entry-actions">
+        <button class="action-btn done-btn" onclick="completeItem('monthly','<?= htmlspecialchars(addslashes($rt['text'])) ?>')" title="Toggle done"><?= $rt['done'] ? '↩' : '✓' ?></button>
+      </span>
+    </div>
+  <?php endforeach; ?>
+</div>
+<?php endif; ?>
 
 <!-- Tasks -->
 <div class="section">
