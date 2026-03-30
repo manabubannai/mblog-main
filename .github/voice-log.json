@@ -73,6 +73,156 @@
         "text": "ボイスメモ→AI書き起こし→自動分類→ダッシュボード→ヘルスログ生成。この一連の仕組みは、健康管理だけでなく「経営者の思考整理」「チームの日報管理」「クリニックの患者管理」にも転用できる。記事タイトル：AIを使って、自分の脳みそとAIをつなぐ方法",
         "summary": "記事ネタ：AIで脳とAIをつなぐ方法（ボイスメモ→自動分類→ログ生成の仕組みを商品化）",
         "file": "manual-idea-20260329",
-        "tag": "idea"
+        "tag": "idea",
+        "answer": "ボイスメモ→自動分類→ログ生成の流れは既にmblogで部分的に実現済み。商品化するなら「誰でも5分で始められるセットアップ」が鍵。まずは自分の運用を3ヶ月記録し、再現性のあるワークフローとして言語化するのが先決。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:30",
+        "text": "https:\/\/www.theinformation.com\/briefings\/meta-launches-meta-small-business?rc=svbvxk",
+        "summary": "Meta Launches Meta Small Business",
+        "file": "manual-read-later-1",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:31",
+        "text": "https:\/\/www.theinformation.com\/briefings\/ai-startup-sierra-unveils-self-service-agent-building-product?rc=svbvxk",
+        "summary": "AI Startup Sierra Unveils Self-Service Agent Building Product",
+        "file": "manual-read-later-2",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:32",
+        "text": "https:\/\/www.theinformation.com\/articles\/tencent-bets-openclaw-make-lost-ground-china-ai-battle?rc=svbvxk",
+        "summary": "Tencent Bets OpenClaw to Make Up Lost Ground in China AI Battle",
+        "file": "manual-read-later-3",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "21:50:08",
+        "text": "Cannabis 0.3g Indica（21:50、ワークアウト直後）",
+        "file": "21-50-08.m4a",
+        "summary": "Cannabis 0.3g Indica（ワークアウト直後）",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "22:09:47",
+        "text": "犬の骨を買う",
+        "file": "22-09-47.m4a",
+        "summary": "犬の骨",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "22:18:06",
+        "text": "コカコーラ 小サイズ 250ml を飲んだ",
+        "file": "22-18-06.m4a",
+        "summary": "Snack: コカコーラ 250ml",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "22:27:26",
+        "text": "筋トレを追い込んで楽しめる期間も限られている。自分たちの世代は恵まれているからこそ、この体を最大限に活かしていきたい。",
+        "file": "22-27-26.m4a",
+        "summary": "筋トレを楽しめる期間は限られている。体を最大限に活かす",
+        "tag": "health",
+        "answer": "筋トレの追い込みを楽しめる今の身体は有限資産。Oura Ringの回復スコアを活用し、追い込む日と回復日を数値で管理すれば、怪我なく強度を最大化できる。「攻めと休み」の最適比率を自分のデータから見つける。"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "23:11:19",
+        "text": "OpenClawでガチャガチャと回しまくる計画について。新しいPCで実験的に色々作っていく。",
+        "file": "23-11-19.m4a",
+        "summary": "OpenClawで実験的に色々作る計画",
+        "tag": "idea",
+        "answer": "OpenClawで量産実験するなら、試作ごとに「目的・結果・学び」を1行ずつ記録する習慣をセットで作ると振り返りやすい。新PCのセットアップ時に開発環境のスナップショットを取っておくと手戻りが減る。"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "23:15:22",
+        "text": "1日の流れをヘルスログやOura Ringのデータから自動生成する仕組みを作る。",
+        "file": "23-15-22.m4a",
+        "summary": "1日の流れをデータから自動生成する仕組み",
+        "tag": "task",
+        "answer": "Oura Ringデータ取得は既にfetch-oura.shで自動化済み。あとはヘルスログとの統合フォーマットを決めるだけ。「起床→活動→睡眠」のテンプレートを先に作り、データを流し込む形にすると実装が早い。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "10:35:05",
+        "text": "朝に犬の散歩をしている時にそこで日光浴をしている。だからSubstancesの日光はそこでカウントする。",
+        "file": "10-35-05.m4a",
+        "summary": "朝の犬散歩で日光浴。Substancesにカウント",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "10:52:10",
+        "text": "DS-01 SEED 1カプセル（朝食前）",
+        "file": "10-52-10.m4a",
+        "summary": "DS-01 SEED 1カプセル（朝食前）",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "11:44:35",
+        "text": "朝からLINEを見ることはマイルールとして絶対にやめる。朝の時間を守る。",
+        "file": "11-44-35.m4a",
+        "summary": "朝からLINEを見ない。マイルール",
+        "tag": "health",
+        "answer": "朝のLINEチェックを防ぐ最も確実な方法は、集中モード（フォーカス）を起床後2時間自動でオンにする設定。通知自体を物理的に遮断すれば意志力に頼らず習慣化できる。ショートカットAppで自動化すると楽。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "12:22:00",
+        "text": "最新の健康科学や栄養科学、ブライアン・ジョンソンのような情報を常にキャッチアップしていく。",
+        "file": "12-22-00.m4a",
+        "summary": "健康科学・栄養科学の最新情報をキャッチアップ",
+        "tag": "idea",
+        "answer": "ブライアン・ジョンソンのBlueprint等は更新頻度が高いので、RSSやニュースレター登録で自動キャッチアップが効率的。週1回15分の「健康情報レビュー時間」をカレンダーに固定し、気になる情報だけボイスメモに残す運用がおすすめ。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "13:48:50",
+        "text": "Lunch 13:48\n- 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g, 豆腐 200g）※約半分を食べた\n- Egg 3個, 納豆 1パック, キムチ 25g\n- Rice 175g（250gの7割）",
+        "file": "13-48-50.m4a",
+        "summary": "昼食: 味噌汁半分 + 卵3個 + 納豆キムチ + 米175g",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "15:27:39",
+        "text": "運動靴を買う優先度をあげる。今の靴は足に力が入りにくい。",
+        "file": "15-27-39.m4a",
+        "summary": "運動靴を買う（優先度高）",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "19:27:24",
+        "text": "筋トレ直後にTOFUSANプロテインドリンクを1本飲んだ。",
+        "file": "19-27-24.m4a",
+        "summary": "Post-Workout: TOFUSANドリンク",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "19:31:57",
+        "text": "Cannabis 0.4g Sativa Angel Mango（19:31、筋トレ直後）",
+        "file": "19-31-57.m4a",
+        "summary": "Cannabis 0.4g Sativa Angel Mango（筋トレ直後）",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "19:32:11",
+        "text": "夕飯を食べ始めた時刻は19:27頃。",
+        "file": "19-32-11.m4a",
+        "summary": "夕食開始 19:27",
+        "tag": "food"
     }
 ]

@@ -10,8 +10,24 @@
         "task": "ヘルスログ全文エディタの動作確認・改善",
         "detail": "ヘルスログ全文エディタの動作確認・改善",
         "answer": "■ 現状\nダッシュボードに「✏️ Edit」ボタンを追加済み。日付選択で該当日のエントリをtextareaで全文編集可能。自動保存（1秒debounce）+ Cmd+S対応。\n\n■ 確認項目\n・日付切り替えが正しく動作するか\n・自動保存が確実に動くか（保存済み表示の確認）\n・長いエントリの編集時にパフォーマンス問題がないか\n・スマホ（dashboard.mblog.com）からも使えるか\n\n■ 改善候補\n・シンタックスハイライト（■セクション名を太字化等）\n・行番号表示\n・Undo\/Redo対応\n・新しい日付のエントリ作成機能",
-        "status": "pending",
+        "status": "done",
         "queued_at": "2026-03-29 15:21:46",
         "instruction": "どこにボタンがあるのか謎。"
+    },
+    {
+        "task": "Kindleで脳を刺激せずにWebサイトを閲覧できるサービスを自作→公開",
+        "detail": "Kindleで脳を刺激せずにWebサイトを閲覧できるサービスを自作→公開",
+        "answer": "■ 技術スタック\n・@mozilla\/readability + jsdom — 記事本文抽出（Firefoxリーダービューの基盤）\n・epub-gen-memory — EPUB生成\n・Nodemailer — Kindleメール(xxx@kindle.com)に送信\n・Puppeteer — JS描画が必要なサイト対応\n\n■ 仕組み\nURL入力 → HTML取得 → Readabilityで本文抽出 → EPUB生成 → Kindleメールに送信\n\n■ 実装ステップ\n1. MVP（1日）: Node.js CLI版。URLからEPUB生成→メール送信\n2. Web UI（1日）: Express + URL入力フォーム。VPS(Hetzner)にデプロイ\n3. 改善: 画像埋め込み、日本語フォント、キュー処理\n\n■ SaaS化のポイント\n・ユーザーがKindle側で送信元メールを承認する手順の案内が必要\n・SES利用で1通0.01円以下。VPS既存でほぼ無料\n・認証: メアド+パスワードで十分（OAuth不要）\n\n■ 既存サービスの限界\n・Instapaper: 無料版はKindle送信が週1回制限\n・Push to Kindle: 無料版は月10記事制限\n・Calibre: デスクトップ専用、自動化が面倒\n→ 自作すれば制限なし",
+        "status": "done",
+        "queued_at": "2026-03-30 08:25:32",
+        "instruction": "ベータ版を作っておいて"
+    },
+    {
+        "task": "1日の流れをデータから自動生成する仕組み",
+        "detail": "1日の流れをヘルスログやOura Ringのデータから自動生成する仕組みを作る。",
+        "answer": "Oura Ringデータ取得は既にfetch-oura.shで自動化済み。あとはヘルスログとの統合フォーマットを決めるだけ。「起床→活動→睡眠」のテンプレートを先に作り、データを流し込む形にすると実装が早い。",
+        "status": "pending",
+        "queued_at": "2026-03-30 13:20:08",
+        "instruction": "デモを作ってみて"
     }
 ]

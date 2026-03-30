@@ -684,8 +684,20 @@ if ($shop_match) {
 $voice_notes = []; $voice_tasks = []; $voice_tasks_scheduled = [];
 $voice_shopping = []; $voice_shopping_scheduled = [];
 $voice_food = []; $voice_health = []; $voice_substance = [];
-$voice_ideas = [];
+$voice_ideas = []; $voice_read_later = [];
 $today = date('Y-m-d');
+$today_day = (int)date('j');
+$days_in_month = (int)date('t');
+$days_until_1st = ($today_day === 1) ? 0 : $days_in_month - $today_day + 1;
+
+// Parse recurring tasks from CLAUDE.md
+$recurring_tasks = [];
+if (preg_match('/## 毎月の固定タスク\n([\s\S]*?)(?=\n##|\z)/', $claude_md, $rt_match)) {
+    preg_match_all('/- \[( |x)\] (.+)/', $rt_match[1], $rt_matches, PREG_SET_ORDER);
+    foreach ($rt_matches as $m) {
+        $recurring_tasks[] = ['done' => $m[1] === 'x', 'text' => trim($m[2])];
+    }
+}
 
 foreach ($voice_log as $entry) {
     $tag = $entry['tag'] ?? '';
@@ -698,6 +710,7 @@ foreach ($voice_log as $entry) {
         case 'health': $voice_health[] = $entry; break;
         case 'substance': $voice_substance[] = $entry; break;
         case 'idea': $voice_ideas[] = $entry; break;
+        case 'read_later': $voice_read_later[] = $entry; break;
         default: $voice_notes[] = $entry; break;
     }
 }
@@ -867,7 +880,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 <!-- Health Log -->
 <?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): ?>
 <div class="section">
-  <div class="section-title">Health Log <button onclick="openEditor()" style="background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);padding:4px 10px;border-radius:6px;font-size:12px;cursor:pointer;margin-left:8px;">✏️ Edit</button></div>
+  <div class="section-title">Health Log <button onclick="openEditor()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#e8e8ef;padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-left:10px;">✏️ Edit Health Log</button></div>
 
   <?php if (!empty($voice_food)): ?>
     <div class="sub-title">Food</div>
@@ -906,7 +919,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 <?php else: ?>
 <div class="section">
-  <div class="section-title">Health Log</div>
+  <div class="section-title">Health Log <button onclick="openEditor()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#e8e8ef;padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-left:10px;">✏️ Edit Health Log</button></div>
   <div class="empty">No entries yet.</div>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
@@ -938,6 +951,28 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
   <div class="add-form">
     <input type="text" id="new-idea" placeholder="Add idea...">
     <button onclick="addIdea()">Add</button>
+  </div>
+</div>
+
+<!-- Read Later -->
+<div class="section">
+  <div class="section-title">Read Later</div>
+  <?php if (empty($voice_read_later)): ?>
+    <div class="empty">No items.</div>
+  <?php else: ?>
+    <?php foreach ($voice_read_later as $rl): ?>
+      <div class="list-item">
+        <a href="<?= htmlspecialchars($rl['text']) ?>" target="_blank" class="voice-text" style="color:#4a9eff;text-decoration:underline;text-underline-offset:3px;"><?= htmlspecialchars($rl['summary'] ?? $rl['text']) ?></a>
+        <span class="entry-actions">
+          <button class="action-btn done-btn" onclick="completeVoice('<?= htmlspecialchars(addslashes($rl['file'])) ?>','<?= htmlspecialchars($rl['time']) ?>')" title="Read">✓</button>
+          <button class="action-btn delete-btn" onclick="deleteVoice('<?= htmlspecialchars(addslashes($rl['file'])) ?>','<?= htmlspecialchars($rl['time']) ?>')">×</button>
+        </span>
+      </div>
+    <?php endforeach; ?>
+  <?php endif; ?>
+  <div class="add-form">
+    <input type="text" id="new-read-later" placeholder="URL を追加...">
+    <button onclick="addReadLater()">Add</button>
   </div>
 </div>
 
@@ -1483,6 +1518,15 @@ function addIdea() {
   const form = new FormData();
   form.append('text', text);
   form.append('tag', 'idea');
+  fetch('?action=add_health', { method: 'POST', body: form }).then(() => location.reload());
+}
+
+function addReadLater() {
+  const text = document.getElementById('new-read-later').value.trim();
+  if (!text) return;
+  const form = new FormData();
+  form.append('text', text);
+  form.append('tag', 'read_later');
   fetch('?action=add_health', { method: 'POST', body: form }).then(() => location.reload());
 }
 
