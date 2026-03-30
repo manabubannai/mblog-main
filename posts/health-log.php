@@ -174,6 +174,48 @@ document.addEventListener('keydown',e=>{
 開始：2026年3月13日
 </pre>
 
+    <h2># 2026-03-30</h2>
+  <pre>
+■ Body (Withings Body Scan) — 10:20
+- Weight: 62.12 kg
+- Muscle Mass: 55.13 kg
+- Body Fat: 6.6%
+- Bone Mass: 2.93 kg
+
+■ Sleep (Oura Ring) — 23:37〜10:08
+- Total: 9h35m
+- Readiness: 85
+- Sleep Score: 79
+- Deep: 0h28m
+- REM: 2h17m
+- HRV: 84ms / HR: 52bpm
+
+■ Stretch (Oura Ring)
+- 11:21〜12:35（1h14m） / 290kcal
+
+■ Meditation (Oura Ring)
+- 12:41〜13:40（0h59m） / Avg HR:59bpm
+
+■ Food
+Lunch 13:48
+- 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g, 豆腐 200g）※約半分を食べた, Egg 3個, Rice 175g
+
+Post-Workout 19:27
+- TOFUSAN プロテインドリンク 250ml
+10:53
+- 朝食: ヨーグルト + オーツ + 蜂蜜 + パッションフルーツ + ブルーベリー
+
+■ Substances
+- Sunlight 10min（morning dog walk）
+- DS-01 SEED 1 capsule（before breakfast）
+- Cannabis 0.4g Sativa Angel Mango（19:31, post-workout）
+
+■ Thought
+- 朝からLINEを見ることはマイルールとして絶対にやめる。朝の時間を守る。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
     <h2># 2026-03-29</h2>
   <pre>
 ■ Body (Withings Body Scan) — 09:14

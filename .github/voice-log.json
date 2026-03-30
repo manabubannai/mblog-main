@@ -78,6 +78,14 @@
     },
     {
         "date": "2026-03-30",
+        "time": "10:09",
+        "text": "Apple Watchのアラームがスマホの方でなってしまう問題を解決したい。Apple Watchだけで鳴るようにしたい。",
+        "summary": "Apple Watchアラームがスマホで鳴る問題を解決",
+        "file": "10-09-51.m4a",
+        "tag": "task"
+    },
+    {
+        "date": "2026-03-30",
         "time": "14:30",
         "text": "https:\/\/www.theinformation.com\/briefings\/meta-launches-meta-small-business?rc=svbvxk",
         "summary": "Meta Launches Meta Small Business",
@@ -105,7 +113,7 @@
         "time": "21:50:08",
         "text": "Cannabis 0.3g Indica（21:50、ワークアウト直後）",
         "file": "21-50-08.m4a",
-        "summary": "Cannabis 0.3g Indica（ワークアウト直後）",
+        "summary": "Cannabis 0.3g Indica（post-workout）",
         "tag": "substance"
     },
     {
@@ -146,17 +154,17 @@
     {
         "date": "2026-03-30",
         "time": "10:35:05",
-        "text": "朝に犬の散歩をしている時にそこで日光浴をしている。だからSubstancesの日光はそこでカウントする。",
+        "text": "Sunlight 10min（morning dog walk）",
         "file": "10-35-05.m4a",
-        "summary": "朝の犬散歩で日光浴。Substancesにカウント",
+        "summary": "Sunlight 10min（morning dog walk）",
         "tag": "substance"
     },
     {
         "date": "2026-03-30",
         "time": "10:52:10",
-        "text": "DS-01 SEED 1カプセル（朝食前）",
+        "text": "DS-01 SEED 1 capsule（before breakfast）",
         "file": "10-52-10.m4a",
-        "summary": "DS-01 SEED 1カプセル（朝食前）",
+        "summary": "DS-01 SEED 1 capsule（before breakfast）",
         "tag": "substance"
     },
     {
@@ -197,7 +205,7 @@
         "time": "19:31:57",
         "text": "Cannabis 0.4g Sativa Angel Mango（19:31、筋トレ直後）",
         "file": "19-31-57.m4a",
-        "summary": "Cannabis 0.4g Sativa Angel Mango（筋トレ直後）",
+        "summary": "Cannabis 0.4g Sativa Angel Mango（post-workout）",
         "tag": "substance"
     },
     {
@@ -213,11 +221,5 @@
         "time": "20:17:07",
         "text": "",
         "file": "20-17-07.m4a"
-    },
-    {
-        "date": "2026-03-30",
-        "time": "20:19:44",
-        "text": "ご視聴ありがとうございました",
-        "file": "20-19-44.m4a"
     }
 ]
