@@ -16,7 +16,7 @@ if ($is_local && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_editor_
         $pre_start = strpos($content, '<pre>', $date_pos);
         $pre_end = strpos($content, '</pre>', $pre_start);
         if ($pre_start !== false && $pre_end !== false) {
-            $content = substr($content, 0, $pre_start + 5) . "\n" . $new_content . "\n  " . substr($content, $pre_end);
+            $content = substr($content, 0, $pre_start + 5) . "\n" . rtrim($new_content) . "\n  " . substr($content, $pre_end);
             file_put_contents($self, $content);
         }
     }
@@ -197,21 +197,26 @@ document.addEventListener('keydown',e=>{
 - 12:41〜13:40（0h59m） / Avg HR:59bpm
 
 ■ Food
+Breakfast 10:53
+- Yogurt 68g, Oatmeal 30g, Honey 12.3g, Passion Fruit 24g, Blueberries 28g
+
 Lunch 13:48
 - 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g, 豆腐 200g）※約半分を食べた, Egg 3個, Rice 175g
 
 Post-Workout 19:27
 - TOFUSAN プロテインドリンク 250ml
-10:53
-- 朝食: ヨーグルト + オーツ + 蜂蜜 + パッションフルーツ + ブルーベリー
+
+Dinner 19:27
+- BBQ Chicken with Grilled Vegetables, Tempe 100g（raw weight）, Broccoli 100g（cooked）
 
 ■ Substances
 - Sunlight 10min（morning dog walk）
 - DS-01 SEED 1 capsule（before breakfast）
 - Cannabis 0.4g Sativa Angel Mango（19:31, post-workout）
+- Sunlight 10min（morning dog walk）（10:35）
 
 ■ Thought
-- 朝からLINEを見ることはマイルールとして絶対にやめる。朝の時間を守る。
+- 朝からLINEを見ることはマイルールとしてやめる
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

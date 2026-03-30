@@ -153,14 +153,6 @@
     },
     {
         "date": "2026-03-30",
-        "time": "10:35:05",
-        "text": "Sunlight 10min（morning dog walk）",
-        "file": "10-35-05.m4a",
-        "summary": "Sunlight 10min（morning dog walk）",
-        "tag": "substance"
-    },
-    {
-        "date": "2026-03-30",
         "time": "10:52:10",
         "text": "DS-01 SEED 1 capsule（before breakfast）",
         "file": "10-52-10.m4a",
@@ -178,14 +170,6 @@
     },
     {
         "date": "2026-03-30",
-        "time": "13:48:50",
-        "text": "Lunch 13:48\n- 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g+30g, 豆腐 200g）※約半分を食べた\n- Egg 3個\n- Rice 175g（250gの7割）",
-        "file": "13-48-50.m4a",
-        "summary": "昼食: 味噌汁半分 + 卵3個 + 米175g（納豆キムチは残した）",
-        "tag": "food"
-    },
-    {
-        "date": "2026-03-30",
         "time": "15:27:39",
         "text": "運動靴を買う優先度をあげる。今の靴は足に力が入りにくい。",
         "file": "15-27-39.m4a",
@@ -194,27 +178,11 @@
     },
     {
         "date": "2026-03-30",
-        "time": "19:27:24",
-        "text": "Post-Workout 19:27\n- TOFUSAN プロテインドリンク 250ml",
-        "file": "19-27-24.m4a",
-        "summary": "Post-Workout: TOFUSAN プロテインドリンク 250ml",
-        "tag": "food"
-    },
-    {
-        "date": "2026-03-30",
         "time": "19:31:57",
         "text": "Cannabis 0.4g Sativa Angel Mango（19:31、筋トレ直後）",
         "file": "19-31-57.m4a",
         "summary": "Cannabis 0.4g Sativa Angel Mango（post-workout）",
         "tag": "substance"
-    },
-    {
-        "date": "2026-03-30",
-        "time": "19:32:11",
-        "text": "夕飯を食べ始めた時刻は19:27頃。",
-        "file": "19-32-11.m4a",
-        "summary": "夕食開始 19:27",
-        "tag": "food"
     },
     {
         "date": "2026-03-30",

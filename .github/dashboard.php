@@ -252,7 +252,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $line = '- ' . $action_text . ' /' . $slug;
             } elseif ($tag === 'food') {
                 $section = '■ Food';
-                $line = $entry_time . "\n- " . $text;
+                // Food always uses original text (not summary)
+                $food_text = $target['text'] ?? $text;
+                $line = $food_text;
             } elseif ($tag === 'substance' || $tag === 'health') {
                 $section = '■ Substances';
                 $line = '- ' . $text . '（' . $entry_time . '）';
@@ -319,23 +321,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                     $health_log = substr($health_log, 0, $insert_pos) . "\n" . $section . "\n" . $line . "\n  " . substr($health_log, $insert_pos);
                 }
             } else {
-                // Date doesn't exist — create new entry after the <hr> line (before first existing date)
+                // Date doesn't exist — create new entry before first existing date
                 $first_h2 = strpos($health_log, '<h2>#');
                 if ($first_h2 !== false) {
-                    // Find the <hr> before it
+                    $new_entry = "    $date_header\n  <pre>\n$section\n$line\n  </pre>\n\n  <hr style=\"border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;\">\n\n";
+                    // Try to find <hr> before first h2, if not found insert directly before h2
                     $hr_before = strrpos(substr($health_log, 0, $first_h2), '<hr');
                     if ($hr_before !== false) {
-                        $new_entry = "  $date_header\n  <pre>\n$section\n$line\n  </pre>\n\n  <hr style=\"border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;\">\n\n";
                         $health_log = substr($health_log, 0, $hr_before) . $new_entry . substr($health_log, $hr_before);
+                    } else {
+                        $health_log = substr($health_log, 0, $first_h2) . $new_entry . substr($health_log, $first_h2);
                     }
                 }
             }
 
-            file_put_contents($health_log_path, $health_log);
+            $write_result = file_put_contents($health_log_path, $health_log);
 
-            // Remove from voice-log.json
-            array_splice($voice_log, $target_idx, 1);
-            file_put_contents($voice_log_file, json_encode(array_values($voice_log), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            // Only remove from voice-log.json if health-log write succeeded
+            if ($write_result !== false) {
+                // Verify the content was actually written
+                $verify = file_get_contents($health_log_path);
+                if (strpos($verify, trim($line)) !== false || strpos($verify, $date_header) !== false) {
+                    array_splice($voice_log, $target_idx, 1);
+                    file_put_contents($voice_log_file, json_encode(array_values($voice_log), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+                }
+            }
 
             // Git commit & push
             chdir(__DIR__ . '/..');
@@ -489,7 +499,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 $pre_start = strpos($health_log, '<pre>', $date_pos);
                 $pre_end = strpos($health_log, '</pre>', $pre_start);
                 if ($pre_start !== false && $pre_end !== false) {
-                    $health_log = substr($health_log, 0, $pre_start + 5) . "\n" . $content . "\n  " . substr($health_log, $pre_end);
+                    $health_log = substr($health_log, 0, $pre_start + 5) . "\n" . rtrim($content) . "\n  " . substr($health_log, $pre_end);
                     file_put_contents($health_log_path, $health_log);
                 }
             }
