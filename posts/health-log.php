@@ -199,15 +199,30 @@ document.addEventListener('keydown',e=>{
 ■ Food
 Breakfast 10:53
 - Yogurt 68g, Oatmeal 30g, Honey 12.3g, Passion Fruit 24g, Blueberries 28g
+→ 236kcal / P:7g / F:5g / C:43g / Fiber:6g / Zinc:1.5mg / Mg:70mg
 
 Lunch 13:48
 - 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g, 豆腐 200g）※約半分を食べた, Egg 3個, Rice 175g
+→ 687kcal / P:41g / F:21g / C:76g / Fiber:6g / Zinc:4.4mg / Mg:114mg
 
 Post-Workout 19:27
 - TOFUSAN プロテインドリンク 250ml
+→ 100kcal / P:7g / F:3g / C:12g / Fiber:1g / Zinc:0.5mg / Mg:30mg
 
 Dinner 19:27
-- BBQ Chicken with Grilled Vegetables, Tempe 100g（raw weight）, Broccoli 100g（cooked）
+- BBQ Chicken 200g（raw, air fried w/ BBQ sauce）, Grilled Vegetables（onion, carrot, purple cabbage, bell peppers）, Tempe 100g（raw）, Broccoli 100g（cooked）, Rice 145g（75g + 追加70g）
+→ 654kcal / P:63g / F:25g / C:46g / Fiber:8g / Zinc:3.8mg / Mg:139mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓░░░░  56%  1,677/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓░░  85%  118/140g
+🥑 F     ▓▓▓▓▓▓▓░░░  68%  54/80g
+🍚 C     ▓▓▓▓░░░░░░  41% 📉 177/430g
+🌿 繊維   ▓▓▓▓▓▓▓░░░  75%  21/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓░  93%  10.2/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓░  89%  353/400mg
+☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 2,000/2,000IU
+💊 Cr   ░░░░░░░░░░   0% 📉 0/5g
 
 ■ Substances
 - Sunlight 10min（morning dog walk）
@@ -216,6 +231,9 @@ Dinner 19:27
 
 ■ Thought
 - 朝からLINEを見ることはマイルールとしてやめる
+  
+■ Idea
+- 健康科学・栄養科学のキャッチアップ設計（本の購入確定）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

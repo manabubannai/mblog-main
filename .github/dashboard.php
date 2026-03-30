@@ -469,42 +469,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
             }
         }
         echo json_encode(['ok' => true]);
-    } elseif ($action === 'get_health_log') {
-        $date = $_POST['date'] ?? date('Y-m-d');
-        $health_log_path = __DIR__ . '/../posts/health-log.php';
-        $health_log = file_get_contents($health_log_path);
-        $date_header = '<h2># ' . $date . '</h2>';
-        $content = '';
-        if (strpos($health_log, $date_header) !== false) {
-            $date_pos = strpos($health_log, $date_header);
-            $pre_start = strpos($health_log, '<pre>', $date_pos);
-            $pre_end = strpos($health_log, '</pre>', $pre_start);
-            if ($pre_start !== false && $pre_end !== false) {
-                $content = substr($health_log, $pre_start + 5, $pre_end - $pre_start - 5);
-                $content = trim($content);
-            }
-        }
-        // Get available dates
-        preg_match_all('/<h2># (\d{4}-\d{2}-\d{2})<\/h2>/', $health_log, $matches);
-        echo json_encode(['content' => $content, 'dates' => $matches[1] ?? []], JSON_UNESCAPED_UNICODE);
-    } elseif ($action === 'save_health_log') {
-        $date = $_POST['date'] ?? '';
-        $content = $_POST['content'] ?? '';
-        if ($date && $content !== '') {
-            $health_log_path = __DIR__ . '/../posts/health-log.php';
-            $health_log = file_get_contents($health_log_path);
-            $date_header = '<h2># ' . $date . '</h2>';
-            $date_pos = strpos($health_log, $date_header);
-            if ($date_pos !== false) {
-                $pre_start = strpos($health_log, '<pre>', $date_pos);
-                $pre_end = strpos($health_log, '</pre>', $pre_start);
-                if ($pre_start !== false && $pre_end !== false) {
-                    $health_log = substr($health_log, 0, $pre_start + 5) . "\n" . rtrim($content) . "\n  " . substr($health_log, $pre_end);
-                    file_put_contents($health_log_path, $health_log);
-                }
-            }
-        }
-        echo json_encode(['ok' => true]);
     } elseif ($action === 'add_health') {
         $text = trim($_POST['text'] ?? '');
         $tag = $_POST['tag'] ?? 'food';
@@ -700,6 +664,11 @@ $today_day = (int)date('j');
 $days_in_month = (int)date('t');
 $days_until_1st = ($today_day === 1) ? 0 : $days_in_month - $today_day + 1;
 
+$queued_results = [];
+foreach ($task_queue as $q) {
+    if (!empty($q['result'])) $queued_results[$q['task']] = $q['result'];
+}
+
 // Parse recurring tasks from CLAUDE.md
 $recurring_tasks = [];
 if (preg_match('/## 毎月の固定タスク\n([\s\S]*?)(?=\n##|\z)/', $claude_md, $rt_match)) {
@@ -766,6 +735,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         $entry_summary = $entry['summary'] ?? $entry['text'] ?? '';
         if (in_array($entry_summary, $queued_done)) {
             $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);margin-top:8px;opacity:0.5;">✅ 実行済み</button>';
+            if (!empty($queued_results[$entry_summary])) {
+                $html .= '<div style="margin-top:8px;padding:10px 14px;background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);border-radius:8px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;">' . nl2br(htmlspecialchars($queued_results[$entry_summary])) . '</div>';
+            }
         } elseif (in_array($entry_summary, $queued_pending)) {
             $html .= '<button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);margin-top:8px;opacity:0.5;">⏳ 実行待ち</button>';
         } else {
@@ -822,6 +794,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
           <?php if (in_array($task['text'], $queued_done)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);opacity:0.5;">✅ 実行済み</button>
+          <?php if (!empty($queued_results[$task['text']])): ?>
+          <div style="margin-top:8px;padding:10px 14px;background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);border-radius:8px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;"><?= nl2br(htmlspecialchars($queued_results[$task['text']])) ?></div>
+          <?php endif; ?>
           <?php elseif (in_array($task['text'], $queued_pending)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
@@ -848,6 +823,9 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
         <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
           <?php $vt_summary = $vt['summary'] ?? $vt['text']; if (in_array($vt_summary, $queued_done)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(80,200,120,0.08);color:rgba(80,200,120,0.5);opacity:0.5;">✅ 実行済み</button>
+          <?php if (!empty($queued_results[$vt_summary])): ?>
+          <div style="margin-top:8px;padding:10px 14px;background:rgba(80,200,120,0.05);border:1px solid rgba(80,200,120,0.15);border-radius:8px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;"><?= nl2br(htmlspecialchars($queued_results[$vt_summary])) ?></div>
+          <?php endif; ?>
           <?php elseif (in_array($vt_summary, $queued_pending)): ?>
           <button disabled style="width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-family:inherit;background:rgba(255,200,60,0.08);color:rgba(255,200,60,0.5);opacity:0.5;">⏳ 実行待ち</button>
           <?php else: ?>
@@ -892,20 +870,10 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 
 </div>
 
-<!-- Health Log Editor -->
-<div class="section" id="health-log-editor" style="display:none;">
-  <div class="section-title">Edit Health Log <button onclick="closeEditor()" style="float:right;background:none;border:none;color:#e8e8ef;font-size:18px;cursor:pointer;">✕</button></div>
-  <div style="margin-bottom:10px;">
-    <select id="editor-date" onchange="loadHealthLog(this.value)" style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:8px 12px;border-radius:8px;font-size:14px;font-family:inherit;"></select>
-    <span id="editor-status" style="margin-left:10px;font-size:12px;color:rgba(255,255,255,0.3);"></span>
-  </div>
-  <textarea id="editor-textarea" style="width:100%;min-height:500px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:14px;border-radius:10px;font-size:14px;font-family:'SFMono-Regular',Consolas,Menlo,monospace;line-height:1.7;resize:vertical;white-space:pre-wrap;" oninput="editorAutoSave()"></textarea>
-</div>
-
 <!-- Health Log -->
 <?php if (!empty($voice_food) || !empty($voice_health) || !empty($voice_substance)): ?>
 <div class="section">
-  <div class="section-title">Health Log <button onclick="openEditor()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#e8e8ef;padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-left:10px;">✏️ Edit Health Log</button></div>
+  <div class="section-title">Health Log</div>
 
   <?php if (!empty($voice_food)): ?>
     <div class="sub-title">Food</div>
@@ -944,7 +912,7 @@ function voice_entry_html($entry, $show_push = false, $use_summary = true, $show
 </div>
 <?php else: ?>
 <div class="section">
-  <div class="section-title">Health Log <button onclick="openEditor()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#e8e8ef;padding:6px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-left:10px;">✏️ Edit Health Log</button></div>
+  <div class="section-title">Health Log</div>
   <div class="empty">No entries yet.</div>
   <div class="add-form" style="flex-wrap:wrap;">
     <select id="new-health-tag" style="background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.1);color:#e8e8ef;padding:10px 12px;border-radius:10px;font-size:15px;font-family:inherit;">
@@ -1264,12 +1232,14 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Summary</label>';
     html += '<input type="text" class="inline-summary" value="' + currentSummary.replace(/"/g,'&quot;') + '" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.15);color:#e8e8ef;padding:10px 14px;border-radius:10px;font-size:16px;font-family:inherit;">';
     html += '<div class="inline-btn-row">';
+    html += '<button class="inline-save-summary" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);">Save</button>';
     html += '<button class="inline-push-s" data-file="' + file + '" data-time="' + time + '">🚀 Push Summary</button>';
     html += '</div>';
     html += '<label style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:4px;display:block;">Original</label>';
   }
   html += '<textarea class="inline-textarea"></textarea>';
   html += '<div class="inline-btn-row">';
+  html += '<button class="inline-save-original" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);">Save</button>';
   html += '<button class="inline-push-o" data-file="' + file + '" data-time="' + time + '">🚀 Push Original</button>';
   html += '</div>';
   if (currentSummary) {
@@ -1321,6 +1291,19 @@ function editAll(el, file, time, date, showDateEdit, currentSummary) {
   if (form.querySelector('.inline-push-s')) form.querySelector('.inline-push-s').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, true)); };
   form.querySelector('.inline-push-o').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, false)); };
   if (form.querySelector('.inline-push-so')) form.querySelector('.inline-push-so').onclick = function() { const btn = this; saveFirst().then(() => pushToServer(btn, 'both')); };
+  // Save buttons (save to voice-log without pushing to health-log)
+  if (form.querySelector('.inline-save-summary')) {
+    form.querySelector('.inline-save-summary').onclick = function() {
+      const btn = this; btn.textContent = '...';
+      saveFirst().then(() => { btn.textContent = '✓ Saved'; setTimeout(() => { btn.textContent = 'Save'; }, 1500); });
+    };
+  }
+  if (form.querySelector('.inline-save-original')) {
+    form.querySelector('.inline-save-original').onclick = function() {
+      const btn = this; btn.textContent = '...';
+      saveFirst().then(() => { btn.textContent = '✓ Saved'; setTimeout(() => { btn.textContent = 'Save'; }, 1500); });
+    };
+  }
   function doSave() {
     const newText = textarea.value.trim();
     const newSummary = form.querySelector('.inline-summary') ? form.querySelector('.inline-summary').value.trim() : '';
@@ -1445,74 +1428,6 @@ function queueForAI(btn) {
     .catch(() => { btn.textContent = '!'; btn.disabled = false; });
 }
 
-// Health Log Editor
-let _editorSaveTimer = null;
-let _editorDate = '';
-
-function openEditor() {
-  document.getElementById('health-log-editor').style.display = '';
-  const fd = new FormData();
-  fd.append('date', '');
-  fetch('?action=get_health_log', { method: 'POST', body: fd })
-    .then(r => r.json())
-    .then(data => {
-      const sel = document.getElementById('editor-date');
-      sel.innerHTML = '';
-      (data.dates || []).forEach(d => {
-        const opt = document.createElement('option');
-        opt.value = d; opt.textContent = d;
-        sel.appendChild(opt);
-      });
-      if (data.dates && data.dates.length > 0) {
-        _editorDate = data.dates[0];
-        loadHealthLog(_editorDate);
-      }
-    });
-}
-
-function closeEditor() {
-  document.getElementById('health-log-editor').style.display = 'none';
-}
-
-function loadHealthLog(date) {
-  _editorDate = date;
-  const fd = new FormData();
-  fd.append('date', date);
-  fetch('?action=get_health_log', { method: 'POST', body: fd })
-    .then(r => r.json())
-    .then(data => {
-      document.getElementById('editor-textarea').value = data.content || '';
-      document.getElementById('editor-status').textContent = '';
-    });
-}
-
-function editorAutoSave() {
-  clearTimeout(_editorSaveTimer);
-  document.getElementById('editor-status').textContent = '...';
-  _editorSaveTimer = setTimeout(() => {
-    const fd = new FormData();
-    fd.append('date', _editorDate);
-    fd.append('content', document.getElementById('editor-textarea').value);
-    fetch('?action=save_health_log', { method: 'POST', body: fd })
-      .then(() => { document.getElementById('editor-status').textContent = '✓ 保存済み'; })
-      .catch(() => { document.getElementById('editor-status').textContent = '! エラー'; });
-  }, 1000);
-}
-
-// Cmd+S / Ctrl+S to save
-document.addEventListener('keydown', e => {
-  if ((e.metaKey || e.ctrlKey) && e.key === 's') {
-    e.preventDefault();
-    if (document.getElementById('health-log-editor').style.display !== 'none') {
-      clearTimeout(_editorSaveTimer);
-      const fd = new FormData();
-      fd.append('date', _editorDate);
-      fd.append('content', document.getElementById('editor-textarea').value);
-      fetch('?action=save_health_log', { method: 'POST', body: fd })
-        .then(() => { document.getElementById('editor-status').textContent = '✓ 保存済み'; });
-    }
-  }
-});
 
 function sendPanelText(btn) {
   const input = btn.parentElement.querySelector('.panel-text-input');

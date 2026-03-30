@@ -26,8 +26,17 @@
         "task": "1日の流れをデータから自動生成する仕組み",
         "detail": "1日の流れをヘルスログやOura Ringのデータから自動生成する仕組みを作る。",
         "answer": "Oura Ringデータ取得は既にfetch-oura.shで自動化済み。あとはヘルスログとの統合フォーマットを決めるだけ。「起床→活動→睡眠」のテンプレートを先に作り、データを流し込む形にすると実装が早い。",
-        "status": "pending",
+        "status": "done",
         "queued_at": "2026-03-30 13:20:08",
-        "instruction": "デモを作ってみて"
+        "instruction": "デモを作ってみて",
+        "result": ".github\/generate-daily-log.sh を作成。Oura Ring（就寝・起床・ストレッチ・メディテーション）、Withings（体重・筋肉量）、voice-log.json（食事・substance）、health-log.php（Food時刻）からデータを収集し、時系列で「マナブの1日」セクション用テキストを自動生成。使い方: bash .github\/generate-daily-log.sh 2026-03-30"
+    },
+    {
+        "task": "Claude Code と Apple ヘルスケアを連携する",
+        "detail": "Claude Code と Apple ヘルスケアを連携する",
+        "answer": "■ 概要\nApple HealthデータをClaude Codeに取り込む方法は大きく3つ。(1) MCP Server経由で直接クエリ (2) Health Auto Exportアプリで自動エクスポート (3) 手動XMLエクスポート+Pythonパース。最も実用的なのは(1)のMCPサーバー連携。\n\n■ 方法1: MCP Server連携（最推奨）\n[A] health-auto-export-mcp-server（公式）\n- Health Auto Exportアプリ（Premium版、iOS）が必要\n- iPhoneとMacが同じWi-Fiに接続されている必要あり\n- 設定例: {\"mcpServers\":{\"health_auto_export\":{\"command\":\"node\",\"args\":[\"\/path\/to\/dist\/server.js\"]}}}\n\n[B] apple-health-mcp-server（Momentum製）\n- Apple HealthのXMLエクスポートをDuckDBでクエリ。リアルタイムではないがiPhone側にアプリ不要。Docker対応あり。\n\n[C] apple-health-mcp（neiltron製）\n- npxで直接実行可能。自然言語クエリ、SQLクエリ、自動レポート生成に対応。\n\n■ 方法2: Health Auto Exportアプリ（自動同期）\n- 150以上のメトリクスをJSON\/CSVで自動エクスポート\n- iCloud Drive、REST API、Dropbox等に自動同期可能\n- iCloud Drive同期 → MacのlaunchdでJSON読み取り → daily-push.shに組み込める\n\n■ 推奨アプローチ（mblog向け）\n既存のOura Ring連携と同パターン: Health Auto Export（Premium）→ iCloud Drive自動同期 → fetch-apple-health.sh → launchdで毎日実行 → daily-push.sh。またはMCP Serverで会話中に直接クエリも可能。",
+        "status": "pending",
+        "queued_at": "2026-03-30 13:53:21",
+        "instruction": "これを実行して:■ 方法2: Health Auto Exportアプリ（自動同期） - 150以上のメトリクスをJSON\/CSVで自動エクスポート - iCloud Drive、REST API、Dropbox等に自動同期可能 - iCloud Drive同期 → MacのlaunchdでJSON読み取り → daily-push.shに組み込める"
     }
 ]
