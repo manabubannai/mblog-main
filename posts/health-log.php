@@ -213,7 +213,6 @@ Dinner 19:27
 - Sunlight 10min（morning dog walk）
 - DS-01 SEED 1 capsule（before breakfast）
 - Cannabis 0.4g Sativa Angel Mango（19:31, post-workout）
-- Sunlight 10min（morning dog walk）（10:35）
 
 ■ Thought
 - 朝からLINEを見ることはマイルールとしてやめる
@@ -276,6 +275,7 @@ Night 21:22
 ■ Substances
 *一旦増量はあきらめて、体重が維持できればいいぐらいな感じにする。完全に腸が治るまではこの状態を維持。
 *昨夜寝る前に腹式呼吸をやってみたら、めちゃくちゃよく寝れたので、これは継続していく。あと、朝歩きながらブレスワークするのもいいと思った。
+- Cannabis 0.3g Indica（post-workout）（21:50）
 
 ■ タスク
 - ダッシュボードにどこからでもアクセスできるようにする → Cloudflare Tunnelでローカルサーバーを利用
