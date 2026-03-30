@@ -239,8 +239,6 @@ Night 21:22
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
-<hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
-
   <h2># 2026-03-28</h2>
   <pre>
 ■ Body (Withings Body Scan) — 09:34
