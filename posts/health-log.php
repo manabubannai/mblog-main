@@ -274,6 +274,7 @@ Post-Workout 19:27
 Dinner 19:27
 - BBQ Chicken 200g（raw, air fried w/ BBQ sauce）, Grilled Vegetables（onion, carrot, purple cabbage, bell peppers）, Tempe 100g（raw）, Broccoli 100g（cooked）, Rice 145g（75g + 追加70g）
 → 654kcal / P:63g / F:25g / C:46g / Fiber:8g / Zinc:3.8mg / Mg:139mg
+Pineapple（数切れ）
 
 ■ Daily Summary
 🔥 kcal  ▓▓▓▓▓▓░░░░  56%  1,677/3,000kcal
