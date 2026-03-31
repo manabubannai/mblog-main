@@ -22,6 +22,7 @@ Breakfast 10:57
 ■ Substances
 - DS-01 + Creatine・NMN再開（11:03）
 - Multi-Vitamin Elite AM 再開（攣り対策）（11:29）
+- DS-01 + Creatine/NMN restart（11:03）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
