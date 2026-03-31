@@ -221,17 +221,29 @@ Breakfast 10:57
 Lunch 14:07
 - Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g
 
+Pre-Workout
+- Coconut Water 180ml
+
+Post-Workout 19:27
+- TOFUSAN プロテインドリンク 250ml
+→ 100kcal / P:7g / F:3g / C:12g / Fiber:1g / Zinc:0.5mg / Mg:30mg
+
 ■ Substances
 - DS-01 SEED 1 capsule（before breakfast）
 - Creatine 5g（Thorne）（after breakfast）
 - NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
-- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
-*腸の調子が良くなった。食事調整+DS-01の効果を実感。
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）*脚トレで攣りやすさ対策
 
-■ Thought
-- 瞑想を続けていたら涙もろくなった。人を感動させるような仕事をしたい
-- 瞑想改善: 左太もも下にタオルを挟むことでバランス改善。ストレッチの効果で長時間座れるように。心拍数も低下
-- 腸改善メモ: 食事に感謝しながらゆっくり噛む。1食あたりP:30-40g上限、米200g上限が今のキャパ
+■ Note
+
+✓ 腸の調子を良くするためにやったこと
+食事に感謝しながら、これは自分の栄養になるんだと思いつつ、食事に意識を向けてゆっくり噛む、美味しく噛む。1回の食事あたりプロテイン摂取量は30gか40g上限ぐらい。お米は最大250gぐらい。
+
+*朝から便の調子がかなり良くなった。やはり食事を調整したから、腸の負担が減ったんだと思う。あとDS-01も効いてそう。引き続き様子見。
+
+瞑想が途中でしんどくなる理由は、股関節が痛くなってしまうから。だから左太もも下にタオルを挟むことによって、それでバランスを取り、かつストレッチをめちゃくちゃしているので、長く座れるようになった。そういった影響もあり、瞑想で心拍数がかなり下げられるようになったという分析。
+
+瞑想を続けていたら涙もろくなったというか感動しやすくなった気がする。人を感動させるような仕事をしたいと思った。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
