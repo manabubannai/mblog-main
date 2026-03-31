@@ -10,7 +10,15 @@ if ($is_local && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_editor_
     $content = file_get_contents($self);
     $date = $_POST['date'] ?? '';
     $new_content = $_POST['content'] ?? '';
-    $date_header = '<h2># ' . $date . '</h2>';
+    $date_header = '    <h2># 2026-03-31</h2>
+  <pre>
+■ タスク
+- ヘルスログを見て、私自身が気づいていない健康リスクや自ら健康を破壊している行為があれば、1日1回リマインドしてほしい。
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+<h2># ' . $date . '</h2>';
     $date_pos = strpos($content, $date_header);
     if ($date_pos !== false && $new_content !== '') {
         $pre_start = strpos($content, '<pre>', $date_pos);
@@ -205,6 +213,9 @@ Lunch 13:48
 - 味噌汁（Salmon 90g, エノキ 36.4g, きくらげ 73g, エリンギ 71g, 豆腐 200g）※約半分を食べた, Egg 3個, Rice 175g
 → 687kcal / P:41g / F:21g / C:76g / Fiber:6g / Zinc:4.4mg / Mg:114mg
 
+Pre-Workout
+- Coconut Water 180ml
+
 Post-Workout 19:27
 - TOFUSAN プロテインドリンク 250ml
 → 100kcal / P:7g / F:3g / C:12g / Fiber:1g / Zinc:0.5mg / Mg:30mg
@@ -224,10 +235,15 @@ Dinner 19:27
 ☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 2,000/2,000IU
 💊 Cr   ░░░░░░░░░░   0% 📉 0/5g
 
+Night 21:44
+- パイナップル 数切れ
+
 ■ Substances
 - Sunlight 10min（morning dog walk）
 - DS-01 SEED 1 capsule（before breakfast）
 - Cannabis 0.4g Sativa Angel Mango（19:31, post-workout）
+- Cannabis 0.9g Indica（22:23）
+- Thorne Multi-Vitamin Elite PM 2カプセル（就寝前）
 
 ■ Thought
 - 朝からLINEを見ることはマイルールとしてやめる
@@ -264,6 +280,9 @@ Dinner 19:27
 Lunch 13:01
 - 味噌汁1/3（豆腐 200g, エリンギ 71g, きくらげ 40.3g, 乾燥わかめ 7.8g, エノキ 22g, 味噌 大さじ1）, 納豆 1パック, キムチ 25g, 目玉焼き（Egg 2個）, Rice 200g
 → 663kcal / P:34g / F:18g / C:90g / Fiber:8g / Zinc:4.4mg / Mg:136mg
+
+Pre-Workout
+- Coconut Water 180ml
 
 Post-Workout 19:54
 - TOFUSAN プロテインドリンク 250ml, 豆腐 200g

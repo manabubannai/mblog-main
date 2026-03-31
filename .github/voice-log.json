@@ -132,5 +132,126 @@
         "summary": "Crypto's Nasty Downturn Getting Worse",
         "file": "manual-read-later-4",
         "tag": "read_later"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "21:44",
+        "text": "パイナップルを夕食後に食べた。",
+        "summary": "パイナップル（夕食後）",
+        "file": "21-44-24.m4a",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "22:23",
+        "text": "Cannabis 0.9g Indica（22:23）",
+        "summary": "Cannabis 0.9g Indica",
+        "file": "22-23-55.m4a",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "22:59",
+        "text": "Thorne Multi-Vitamin Elite PM 2カプセル（就寝前）。顔に疲れを感じたため。",
+        "summary": "Multi-Vitamin Elite PM 2カプセル（就寝前）",
+        "file": "22-59-56.m4a",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "10:31",
+        "text": "朝一から便の調子がかなり良くなった。食事を調整したから腸の負担が減ったんだと思う。DS-01も効いてそう。この調子で様子を見ていく。",
+        "summary": "腸の調子改善。食事調整+DS-01の効果を実感",
+        "file": "10-31-48.m4a",
+        "tag": "health"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "10:57",
+        "text": "Breakfast 10:57\n- Yogurt 62g, Chia Seeds 6.5g, Passion Fruit 1個, Almonds 8.5g, Walnuts 4.5g, Blueberries 22g\n※別件: 昨日とおとといの筋トレ前にココナッツウォーター180mlを飲んでいたので追記すること",
+        "summary": "朝食: ヨーグルト+チアシード+ナッツ+フルーツ",
+        "file": "10-57-34.m4a",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:03",
+        "text": "DS-01 SEED 1カプセル（朝食前）。本日からCreatine（Thorne）5gとNMN Pro Complete（ProHealth）を再開。朝食後に摂取。",
+        "summary": "DS-01 + Creatine・NMN再開",
+        "file": "11-03-11.m4a",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:08",
+        "text": "サプリのベストな摂取タイミングを、過去のログを見ながらリサーチして提案しておいて。",
+        "summary": "サプリの最適摂取タイミングをリサーチ",
+        "file": "11-08-16.m4a",
+        "tag": "task",
+        "answer": "■ 推奨ルーティン\n【起床後（空腹）】DS-01 SEED → NMN\/Resveratrol\/TMG\n【朝食時】Creatine 5g、Multi-Vitamin Elite AM 2カプセル\n【夕食時】Multi-Vitamin Elite PM 2カプセル、Ashwagandha\n【就寝前（空腹）】ProBac7\n\n■ 注意点\n・DS-01とProBac7は2時間以上あける（競合回避）\n・NMNは空腹時が吸収◎。Resveratrolは脂溶性なので少量の脂質と一緒でもOK\n・Multi-Vitamin AMは食後（脂溶性ビタミンA\/D\/E\/Kに脂質が必要）。空腹時は胃がムカつく\n・Multi-Vitamin PMはMg含有で睡眠サポート\n・Creatineはタイミングより毎日の継続が重要。水を十分に摂る"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:29",
+        "text": "Thorne Multi-Vitamin Elite AM 2カプセル再開。足トレで攣ることが増えたため。",
+        "summary": "Multi-Vitamin Elite AM 再開（攣り対策）",
+        "file": "11-29-14.m4a",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:45",
+        "text": "腸の調子をよくするためにやったこと：1. 食事に感謝しながらゆっくり噛む 2. 一気に食べ過ぎをやめる。1食あたりP:30-40g上限、米は200g上限が今の自分のキャパシティ。",
+        "summary": "腸改善メモ: ゆっくり噛む + 1食P:30-40g・米200g上限",
+        "file": "11-45-25.m4a",
+        "tag": "health"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:46",
+        "text": "WhisperボイスみたいなAIアプリをApple Watchに入れられたら、話した内容をAIが解析して書き起こしてくれるから精度が上がりそう。",
+        "summary": "Apple Watch向けWhisper AIアプリで書き起こし精度向上",
+        "file": "11-46-12.m4a",
+        "tag": "idea"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "12:23",
+        "text": "家政婦さん用のクッションがちょっと小さすぎるので、Lazadaでもう少し大きいものか別のものを追加する。",
+        "summary": "家政婦さん用クッション（大きいもの）",
+        "file": "12-23-29.m4a",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "12:38",
+        "text": "足首を前側に折るときの角度が硬すぎる。どうやったら柔らかくなるのか調査したい。",
+        "summary": "足首の背屈が硬い→柔軟性改善を調査",
+        "file": "12-38-19.m4a",
+        "tag": "health",
+        "answer": "■ 原因\nヒラメ筋・腓腹筋の硬さ + 距骨の滑りの悪さ\n\n■ エクササイズ（毎日実施）\n1. Wall Ankle Mobilization — 壁に向かって膝を壁にタッチ。かかと浮かさず距離を伸ばす。片足20回×2セット\n2. Banded Joint Mobilization — バンドを足首前面にかけ後方に引っ張り、ランジ姿勢で膝を前に押す。片足15回×2セット\n3. Weighted Soleus Stretch — 膝を曲げた状態で段差につま先、かかとを沈める。30秒×3セット\n4. Eccentric Calf Raise — 段差で下ろす動作を5秒かけてゆっくり。12回×3セット\n\n2-4週間でスクワットの深さに変化が出る。"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "14:01",
+        "text": "瞑想が途中でしんどくなる理由は股関節が痛くなるから。左太もも下にタオルを挟むことでバランスを取り、かつストレッチをしっかりしているので長く座れるようになった。瞑想で心拍数がかなり下げられるようになった。",
+        "summary": "瞑想改善: タオル+ストレッチで長時間可能に。心拍数も低下",
+        "file": "14-01-49.m4a",
+        "tag": "health"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "14:07",
+        "text": "Lunch 14:07\n- Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g\n※納豆1パックは残した",
+        "summary": "昼食: 米200g+エリンギ+キムチ+卵2個+豆腐",
+        "file": "14-07-46.m4a",
+        "tag": "food"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "14:55",
+        "text": "瞑想を続けていたら明らかに涙もろくなったというか感動しやすくなった。人を感動させるような仕事をしたいとカトミリアのPVを見て思った。",
+        "summary": "瞑想で感受性が高まった。人を感動させる仕事をしたい",
+        "file": "14-55-54.m4a"
     }
 ]
