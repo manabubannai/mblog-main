@@ -9,29 +9,18 @@ BLOG_DIR="/Users/manabu/mblog-main"
 OUTPUT="$BLOG_DIR/.github/apple-health-today.txt"
 DATE=${1:-$(TZ=Asia/Bangkok date '+%Y-%m-%d')}
 
-# iCloud Drive のパス（アプリインストール後に確認して修正）
-ICLOUD_BASE="$HOME/Library/Mobile Documents/iCloud~com~larkinator~HealthAutoExport/Documents"
-# 代替パス（アプリが iCloud Drive 直下に出力する場合）
-ICLOUD_ALT="$HOME/Library/Mobile Documents/com~apple~CloudDocs/HealthAutoExport"
+# iCloud Drive のパス（ショートカットで iCloud Drive > HealthExport に保存）
+ICLOUD_BASE="$HOME/Library/Mobile Documents/com~apple~CloudDocs/HealthExport"
 
 # JSONファイルを探す
 JSON_FILE=""
-for dir in "$ICLOUD_BASE" "$ICLOUD_ALT"; do
-  if [ -d "$dir" ]; then
-    # 日付を含むファイルを探す
-    found=$(find "$dir" -name "*${DATE}*" -name "*.json" 2>/dev/null | head -1)
-    if [ -n "$found" ]; then
-      JSON_FILE="$found"
-      break
-    fi
-    # 固定名ファイル（最新）
-    found=$(find "$dir" -name "*.json" -newer "$dir" 2>/dev/null | sort -r | head -1)
-    if [ -n "$found" ]; then
-      JSON_FILE="$found"
-      break
-    fi
+if [ -d "$ICLOUD_BASE" ]; then
+  # 日付を含むファイルを探す
+  found=$(find "$ICLOUD_BASE" -name "*${DATE}*" -name "*.json" 2>/dev/null | head -1)
+  if [ -n "$found" ]; then
+    JSON_FILE="$found"
   fi
-done
+fi
 
 if [ -z "$JSON_FILE" ]; then
   echo "No Health Auto Export JSON found for $DATE" >&2

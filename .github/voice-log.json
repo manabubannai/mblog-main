@@ -136,18 +136,10 @@
     {
         "date": "2026-03-30",
         "time": "21:44",
-        "text": "パイナップルを夕食後に食べた。",
-        "summary": "パイナップル（夕食後）",
+        "text": "Pineapple（数切れ）",
+        "summary": "Pineapple（after dinner）",
         "file": "21-44-24.m4a",
         "tag": "food"
-    },
-    {
-        "date": "2026-03-30",
-        "time": "22:23",
-        "text": "Cannabis 0.9g Indica（22:23）",
-        "summary": "Cannabis 0.9g Indica",
-        "file": "22-23-55.m4a",
-        "tag": "substance"
     },
     {
         "date": "2026-03-30",
@@ -216,17 +208,34 @@
     },
     {
         "date": "2026-03-31",
-        "time": "14:07",
-        "text": "Lunch 14:07\n- Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g",
-        "summary": "昼食: 米200g+エリンギ+キムチ+卵2個+豆腐",
-        "file": "14-07-46.m4a",
-        "tag": "food"
-    },
-    {
-        "date": "2026-03-31",
         "time": "14:55",
         "text": "瞑想を続けていたら明らかに涙もろくなったというか感動しやすくなった。人を感動させるような仕事をしたいとカトミリアのPVを見て思った。",
         "summary": "瞑想で感受性が高まった。人を感動させる仕事をしたい",
         "file": "14-55-54.m4a"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:03",
+        "text": "DS-01 SEED 1 capsule（before breakfast）。Creatine 5g（Thorne）とNMN Pro Complete（ProHealth）を再開。朝食後に摂取。",
+        "summary": "DS-01 + Creatine\/NMN restart",
+        "file": "11-03-11.m4a",
+        "tag": "substance"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:04",
+        "text": "ヘルスログを見て、健康リスクや自ら健康を破壊している行為があれば1日1回リマインドしてほしい。",
+        "summary": "健康リスクの1日1回リマインド依頼",
+        "file": "11-04-46.m4a",
+        "tag": "task"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "11:08",
+        "text": "サプリのベストな摂取タイミングを、過去のログを見ながらリサーチして提案しておいて。",
+        "summary": "サプリの最適摂取タイミングをリサーチ",
+        "file": "11-08-16.m4a",
+        "tag": "task",
+        "answer": "■ 推奨ルーティン\n【起床後（空腹）】DS-01 SEED → NMN\/Resveratrol\/TMG\n【朝食時】Creatine 5g、Multi-Vitamin Elite AM 2カプセル\n【夕食時】Multi-Vitamin Elite PM 2カプセル、Ashwagandha\n【就寝前（空腹）】ProBac7\n\n■ 注意点\n・DS-01とProBac7は2時間以上あける（競合回避）\n・NMNは空腹時が吸収◎\n・Multi-Vitamin AMは食後（脂溶性ビタミンに脂質が必要）\n・Creatineはタイミングより毎日の継続が重要"
     }
 ]

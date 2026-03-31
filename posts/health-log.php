@@ -189,6 +189,50 @@ document.addEventListener('keydown',e=>{
 開始：2026年3月13日
 </pre>
 
+    <h2># 2026-03-31</h2>
+  <pre>
+■ Body (Withings Body Scan) — 10:24
+- Weight: 61.57 kg
+- Muscle Mass: 54.34 kg
+- Body Fat: 7.0%
+- Bone Mass: 2.89 kg
+
+■ Sleep (Oura Ring) — 23:17〜10:12
+- Total: 9h24m
+- Readiness: 86
+- Sleep Score: 80
+- Deep: 1h14m
+- REM: 1h52m
+- HRV: 62ms / HR: 50bpm
+
+■ Stretch (Oura Ring)
+- 11:35〜12:52（1h17m） / 302kcal
+
+■ Meditation (Oura Ring)
+- 12:58〜13:58（1h00m） / Avg HR:58bpm
+
+■ Food
+Breakfast 10:57
+- Yogurt 62g, Chia Seeds 6.5g, Passion Fruit 1個, Almonds 8.5g, Walnuts 4.5g, Blueberries 22g
+
+Lunch 14:07
+- Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g
+
+■ Substances
+- DS-01 SEED 1 capsule（before breakfast）
+- Creatine 5g（Thorne）（after breakfast）
+- NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
+*腸の調子が良くなった。食事調整+DS-01の効果を実感。
+
+■ Thought
+- 瞑想を続けていたら涙もろくなった。人を感動させるような仕事をしたい
+- 瞑想改善: 左太もも下にタオルを挟むことでバランス改善。ストレッチの効果で長時間座れるように。心拍数も低下
+- 腸改善メモ: 食事に感謝しながらゆっくり噛む。1食あたりP:30-40g上限、米200g上限が今のキャパ
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
     <h2># 2026-03-30</h2>
   <pre>
 ■ Body (Withings Body Scan) — 10:20
@@ -251,6 +295,7 @@ Night 21:44
 - Cannabis 0.4g Sativa Angel Mango（19:31, post-workout）
 - Cannabis 0.9g Indica（22:23）
 - Thorne Multi-Vitamin Elite PM 2カプセル（就寝前）
+- Cannabis 0.9g Indica（22:23）
 
 ■ Thought
 - 朝からLINEを見ることはマイルールとしてやめる
