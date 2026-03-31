@@ -221,20 +221,36 @@ Breakfast 10:57
 Lunch 14:07
 - Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g
 
-Pre-Workout
-- Coconut Water 180ml
+Dinner 19:50
+- 親子丼 1人前（Rice 約200g, Chicken 約100g, Egg 2個, 玉ねぎ）
+→ 680kcal / P:32g / F:15g / C:100g / Fiber:2g / Zinc:3mg / Mg:50mg
+- 豆腐わかめサラダ 1人前（豆腐 150g, わかめ, キャベツ, レタス）
+→ 90kcal / P:8g / F:4g / C:5g / Fiber:3g / Zinc:0.8mg / Mg:45mg
 
-Post-Workout 19:27
-- TOFUSAN プロテインドリンク 250ml
-→ 100kcal / P:7g / F:3g / C:12g / Fiber:1g / Zinc:0.5mg / Mg:30mg
+Night 21:45
+- Coca-Cola 250ml
+→ 105kcal / P:0g / F:0g / C:27g / Fiber:0g / Zinc:0mg / Mg:0mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓░░░░░  55%  1,635/3,000kcal
+💪 P     ▓▓▓▓▓░░░░░  52%  73/140g
+🥑 F     ▓▓▓▓░░░░░░  38% 📉 30/80g
+🍚 C     ▓▓▓▓▓▓░░░░  60%  257/430g
+🌿 繊維   ▓▓▓▓▓▓░░░░  64%  18/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓░  94%  10.3/11mg
+⚡ Mg    ▓▓▓▓▓▓▓░░░  70%  280/400mg
+☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 2,000/2,000IU
+💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
 
 ■ Substances
 - DS-01 SEED 1 capsule（before breakfast）
 - Creatine 5g（Thorne）（after breakfast）
 - NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
-- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）*脚トレで攣りやすさ対策
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
+*脚トレで攣りやすさ対策のためMulti-Vitamin Elite AM再開
+- Cannabis 0.7g Hybrid Sativa寄り（20:46, post-workout）
 
-■ Note
+■ Thought
 
 ✓ 腸の調子を良くするためにやったこと
 食事に感謝しながら、これは自分の栄養になるんだと思いつつ、食事に意識を向けてゆっくり噛む、美味しく噛む。1回の食事あたりプロテイン摂取量は30gか40g上限ぐらい。お米は最大250gぐらい。
