@@ -1,186 +1,157 @@
 [
-  {
-    "date": "2026-03-28",
-    "time": "13:27",
-    "text": "お米を買う。",
-    "summary": "お米",
-    "file": "Recording 24",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-28",
-    "time": "13:28",
-    "text": "大きいジップロックを購入する。",
-    "summary": "大きいジップロック",
-    "file": "Recording 25",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-28",
-    "time": "13:35",
-    "text": "自室へのエアコン風よけ設置。寝室用を体験してから、良ければ他の部屋にも設置する。",
-    "summary": "エアコン風よけ（寝室体験後に他の部屋も検討）",
-    "file": "Recording 27",
-    "tag": "shopping",
-    "show_after": "2026-04-04"
-  },
-  {
-    "date": "2026-03-28",
-    "time": "13:36",
-    "text": "運動用の靴を購入する。",
-    "summary": "運動靴",
-    "file": "Recording 28",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-28",
-    "time": "12:59",
-    "text": "やっぱりマナブログは記事ごとにデザインを変えていこうと思う。トップページもやっぱり別のデザインに変える。それのモックアップを考える。これもボイスメモをAIが受け取った時点でパソコン側で作業を終わらせ作っておいてもらう感じ。",
-    "summary": "ブログを記事ごとに個別デザイン。AIでデザイン生成",
-    "file": "Recording 16",
-    "tag": "task",
-    "answer": "■ 方法1: 記事ごとのカスタムCSS（最も手軽）\nheader.phpに1行追加: <?php if (!empty($page_css)): ?><style><?= $page_css ?></style><?php endif; ?>\n各記事ファイルの冒頭で $page_css = 'body { background: #0a0a0a; ... }'; を設定するだけ\n\n■ 方法2: 外部CSSファイル（推奨）\ncss/ディレクトリ作成 → header.phpでslug取得 → css/slug.cssが存在すれば自動読み込み\nCSSとコンテンツが分離されてクリーン\n\n■ 方法3: 完全独自HTML（最大の自由度）\nheader.phpを使わず記事ファイルに全HTML記述。GA・OGPだけのhelpers/meta.phpを作ればOK\n\n■ トップページ\nindex専用CSS（css/index.css）を作るか、完全に独自HTMLで書き直す\n\n■ インスピレーション\npudding.cool（データジャーナリズム、各記事が完全独自デザイン）、craigmod.com、gwern.net\n\n■ モックアップツール\nv0.dev — プロンプトからUI生成→CSSだけ抽出してPHPに貼る。最も速い\nClaude Code — 「ダークテーマにして」等の指示でCSS直接生成。PHPブログとの相性◎\nDevTools — localhost上で直接CSS編集→気に入ったらコピー\n\n■ 推奨ステップ\n1. header.phpに$page_css対応を追加（5分）\n2. 1記事で試す → css/ディレクトリ方式に移行\n3. トップページも専用CSS化"
-  },
-  {
-    "date": "2026-03-28",
-    "time": "22:59",
-    "text": "ケイスケさんのLINEメッセージをもとにブログ記事を書く。メルマガで、導入としてLINEの内容をポンと置いて、3行で解説したやつをメルマガで深掘りしていく。アプリの具体的な作り方とかも書く。",
-    "summary": "ケイスケさんのLINEからブログ記事＋メルマガ",
-    "file": "22-59-53.m4a",
-    "tag": "idea",
-    "answer": "LINEメッセージ起点のコンテンツ設計は読者との距離が近くて良い。まず5本ほど試作して開封率・クリック率を計測し、反応の良いフォーマットを型化するのがおすすめ。アプリの作り方パートは具体的なコード例やスクショを入れると滞在時間が伸びやすい。"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "10:48",
-    "text": "Netflixで宇宙のドキュメンタリーを見てみる。なぜならこれから宇宙がチャンスだから、ドキュメンタリーを理解しながら、その周辺のマーケティングを巻き取れるような人材になれたりしたら、かなり大きいと思う。\r\n\r\n〜〜下記のあたりかな〜〜\r\n\r\nReturn to Space                                                                             \r\n  SpaceXが9年かけてNASAの有人宇宙飛行をアメリカに取り戻すまでのドキュメンタリー。イーロン・マ\r\n  スクのビジョン、失敗からの復活、NASAとの協業が描かれる。                                    \r\n   \r\n  見所：商業宇宙の「なぜ今なのか」が明確に理解できる。SpaceXがどうやって政府機関（NASA）を顧客\r\n  にしつつ民間市場を開拓したかのビジネスモデルが見える。                                    \r\n                                                                                              \r\n  活かし方：宇宙スタートアップが「信頼」を構築するためのストーリーテリング手法が学べる。ブログ\r\n  やメルマガで「技術系スタートアップのブランディング」を語る際のケーススタディとして使える。\r\n                                                                                              \r\n  ---                                                             \r\n  Countdown: Inspiration4 Mission to Space\r\n  史上初の完全民間人による宇宙飛行ミッション。宇宙経験ゼロの4人の選考から打ち上げまでを追う4話\r\n  構成。                                                                                      \r\n                                                                                              \r\n  見所：マーケティングの教科書。このミッション自体が「宇宙旅行の民主化」というメッセージを売る\r\n  ための巨大キャンペーンとして設計されている。St. Jude小児病院への寄付と連動したPR戦略も必見。\r\n                                                                  \r\n  活かし方：「プロダクトではなくミッションを売る」手法がそのまま応用可能。健康ブログでも「デー\r\n  タ公開からプレッシャーを生む」という今のManabuさんのアプローチと共通点が多い。宇宙旅行企業の\r\n  プロモーション提案をする際の具体的な参照事例になる。",
-    "summary": "宇宙ドキュメンタリーを見る：宇宙周辺マーケティングの可能性",
-    "file": "10-48-01.m4a",
-    "tag": "idea",
-    "answer": "宇宙産業は今後10年で市場規模が倍増予測。早期に知見を貯めるのは賢い動き。まずはドキュメンタリーで全体像を掴みつつ、宇宙系スタートアップのマーケ事例を10社ほどリサーチすると具体的なポジションが見えてくるはず。"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "20:10",
-    "text": "お手拭きを買う。",
-    "summary": "お手拭き",
-    "file": "20-10-46.m4a",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "21:30",
-    "text": "ボイスメモ→AI書き起こし→自動分類→ダッシュボード→ヘルスログ生成。この一連の仕組みは、健康管理だけでなく「経営者の思考整理」「チームの日報管理」「クリニックの患者管理」にも転用できる。記事タイトル：AIを使って、自分の脳みそとAIをつなぐ方法",
-    "summary": "記事ネタ：AIで脳とAIをつなぐ方法（ボイスメモ→自動分類→ログ生成）",
-    "file": "manual-idea-20260329",
-    "tag": "idea",
-    "answer": "ボイスメモ→自動分類→ログ生成の流れは既にmblogで部分的に実現済み。商品化するなら「誰でも5分で始められるセットアップ」が鍵。まずは自分の運用を3ヶ月記録し、再現性のあるワークフローとして言語化するのが先決。"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "14:30",
-    "text": "https://www.theinformation.com/briefings/meta-launches-meta-small-business?rc=svbvxk",
-    "summary": "Meta Launches Meta Small Business",
-    "file": "manual-read-later-1",
-    "tag": "read_later"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "14:31",
-    "text": "https://www.theinformation.com/briefings/ai-startup-sierra-unveils-self-service-agent-building-product?rc=svbvxk",
-    "summary": "AI Startup Sierra Unveils Self-Service Agent Building Product",
-    "file": "manual-read-later-2",
-    "tag": "read_later"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "14:32",
-    "text": "https://www.theinformation.com/articles/tencent-bets-openclaw-make-lost-ground-china-ai-battle?rc=svbvxk",
-    "summary": "Tencent Bets OpenClaw to Make Up Lost Ground in China AI Battle",
-    "file": "manual-read-later-3",
-    "tag": "read_later"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "22:09:47",
-    "text": "犬の骨を買う",
-    "file": "22-09-47.m4a",
-    "summary": "犬の骨",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "23:11:19",
-    "text": "OpenClawでガチャガチャと回しまくる計画について。新しいPCで実験的に色々作っていく。",
-    "file": "23-11-19.m4a",
-    "summary": "OpenClawで実験的に色々作る計画",
-    "tag": "idea",
-    "answer": "OpenClawで量産実験するなら、試作ごとに「目的・結果・学び」を1行ずつ記録する習慣をセットで作ると振り返りやすい。新PCのセットアップ時に開発環境のスナップショットを取っておくと手戻りが減る。"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "15:27:39",
-    "text": "運動靴を買う優先度をあげる。今の靴は足に力が入りにくい。",
-    "file": "15-27-39.m4a",
-    "summary": "運動靴を買う（優先度高）",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "21:15",
-    "text": "https://www.theinformation.com/articles/cryptos-nasty-downturn-getting-worse?rc=svbvxk",
-    "summary": "Crypto's Nasty Downturn Getting Worse",
-    "file": "manual-read-later-4",
-    "tag": "read_later"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "12:23",
-    "text": "家政婦さん用のクッションがちょっと小さすぎるので、Lazadaでもう少し大きいものか別のものを追加する。",
-    "summary": "家政婦さん用クッション（大きいもの）",
-    "file": "12-23-29.m4a",
-    "tag": "shopping"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "14:55",
-    "text": "瞑想を続けていたら明らかに涙もろくなったというか感動しやすくなった。人を感動させるような仕事をしたいとカトミリアのPVを見て思った。",
-    "summary": "瞑想で感受性が高まった。人を感動させる仕事をしたい",
-    "file": "14-55-54.m4a"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "11:04",
-    "text": "ヘルスログを見て、健康リスクや自ら健康を破壊している行為があれば1日1回リマインドしてほしい。",
-    "summary": "健康リスクの1日1回リマインド依頼",
-    "file": "11-04-46.m4a",
-    "tag": "task"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "11:08",
-    "text": "サプリのベストな摂取タイミングを、過去のログを見ながらリサーチして提案しておいて。",
-    "summary": "サプリの最適摂取タイミングをリサーチ",
-    "file": "11-08-16.m4a",
-    "tag": "task",
-    "answer": "■ 推奨ルーティン\n【起床後（空腹）】DS-01 SEED → NMN/Resveratrol/TMG\n【朝食時】Creatine 5g、Multi-Vitamin Elite AM 2カプセル\n【夕食時】Multi-Vitamin Elite PM 2カプセル、Ashwagandha\n【就寝前（空腹）】ProBac7\n\n■ 注意点\n・DS-01とProBac7は2時間以上あける（競合回避）\n・NMNは空腹時が吸収◎\n・Multi-Vitamin AMは食後（脂溶性ビタミンに脂質が必要）\n・Creatineはタイミングより毎日の継続が重要"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "20:00:05",
-    "text": "夕飯は10分前から食べ始めた\nまず親子丼1人前通常サイズ\nそれと豆腐和米サラダ\nこれも1人前通常サイズで親子丼と同じ容器に入っている\n同じ大きさの容器に入っている\nこの容器が2つあって1つが親子丼と1つが豆腐和米サラダ\n豆腐和米サラダの中には\n豆腐割と大きめな豆腐が1,2,3,4,5,6かけらと\nあと和米も割りかしいワンサカ入っていて\nその下にはキャベツ、レタス\nあとは色々そういったデフォルトでサラダで入ってるようなもの\nという感じ。これが夕飯です",
-    "file": "20-00-05.m4a"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "20:21:34",
-    "text": "",
-    "file": "20-21-34.m4a"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "20:46:33",
-    "text": "筋トレ直後にカンナビス ハイブリッドのサティバヨリオスタ\n量は0.3gプラス0.4g\nだから合計0.7g",
-    "file": "20-46-33.m4a"
-  }
+    {
+        "date": "2026-03-28",
+        "time": "13:27",
+        "text": "お米を買う。",
+        "summary": "お米",
+        "file": "Recording 24",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-28",
+        "time": "13:28",
+        "text": "大きいジップロックを購入する。",
+        "summary": "大きいジップロック",
+        "file": "Recording 25",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-28",
+        "time": "13:35",
+        "text": "自室へのエアコン風よけ設置。寝室用を体験してから、良ければ他の部屋にも設置する。",
+        "summary": "エアコン風よけ（寝室体験後に他の部屋も検討）",
+        "file": "Recording 27",
+        "tag": "shopping",
+        "show_after": "2026-04-04"
+    },
+    {
+        "date": "2026-03-28",
+        "time": "13:36",
+        "text": "運動用の靴を購入する。",
+        "summary": "運動靴",
+        "file": "Recording 28",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "10:48",
+        "text": "Netflixで宇宙のドキュメンタリーを見てみる。なぜならこれから宇宙がチャンスだから、ドキュメンタリーを理解しながら、その周辺のマーケティングを巻き取れるような人材になれたりしたら、かなり大きいと思う。\r\n\r\n〜〜下記のあたりかな〜〜\r\n\r\nReturn to Space                                                                             \r\n  SpaceXが9年かけてNASAの有人宇宙飛行をアメリカに取り戻すまでのドキュメンタリー。イーロン・マ\r\n  スクのビジョン、失敗からの復活、NASAとの協業が描かれる。                                    \r\n   \r\n  見所：商業宇宙の「なぜ今なのか」が明確に理解できる。SpaceXがどうやって政府機関（NASA）を顧客\r\n  にしつつ民間市場を開拓したかのビジネスモデルが見える。                                    \r\n                                                                                              \r\n  活かし方：宇宙スタートアップが「信頼」を構築するためのストーリーテリング手法が学べる。ブログ\r\n  やメルマガで「技術系スタートアップのブランディング」を語る際のケーススタディとして使える。\r\n                                                                                              \r\n  ---                                                             \r\n  Countdown: Inspiration4 Mission to Space\r\n  史上初の完全民間人による宇宙飛行ミッション。宇宙経験ゼロの4人の選考から打ち上げまでを追う4話\r\n  構成。                                                                                      \r\n                                                                                              \r\n  見所：マーケティングの教科書。このミッション自体が「宇宙旅行の民主化」というメッセージを売る\r\n  ための巨大キャンペーンとして設計されている。St. Jude小児病院への寄付と連動したPR戦略も必見。\r\n                                                                  \r\n  活かし方：「プロダクトではなくミッションを売る」手法がそのまま応用可能。健康ブログでも「デー\r\n  タ公開からプレッシャーを生む」という今のManabuさんのアプローチと共通点が多い。宇宙旅行企業の\r\n  プロモーション提案をする際の具体的な参照事例になる。",
+        "summary": "宇宙ドキュメンタリーを見る：宇宙周辺マーケティングの可能性",
+        "file": "10-48-01.m4a",
+        "tag": "idea",
+        "answer": "宇宙産業は今後10年で市場規模が倍増予測。早期に知見を貯めるのは賢い動き。まずはドキュメンタリーで全体像を掴みつつ、宇宙系スタートアップのマーケ事例を10社ほどリサーチすると具体的なポジションが見えてくるはず。"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "20:10",
+        "text": "お手拭きを買う。",
+        "summary": "お手拭き",
+        "file": "20-10-46.m4a",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "21:30",
+        "text": "ボイスメモ→AI書き起こし→自動分類→ダッシュボード→ヘルスログ生成。この一連の仕組みは、健康管理だけでなく「経営者の思考整理」「チームの日報管理」「クリニックの患者管理」にも転用できる。記事タイトル：AIを使って、自分の脳みそとAIをつなぐ方法",
+        "summary": "記事ネタ：AIで脳とAIをつなぐ方法（ボイスメモ→自動分類→ログ生成）",
+        "file": "manual-idea-20260329",
+        "tag": "idea",
+        "answer": "ボイスメモ→自動分類→ログ生成の流れは既にmblogで部分的に実現済み。商品化するなら「誰でも5分で始められるセットアップ」が鍵。まずは自分の運用を3ヶ月記録し、再現性のあるワークフローとして言語化するのが先決。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:30",
+        "text": "https:\/\/www.theinformation.com\/briefings\/meta-launches-meta-small-business?rc=svbvxk",
+        "summary": "Meta Launches Meta Small Business",
+        "file": "manual-read-later-1",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:31",
+        "text": "https:\/\/www.theinformation.com\/briefings\/ai-startup-sierra-unveils-self-service-agent-building-product?rc=svbvxk",
+        "summary": "AI Startup Sierra Unveils Self-Service Agent Building Product",
+        "file": "manual-read-later-2",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "14:32",
+        "text": "https:\/\/www.theinformation.com\/articles\/tencent-bets-openclaw-make-lost-ground-china-ai-battle?rc=svbvxk",
+        "summary": "Tencent Bets OpenClaw to Make Up Lost Ground in China AI Battle",
+        "file": "manual-read-later-3",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "22:09:47",
+        "text": "犬の骨を買う",
+        "file": "22-09-47.m4a",
+        "summary": "犬の骨",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-29",
+        "time": "23:11:19",
+        "text": "OpenClawでガチャガチャと回しまくる計画について。新しいPCで実験的に色々作っていく。",
+        "file": "23-11-19.m4a",
+        "summary": "OpenClawで実験的に色々作る計画",
+        "tag": "idea",
+        "answer": "OpenClawで量産実験するなら、試作ごとに「目的・結果・学び」を1行ずつ記録する習慣をセットで作ると振り返りやすい。新PCのセットアップ時に開発環境のスナップショットを取っておくと手戻りが減る。"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "15:27:39",
+        "text": "運動靴を買う優先度をあげる。今の靴は足に力が入りにくい。",
+        "file": "15-27-39.m4a",
+        "summary": "運動靴を買う（優先度高）",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-30",
+        "time": "21:15",
+        "text": "https:\/\/www.theinformation.com\/articles\/cryptos-nasty-downturn-getting-worse?rc=svbvxk",
+        "summary": "Crypto's Nasty Downturn Getting Worse",
+        "file": "manual-read-later-4",
+        "tag": "read_later"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "12:23",
+        "text": "家政婦さん用のクッションがちょっと小さすぎるので、Lazadaでもう少し大きいものか別のものを追加する。",
+        "summary": "家政婦さん用クッション（大きいもの）",
+        "file": "12-23-29.m4a",
+        "tag": "shopping"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "14:55",
+        "text": "瞑想を続けていたら明らかに涙もろくなったというか感動しやすくなった。人を感動させるような仕事をしたいとカトミリアのPVを見て思った。",
+        "summary": "瞑想で感受性が高まった。人を感動させる仕事をしたい",
+        "file": "14-55-54.m4a"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "20:00:05",
+        "text": "夕飯は10分前から食べ始めた\nまず親子丼1人前通常サイズ\nそれと豆腐和米サラダ\nこれも1人前通常サイズで親子丼と同じ容器に入っている\n同じ大きさの容器に入っている\nこの容器が2つあって1つが親子丼と1つが豆腐和米サラダ\n豆腐和米サラダの中には\n豆腐割と大きめな豆腐が1,2,3,4,5,6かけらと\nあと和米も割りかしいワンサカ入っていて\nその下にはキャベツ、レタス\nあとは色々そういったデフォルトでサラダで入ってるようなもの\nという感じ。これが夕飯です",
+        "file": "20-00-05.m4a"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "20:21:34",
+        "text": "",
+        "file": "20-21-34.m4a"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "20:46:33",
+        "text": "筋トレ直後にカンナビス ハイブリッドのサティバヨリオスタ\n量は0.3gプラス0.4g\nだから合計0.7g",
+        "file": "20-46-33.m4a"
+    },
+    {
+        "date": "2026-03-31",
+        "time": "21:18:25",
+        "text": "ん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん\nん",
+        "file": "21-18-25.m4a"
+    }
 ]
