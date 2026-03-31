@@ -296,6 +296,7 @@ Night 21:44
 - Cannabis 0.9g Indica（22:23）
 - Thorne Multi-Vitamin Elite PM 2カプセル（就寝前）
 - Cannabis 0.9g Indica（22:23）
+- Multi-Vitamin Elite PM 2カプセル（就寝前）（22:59）
 
 ■ Thought
 - 朝からLINEを見ることはマイルールとしてやめる
