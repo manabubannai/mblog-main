@@ -248,7 +248,7 @@ Night 21:45
 - NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
 - Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
 *脚トレで攣りやすさ対策のためMulti-Vitamin Elite AM再開
-- Cannabis 0.7g Hybrid Sativa寄り（20:46, post-workout）
+- Cannabis 0.7g Hybrid Sativa寄り（post-workout）
 - Thorne Multi-Vitamin Elite PM 2 capsules（before bed）
 
 ■ Thought
