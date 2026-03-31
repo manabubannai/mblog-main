@@ -18,6 +18,9 @@ if ($is_local && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_editor_
 ■ Food
 Breakfast 10:57
 - Yogurt 62g, Chia Seeds 6.5g, Passion Fruit 1個, Almonds 8.5g, Walnuts 4.5g, Blueberries 22g
+  
+■ Substances
+- DS-01 + Creatine・NMN再開（11:03）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

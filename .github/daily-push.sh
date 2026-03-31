@@ -7,6 +7,7 @@ bash .github/backup.sh 2>/dev/null || true
 # データ取得（エラーがあっても続行）
 bash .github/fetch-oura.sh 2>/dev/null || true
 bash .github/fetch-withings.sh 2>/dev/null || true
+bash .github/fetch-apple-health.sh 2>/dev/null || true
 
 # 変更がなければ何もしない
 if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then

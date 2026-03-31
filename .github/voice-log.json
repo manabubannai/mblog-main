@@ -167,14 +167,6 @@
     },
     {
         "date": "2026-03-31",
-        "time": "11:03",
-        "text": "DS-01 SEED 1カプセル（朝食前）。本日からCreatine（Thorne）5gとNMN Pro Complete（ProHealth）を再開。朝食後に摂取。",
-        "summary": "DS-01 + Creatine・NMN再開",
-        "file": "11-03-11.m4a",
-        "tag": "substance"
-    },
-    {
-        "date": "2026-03-31",
         "time": "11:29",
         "text": "Thorne Multi-Vitamin Elite AM 2カプセル再開。足トレで攣ることが増えたため。",
         "summary": "Multi-Vitamin Elite AM 再開（攣り対策）",
@@ -225,7 +217,7 @@
     {
         "date": "2026-03-31",
         "time": "14:07",
-        "text": "Lunch 14:07\n- Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g\n※納豆1パックは残した",
+        "text": "Lunch 14:07\n- Rice 200g, エリンギ 90g, キムチ 50g, Egg 2個, 豆腐 200g",
         "summary": "昼食: 米200g+エリンギ+キムチ+卵2個+豆腐",
         "file": "14-07-46.m4a",
         "tag": "food"
