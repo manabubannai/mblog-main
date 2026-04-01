@@ -99,9 +99,6 @@ bedtime_end = s["bedtime_end"][11:16]
 # Parse sessions (meditation) and workouts (stretch)
 sessions = session_data.get("data", [])
 meditation_sessions = [x for x in sessions if x.get("type") == "meditation"]
-workouts = workout_data.get("data", [])
-stretch_sessions = [x for x in workouts if x.get("activity") == "stretching" or x.get("activity") == "stretch"]
-
 def format_session(sess):
     start_dt = sess.get("start_datetime", "")
     end_dt = sess.get("end_datetime", "")

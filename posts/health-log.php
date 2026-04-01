@@ -208,9 +208,6 @@ document.addEventListener('keydown',e=>{
 - REM: 1h33m
 - HRV: 69ms / HR: 48bpm
 
-■ Stretch (Oura Ring)
-—
-
 ■ Meditation (Oura Ring)
 - 11:49〜12:50（1h01m） / Avg HR:62bpm
 
@@ -222,11 +219,32 @@ Breakfast 11:00
 - Yogurt 70g, Oatmeal 38g, Chia Seeds 2.8g, Honey 13g, Passion Fruit 27g, Almonds 13.9g, Blueberries 44.5g
 → 410kcal / P:12g / F:13g / C:63g / Fiber:9g / Zinc:2.2mg / Mg:95mg
 
+Lunch 14:36
+- しまほっけの炭火焼き定食（Hokke, Rice, 味噌汁, 茶碗蒸し, きんぴらごぼう, わかめ, 台湾風豆腐）
+→ 802kcal / P:60g / F:26g / C:83g / Fiber:5g / Zinc:3mg / Mg:80mg
+- ほうれん草のおひたし 1人前
+→ 25kcal / P:2.5g / F:0.3g / C:3g / Fiber:2g / Zinc:0.3mg / Mg:20mg
+- わかめとひじきの和え物 1人前
+→ 30kcal / P:1.5g / F:1g / C:4g / Fiber:2g / Zinc:0.2mg / Mg:15mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓░░░░░░  42%  1,267/3,000kcal
+💪 P     ▓▓▓▓▓░░░░░  54%  76/140g
+🥑 F     ▓▓▓▓▓░░░░░  50%  40/80g
+🍚 C     ▓▓▓▓░░░░░░  36% 📉 153/430g
+🌿 繊維   ▓▓▓▓▓▓▓░░░  71%  20/28g
+🔩 亜鉛   ▓▓▓▓▓░░░░░  52%  5.7/11mg
+⚡ Mg    ▓▓▓▓▓░░░░░  53%  210/400mg
+☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 2,000/2,000IU
+💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
+
 ■ Substances
 - DS-01 SEED 1 capsule（before breakfast）
 - Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
 - NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
 - Creatine 5g（Thorne）（after breakfast）
+- Fish Oil 1粒（with lunch）
+- NOW Super Enzymes 1粒（with lunch）
 
 ■ Thought
 - 何か嫌なことをされたり侮辱されても、すぐには反応しない。24時間経過してから対応する。これを人生のルールにする。外側だけじゃなくて内側の心でも意識する。
