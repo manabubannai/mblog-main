@@ -213,6 +213,7 @@ document.addEventListener('keydown',e=>{
 
 ■ Workout (Apple Health)
 - Outdoor Walk: 10:34〜10:45（11min） / Avg HR:81bpm / 29kcal
+- Steps: 9,633
 
 ■ Food
 Breakfast 11:00
