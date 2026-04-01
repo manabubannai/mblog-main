@@ -224,6 +224,12 @@ Breakfast 11:00
 - Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
 - NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
 - Creatine 5g（Thorne）（after breakfast）
+
+■ Thought
+- 何か嫌なことをされたり侮辱されても、すぐには反応しない。24時間経過してから対応する。これを人生のルールにする。外側だけじゃなくて内側の心でも意識する。
+- 24時間反応しないというルールは全てにおいて使える。朝に何か嫌なことがあっても、紙に書いておくだけでもいい。24時間後にまた反応する。人生のマイルールにする。
+- 食後ウォーキングは血糖値スパイクを30-50%抑制する。食後5-15分以内に開始して15-20分で十分。
+- 睡眠の改善アクション: 就寝を23:00に固定 / 寝室温度を20℃に / 起床時刻も9:00に固定
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

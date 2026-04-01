@@ -49,9 +49,11 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/workout?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/workout.json"
 
+
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
 import json, sys, os
+from datetime import datetime, timedelta
 
 tmpdir = sys.argv[1]
 output = sys.argv[2]
@@ -108,7 +110,7 @@ def format_session(sess):
     end_time = end_dt[11:16] if end_dt else ""
     # Calculate duration from start/end
     if start_dt and end_dt:
-        from datetime import datetime
+        pass; # datetime already imported at top
         fmt = "%Y-%m-%dT%H:%M"
         try:
             s_dt = datetime.strptime(start_dt[:16], fmt)
@@ -144,6 +146,26 @@ if stretch_sessions:
         parts.append(f"{start}〜{end}（{dur}）{hr_str}{cal_str}")
     stretch_line = ", ".join(parts)
 
+# Workout data (walking, cycling etc from Oura TL)
+with open(f"{tmpdir}/workout.json") as wf:
+    workout_data = json.load(wf)
+workouts = [w for w in workout_data.get("data", []) if w.get("day") == target_date]
+workout_lines = []
+for w in workouts:
+    wtype = w.get("activity", "unknown").replace("_", " ").title()
+    wstart = w.get("start_datetime", "")[11:16] if w.get("start_datetime") else ""
+    wend = w.get("end_datetime", "")[11:16] if w.get("end_datetime") else ""
+    wcal = int(w.get("calories", 0))
+    # duration from start/end
+    if w.get("start_datetime") and w.get("end_datetime"):
+        ws = datetime.strptime(w["start_datetime"][:16], "%Y-%m-%dT%H:%M")
+        we = datetime.strptime(w["end_datetime"][:16], "%Y-%m-%dT%H:%M")
+        wdur = sec_to_hm(int((we - ws).total_seconds()))
+    else:
+        wdur = "—"
+    cal_str = f" / {wcal}kcal" if wcal else ""
+    workout_lines.append(f"- {wtype}: {wstart}〜{wend}（{wdur}）{cal_str}")
+
 lines = [
     f"DATE={s['day']}",
     f"BEDTIME_START={bedtime_start}",
@@ -172,6 +194,9 @@ lines = [
     "",
     f"■ Meditation (Oura Ring)",
     f"- {med_line}",
+    "",
+    f"■ Workout (Oura TL)",
+    *(workout_lines if workout_lines else ["—"]),
     "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",
