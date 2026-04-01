@@ -227,6 +227,14 @@ Lunch 14:36
 - わかめとひじきの和え物 1人前
 → 30kcal / P:1.5g / F:1g / C:4g / Fiber:2g / Zinc:0.2mg / Mg:15mg
 
+■ Substances
+- DS-01 SEED 1 capsule（before breakfast）
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
+- NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
+- Creatine 5g（Thorne）（after breakfast）
+- Fish Oil 1粒（with lunch）
+- NOW Super Enzymes 1粒（with lunch）
+
 ■ Daily Summary（Food + Supplements）
 🔥 kcal  ▓▓▓▓░░░░░░  42%  1,267/3,000kcal
 💪 P     ▓▓▓▓▓░░░░░  54%  76/140g
@@ -237,14 +245,6 @@ Lunch 14:36
 ⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 103% ✅ 410/400mg
 ☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 150% ✅ 3,000/2,000IU
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
-
-■ Substances
-- DS-01 SEED 1 capsule（before breakfast）
-- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
-- NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
-- Creatine 5g（Thorne）（after breakfast）
-- Fish Oil 1粒（with lunch）
-- NOW Super Enzymes 1粒（with lunch）
 
 ■ Thought
 - 何か嫌なことをされたり侮辱されても、すぐには反応しない。24時間経過してから対応する。これを人生のルールにする。外側だけじゃなくて内側の心でも意識する。
