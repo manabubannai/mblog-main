@@ -142,6 +142,31 @@ if stretch_sessions:
         parts.append(f"{start}〜{end}（{dur}）{hr_str}{cal_str}")
     stretch_line = ", ".join(parts)
 
+# Other workouts (Strength training, Walking, etc. — imported from Apple Health)
+other_workouts = [x for x in workouts if x.get("activity") not in ("stretching", "stretch")]
+workout_lines = []
+for w in other_workouts:
+    wtype = w.get("activity", "unknown").replace("_", " ").title()
+    w_start_dt = w.get("start_datetime", "")
+    w_end_dt = w.get("end_datetime", "")
+    w_start = w_start_dt[11:16] if w_start_dt else ""
+    w_end = w_end_dt[11:16] if w_end_dt else ""
+    if w_start_dt and w_end_dt:
+        try:
+            ws = datetime.strptime(w_start_dt[:16], "%Y-%m-%dT%H:%M")
+            we = datetime.strptime(w_end_dt[:16], "%Y-%m-%dT%H:%M")
+            w_dur = sec_to_hm(int((we - ws).total_seconds()))
+        except:
+            w_dur = "—"
+    else:
+        w_dur = "—"
+    w_cal = int(w.get("calories", 0))
+    w_hr_items = [x for x in (w.get("heart_rate", {}).get("items", []) or []) if x]
+    w_avg_hr = int(sum(w_hr_items) / len(w_hr_items)) if w_hr_items else 0
+    hr_str = f" / Avg HR:{w_avg_hr}bpm" if w_avg_hr else ""
+    cal_str = f" / {w_cal}kcal" if w_cal else ""
+    workout_lines.append(f"- {wtype}: {w_start}〜{w_end}（{w_dur}）{hr_str}{cal_str}")
+
 lines = [
     f"DATE={s['day']}",
     f"BEDTIME_START={bedtime_start}",
@@ -170,6 +195,9 @@ lines = [
     "",
     f"■ Meditation (Oura Ring)",
     f"- {med_line}",
+    "",
+    f"■ Workout (Imported from Health)",
+    *(workout_lines if workout_lines else ["—"]),
     "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",

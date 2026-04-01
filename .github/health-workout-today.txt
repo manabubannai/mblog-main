@@ -1,0 +1,5 @@
+DATE=2026-04-01
+
+--- FORMATTED ---
+■ Workout (Apple Health)
+- Outdoor Walk: 10:34〜10:45（11min） / Avg HR:81bpm / 29kcal

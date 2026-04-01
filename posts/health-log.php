@@ -214,6 +214,9 @@ document.addEventListener('keydown',e=>{
 ■ Meditation (Oura Ring)
 - 11:49〜12:50（1h01m） / Avg HR:62bpm
 
+■ Workout (Apple Health)
+- Outdoor Walk: 10:34〜10:45（11min） / Avg HR:81bpm / 29kcal
+
 ■ Food
 Breakfast 11:00
 - Yogurt 70g, Oatmeal 38g, Chia Seeds 2.8g, Honey 13g, Passion Fruit 27g, Almonds 13.9g, Blueberries 44.5g
