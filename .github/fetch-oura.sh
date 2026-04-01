@@ -49,10 +49,6 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/workout?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/workout.json"
 
-curl -s -H "Authorization: Bearer $OURA_TOKEN" \
-  "https://api.ouraring.com/v2/usercollection/daily_activity?start_date=$DATE&end_date=$NEXT_DATE" \
-  > "$TMPDIR/activity.json"
-
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
 import json, sys, os
@@ -72,8 +68,6 @@ with open(f"{tmpdir}/session.json") as f:
     session_data = json.load(f)
 with open(f"{tmpdir}/workout.json") as f:
     workout_data = json.load(f)
-with open(f"{tmpdir}/activity.json") as f:
-    activity_data = json.load(f)
 
 # 該当日のデータだけフィルタ（sleep は複数日分ある場合がある）
 sleep_sessions = [x for x in sleep_data.get("data", []) if x["day"] == target_date]
@@ -113,9 +107,7 @@ def format_session(sess):
     end_dt = sess.get("end_datetime", "")
     start_time = start_dt[11:16] if start_dt else ""
     end_time = end_dt[11:16] if end_dt else ""
-    # Calculate duration from start/end
     if start_dt and end_dt:
-        pass; # datetime already imported at top
         fmt = "%Y-%m-%dT%H:%M"
         try:
             s_dt = datetime.strptime(start_dt[:16], fmt)
@@ -126,7 +118,6 @@ def format_session(sess):
             dur = "—"
     else:
         dur = "—"
-    # Avg heart rate
     hr_items = [x for x in (sess.get("heart_rate", {}).get("items", []) or []) if x]
     avg_hr = int(sum(hr_items) / len(hr_items)) if hr_items else 0
     return dur, start_time, end_time, avg_hr
@@ -150,35 +141,6 @@ if stretch_sessions:
         cal_str = f" / {cal}kcal" if cal else ""
         parts.append(f"{start}〜{end}（{dur}）{hr_str}{cal_str}")
     stretch_line = ", ".join(parts)
-
-# Workout data (walking, cycling etc from Oura TL)
-with open(f"{tmpdir}/workout.json") as wf:
-    workout_data = json.load(wf)
-workouts = [w for w in workout_data.get("data", []) if w.get("day") == target_date]
-workout_lines = []
-for w in workouts:
-    wtype = w.get("activity", "unknown").replace("_", " ").title()
-    wstart = w.get("start_datetime", "")[11:16] if w.get("start_datetime") else ""
-    wend = w.get("end_datetime", "")[11:16] if w.get("end_datetime") else ""
-    wcal = int(w.get("calories", 0))
-    # duration from start/end
-    if w.get("start_datetime") and w.get("end_datetime"):
-        ws = datetime.strptime(w["start_datetime"][:16], "%Y-%m-%dT%H:%M")
-        we = datetime.strptime(w["end_datetime"][:16], "%Y-%m-%dT%H:%M")
-        wdur = sec_to_hm(int((we - ws).total_seconds()))
-    else:
-        wdur = "—"
-    cal_str = f" / {wcal}kcal" if wcal else ""
-    workout_lines.append(f"- {wtype}: {wstart}〜{wend}（{wdur}）{cal_str}")
-
-# Daily activity (steps, calories, distance)
-act = activity_data.get("data", [])
-act_entry = act[0] if act else {}
-steps = act_entry.get("steps", 0)
-active_cal = act_entry.get("active_calories", 0)
-total_cal = act_entry.get("total_calories", 0)
-distance_m = act_entry.get("equivalent_walking_distance", 0)
-distance_km = round(distance_m / 1000, 1) if distance_m else 0
 
 lines = [
     f"DATE={s['day']}",
@@ -208,15 +170,6 @@ lines = [
     "",
     f"■ Meditation (Oura Ring)",
     f"- {med_line}",
-    "",
-    f"■ Workout (Oura TL)",
-    *(workout_lines if workout_lines else ["—"]),
-    "",
-    f"■ Activity (Apple Health via Oura)",
-    f"- Steps: {steps:,}" if steps else "—",
-    f"- Active Calories: {active_cal} kcal" if active_cal else "",
-    f"- Total Calories: {total_cal} kcal" if total_cal else "",
-    f"- Distance: {distance_km} km" if distance_km else "",
     "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",
