@@ -45,9 +45,6 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/session?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/session.json"
 
-curl -s -H "Authorization: Bearer $OURA_TOKEN" \
-  "https://api.ouraring.com/v2/usercollection/workout?start_date=$DATE&end_date=$NEXT_DATE" \
-  > "$TMPDIR/workout.json"
 
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
@@ -66,8 +63,6 @@ with open(f"{tmpdir}/readiness.json") as f:
     readiness = json.load(f)
 with open(f"{tmpdir}/session.json") as f:
     session_data = json.load(f)
-with open(f"{tmpdir}/workout.json") as f:
-    workout_data = json.load(f)
 
 # 該当日のデータだけフィルタ（sleep は複数日分ある場合がある）
 sleep_sessions = [x for x in sleep_data.get("data", []) if x["day"] == target_date]
@@ -128,42 +123,6 @@ if meditation_sessions:
         parts.append(f"{start}〜{end}（{dur}）{hr_str}")
     med_line = ", ".join(parts)
 
-stretch_line = "—"
-if stretch_sessions:
-    parts = []
-    for ss in stretch_sessions:
-        dur, start, end, avg_hr = format_session(ss)
-        cal = int(ss.get("calories", 0))
-        hr_str = f" / Avg HR:{avg_hr}bpm" if avg_hr else ""
-        cal_str = f" / {cal}kcal" if cal else ""
-        parts.append(f"{start}〜{end}（{dur}）{hr_str}{cal_str}")
-    stretch_line = ", ".join(parts)
-
-# Other workouts (Strength training, Walking, etc. — imported from Apple Health)
-other_workouts = [x for x in workouts if x.get("activity") not in ("stretching", "stretch")]
-workout_lines = []
-for w in other_workouts:
-    wtype = w.get("activity", "unknown").replace("_", " ").title()
-    w_start_dt = w.get("start_datetime", "")
-    w_end_dt = w.get("end_datetime", "")
-    w_start = w_start_dt[11:16] if w_start_dt else ""
-    w_end = w_end_dt[11:16] if w_end_dt else ""
-    if w_start_dt and w_end_dt:
-        try:
-            ws = datetime.strptime(w_start_dt[:16], "%Y-%m-%dT%H:%M")
-            we = datetime.strptime(w_end_dt[:16], "%Y-%m-%dT%H:%M")
-            w_dur = sec_to_hm(int((we - ws).total_seconds()))
-        except:
-            w_dur = "—"
-    else:
-        w_dur = "—"
-    w_cal = int(w.get("calories", 0))
-    w_hr_items = [x for x in (w.get("heart_rate", {}).get("items", []) or []) if x]
-    w_avg_hr = int(sum(w_hr_items) / len(w_hr_items)) if w_hr_items else 0
-    hr_str = f" / Avg HR:{w_avg_hr}bpm" if w_avg_hr else ""
-    cal_str = f" / {w_cal}kcal" if w_cal else ""
-    workout_lines.append(f"- {wtype}: {w_start}〜{w_end}（{w_dur}）{hr_str}{cal_str}")
-
 lines = [
     f"DATE={s['day']}",
     f"BEDTIME_START={bedtime_start}",
@@ -176,7 +135,6 @@ lines = [
     f"HRV={hrv}",
     f"HR={hr}",
     f"MEDITATION={med_line}",
-    f"STRETCH={stretch_line}",
     "",
     "--- FORMATTED ---",
     f"■ Sleep (Oura Ring) — {bedtime_start}〜{bedtime_end}",
@@ -186,9 +144,6 @@ lines = [
     f"- Deep: {deep}",
     f"- REM: {rem}",
     f"- HRV: {hrv}ms / HR: {hr}bpm",
-    "",
-    f"■ Stretch (Oura Ring)",
-    f"- {stretch_line}",
     "",
     f"■ Meditation (Oura Ring)",
     f"- {med_line}",
