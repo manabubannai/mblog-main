@@ -148,9 +148,6 @@ lines = [
     f"■ Meditation (Oura Ring)",
     f"- {med_line}",
     "",
-    f"■ Workout (Imported from Health)",
-    *(workout_lines if workout_lines else ["—"]),
-    "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",
 ]
