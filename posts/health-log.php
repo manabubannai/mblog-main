@@ -259,6 +259,10 @@ Breakfast 11:00
 ■ Meditation (Oura Ring)
 - 12:58〜13:58（1h00m） / Avg HR:58bpm
 
+■ Workout (Apple Health)
+- Functional Strength Training: 16:08〜17:51（1h43m） / Avg HR:119bpm / 408kcal
+- Outdoor Walk: 10:39〜10:56（16min） / Avg HR:78bpm / 33kcal
+
 ■ Food
 Breakfast 10:57
 - Yogurt 62g, Chia Seeds 6.5g, Passion Fruit 1個, Almonds 8.5g, Walnuts 4.5g, Blueberries 22g
@@ -331,6 +335,10 @@ Night 21:45
 
 ■ Meditation (Oura Ring)
 - 12:41〜13:40（0h59m） / Avg HR:59bpm
+
+■ Workout (Apple Health)
+- Functional Strength Training: 16:05〜17:59（1h54m） / Avg HR:111bpm / 374kcal
+- Outdoor Walk: 10:33〜10:45（11min） / Avg HR:92bpm / 28kcal
 
 ■ Food
 Breakfast 10:53
@@ -407,6 +415,11 @@ Night 21:44
 ■ Meditation (Oura Ring)
 - 11:44〜12:44（1h00m） / Avg HR:61bpm
 
+■ Workout (Apple Health)
+- Functional Strength Training: 16:11〜18:31（1h49m） / Avg HR:121bpm / 335kcal
+- Indoor Walk: 15:46〜16:05（19min） / Avg HR:103bpm / 59kcal
+- Outdoor Walk: 09:37〜09:51（14min） / 37kcal
+
 ■ Food
 Lunch 13:01
 - 味噌汁1/3（豆腐 200g, エリンギ 71g, きくらげ 40.3g, 乾燥わかめ 7.8g, エノキ 22g, 味噌 大さじ1）, 納豆 1パック, キムチ 25g, 目玉焼き（Egg 2個）, Rice 200g
@@ -476,6 +489,9 @@ Night 21:22
 
 ■ Meditation (Oura Ring)
 - 15:28〜16:28（1h00m） / Avg HR:63bpm
+
+■ Workout (Apple Health)
+- Outdoor Walk: 18:12〜18:41（29min） / Avg HR:90bpm / 75kcal
 
 ■ Food
 Breakfast 13:30
@@ -570,6 +586,9 @@ Dinner 19:17
 ■ Meditation (Oura Ring)
 - 2026-03-27 16:06〜17:06 BKK（約1時間）/ Avg HR:64bpm
 
+■ Workout (Apple Health)
+- Yoga: 13:42〜14:38（55min） / Avg HR:78bpm / 141kcal
+
 ■ Food
 Breakfast 10:00
 - Rice 250g, 納豆 2パック, キムチ 50g, 豆腐 200g, パイナップル 数切れ（推定100g）
@@ -645,6 +664,9 @@ Dinner 21:00
 —
 
 ■ Meditation (Oura Ring)
+—
+
+■ Workout (Apple Health)
 —
 
 ■ Workout（Back Day）

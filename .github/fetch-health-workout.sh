@@ -28,7 +28,10 @@ target_date = sys.argv[3]
 with open(json_file) as f:
     data = json.load(f)
 
-workouts = data.get("data", {}).get("workouts", [])
+# Stretch系はOura Ringで取得するので除外
+EXCLUDE = {"stretching", "flexibility", "other"}
+all_workouts = data.get("data", {}).get("workouts", [])
+workouts = [w for w in all_workouts if w.get("name", "").lower() not in EXCLUDE]
 lines = [f"DATE={target_date}", "", "--- FORMATTED ---", "■ Workout (Apple Health)"]
 
 if not workouts:
