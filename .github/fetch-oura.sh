@@ -49,6 +49,9 @@ curl -s -H "Authorization: Bearer $OURA_TOKEN" \
   "https://api.ouraring.com/v2/usercollection/workout?start_date=$DATE&end_date=$NEXT_DATE" \
   > "$TMPDIR/workout.json"
 
+curl -s -H "Authorization: Bearer $OURA_TOKEN" \
+  "https://api.ouraring.com/v2/usercollection/daily_activity?start_date=$DATE&end_date=$NEXT_DATE" \
+  > "$TMPDIR/activity.json"
 
 # Python でパース・フォーマット
 python3 - "$TMPDIR" "$OUTPUT" "$DATE" << 'PYEOF'
@@ -69,6 +72,8 @@ with open(f"{tmpdir}/session.json") as f:
     session_data = json.load(f)
 with open(f"{tmpdir}/workout.json") as f:
     workout_data = json.load(f)
+with open(f"{tmpdir}/activity.json") as f:
+    activity_data = json.load(f)
 
 # 該当日のデータだけフィルタ（sleep は複数日分ある場合がある）
 sleep_sessions = [x for x in sleep_data.get("data", []) if x["day"] == target_date]
@@ -166,6 +171,15 @@ for w in workouts:
     cal_str = f" / {wcal}kcal" if wcal else ""
     workout_lines.append(f"- {wtype}: {wstart}〜{wend}（{wdur}）{cal_str}")
 
+# Daily activity (steps, calories, distance)
+act = activity_data.get("data", [])
+act_entry = act[0] if act else {}
+steps = act_entry.get("steps", 0)
+active_cal = act_entry.get("active_calories", 0)
+total_cal = act_entry.get("total_calories", 0)
+distance_m = act_entry.get("equivalent_walking_distance", 0)
+distance_km = round(distance_m / 1000, 1) if distance_m else 0
+
 lines = [
     f"DATE={s['day']}",
     f"BEDTIME_START={bedtime_start}",
@@ -197,6 +211,12 @@ lines = [
     "",
     f"■ Workout (Oura TL)",
     *(workout_lines if workout_lines else ["—"]),
+    "",
+    f"■ Activity (Apple Health via Oura)",
+    f"- Steps: {steps:,}" if steps else "—",
+    f"- Active Calories: {active_cal} kcal" if active_cal else "",
+    f"- Total Calories: {total_cal} kcal" if total_cal else "",
+    f"- Distance: {distance_km} km" if distance_km else "",
     "",
     f"BEDTIME_LOG={bedtime_start} 就寝。",
     f"WAKEUP_LOG={bedtime_end} 起床（{total}）。",
