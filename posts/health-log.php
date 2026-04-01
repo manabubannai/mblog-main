@@ -192,6 +192,42 @@ document.addEventListener('keydown',e=>{
 開始：2026年3月13日
 </pre>
 
+    <h2># 2026-04-01</h2>
+  <pre>
+■ Body (Withings Body Scan) — 10:01
+- Weight: 61.56 kg
+- Muscle Mass: 54.40 kg
+- Body Fat: 6.9%
+- Bone Mass: 2.90 kg
+
+■ Sleep (Oura Ring) — 23:35〜09:54
+- Total: 8h55m
+- Readiness: 82
+- Sleep Score: 67
+- Deep: 0h34m
+- REM: 1h33m
+- HRV: 69ms / HR: 48bpm
+
+■ Stretch (Oura Ring)
+—
+
+■ Meditation (Oura Ring)
+- 11:49〜12:50（1h01m） / Avg HR:62bpm
+
+■ Food
+Breakfast 11:00
+- Yogurt 70g, Oatmeal 38g, Chia Seeds 2.8g, Honey 13g, Passion Fruit 27g, Almonds 13.9g, Blueberries 44.5g
+→ 410kcal / P:12g / F:13g / C:63g / Fiber:9g / Zinc:2.2mg / Mg:95mg
+
+■ Substances
+- DS-01 SEED 1 capsule（before breakfast）
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
+- NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
+- Creatine 5g（Thorne）（after breakfast）
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
     <h2># 2026-03-31</h2>
   <pre>
 ■ Body (Withings Body Scan) — 10:24
