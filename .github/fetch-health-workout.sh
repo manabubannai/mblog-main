@@ -8,31 +8,50 @@ BLOG_DIR="/Users/manabu/mblog-main"
 OUTPUT="$BLOG_DIR/.github/health-workout-today.txt"
 DATE=${1:-$(TZ=Asia/Bangkok date '+%Y-%m-%d')}
 
-# iCloud Drive のパス
-ICLOUD_DIR="$HOME/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents/New Automation"
-JSON_FILE="$ICLOUD_DIR/HealthAutoExport-${DATE}.json"
+# iCloud Drive のパス（Workouts と Metrics は別フォルダ）
+ICLOUD_WORKOUTS="$HOME/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents/Health Export for Workouts"
+ICLOUD_METRICS="$HOME/Library/Mobile Documents/iCloud~com~ifunography~HealthExport/Documents/Health Export for Step"
+WORKOUT_FILE="$ICLOUD_WORKOUTS/HealthAutoExport-${DATE}.json"
+METRICS_FILE="$ICLOUD_METRICS/HealthAutoExport-${DATE}.json"
 
-if [ ! -f "$JSON_FILE" ]; then
+if [ ! -f "$WORKOUT_FILE" ] && [ ! -f "$METRICS_FILE" ]; then
   echo "No Health Export JSON found for $DATE" >&2
-  echo "— No workout data" > "$OUTPUT"
+  echo "— No data" > "$OUTPUT"
   exit 0
 fi
 
-python3 - "$JSON_FILE" "$OUTPUT" "$DATE" << 'PYEOF'
-import json, sys
+python3 - "$WORKOUT_FILE" "$METRICS_FILE" "$OUTPUT" "$DATE" << 'PYEOF'
+import json, sys, os
 
-json_file = sys.argv[1]
-output = sys.argv[2]
-target_date = sys.argv[3]
+workout_file = sys.argv[1]
+metrics_file = sys.argv[2]
 
-with open(json_file) as f:
-    data = json.load(f)
+# Load workouts
+workout_data = {}
+if os.path.exists(workout_file):
+    with open(workout_file) as f:
+        workout_data = json.load(f)
+
+# Load metrics
+metrics_data = {}
+if os.path.exists(metrics_file):
+    with open(metrics_file) as f:
+        metrics_data = json.load(f)
+output = sys.argv[3]
+target_date = sys.argv[4]
+
+# Step count from metrics
+metrics = metrics_data.get("data", {}).get("metrics", [])
+steps = 0
+for m in metrics:
+    if m.get("name") == "step_count":
+        steps = int(sum(e.get("qty", 0) for e in m.get("data", [])))
 
 # "Other"は重複データなので除外。Flexibilityはストレッチとして使う
 EXCLUDE = {"other"}
-all_workouts = data.get("data", {}).get("workouts", [])
+all_workouts = workout_data.get("data", {}).get("workouts", [])
 workouts = [w for w in all_workouts if w.get("name", "").lower() not in EXCLUDE]
-lines = [f"DATE={target_date}", "", "--- FORMATTED ---", "■ Workout (Apple Health)"]
+lines = [f"DATE={target_date}", f"STEPS={steps}", "", "--- FORMATTED ---", "■ Workout (Apple Health)"]
 
 if not workouts:
     lines.append("—")
@@ -61,6 +80,10 @@ else:
         hr_str = f" / Avg HR:{avg_hr}bpm" if avg_hr else ""
         cal_str = f" / {total_kcal}kcal" if total_kcal else ""
         lines.append(f"- {name}: {start}〜{end}（{dur_str}）{hr_str}{cal_str}")
+
+if steps:
+    lines.append("")
+    lines.append(f"STEPS_LOG=Steps: {steps:,}")
 
 with open(output, "w") as f:
     f.write("\n".join(lines) + "\n")

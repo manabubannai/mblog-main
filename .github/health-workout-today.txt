@@ -1,7 +1,8 @@
-DATE=2026-03-31
+DATE=2026-04-01
+STEPS=9633
 
 --- FORMATTED ---
 ■ Workout (Apple Health)
-- Functional Strength Training: 16:08〜17:51（1h43m） / Avg HR:119bpm / 408kcal
-- Flexibility: 11:35〜12:52（1h08m） / Avg HR:74bpm / 238kcal
-- Outdoor Walk: 10:39〜10:56（16min） / Avg HR:78bpm / 33kcal
+- Outdoor Walk: 10:34〜10:45（11min） / Avg HR:81bpm / 29kcal
+
+STEPS_LOG=Steps: 9,633
