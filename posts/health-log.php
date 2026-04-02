@@ -233,6 +233,22 @@ Breakfast 10:02
 → 45kcal / P:0g / F:0g / C:11g / Fiber:0g / Zinc:0mg / Mg:25mg
 - Omelette（Egg 3個）, Croissant 1個, Tempe 100g（air fried）, Bacon 2切れ, Carrot 100g
 → 875kcal / P:42g / F:48g / C:62g / Fiber:6g / Zinc:4.5mg / Mg:65mg
+
+Dinner 19:30
+- Quinoa Salad 1人前（Red Quinoa, Avocado, Chickpeas, Cherry Tomato, Red Onion, Olives, Feta Cheese, Lettuce）
+→ 420kcal / P:14g / F:22g / C:42g / Fiber:8g / Zinc:2mg / Mg:80mg
+- Chicken in Tomato Sauce w/ Capers 1人前（Chicken Breast 約150g, Tomato Sauce, Capers）, Roast Potato（約100g, w/ Rosemary）
+→ 520kcal / P:38g / F:18g / C:45g / Fiber:3g / Zinc:2.5mg / Mg:50mg
+
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓▓▓░░  78%  2,340/3,000kcal
+💪 P     ▓▓▓▓▓▓▓░░░  67%  94/140g
+🥑 F     ▓▓▓▓▓▓▓▓▓▓ 110% ✅ 88/80g
+🍚 C     ▓▓▓▓▓▓▓░░░  37% 📉 160/430g
+🌿 繊維   ▓▓▓▓▓▓░░░░  61%  17/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓░░  82%  9/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓░  85%  340/400mg
+💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
