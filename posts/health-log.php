@@ -322,6 +322,38 @@ Dinner 19:46
 - Functional Strength Training: 16:08〜17:51（1h43m） / Avg HR:119bpm / 408kcal
 - Outdoor Walk: 10:39〜10:56（16min） / Avg HR:78bpm / 33kcal
 
+■ Workout（Leg Day）
+Goal：
+- 1. Try 130kg + 膝直角のフォーム意識
+- 2. 61kg x 12 x 3
+- 3. 89kg x 12 x 3
+- 4. warm up : lunge
+
+1. Squat（Bar = 20kg, s = Support）
+   60kg (40kg + Bar) x 10
+   80kg (60kg + Bar) x 4
+   130kg (110kg + Bar) x (1+1s)
+   110kg (90kg + Bar) x 4
+   100kg (80kg + Bar) x 8
+   90kg (70kg + Bar) x 8
+   *note: もっと腰を下げれる。あと計画に沿ってRepする。
+
+2. Leg Curl
+   61kg × 10
+   54kg × 12
+   61kg × 8
+   *note: 足を乗せる位置が悪い。フォームの調整が必要。最も小さい人の位置にSetしたらFitした。とはいえ来週の筋トレ前に調整する。
+
+3. Jump Squat → Leg Extension
+   10 → 89kg × 12
+   10 → 89kg × 12
+   10 → 89kg × 9
+
+4. Calf Raise
+   40kg × 20
+   40kg × 20
+   40kg × 20
+
 ■ Food
 Breakfast 10:57
 - Yogurt 62g, Chia Seeds 6.5g, Passion Fruit 1個, Almonds 8.5g, Walnuts 4.5g, Blueberries 22g
