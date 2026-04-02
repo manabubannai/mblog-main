@@ -249,6 +249,9 @@ Dinner 19:30
 🔩 亜鉛   ▓▓▓▓▓▓▓▓░░  82%  9/11mg
 ⚡ Mg    ▓▓▓▓▓▓▓▓▓░  85%  340/400mg
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
+
+■ Thought
+- スマホとパソコンは全てグレイスケール化。ショートカットで戻せないようにする。
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
