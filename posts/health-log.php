@@ -540,6 +540,41 @@ Night 21:44
 - Indoor Walk: 15:46〜16:05（19min） / Avg HR:103bpm / 59kcal
 - Outdoor Walk: 09:37〜09:51（14min） / 37kcal
 
+■ Workout（Chest Day）
+Goal：
+- 1. Try 80kg
+- 2. 5kg dumbbell
+- 3. 40kg x 10 w/ good form
+- 4. 38.3kg x 12
+- warm-up: push-up x 30
+
+1. Bench Press w/ Smith Machine（Bar = 10kg, s = Support）
+   50kg (40kg + Bar) × 10
+   70kg (60kg + Bar) × 4
+   90kg (80kg + Bar) × 1
+   80kg (70kg + Bar) × 5
+   75kg (65kg + Bar) × (5+1s)
+   70kg (60kg + Bar) × (7+1s)
+   65kg (55kg + Bar) × (8+1s)
+
+2. Dips
+   10 w/ 5kg dumbbell
+   10 w/ 5kg dumbbell
+   10 w/ 5kg dumbbell
+
+3. Incline Bench Press（Bar = 20kg）
+   40kg (20kg + Bar) × 10
+   50kg (30kg + Bar) × (5+1c)
+   50kg (30kg + Bar) × (6+1c)
+
+4. Low-to-High Cable Fly
+   15kg × 10
+   15kg × 10
+   15kg × 10
+
+5. タバタ式腕立て
+   3min
+
 ■ Food
 Lunch 13:01
 - 味噌汁1/3（豆腐 200g, エリンギ 71g, きくらげ 40.3g, 乾燥わかめ 7.8g, エノキ 22g, 味噌 大さじ1）, 納豆 1パック, キムチ 25g, 目玉焼き（Egg 2個）, Rice 200g
