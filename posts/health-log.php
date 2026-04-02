@@ -238,6 +238,7 @@ document.addEventListener('keydown',e=>{
 ■ Workout (Apple Health)
 - Outdoor Walk: 10:34〜10:45（11min） / Avg HR:81bpm / 29kcal
 - Steps: 9,633
+- Stretch: 就寝前（約1時間）
 
 ■ Food
 Breakfast 11:00
@@ -252,6 +253,18 @@ Lunch 14:36
 - わかめとひじきの和え物 1人前
 → 30kcal / P:1.5g / F:1g / C:4g / Fiber:2g / Zinc:0.2mg / Mg:15mg
 
+Dinner 19:46
+- Caesar Salad 1人前（Bacon, Croutons, Parmesan, Lettuce）
+→ 350kcal / P:12g / F:25g / C:18g / Fiber:2g / Zinc:1mg / Mg:20mg
+- Mushroom Soup 1人前
+→ 180kcal / P:4g / F:12g / C:14g / Fiber:1g / Zinc:0.5mg / Mg:10mg
+- Carbonara 1人前
+→ 650kcal / P:22g / F:28g / C:72g / Fiber:2g / Zinc:2mg / Mg:35mg
+- Garlic Toast（フランスパン 大きめ1切れ）
+→ 150kcal / P:3g / F:6g / C:20g / Fiber:1g / Zinc:0.3mg / Mg:8mg
+- Coconut Water 1個分
+→ 45kcal / P:0g / F:0g / C:11g / Fiber:0g / Zinc:0mg / Mg:25mg
+
 ■ Substances
 - DS-01 SEED 1 capsule（before breakfast）
 - Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
@@ -259,15 +272,18 @@ Lunch 14:36
 - Creatine 5g（Thorne）（after breakfast）
 - Fish Oil 1粒（with lunch）
 - NOW Super Enzymes 1粒（with lunch）
+- Cannabis 0.6g Hybrid（19:24）
+- Thorne Multi-Vitamin Elite PM 2 capsules（with dinner）
+- NOW Super Enzymes 1粒（with dinner）
 
-■ Daily Summary（Food + Supplements）
-🔥 kcal  ▓▓▓▓░░░░░░  42%  1,267/3,000kcal
-💪 P     ▓▓▓▓▓░░░░░  54%  76/140g
-🥑 F     ▓▓▓▓▓░░░░░  50%  40/80g
-🍚 C     ▓▓▓▓░░░░░░  36% 📉 153/430g
-🌿 繊維   ▓▓▓▓▓▓▓░░░  71%  20/28g
-🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 120% ✅ 13.2/11mg
-⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 103% ✅ 410/400mg
+■ Daily Summary
+🔥 kcal  ▓▓▓▓▓▓▓▓░░  88%  2,642/3,000kcal
+💪 P     ▓▓▓▓▓▓▓▓░░  83%  117/140g
+🥑 F     ▓▓▓▓▓▓▓▓▓▓ 113% ✅ 90/80g
+🍚 C     ▓▓▓▓▓▓▓░░░  67%  288/430g
+🌿 繊維   ▓▓▓▓▓▓▓▓▓░  93%  26/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓▓▓ 136% ✅ 15/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓▓ 131% ✅ 523/400mg
 ☀️ VitD ▓▓▓▓▓▓▓▓▓▓ 150% ✅ 3,000/2,000IU
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
 
