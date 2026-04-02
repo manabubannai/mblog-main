@@ -431,6 +431,35 @@ Night 21:45
 - Functional Strength Training: 16:05〜17:59（1h54m） / Avg HR:111bpm / 374kcal
 - Outdoor Walk: 10:33〜10:45（11min） / Avg HR:92bpm / 28kcal
 
+■ Workout（Shoulder Day）
+Goal：
+- 1. 35kg x 20 x 3
+- 2. Try 85kg
+- 3. 20kg x 8 x 2
+- 4. 12.5kg x 12 → 80kg x 12
+- warm-up = wall hand stand
+*note: フォーム：肘を直角に。そして垂直に降ろす。背中をシートに当て、地面を蹴る感じ。
+
+1. Barbell Rear Raise
+   35kg × 20
+   35kg × 20
+   35kg × 20
+
+2. Shoulder Press Machine（s = Support）
+   40kg x 10
+   70kg x 3
+   85kg x 2
+   80kg x (2+4s)
+   75kg x (3+3s)
+   70kg x (3+7s)
+
+3. Arnold Shoulder Press
+   12.5kg x (9+1c)
+   12.5kg x (9+1c)
+
+4. タバタ式：Side Raise
+   3min, 7.5kg
+
 ■ Food
 Breakfast 10:53
 - Yogurt 68g, Oatmeal 30g, Honey 12.3g, Passion Fruit 24g, Blueberries 28g
