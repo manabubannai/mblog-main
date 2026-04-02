@@ -240,14 +240,18 @@ Dinner 19:30
 - Chicken in Tomato Sauce w/ Capers 1人前（Chicken Breast 約150g, Tomato Sauce, Capers）, Roast Potato（約100g, w/ Rosemary）
 → 520kcal / P:38g / F:18g / C:45g / Fiber:3g / Zinc:2.5mg / Mg:50mg
 
+Night
+- Banana 1本
+→ 90kcal / P:1g / F:0g / C:23g / Fiber:2g / Zinc:0.2mg / Mg:27mg
+
 ■ Daily Summary
-🔥 kcal  ▓▓▓▓▓▓▓▓░░  78%  2,340/3,000kcal
-💪 P     ▓▓▓▓▓▓▓░░░  67%  94/140g
+🔥 kcal  ▓▓▓▓▓▓▓▓░░  81%  2,430/3,000kcal
+💪 P     ▓▓▓▓▓▓▓░░░  68%  95/140g
 🥑 F     ▓▓▓▓▓▓▓▓▓▓ 110% ✅ 88/80g
-🍚 C     ▓▓▓▓▓▓▓░░░  37% 📉 160/430g
-🌿 繊維   ▓▓▓▓▓▓░░░░  61%  17/28g
-🔩 亜鉛   ▓▓▓▓▓▓▓▓░░  82%  9/11mg
-⚡ Mg    ▓▓▓▓▓▓▓▓▓░  85%  340/400mg
+🍚 C     ▓▓▓▓░░░░░░  43% 📉 183/430g
+🌿 繊維   ▓▓▓▓▓▓▓░░░  68%  19/28g
+🔩 亜鉛   ▓▓▓▓▓▓▓▓░░  84%  9.2/11mg
+⚡ Mg    ▓▓▓▓▓▓▓▓▓░  92%  367/400mg
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
 
 ■ Thought
