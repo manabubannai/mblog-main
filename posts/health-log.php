@@ -192,6 +192,30 @@ document.addEventListener('keydown',e=>{
 開始：2026年3月13日
 </pre>
 
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-04-02</h2>
+  <pre>
+■ InBody 270 — 09:45
+- Weight: 61.9 kg
+- SMM（骨格筋量）: 32.1 kg
+- Body Fat Mass: 5.6 kg
+- PBF（体脂肪率）: 9.0%
+- BMI: 21.2
+- Fat Free Mass: 56.3 kg
+- Visceral Fat Level: 1（Low）
+- Waist-Hip Ratio: 0.79
+- BMR: 1,587 kcal
+- InBody Score: 79/100
+
+■ InBody 履歴比較
+- 2026.02.01: Weight 61.1kg / SMM 32.4kg / PBF 7.2%
+- 2026.04.02: Weight 61.9kg / SMM 32.1kg / PBF 9.0%
+→ 約2ヶ月で: 体重+0.8kg / SMM -0.3kg / 体脂肪率+1.8%
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
     <h2># 2026-04-01</h2>
   <pre>
 ■ Body (Withings Body Scan) — 10:01
@@ -483,28 +507,6 @@ Night 21:22
 
 ■ Thought
 - 座らない生活は可能か？結論：座りすぎは有害だが、立ちっぱなしも同様に体に悪い。最適解：座る・立つ・動くの組み合わせ。スタンディングデスクは「30分立つ→30分座る」の交互が推奨
-  </pre>
-
-  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
-
-  <h2># 2026-04-02</h2>
-  <pre>
-■ InBody 270 — 09:45
-- Weight: 61.9 kg
-- SMM（骨格筋量）: 32.1 kg
-- Body Fat Mass: 5.6 kg
-- PBF（体脂肪率）: 9.0%
-- BMI: 21.2
-- Fat Free Mass: 56.3 kg
-- Visceral Fat Level: 1（Low）
-- Waist-Hip Ratio: 0.79
-- BMR: 1,587 kcal
-- InBody Score: 79/100
-
-■ InBody 履歴比較
-- 2026.02.01: Weight 61.1kg / SMM 32.4kg / PBF 7.2%
-- 2026.04.02: Weight 61.9kg / SMM 32.1kg / PBF 9.0%
-→ 約2ヶ月で: 体重+0.8kg / SMM -0.3kg / 体脂肪率+1.8%
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
