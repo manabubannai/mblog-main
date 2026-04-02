@@ -196,6 +196,20 @@ document.addEventListener('keydown',e=>{
 
   <h2># 2026-04-02</h2>
   <pre>
+■ Body (Withings Body Scan) — 08:11
+- Weight: 62.11 kg
+- Muscle Mass: 54.99 kg
+- Body Fat: 6.8%
+- Bone Mass: 2.93 kg
+
+■ Sleep (Oura Ring) — 00:39〜07:58
+- Total: 6h40m
+- Readiness: 85
+- Sleep Score: 73
+- Deep: 1h06m
+- REM: 1h07m
+- HRV: 72ms / HR: 47bpm
+
 ■ InBody 270 — 09:45
 - Weight: 61.9 kg
 - SMM（骨格筋量）: 32.1 kg
@@ -212,6 +226,13 @@ document.addEventListener('keydown',e=>{
 - 2026.02.01: Weight 61.1kg / SMM 32.4kg / PBF 7.2%
 - 2026.04.02: Weight 61.9kg / SMM 32.1kg / PBF 9.0%
 → 約2ヶ月で: 体重+0.8kg / SMM -0.3kg / 体脂肪率+1.8%
+
+■ Food
+Breakfast 10:02
+- Coconut Water 1個分
+→ 45kcal / P:0g / F:0g / C:11g / Fiber:0g / Zinc:0mg / Mg:25mg
+- Omelette（Egg 3個）, Croissant 1個, Tempe 100g（air fried）, Bacon 2切れ, Carrot 100g
+→ 875kcal / P:42g / F:48g / C:62g / Fiber:6g / Zinc:4.5mg / Mg:65mg
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
