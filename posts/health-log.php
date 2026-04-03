@@ -196,6 +196,7 @@ document.addEventListener('keydown',e=>{
 
   <h2># 2026-04-03</h2>
   <pre>
+■ Body Check
 - Readiness: 90, Sleep Score: 81, Total Sleep: 8h25m
 - Sleep Time: 23:11~08:38, Deep: 49m, REM: 1h56m
 - Weight: 62.08 kg, Muscle: 55.97 kg, Body Fat: 5.1%
@@ -216,12 +217,12 @@ document.addEventListener('keydown',e=>{
 - NOW Super Enzymes 1粒 (with lunch), Nordic Naturals Ultimate Omega 1粒 640mg (after lunch)
 → 1,050kcal / P:62g / F:22g / C:142g / Fiber:10g / Zinc:5.5mg / Mg:180mg
 
-✓ Feedback from AI
+■ Feedback from AI
 - Breakfast + Lunch = 1,570kcal / P:76g (54%). 夕食でP:64g以上必要. Chicken or Salmon + Egg推奨
 - Rice 335gは腸キャパ200g上限を超過. 体調に問題なければOKだが注意
 - Sleep Score 81 / Readiness 90は直近最高. 就寝23:11の早寝が効いている
 
-✓ Thought
+■ Thought
 
   </pre>
 
