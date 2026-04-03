@@ -254,8 +254,13 @@ Night
 ⚡ Mg    ▓▓▓▓▓▓▓▓▓░  92%  367/400mg
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
 
+■ Substances
+- Cannabis 1g Sativa（14:30, before massage）
+- Cannabis 0.6g Indica（21:00）
+
 ■ Thought
 - スマホとパソコンは全てグレイスケール化。ショートカットで戻せないようにする。
+- 15:00〜16:30 マッサージ（90分）
   </pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">

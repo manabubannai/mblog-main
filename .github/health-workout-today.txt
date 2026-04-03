@@ -1,1 +1,9 @@
-— No data
+DATE=2026-04-03
+STEPS=2467
+
+--- FORMATTED ---
+■ Workout (Apple Health)
+- Flexibility: 11:13〜12:03（49min） / Avg HR:73bpm / 169kcal
+- Outdoor Walk: 09:11〜09:26（15min） / Avg HR:87bpm / 33kcal
+
+STEPS_LOG=Steps: 2,467
