@@ -255,6 +255,9 @@ Night
 💊 Cr   ▓▓▓▓▓▓▓▓▓▓ 100% ✅ 5/5g
 
 ■ Substances
+- DS-01 SEED 1 capsule（before breakfast）
+- NOW Super Enzymes 1粒（with breakfast）
+- Thorne Multi-Vitamin Elite AM 2 capsules（with breakfast）
 - Cannabis 1g Sativa（14:30, before massage）
 - Cannabis 0.9g Indica（19:00）
 
