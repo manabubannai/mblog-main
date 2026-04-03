@@ -256,7 +256,7 @@ Night
 
 ■ Substances
 - Cannabis 1g Sativa（14:30, before massage）
-- Cannabis 0.6g Indica（21:00）
+- Cannabis 0.9g Indica（19:00）
 
 ■ Thought
 - スマホとパソコンは全てグレイスケール化。ショートカットで戻せないようにする。
