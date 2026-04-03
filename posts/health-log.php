@@ -146,8 +146,8 @@ document.addEventListener('keydown',e=>{
       }
       // Auto-link: "- text /path" or "- text https://url" → text becomes link, path/URL hidden
       html = html.replace(/^(- )(.+?) ((?:https?:\/\/[^\s<]+)|(?:\/thought-[^\s<]+))$/gm, '$1<a class="task-link" href="$3" target="_blank">$2</a>');
-      // Auto-link: standalone URLs
-      html = html.replace(/(?<!href="|">)(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:#2121d3d9;">$1</a>');
+      // Auto-link: standalone URLs (exclude those inside href="", alt="", src="", or after ">")
+      html = html.replace(/(?<!href="|alt="|src="|">)(https?:\/\/[^\s<"]+)/g, '<a href="$1" target="_blank" style="color:#2121d3d9;">$1</a>');
       const regex = /([\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/g;
       html = html.replace(regex, '<span class="jp-font">$1</span>');
       pre.innerHTML = html;
