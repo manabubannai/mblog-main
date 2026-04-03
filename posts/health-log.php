@@ -210,11 +210,15 @@ document.addEventListener('keydown',e=>{
 ■ Food + Substances
 
 - Breakfast 10:00 : Yogurt 71g, Oatmeal 40g, Honey 18.4g, Passion Fruit 1個, Almonds 8.4g, Walnuts 7g, Banana 101g (皮なし), Blueberries 47g
-- DS-01 SEED 1 capsule (before breakfast), NMN Pro Complete + Creatine 5g + Multi-Vitamin Elite AM (after breakfast)
+- Seed DS-01 Daily Synbiotic 1 capsule (before breakfast)
+- ProHealth NMN Pro Powder 1 scoop (after breakfast)
+- Thorne Creatine 5g (after breakfast)
+- Thorne Multi-Vitamin Elite AM 2 capsules (after breakfast)
 → 520kcal / P:14g / F:15g / C:88g / Fiber:10g / Zinc:2.5mg / Mg:110mg
 
 - Lunch 13:30 : 味噌汁1/3 (豆腐 200g, エリンギ 74g, きくらげ 50g, 乾燥わかめ 5.8g, エノキ 18g, 味噌 大さじ2), Salmon 116g, 納豆 1パック, 梅干し 2粒, Rice 335g
-- NOW Super Enzymes 1粒 (with lunch), Nordic Naturals Ultimate Omega 1粒 640mg (after lunch)
+- NOW Super Enzymes 1 capsule (with lunch)
+- Nordic Naturals Ultimate Omega 1 soft gel 640mg (after lunch)
 → 1,050kcal / P:62g / F:22g / C:142g / Fiber:10g / Zinc:5.5mg / Mg:180mg
 
 ■ Feedback from AI
