@@ -194,6 +194,50 @@ document.addEventListener('keydown',e=>{
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-04-03</h2>
+  <pre>
+■ Body (Withings Body Scan) — 08:46
+- Weight: 62.08 kg
+- Muscle Mass: 55.97 kg
+- Body Fat: 5.1%
+- Bone Mass: 2.97 kg
+
+■ Sleep (Oura Ring) — 23:11〜08:38
+- Total: 8h25m
+- Readiness: 90
+- Sleep Score: 81
+- Deep: 0h49m
+- REM: 1h56m
+- HRV: 68ms / HR: 50bpm
+
+■ Meditation (Oura Ring)
+- 10:09〜11:09（1h00m） / Avg HR:63bpm / HRV:27ms
+
+■ Workout (Apple Health)
+- Flexibility: 11:13〜12:03（49min） / Avg HR:73bpm / 169kcal
+- Outdoor Walk: 09:11〜09:26（15min） / Avg HR:87bpm / 33kcal
+- Steps: 2,467
+
+■ Food
+Breakfast 10:00
+- Yogurt 71g, Oatmeal 40g, Honey 18.4g, Passion Fruit 1個, Almonds 8.4g, Walnuts 7g, Banana 101g（皮なし）, Blueberries 47g
+→ 520kcal / P:14g / F:15g / C:88g / Fiber:10g / Zinc:2.5mg / Mg:110mg
+
+Lunch 13:30
+- 味噌汁1/3（豆腐 200g, エリンギ 74g, きくらげ 50g, 乾燥わかめ 5.8g, エノキ 18g, 味噌 大さじ2）, Salmon 116g, 納豆 1パック, 梅干し 2粒, Rice 335g
+→ 1,050kcal / P:62g / F:22g / C:142g / Fiber:10g / Zinc:5.5mg / Mg:180mg
+
+■ Substances
+- DS-01 SEED 1 capsule（before breakfast）
+- NMN Pro Complete Powder 1スクープ（ProHealth）（after breakfast）
+- Creatine 5g（Thorne）（after breakfast）
+- Thorne Multi-Vitamin Elite AM 2 capsules（after breakfast）
+- NOW Super Enzymes 1粒（with lunch）
+- Nordic Naturals Ultimate Omega 1粒（640mg）（after lunch）
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-04-02</h2>
   <pre>
 ■ Body (Withings Body Scan) — 08:11
