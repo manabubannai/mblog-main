@@ -211,7 +211,7 @@ Breakfast 10:20
 → 480kcal / P:13g / F:15g / C:75g / Fiber:7g / Zinc:2mg / Mg:100mg
 
 Lunch 13:57
-- Rice 225g, Egg 2個, 納豆 1パック, Salmon 焼き 約85g (212gの4割), 味噌汁 残り半分 (豆腐 100g, エリンギ 37g, きくらげ 25g, 乾燥わかめ 3g, エノキ 9g, 味噌 大さじ1)
+- Rice 225g, Egg 2個, 納豆 1パック, Salmon 焼き 85g, 味噌汁 (豆腐 100g, エリンギ 37g, きくらげ 25g, 乾燥わかめ 3g, エノキ 9g, 味噌 大さじ1)
 → 870kcal / P:52g / F:24g / C:108g / Fiber:6g / Zinc:5mg / Mg:130mg
 
 ■ Substances
