@@ -220,7 +220,8 @@ Lunch 13:57
 - ProHealth NMN Powder 1 scoop (after breakfast)
 - Thorne Multi-Vitamin AM 2 capsules (after breakfast)
 - NOW Super Enzymes 1 capsule (with lunch)
-→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g
+- Nordic Naturals Omega 1 capsule (after lunch)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:640mg
 
 ■ Daily Summary (Food + Supplements)
 kcal:  1,350 / 3,000  ▓▓▓▓░░░░░░  45% 📉
@@ -236,7 +237,7 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 ■ Feedback from AI
 - Breakfast + Lunch = 1,350kcal (45%) — 夕食で1,650kcal / P:75g必要。Salmon or 鶏むね + Egg + Rice推奨
 - P:65g (46%📉) — 夕食でP重視。Salmon 200g + Egg 2個で約P:50g確保可能
-- VitD 50%📉 — Nordic Naturals Omega未摂取?夕食時に忘れずに。日光浴5分も推奨
+- VitD 50%📉 — 日光浴5分で改善可能
 - Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的
 - Rice 225gは腸キャパ200gをやや超過だが前日(335g)より改善
   </pre>
