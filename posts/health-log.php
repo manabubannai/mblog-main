@@ -194,6 +194,55 @@ document.addEventListener('keydown',e=>{
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-04-04</h2>
+  <pre>
+■ Body Check
+- Readiness: 91, Sleep Score: 88, Total Sleep: 9h45m
+- Sleep Time: 23:43~10:26, Deep: 1h34m, REM: 2h29m
+- Weight: 62.43 kg, Muscle: 56.33 kg, Body Fat: 5.0%
+
+■ Treatment
+- Meditation: 12:44~13:44 (HR: 63bpm)
+
+■ Food
+
+Breakfast 10:20
+- Yogurt 75g, Oatmeal 40g, Honey 16g, Almonds 12g, Cashews 13g, Passion Fruit 32g, Blueberries 40g
+→ 480kcal / P:13g / F:15g / C:75g / Fiber:7g / Zinc:2mg / Mg:100mg
+
+Lunch 13:57
+- Rice 225g, Egg 2個, 納豆 1パック, Salmon 焼き 約85g (212gの4割), 味噌汁 残り半分 (豆腐 100g, エリンギ 37g, きくらげ 25g, 乾燥わかめ 3g, エノキ 9g, 味噌 大さじ1)
+→ 870kcal / P:52g / F:24g / C:108g / Fiber:6g / Zinc:5mg / Mg:130mg
+
+■ Substances
+- Seed DS-01 1 capsule (before breakfast)
+- Thorne Creatine Powder 5g (after breakfast)
+- ProHealth NMN Powder 1 scoop (after breakfast)
+- Thorne Multi-Vitamin AM 2 capsules (after breakfast)
+- NOW Super Enzymes 1 capsule (with lunch)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g
+
+■ Daily Summary (Food + Supplements)
+kcal:  1,350 / 3,000  ▓▓▓▓░░░░░░  45% 📉
+P:        65 / 140g   ▓▓▓▓░░░░░░  46% 📉
+F:        39 / 80g    ▓▓▓▓▓░░░░░  49% 📉
+C:       183 / 430g   ▓▓▓▓░░░░░░  43% 📉
+Fiber:    13 / 28g    ▓▓▓▓░░░░░░  46% 📉
+Zinc:  14.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  132% ✅
+Mg:      430 / 400mg  ▓▓▓▓▓▓▓▓▓▓  108% ✅
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
+■ Feedback from AI
+- Breakfast + Lunch = 1,350kcal (45%) — 夕食で1,650kcal / P:75g必要。Salmon or 鶏むね + Egg + Rice推奨
+- P:65g (46%📉) — 夕食でP重視。Salmon 200g + Egg 2個で約P:50g確保可能
+- VitD 50%📉 — Nordic Naturals Omega未摂取?夕食時に忘れずに。日光浴5分も推奨
+- Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的
+- Rice 225gは腸キャパ200gをやや超過だが前日(335g)より改善
+  </pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-04-03</h2>
   <pre>
 ■ Body Check
@@ -209,11 +258,25 @@ document.addEventListener('keydown',e=>{
 
 ■ Food
 
-Breakfast 10:00 : Yogurt 71g, Oatmeal 40g, Honey 18.4g, Passion Fruit 1個, Almonds 8.4g, Walnuts 7g, Banana 101g (皮なし), Blueberries 47g
+Breakfast 10:00
+- Yogurt 71g, Oatmeal 40g, Honey 18.4g, Passion Fruit 1個, Almonds 8.4g, Walnuts 7g, Banana 101g (皮なし), Blueberries 47g
 → 520kcal / P:14g / F:15g / C:88g / Fiber:10g / Zinc:2.5mg / Mg:110mg
 
-Lunch 13:30 : 味噌汁1/3 (豆腐 200g, エリンギ 74g, きくらげ 50g, 乾燥わかめ 5.8g, エノキ 18g, 味噌 大さじ2), Salmon 116g, 納豆 1パック, 梅干し 2粒, Rice 335g
+Lunch 13:30
+- 味噌汁 1/3 (豆腐 200g, エリンギ 74g, きくらげ 50g, 乾燥わかめ 5.8g, エノキ 18g, 味噌 大さじ2), Salmon 116g, 納豆 1パック, 梅干し 2粒, Rice 335g
 → 1,050kcal / P:62g / F:22g / C:142g / Fiber:10g / Zinc:5.5mg / Mg:180mg
+
+Post-Workout 19:00
+- TOFUSAN プロテインドリンク 250ml
+→ 105kcal / P:8.5g / F:4.5g / C:8g / Fiber:1g / Zinc:0.5mg / Mg:30mg
+
+Dinner 20:00
+- しめ鯖 1貫, 餃子 3個, たこ焼き 3個, カレーライス 1人前 (牛肉, じゃがいも), 味噌汁 (小), サラダ (小)
+→ 1,080kcal / P:32g / F:38g / C:145g / Fiber:5g / Zinc:4mg / Mg:70mg
+
+Night 22:30
+- TOFUSAN プロテインドリンク 250ml, Banana 1本
+→ 200kcal / P:9.5g / F:4.8g / C:34g / Fiber:2g / Zinc:0.7mg / Mg:55mg
 
 ■ Substances
 - Seed DS-01 1 capsule (before breakfast)
@@ -222,12 +285,28 @@ Lunch 13:30 : 味噌汁1/3 (豆腐 200g, エリンギ 74g, きくらげ 50g, 乾
 - Thorne Multi-Vitamin AM 2 capsules (after breakfast)
 - NOW Super Enzymes 1 capsule (with lunch)
 - Nordic Naturals Omega 1 capsule (after lunch)
+- Cannabis Sativa 0.7g (post-workout ~19:30)
+- Cannabis 0.6g (after dinner ~21:00)
+- Thorne Multi-Vitamin Elite PM 2 capsules (before sleep)
 → Zinc:15mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:640mg
 
+■ Daily Summary (Food + Supplements)
+kcal:  2,955 / 3,000  ▓▓▓▓▓▓▓▓▓░  99%
+P:       126 / 140g   ▓▓▓▓▓▓▓▓▓░  90%
+F:        84 / 80g    ▓▓▓▓▓▓▓▓▓▓  105% ✅
+C:       417 / 430g   ▓▓▓▓▓▓▓▓▓░  97%
+Fiber:    28 / 28g    ▓▓▓▓▓▓▓▓▓▓  100% ✅
+Zinc:  28.2 / 11mg    ▓▓▓▓▓▓▓▓▓▓  256% ✅
+Mg:      645 / 400mg  ▓▓▓▓▓▓▓▓▓▓  161% ✅
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
 ■ Feedback from AI
-- Breakfast + Lunch = 1,570kcal / P:76g (54%). 夕食でP:64g以上必要. Chicken or Salmon + Egg推奨
-- Rice 335gは腸キャパ200g上限を超過. 体調に問題なければOKだが注意
-- Sleep Score 81 / Readiness 90は直近最高. 就寝23:11の早寝が効いている
+- 1日合計 2,955kcal / P:126g (90%) — 目標にほぼ到達。外食のカレー+餃子+たこ焼きでカロリーは確保できたがP不足気味
+- Rice 335g (Lunch) は腸キャパ200g上限を超過。体調に問題なければOKだが注意
+- VitD 50%📉 — 日光浴なしの日。Nordic Naturals Omegaだけでは不足。屋外5分でも改善可能
+- Cannabis 2回 (19:30 + 21:00) — 21時以降の摂取はDeep Sleep減少リスク。今回Deep 49mは目標(1h+)未満
+- Sleep Score 81 / Readiness 90は直近最高。就寝23:11の早寝が効いている
 
 ■ Thought
 
