@@ -198,7 +198,7 @@ document.addEventListener('keydown',e=>{
   <pre>
 ■ Body Check
 - Readiness: 91, Sleep Score: 88, Total Sleep: 9h45m
-- Sleep Time: 23:43~10:26, Deep: 1h34m, REM: 2h29m
+- Sleep Time: 23:43~10:26, Deep: 1h34m, REM: 2h29m, HRV: 55ms, HR: 51bpm
 - Weight: 62.43 kg, Muscle: 56.33 kg, Body Fat: 5.0%
 
 ■ Treatment
