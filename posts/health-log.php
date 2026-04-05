@@ -194,6 +194,58 @@ document.addEventListener('keydown',e=>{
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-04-05</h2>
+  <pre>
+■ Body Check
+- Readiness: 84, Sleep Score: 72, Total Sleep: 6h34m
+- Sleep Time: 01:10~08:35, Deep: 1h17m, REM: 1h18m
+- Weight: 62.28 kg, Muscle: 55.64 kg, Body Fat: 5.9%
+
+■ Treatment
+- Stretch: 11:31~12:20 (49min / Avg HR: 78bpm / 166kcal)
+- Meditation: 12:24~13:24 (HR: 61bpm)
+- Steps: 2,963
+
+■ Food
+
+Breakfast 10:15
+- Yogurt 62g, Oats 38g, Honey 17g, Walnuts 11g, Almonds 11g, Chia Seeds 7g, Cashews 10g, Pumpkin Seeds 4g, Passion Fruit 30g, Banana 110g (皮なし), Blueberries 46g
+→ 635kcal / P:18g / F:26g / C:92g / Fiber:16g / Zinc:4mg / Mg:220mg
+
+Lunch 13:30
+- 味噌汁 (豆腐 80g, エリンギ 26g, Egg 40g, ネギ 18g, えのき 14g, アスパラガス 11g, 乾燥わかめ 4g, 味噌 大さじ1), Salmon 125g, Rice 220g, 梅干し 1粒
+→ 720kcal / P:47g / F:25g / C:73g / Fiber:6g / Zinc:3.5mg / Mg:95mg
+
+■ Substances
+- Seed DS-01 1 capsule (before breakfast)
+- Thorne Creatine Powder 5g (after breakfast)
+- ProHealth NMN Powder 1 scoop (after breakfast)
+- Thorne Multi-Vitamin AM 2 capsules (after breakfast)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:  1,355 / 3,000  ▓▓▓▓░░░░░░  45% 📉
+P:        65 / 140g   ▓▓▓▓▓░░░░░  46% 📉
+F:        51 / 80g    ▓▓▓▓▓▓░░░░  64%
+C:       165 / 430g   ▓▓▓▓░░░░░░  38% 📉
+Fiber:    22 / 28g    ▓▓▓▓▓▓▓▓░░  79%
+Zinc:     15 / 11mg   ▓▓▓▓▓▓▓▓▓▓  136% ✅
+Mg:      515 / 400mg  ▓▓▓▓▓▓▓▓▓▓  129% ✅
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
+■ Feedback from AI
+- Breakfast + Lunch = 1,355kcal (45%) — 夕食で1,645kcal / P:75g必要。Salmon or 鶏むね + Egg + Rice推奨
+- Fiber 22/28g (79%) — 朝食のシード類が優秀。夕食で+6gで達成可能 (野菜・きのこ追加)
+- VitD 50%📉 — 日光浴5分で+1,000IU相当。AM散歩推奨
+- Sleep Score 72 / Total 6h34m — 前日比で大幅低下 (88→72)。01:10就寝が遅め。Deep 1h17mは改善だが睡眠時間が短い。23時台就寝を推奨
+- Rice 220gは腸キャパ200gをやや超過。体調に問題なければOKだが注意
+- Nordic Naturals Omega 2粒 (EPA+DHA:1,280mg) — 前日1粒から増量。抗炎症効果◎</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-04-04</h2>
   <pre>
 ■ Body Check
