@@ -259,6 +259,36 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - Workout: 16:17~17:54 (1h21m / Avg HR: 135bpm / 346kcal)
 - Steps: 9,787
 
+■ Workout — Back Day (16:17~17:54)
+
+Warm-up: Muscle-up x 2
+
+1. Chinning
+12
+12
+7 + 5c
+
+2. Deadlift
+60kg (40kg + Bar) x 10
+100kg (80kg + Bar) x 3
+130kg (110kg + Bar) x 2
+
+3. Bent Over Rowing Machine
+40kg x 10
+80kg x 5
+110kg x 4, 100kg x 6
+90kg x 8
+80kg x 12
+
+4. T-Bar Row
+40kg x 12
+40kg x (10+2c)
+
+5. Lat Pull Down
+54kg x 12
+54kg x (10+2c)
+54kg x (10+2c)
+
 ■ Food
 
 Breakfast 10:20
