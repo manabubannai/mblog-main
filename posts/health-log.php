@@ -242,7 +242,30 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - VitD 50%📉 — 日光浴5分で+1,000IU相当。AM散歩推奨
 - Sleep Score 72 / Total 6h34m — 前日比で大幅低下 (88→72)。01:10就寝が遅め。Deep 1h17mは改善だが睡眠時間が短い。23時台就寝を推奨
 - Rice 220gは腸キャパ200gをやや超過。体調に問題なければOKだが注意
-- Nordic Naturals Omega 2粒 (EPA+DHA:1,280mg) — 前日1粒から増量。抗炎症効果◎</pre>
+- Nordic Naturals Omega 2粒 (EPA+DHA:1,280mg) — 前日1粒から増量。抗炎症効果◎
+
+■ Thought
+
+血液検査結果 — 2026年4月2日
+施設: CM Mediclinic / N Health Diagnostic Services Chiang Mai
+医師: Dr. Jittiya Hawkins
+採血日時: 02 Apr 2026 09:20
+
+Lab No: NCL260920020
+1. Magnesium: 2.2 mg/dL (基準値 1.6–2.6)
+2. hs-CRP: 0.24 mg/L (基準値 0.00–5.00 / 心血管リスク: <1.0 Low / 1.0–3.0 Average / >3.0 High)
+3. Vitamin D (25-OH Total): 34.50 ng/mL (基準値 30.00–100.00 / <20 欠乏 / 20–29 不足 / 30–100 充足)
+4. TSH: 3.663 uIU/mL (基準値 0.350–4.940)
+5. Cortisol (AM): 15.5 ug/dL (基準値 AM 3.7–19.4 / PM 2.9–17.3)
+
+Lab No: NCL260920021
+6. LH: 2.32 mIU/mL (基準値 Male 0.57–12.07)
+7. FSH: 9.39 mIU/mL (基準値 Male 0.95–11.95)
+8. Testosterone: 705.00 ng/dL (7.05 ng/mL) (基準値 Male 21–49歳 2.40–8.71 ng/mL)
+   - Albumin: 4.60 g/dL (基準値 3.50–5.20)
+   - SHBG: 51.70 nmol/L (基準値 Male 13.5–71.4)
+   - Free Testosterone: 11.40 ng/dL / 1.6% (基準値 Male 20–49歳 5.71–17.84 ng/dL / 1.53–2.88%)
+   - Bioavailable Testosterone: 286.00 ng/dL / 40.5% (基準値 Male 20–49歳 125.65–412.10 ng/dL / 35.0–66.3%)</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
