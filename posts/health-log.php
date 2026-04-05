@@ -306,7 +306,13 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - VitD 50%📉 — 日光浴なし。屋外5分でも改善可能
 - Cannabis 2回 (18:15 + 21:00) — 21時以降の摂取はDeep Sleep減少リスク。翌日のSleep Score 72 / Total 6h34mに影響した可能性あり
 - Workout 1h21m (Avg HR:135bpm / 346kcal) — 高強度セッション。Post-Workout TOFUSAN でプロテイン補給◎
-- Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的</pre>
+- Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的
+
+■ Body Check Day
+<img src="img/health-log/20260404_front.jpg?v=1" alt="Body Check 2026-04-04 Front">
+<img src="img/health-log/20260404_side.jpg?v=1" alt="Body Check 2026-04-04 Side">
+<img src="img/health-log/20260404_back.jpg?v=1" alt="Body Check 2026-04-04 Back">
+*source: https://mblog.com/img/health-log/20260404_front.jpg</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
