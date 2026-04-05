@@ -254,7 +254,10 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - Weight: 62.43 kg, Muscle: 56.33 kg, Body Fat: 5.0%
 
 ■ Treatment
+- Stretch: 11:50~12:41 (50min / Avg HR: 80bpm / 171kcal)
 - Meditation: 12:44~13:44 (HR: 63bpm)
+- Workout: 16:17~17:54 (1h21m / Avg HR: 135bpm / 346kcal)
+- Steps: 9,787
 
 ■ Food
 
@@ -266,6 +269,14 @@ Lunch 13:57
 - Rice 225g, Egg 2個, 納豆 1パック, Salmon 焼き 85g, 味噌汁 (豆腐 100g, エリンギ 37g, きくらげ 25g, 乾燥わかめ 3g, エノキ 9g, 味噌 大さじ1)
 → 870kcal / P:52g / F:24g / C:108g / Fiber:6g / Zinc:5mg / Mg:130mg
 
+Post-Workout 18:00
+- TOFUSAN プロテインドリンク 250ml
+→ 105kcal / P:8.5g / F:4.5g / C:8g / Fiber:1g / Zinc:0.5mg / Mg:30mg
+
+Dinner 19:00
+- 唐揚げ 175g (5個), Rice 300g, 明太子ペースト 25g, 豚汁 150g, きんぴらごぼう 55g
+→ 1,060kcal / P:53g / F:39g / C:124g / Fiber:6g / Zinc:5.5mg / Mg:80mg
+
 ■ Substances
 - Seed DS-01 1 capsule (before breakfast)
 - Thorne Creatine Powder 5g (after breakfast)
@@ -273,26 +284,29 @@ Lunch 13:57
 - Thorne Multi-Vitamin AM 2 capsules (after breakfast)
 - NOW Super Enzymes 1 capsule (with lunch)
 - Nordic Naturals Omega 1 capsule (after lunch)
+- Cannabis 0.3g (post-workout ~18:15)
+- Cannabis 0.8g (after dinner ~21:00)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:640mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,350 / 3,000  ▓▓▓▓░░░░░░  45% 📉
-P:        65 / 140g   ▓▓▓▓░░░░░░  46% 📉
-F:        39 / 80g    ▓▓▓▓▓░░░░░  49% 📉
-C:       183 / 430g   ▓▓▓▓░░░░░░  43% 📉
-Fiber:    13 / 28g    ▓▓▓▓░░░░░░  46% 📉
-Zinc:  14.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  132% ✅
-Mg:      430 / 400mg  ▓▓▓▓▓▓▓▓▓▓  108% ✅
+kcal:  2,515 / 3,000  ▓▓▓▓▓▓▓▓░░  84%
+P:       127 / 140g   ▓▓▓▓▓▓▓▓▓░  91%
+F:        83 / 80g    ▓▓▓▓▓▓▓▓▓▓  104% ✅
+C:       315 / 430g   ▓▓▓▓▓▓▓░░░  73%
+Fiber:    20 / 28g    ▓▓▓▓▓▓▓░░░  71%
+Zinc:  20.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  186% ✅
+Mg:      540 / 400mg  ▓▓▓▓▓▓▓▓▓▓  135% ✅
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
-- Breakfast + Lunch = 1,350kcal (45%) — 夕食で1,650kcal / P:75g必要。Salmon or 鶏むね + Egg + Rice推奨
-- P:65g (46%📉) — 夕食でP重視。Salmon 200g + Egg 2個で約P:50g確保可能
-- VitD 50%📉 — 日光浴5分で改善可能
-- Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的
-- Rice 225gは腸キャパ200gをやや超過だが前日(335g)より改善
-  </pre>
+- 1日合計 2,515kcal (84%) / P:127g (91%) — 唐揚げ+大盛りライスで目標にほぼ到達
+- Rice 300g (大盛り) — 腸キャパ200g上限を大幅超過。消化負担に注意
+- Fiber 20/28g (71%) — 野菜少なめ。きんぴら+豚汁の野菜のみ
+- VitD 50%📉 — 日光浴なし。屋外5分でも改善可能
+- Cannabis 2回 (18:15 + 21:00) — 21時以降の摂取はDeep Sleep減少リスク。翌日のSleep Score 72 / Total 6h34mに影響した可能性あり
+- Workout 1h21m (Avg HR:135bpm / 346kcal) — 高強度セッション。Post-Workout TOFUSAN でプロテイン補給◎
+- Sleep Score 88 / Readiness 91 / Deep 1h34m — 前日比で大幅改善。23:43就寝+9h45m睡眠が効果的</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
