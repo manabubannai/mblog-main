@@ -327,7 +327,40 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - Meditation: 10:09~11:09 (HR: 63bpm / HRV: 27ms)
 - Stretch: 11:13~12:03 (Avg HR: 73bpm / 169kcal)
 - Outdoor Walk: 09:11~09:26 (15min / Avg HR: 87bpm / 33kcal)
-- Steps: 2,467
+- Workout: 16:14~17:55 (1h36m / Avg HR: 107bpm / 285kcal)
+- Steps: 9,004
+
+■ Workout — Arm Day (16:14~17:55)
+
+Warm-up: Barbell 10kg x 5, 20kg x 10
+
+1. Barbell Curl → Dumbbell Curl
+40kg x 8 → 10kg x 8
+40kg x 8 → 10kg x (7+1c)
+40kg x (6+2c) → 10kg x 7
+*フォームの崩れあり
+
+2. Hammer Curl
+20kg x 12
+20kg x 12
+*フォームの崩れあり。手が滑るのでタオル必須
+
+3. Narrow Bench Press (Smith Machine)
+60kg x 8
+60kg x 5
+60kg x 5
+*腕は肩幅でOK。降ろし過ぎなくてOK。
+
+4. Press Down with Bar
+65kg x (9+1c)
+65kg x 10
+65kg x 8
+*肘は固定する。脇は締める。
+
+5. Press Down with Rope
+40kg x 12
+40kg x (9+3c)
+40kg x 9
 
 ■ Food
 
