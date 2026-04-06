@@ -211,13 +211,14 @@ Snack 09:00
 - Ginger Honey Tea 1杯
 → 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
 
-Lunch 14:00
-- Salmon 113g (grilled), Garden Salad 113g (with dressing), Grill Pineapple 113g, Rice 130g, EVOO 15ml
-→ 794kcal / P:29g / F:43g / C:73g / Fiber:4g / Zinc:1.5mg / Mg:55mg
+Lunch 14:00 (75% of Grab order + Rice + EVOO)
+- Healthy Junk "Salmon In The Garden": Salmon 150g, Avocado, Curly Kale, Sweet Potato airfry, Pumpkin Seed, Feta Cheese, Pickle Onion (597kcal: C19/P50/F36) + Broccoli 50g + Chickpea 100g + Grill Pineapple 150g
+- Rice 130g, EVOO 15ml
+→ 929kcal / P:49g / F:43g / C:88g / Fiber:10g / Zinc:4.3mg / Mg:178mg
 
-Snack 15:33
-- Salmon 37g, Garden Salad 37g (with dressing), Grill Pineapple 37g
-→ 168kcal / P:9g / F:10g / C:9g / Fiber:1g / Zinc:0.5mg / Mg:15mg
+Snack 15:33 (残り25%)
+- Healthy Junk "Salmon In The Garden" + toppings + Grill Pineapple (残り25%)
+→ 213kcal / P:15g / F:10g / C:17g / Fiber:3g / Zinc:1.1mg / Mg:52mg
 
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
@@ -229,26 +230,27 @@ Snack 15:33
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:    992 / 2,700  ▓▓▓▓░░░░░░  37% 📉
-P:        38 / 126g   ▓▓▓░░░░░░░  30% 📉
+kcal:  1,172 / 2,700  ▓▓▓▓░░░░░░  43% 📉
+P:        64 / 126g   ▓▓▓▓▓░░░░░  51%
 F:        53 / 75g    ▓▓▓▓▓▓▓░░░  71%
-C:        90 / 380g   ▓▓░░░░░░░░  24% 📉
-Fiber:     5 / 28g    ▓▓░░░░░░░░  18% 📉
-Zinc:    9.5 / 11mg   ▓▓▓▓▓▓▓▓▓░  86%
-Mg:      272 / 400mg  ▓▓▓▓▓▓▓░░░  68%
+C:       113 / 380g   ▓▓▓░░░░░░░  30% 📉
+Fiber:    13 / 28g    ▓▓▓▓▓░░░░░  46% 📉
+Zinc:  13.4 / 11mg    ▓▓▓▓▓▓▓▓▓▓  122% ✅
+Mg:      447 / 400mg  ▓▓▓▓▓▓▓▓▓▓  112% ✅
 VitD:  2,000 / 2,000  ▓▓▓▓▓▓▓▓▓▓  100% ✅
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 75/100
-- Good → Salmon, EVOO, Garden Salad, Ginger, Grill Pineapple
-- OK → Rice, Honey
-- note: 外食(Healthy Junk)の調理油は比較的安全だが、ドレッシングの油の種類は確認推奨
+✓ 総合: 82/100
+- Good → Salmon, Avocado, Curly Kale, Broccoli, Pumpkin Seed, EVOO, Ginger
+- OK → Sweet Potato, Chickpea, Rice, Honey, Feta Cheese, Grill Pineapple
+- Avoid → なし◎
+- note: Avoid食材ゼロ。Chickpea(レクチン含有)は加熱済みなら問題なし
 
-✓ 栄養: 992/2,700kcal (37%)📉
-- P:38/126g (30%)📉 — 夕食でP 88g必要。Egg 3個 + 鶏肉150g or Salmon 150g推奨
-- Fiber:5/28g (18%)📉 — 夕食できのこ・ブロッコリー・わかめ等を大量追加
+✓ 栄養: 1,172/2,700kcal (43%)📉
+- P:64/126g (51%) — 夕飯で62g必要。鶏むね250g or Salmon 200g推奨
+- Fiber:13/28g (46%)📉 — 夕飯で+15g必要。野菜・きのこ多めに
 
 ✓ 血液
 - VitD: 日光浴10min (~1,000IU) + サプリ1,000IU = 2,000IU◎ 目標達成
