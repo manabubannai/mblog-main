@@ -1049,6 +1049,12 @@ Night 21:44
 - Outdoor Walk: 09:37〜09:51（14min） / 37kcal
 
 ■ Workout（Chest Day）
+
+✓ベンチプレスのフォームメモ：
+・両腕を上に上げて（胸を上げる）
+・その後に両腕を下に伸ばす（肩を下げる）
+・この姿勢を常にキープする
+
 Goal：
 - 1. Try 80kg
 - 2. 5kg dumbbell
