@@ -211,30 +211,54 @@ Snack 09:00
 - Ginger Honey Tea 1杯
 → 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
 
+Lunch 14:00
+- Salmon 113g (grilled), Garden Salad 113g (with dressing), Grill Pineapple 113g, Rice 130g, EVOO 15ml
+→ 794kcal / P:29g / F:43g / C:73g / Fiber:4g / Zinc:1.5mg / Mg:55mg
+
+Snack 15:33
+- Salmon 37g, Garden Salad 37g (with dressing), Grill Pineapple 37g
+→ 168kcal / P:9g / F:10g / C:9g / Fiber:1g / Zinc:0.5mg / Mg:15mg
+
 ■ Substances
-—
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:    992 / 2,700  ▓▓▓▓░░░░░░  37% 📉
+P:        38 / 126g   ▓▓▓░░░░░░░  30% 📉
+F:        53 / 75g    ▓▓▓▓▓▓▓░░░  71%
+C:        90 / 380g   ▓▓░░░░░░░░  24% 📉
+Fiber:     5 / 28g    ▓▓░░░░░░░░  18% 📉
+Zinc:    9.5 / 11mg   ▓▓▓▓▓▓▓▓▓░  86%
+Mg:      272 / 400mg  ▓▓▓▓▓▓▓░░░  68%
+VitD:  2,000 / 2,000  ▓▓▓▓▓▓▓▓▓▓  100% ✅
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 80/100
-- Good → Ginger, Honey(生)
-- OK → Honey(加糖の場合)
-- ファスティング中のため食材少。スコアは暫定
+✓ 総合: 75/100
+- Good → Salmon, EVOO, Garden Salad, Ginger, Grill Pineapple
+- OK → Rice, Honey
+- note: 外食(Healthy Junk)の調理油は比較的安全だが、ドレッシングの油の種類は確認推奨
 
-✓ 栄養: 30/2,700kcal (1%)
-- note: 14時までファスティング中
-- 14時以降にP重視の食事を推奨(目標: 126g+)
+✓ 栄養: 992/2,700kcal (37%)📉
+- P:38/126g (30%)📉 — 夕食でP 88g必要。Egg 3個 + 鶏肉150g or Salmon 150g推奨
+- Fiber:5/28g (18%)📉 — 夕食できのこ・ブロッコリー・わかめ等を大量追加
 
 ✓ 血液
-- VitDは朝の日光浴10分で~1,000IU◎ 3日ぶり
-- サプリなしでも本日は日光で補填
+- VitD: 日光浴10min (~1,000IU) + サプリ1,000IU = 2,000IU◎ 目標達成
+- TSH: 本日大豆なし◎ 昨日3回から改善
 
 ✓ 睡眠: 83
-- 前日72から改善◎ 23:16就寝は良好。Deep 43mがやや少ない(前日1h17m)
-- 体重 63.30kg (+1.02kg) — 前日の夜食2回分(Rice+Oats ball)の影響。水分・食物残留の可能性大
+- 前日72から改善◎ Deep 43mのみやや少ない。今夜23時就寝を維持
 
 ✓ 体調
-- 胃の痛みあり → ジンジャーティーの生姜は胃粘膜保護+抗炎症◎ 経過観察</pre>
+- 胃の痛み → ジンジャーティーで経過観察中。ファスティング14時まで実行済み</pre>
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
