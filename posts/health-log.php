@@ -194,6 +194,36 @@ document.addEventListener('keydown',e=>{
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-04-06</h2>
+  <pre>
+■ Body Check
+- Readiness: 80, Sleep Score: 83, Total Sleep: 8h13m
+- Sleep Time: 23:16~08:20, Deep: 0h43m, REM: 1h46m
+- Weight: 63.30 kg, Muscle: 56.10 kg, Body Fat: 6.7%
+
+■ Treatment
+- Sunlight: 08:40~ (10min+) (VitD ~1,000IU)
+- Meditation: 12:24~13:24 (HR: 56bpm)
+
+■ Food
+
+Snack 09:00
+- Ginger Honey Tea 1杯
+→ 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
+
+■ Substances
+—
+
+■ Feedback from AI
+- 14時までファスティング中（Recording 13）。ジンジャーハニーティーのみ
+- Sleep Score 83 — 前日72から改善◎ 23:16就寝は良好。ただしDeep 43mがやや少ない（前日1h17m）
+- 体重 63.30kg (+1.02kg) — 前日の夜食2回分（Rice+Oats ball）の影響。水分・食物残留の可能性大
+- Body Fat 6.7% (+0.8%) — Withings体脂肪率は変動が大きいため、週平均で見ること
+- VitD: 朝の日光浴10分で~1,000IU◎ 3日ぶりの日光浴
+- 胃の痛みあり → ジンジャーハニーティーで緩和を試みている。経過観察</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-04-05</h2>
   <pre>
 ■ Body Check
@@ -216,9 +246,21 @@ Lunch 13:30
 - 味噌汁 (豆腐 80g, エリンギ 26g, Egg 40g, ネギ 18g, えのき 14g, アスパラガス 11g, 乾燥わかめ 4g, 味噌 大さじ1), Salmon 125g, Rice 220g, 梅干し 1粒
 → 720kcal / P:47g / F:25g / C:73g / Fiber:6g / Zinc:3.5mg / Mg:95mg
 
+Snack 18:18
+- Tofu 200g
+→ 144kcal / P:15g / F:9g / C:3g / Fiber:1g / Zinc:1.5mg / Mg:50mg
+
 Dinner 19:54
 - カオソーイ: 卵麺 200g (茹で), ココナッツカレースープ 250ml, 鶏肉 80g, トマト 40g, 紫キャベツ 30g, ピーマン 20g, 玉ねぎ 30g, きのこ 20g
 → 750kcal / P:30g / F:30g / C:85g / Fiber:5g / Zinc:2.5mg / Mg:55mg
+
+Night 21:00
+- Rice 124g, きのこ 50g
+→ 200kcal / P:4g / F:0.5g / C:45g / Fiber:2g / Zinc:0.8mg / Mg:10mg
+
+Night 22:00
+- Yogurt 62g, Oats 36g, Honey 12g, Chia Seeds 3.3g, Brazil Nuts 7.4g, Almonds 10g, Cashews 30g, Passion Fruit 58g, Blueberries 40g
+→ 530kcal / P:14g / F:22g / C:72g / Fiber:9g / Zinc:3mg / Mg:150mg
 
 ■ Substances
 - Seed DS-01 1 capsule (before breakfast)
@@ -227,26 +269,32 @@ Dinner 19:54
 - Thorne Multi-Vitamin AM 2 capsules (after breakfast)
 - NOW Super Enzymes 1 capsule (before lunch)
 - Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
+- Cannabis Sativa 0.5g (20:27)
+- Cannabis Indica 0.4g (22:38)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  2,105 / 3,000  ▓▓▓▓▓▓▓░░░  70%
-P:        95 / 140g   ▓▓▓▓▓▓▓░░░  68%
-F:        81 / 80g    ▓▓▓▓▓▓▓▓▓▓  101% ✅
-C:       250 / 430g   ▓▓▓▓▓▓░░░░  58%
-Fiber:    27 / 28g    ▓▓▓▓▓▓▓▓▓░  96%
-Zinc:  17.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  159% ✅
-Mg:      570 / 400mg  ▓▓▓▓▓▓▓▓▓▓  143% ✅
+kcal:  2,979 / 3,000  ▓▓▓▓▓▓▓▓▓▓  99%
+P:       128 / 140g   ▓▓▓▓▓▓▓▓▓░  91%
+F:       113 / 80g    ▓▓▓▓▓▓▓▓▓▓  141% ✅
+C:       370 / 430g   ▓▓▓▓▓▓▓▓▓░  86%
+Fiber:    39 / 28g    ▓▓▓▓▓▓▓▓▓▓  139% ✅
+Zinc:  23.3 / 11mg    ▓▓▓▓▓▓▓▓▓▓  212% ✅
+Mg:      780 / 400mg  ▓▓▓▓▓▓▓▓▓▓  195% ✅
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
-- 1日合計 2,105kcal (70%) — 目標まであと895kcal不足。Night snackでP重視の食事を追加できると理想的
-- P 95/140g (68%) — タンパク質がまだ45g不足。ギリシャヨーグルト+プロテインで補填可能
-- Fiber 27/28g (96%) — ほぼ達成。カオソーイの野菜が貢献◎
-- VitD 50%📉 — 日光浴なし。サプリ追加または翌日の朝散歩推奨
-- Sleep Score 72 / Total 6h34m — 前日比で大幅低下 (88→72)。01:10就寝が遅め。23時台就寝を推奨
-- カオソーイはココナッツミルクで脂質高め (F達成) だが、P:30gは1食としてはやや少なめ。次回は卵トッピング追加でP改善可能
+- 1日合計 2,979kcal (99%) — ほぼ目標達成◎ Night snack 2回が効いた
+- P 128/140g (91%) — あと12g。Snackの豆腐200gでP+15g追加が大きかった
+- F 113/80g (141%) — カオソーイのココナッツミルク+ナッツ類で脂質過多。翌日は控えめに
+- Fiber 39/28g (139%) — ブラジルナッツ+チアシード+Oatsで大幅達成◎
+- VitD 50%📉 — 3日連続で日光浴なし。翌日は朝散歩10分を推奨（Recording 19で翌日実行済み）
+- Sleep Score 72 — 01:10就寝→夜食22:00が影響。19時夕食→23時就寝のルーティン化は良い方針（Recording 16-17）
+- Cannabis: Sativa 0.5g (20:27) + Indica 0.4g (22:38) = 合計0.9g。前日 (1.1g) より減量
 
 ■ Thought
 
