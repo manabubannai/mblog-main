@@ -118,7 +118,7 @@ https://mblog.com に反映
   - 各食事追加時にP/F/C/Fiber/Zinc/Mgの過不足を評価
   - 次の食事で何を意識すべきかを簡潔に1-2行で提示
   - 普段の食事をちょっと変えるだけで改善できる提案を都度行う（例: 「Cashews→Macadamia Nutsでマイコトキシンリスク低減」）
-  - 累計kcal/目標を表示（例: 「本日累計: 1,355/3,000kcal (45%)」）
+  - 累計kcal/目標を表示（例: 「本日累計: 1,355/2,700kcal (50%)」）
   - Sleep Score/Readinessが低い場合、食事との関連を指摘
   【パート3: 血液データとの相関チェック】
   - ユーザーの血液検査結果（2026-04-02時点）と照合し、食事が検査値に与える影響を指摘:
@@ -145,7 +145,7 @@ https://mblog.com に反映
 - 「昨日の味噌汁の残り9割」のような曖昧な表記は禁止。元の材料から実際の分量を計算し、食材を個別に記載する（例: 味噌汁（豆腐 120g, エリンギ 54g, ...））。残り物の追跡は元の量×残り割合で計算する
 - ヘルスログは未来の自分が振り返るためのデータ。「残り半分」「4割」「昨日の残り」等の相対的な表記は禁止。計算後の実際のグラム数のみ記載する（例: ×「Salmon 焼き 約85g (212gの4割)」→ ○「Salmon 焼き 85g」）。元の量や割合の情報はログに残す価値がない
 - 食材のグラム数が記載されていない場合、前後の時間帯のボイスメモに重量が記録されていないか確認する。同じ食材の計量メモが近い時間にある場合は統合して反映する（例: 20:44「バナナ260g皮付き」→ 21:22「バナナ2本食べる」→ 統合して「バナナ 2本（260g 皮付き）」）
-- Daily Summary: **食事データを追加・更新したら必ずDaily Summaryも再計算して更新すること（省略禁止）**。目標値: kcal:3,000 / P:140g / F:80g / C:430g / Fiber:28g / Zinc:11mg / Mg:400mg / VitD:2,000IU / Cr:5g。バーは10ブロック（▓░）でパーセンテージを視覚化。100%超は✅、50%以下は📉を付与。**サプリメントの栄養素（Mg, Zinc, VitD等）もDaily Summaryに含めること**。Thorne Multi-Vitamin Elite AM 2カプセル = Mg:200mg / Zinc:7.5mg / VitD:1,000IU。見出しは「■ Daily Summary（Food + Supplements）」とする
+- Daily Summary: **食事データを追加・更新したら必ずDaily Summaryも再計算して更新すること（省略禁止）**。目標値: kcal:2,700 / P:126g / F:75g / C:380g / Fiber:28g / Zinc:11mg / Mg:400mg / VitD:2,000IU / Cr:5g。バーは10ブロック（▓░）でパーセンテージを視覚化。100%超は✅、50%以下は📉を付与。**サプリメントの栄養素（Mg, Zinc, VitD等）もDaily Summaryに含めること**。Thorne Multi-Vitamin Elite AM 2カプセル = Mg:200mg / Zinc:7.5mg / VitD:1,000IU。見出しは「■ Daily Summary（Food + Supplements）」とする
 - 行動ログ（マナブの1日）: 毎日の会話終了時またはpush時に生成する。データソース: voice-log.json（ボイスメモ時刻・内容）、oura-today.txt（就寝・起床）、withings-today.txt（計測時刻）、git log（作業内容）、health-log.phpの食事データ。時刻順に「HH:MM 行動内容。」の形式で記載。最終行に「この日の一言：」を付ける
 - 栄養計算は卵1個 = 約71kcal / P:6.3g / F:4.8g / C:0.4g / Zinc:0.6mg / Mg:6mg を基準にする
 - health-log.php のセクション順序は以下を厳守する: Body → Sleep → Stretch → Meditation → Workout → Food → Substances → Daily Summary → タスク → Idea → Thought → マナブの1日（最下部）
