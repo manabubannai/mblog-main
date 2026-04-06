@@ -235,6 +235,9 @@ Dinner 19:00
 - Thorne Creatine Powder 5g (after lunch)
 - ProHealth NMN Powder 1 scoop (after lunch)
 - Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
