@@ -228,6 +228,10 @@ Dinner 19:00
 - Vanilla Protein Shake (Milk Whey)
 → 130kcal / P:24g / F:1g / C:8g / Fiber:0g / Zinc:0.3mg / Mg:10mg
 
+Night 19:54
+- Oats 40g, Yogurt 62g, Honey 15g, Blueberries 50g, EVOO 15ml, Vital Proteins Collagen Peptides 20g
+→ 500kcal / P:28g / F:18g / C:52g / Fiber:5g / Zinc:0.5mg / Mg:30mg
+
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
 - NOW Super Enzymes 1 capsule (before lunch)
@@ -241,27 +245,27 @@ Dinner 19:00
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,697 / 2,700  ▓▓▓▓▓▓░░░░  63%
-P:       155 / 126g   ▓▓▓▓▓▓▓▓▓▓  123% ✅
-F:        64 / 75g    ▓▓▓▓▓▓▓▓▓░  85%
-C:       144 / 380g   ▓▓▓▓░░░░░░  38% 📉
-Fiber:    19 / 28g    ▓▓▓▓▓▓▓░░░  68%
-Zinc:  16.1 / 11mg    ▓▓▓▓▓▓▓▓▓▓  146% ✅
-Mg:      518 / 400mg  ▓▓▓▓▓▓▓▓▓▓  130% ✅
+kcal:  2,197 / 2,700  ▓▓▓▓▓▓▓▓░░  81%
+P:       183 / 126g   ▓▓▓▓▓▓▓▓▓▓  145% ✅
+F:        82 / 75g    ▓▓▓▓▓▓▓▓▓▓  109% ✅
+C:       196 / 380g   ▓▓▓▓▓░░░░░  52%
+Fiber:    24 / 28g    ▓▓▓▓▓▓▓▓▓░  86%
+Zinc:  16.6 / 11mg    ▓▓▓▓▓▓▓▓▓▓  151% ✅
+Mg:      548 / 400mg  ▓▓▓▓▓▓▓▓▓▓  137% ✅
 VitD:  2,000 / 2,000  ▓▓▓▓▓▓▓▓▓▓  100% ✅
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 80/100
-- Good → Salmon, Chicken (air fry), Avocado, Curly Kale, Broccoli, Pumpkin Seed, EVOO, Ginger, Grill Vegetables
-- OK → Sweet Potato, Chickpea, Rice, Honey, Feta Cheese, Grill Pineapple, Whey Protein
+✓ 総合: 82/100
+- Good → Salmon, Chicken (air fry), Avocado, Curly Kale, Broccoli, Pumpkin Seed, EVOO, Ginger, Grill Vegetables, Blueberries, Collagen Peptides
+- OK → Sweet Potato, Chickpea, Rice, Honey, Feta Cheese, Grill Pineapple, Whey Protein, Oats, Yogurt
 - Avoid → なし◎
 
-✓ 栄養: 1,697/2,700kcal (63%)
-- P:155/126g (123%)✅ — Chicken 200g + Protein Shake で大幅達成◎
-- kcal 63% — ファスティング日のため1,000kcal不足。腸の痛みを考慮すると無理に追加しない方が良い
-- Fiber:19/28g (68%) — Broccoli追加が効いたがまだ不足。Night snackでOats+Chia追加可能
+✓ 栄養: 2,197/2,700kcal (81%)
+- P:183/126g (145%)✅ — Collagen Peptides (+18g) で更に上乗せ
+- kcal 81% — ファスティング日+腸の痛みを考慮すると十分
+- Fiber:24/28g (86%) — あと4g不足だが、腸の状態を考えると無理に追加しない
 
 ✓ 血液
 - VitD: 日光浴+サプリで2,000IU◎ 目標達成
@@ -269,10 +273,10 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ✓ 睡眠: 83
 - 前日72から改善◎ 23:16就寝は良好。Deep 43mがやや少ない
-- 19:00夕食 → 就寝まで4h+空く想定。消化負荷は軽い◎
+- 19:54 Night snack → 23時就寝なら3h空く。Oats+Yogurtは消化軽い◎
 
 ✓ 体調
-- 腸の痛み → BBQ Chicken(air fry)+Broccoli(加熱)は消化負荷が軽い選択◎ Spicy系を避けた判断も正解
+- 腸の痛み → Collagen Peptidesは腸粘膜修復に寄与◎ Oats+Yogurtも消化に優しい選択
 - TSH: 本日大豆なし◎ 昨日3回から改善
 
 ✓ 睡眠: 83
