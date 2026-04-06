@@ -220,6 +220,14 @@ Snack 15:33 (残り25%)
 - Healthy Junk "Salmon In The Garden" + toppings + Grill Pineapple (残り25%)
 → 213kcal / P:15g / F:10g / C:17g / Fiber:3g / Zinc:1.1mg / Mg:52mg
 
+Dinner 19:00
+- Healthy Junk "BBQ Chicken + Grill Veg": Chicken 200g (air fry), mix grill vegetables
+→ 360kcal / P:64g / F:10g / C:16g / Fiber:3g / Zinc:2mg / Mg:40mg
+- Cooked Broccoli 100g
+→ 35kcal / P:3g / F:0g / C:7g / Fiber:3g / Zinc:0.4mg / Mg:21mg
+- Vanilla Protein Shake (Milk Whey)
+→ 130kcal / P:24g / F:1g / C:8g / Fiber:0g / Zinc:0.3mg / Mg:10mg
+
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
 - NOW Super Enzymes 1 capsule (before lunch)
@@ -230,30 +238,38 @@ Snack 15:33 (残り25%)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,172 / 2,700  ▓▓▓▓░░░░░░  43% 📉
-P:        64 / 126g   ▓▓▓▓▓░░░░░  51%
-F:        53 / 75g    ▓▓▓▓▓▓▓░░░  71%
-C:       113 / 380g   ▓▓▓░░░░░░░  30% 📉
-Fiber:    13 / 28g    ▓▓▓▓▓░░░░░  46% 📉
-Zinc:  13.4 / 11mg    ▓▓▓▓▓▓▓▓▓▓  122% ✅
-Mg:      447 / 400mg  ▓▓▓▓▓▓▓▓▓▓  112% ✅
+kcal:  1,697 / 2,700  ▓▓▓▓▓▓░░░░  63%
+P:       155 / 126g   ▓▓▓▓▓▓▓▓▓▓  123% ✅
+F:        64 / 75g    ▓▓▓▓▓▓▓▓▓░  85%
+C:       144 / 380g   ▓▓▓▓░░░░░░  38% 📉
+Fiber:    19 / 28g    ▓▓▓▓▓▓▓░░░  68%
+Zinc:  16.1 / 11mg    ▓▓▓▓▓▓▓▓▓▓  146% ✅
+Mg:      518 / 400mg  ▓▓▓▓▓▓▓▓▓▓  130% ✅
 VitD:  2,000 / 2,000  ▓▓▓▓▓▓▓▓▓▓  100% ✅
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 82/100
-- Good → Salmon, Avocado, Curly Kale, Broccoli, Pumpkin Seed, EVOO, Ginger
-- OK → Sweet Potato, Chickpea, Rice, Honey, Feta Cheese, Grill Pineapple
+✓ 総合: 80/100
+- Good → Salmon, Chicken (air fry), Avocado, Curly Kale, Broccoli, Pumpkin Seed, EVOO, Ginger, Grill Vegetables
+- OK → Sweet Potato, Chickpea, Rice, Honey, Feta Cheese, Grill Pineapple, Whey Protein
 - Avoid → なし◎
-- note: Avoid食材ゼロ。Chickpea(レクチン含有)は加熱済みなら問題なし
 
-✓ 栄養: 1,172/2,700kcal (43%)📉
-- P:64/126g (51%) — 夕飯で62g必要。鶏むね250g or Salmon 200g推奨
-- Fiber:13/28g (46%)📉 — 夕飯で+15g必要。野菜・きのこ多めに
+✓ 栄養: 1,697/2,700kcal (63%)
+- P:155/126g (123%)✅ — Chicken 200g + Protein Shake で大幅達成◎
+- kcal 63% — ファスティング日のため1,000kcal不足。腸の痛みを考慮すると無理に追加しない方が良い
+- Fiber:19/28g (68%) — Broccoli追加が効いたがまだ不足。Night snackでOats+Chia追加可能
 
 ✓ 血液
-- VitD: 日光浴10min (~1,000IU) + サプリ1,000IU = 2,000IU◎ 目標達成
+- VitD: 日光浴+サプリで2,000IU◎ 目標達成
+- Testosterone: Avoid食材ゼロ+P充足で良好な環境
+
+✓ 睡眠: 83
+- 前日72から改善◎ 23:16就寝は良好。Deep 43mがやや少ない
+- 19:00夕食 → 就寝まで4h+空く想定。消化負荷は軽い◎
+
+✓ 体調
+- 腸の痛み → BBQ Chicken(air fry)+Broccoli(加熱)は消化負荷が軽い選択◎ Spicy系を避けた判断も正解
 - TSH: 本日大豆なし◎ 昨日3回から改善
 
 ✓ 睡眠: 83
