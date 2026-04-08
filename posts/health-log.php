@@ -214,6 +214,10 @@ h2.after(editor);
 - Healthy Junk "Salmon In The Garden": Salmon 150g (grilled with Rosemary), Curly Kale, Cherry Tomatoes, Sweet Potato Airfry Cubes, Avocado, Feta Cheese Crumbles, Pumpkin Seeds, Pickle Onion, Lemon Wedge, Dressing (597kcal: C19/P50/F36) + Edamame 40g + Rice 210g
 → 922kcal / P:60g / F:38.5g / C:82g / Fiber:7g / Zinc:3.5mg / Mg:80mg
 
+Pre-Workout
+- Latte 1杯, Coconut Water 1個分
+→ 165kcal / P:5g / F:5g / C:24g / Fiber:0g / Zinc:0.3mg / Mg:30mg
+
 Post-Workout
 - Banana 2本 (約220g 皮なし), 3 Seed Protein Super Foods (Doctor Murray) 2 scoops (30g)
 → 310kcal / P:19g / F:4g / C:56g / Fiber:6g / Zinc:1mg / Mg:40mg
@@ -235,13 +239,13 @@ Post-Workout
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  2,172 / 2,700  ▓▓▓▓▓▓▓▓░░  80%
-P:       135 / 126g   ▓▓▓▓▓▓▓▓▓▓  107% ✅
-F:        86 / 75g    ▓▓▓▓▓▓▓▓▓▓  115% ✅
-C:       220 / 380g   ▓▓▓▓▓▓░░░░  58%
+kcal:  2,337 / 2,700  ▓▓▓▓▓▓▓▓▓░  87%
+P:       140 / 126g   ▓▓▓▓▓▓▓▓▓▓  111% ✅
+F:        91 / 75g    ▓▓▓▓▓▓▓▓▓▓  121% ✅
+C:       244 / 380g   ▓▓▓▓▓▓░░░░  64%
 Fiber:    18 / 28g    ▓▓▓▓▓▓░░░░  64%
-Zinc:  15.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  141% ✅
-Mg:      367 / 400mg  ▓▓▓▓▓▓▓▓▓░  92%
+Zinc:  15.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  144% ✅
+Mg:      397 / 400mg  ▓▓▓▓▓▓▓▓▓▓  99%
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
@@ -253,8 +257,8 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 - Avoid → Edamame 40g(大豆), Fried Chicken Wings(揚げ物)
 - note: 写真確認 → Chicken Wingsは揚げ物🔴。次回はグリルチキンに代替推奨
 
-✓ 栄養: 2,172/2,700kcal (80%)
-- P:135/126g (107%)✅ — Post-Workout Banana+3 Seed Proteinで達成◎
+✓ 栄養: 2,337/2,700kcal (87%)
+- P:140/126g (111%)✅ / Mg:397/400mg (99%) — ほぼ全達成
 - Fiber 18/28g (64%) — Night snackにOats bowl追加で達成可能
 
 ✓ 血液
