@@ -246,9 +246,9 @@ h2.after(editor);
 - Ginger Honey Tea 1杯
 → 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
 
-13:30 (estimated)
-- Rice 160g
-→ 210kcal / P:4g / F:0.5g / C:46g / Fiber:0.5g / Zinc:0.8mg / Mg:8mg
+13:30
+- Healthy Junk "EL COOP BOWL": Chicken 300g (air fry), Grill Vegetables 120g, Cheese 30g, Sweet Corn, Tortilla Chips, Tomato Salsa, Avocado-Greek Yogurt Mash, Lime, Jalapeno Pickle, Onion Pickle, Cilantro (629kcal: F18.6/C26.3/P108.4) + Rice 200g + EVOO 15ml + Cooked Broccoli 100g
+→ 1,044kcal / P:108g / F:33g / C:83g / Fiber:8g / Zinc:5mg / Mg:80mg
 
 Post-Workout
 - 3 Seed Protein Super Foods (Doctor Murray) 2 scoops (30g)
@@ -262,39 +262,39 @@ Post-Workout
 —
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,460 / 2,700  ▓▓▓▓▓░░░░░  54%
-P:        74 / 126g   ▓▓▓▓▓▓░░░░  59%
-F:        34 / 75g    ▓▓▓▓░░░░░░  45% 📉
-C:       194 / 380g   ▓▓▓▓▓░░░░░  51%
-Fiber:    12 / 28g    ▓▓▓▓░░░░░░  43% 📉
-Zinc:   9.3 / 11mg    ▓▓▓▓▓▓▓▓░░  85%
-Mg:       90 / 400mg  ▓▓░░░░░░░░  23% 📉
+kcal:  2,294 / 2,700  ▓▓▓▓▓▓▓▓▓░  85%
+P:       178 / 126g   ▓▓▓▓▓▓▓▓▓▓  141% ✅
+F:        66 / 75g    ▓▓▓▓▓▓▓▓▓░  88%
+C:       231 / 380g   ▓▓▓▓▓▓░░░░  61%
+Fiber:    20 / 28g    ▓▓▓▓▓▓▓░░░  71%
+Zinc:  13.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  123% ✅
+Mg:      162 / 400mg  ▓▓▓▓░░░░░░  41% 📉
 VitD:      0 / 2,000  ░░░░░░░░░░   0% 📉
 Cr:      0g / 5g      ░░░░░░░░░░   0% 📉
 
 ■ Feedback from AI
 
-✓ 総合: 55/100
-- Good → Beef, 野菜(しゃぶしゃぶ)
-- OK → Rice 500g(合計), Ginger, Honey
+✓ 総合: 68/100
+- Good → Chicken 300g (air fry), Grill Vegetables, Avocado, Broccoli, EVOO, Beef, 野菜(しゃぶしゃぶ), Ginger
+- OK → Rice 540g(合計), Tortilla Chips, Cheese, Corn, Honey
 - Avoid → なし
-- note: サプリ未摂取でZinc/Mg/VitD/Crが全て未達。Rice合計500gは過多
+- note: EL COOP BOWLでP大幅達成◎ ただしサプリ未摂取でMg/VitD/Crが未達
 
-✓ 栄養: 1,460/2,700kcal (54%)
-- P:74/126g (59%) — 大幅不足。しゃぶしゃぶのBeef 200gでP:55gだが他の食事でP不足
-- Mg 90/400mg (23%)📉 — サプリなしの影響が顕著
-- VitD/Creatine 0% — サプリ未摂取
+✓ 栄養: 2,294/2,700kcal (85%)
+- P:178/126g (141%)✅ — EL COOP BOWL(P:108g)が圧倒的に貢献
+- Mg 162/400mg (41%)📉 — サプリなしの影響。食事だけではMg不足
+- VitD/Creatine 0%📉 — サプリ未摂取。翌日から復活推奨
 
 ✓ 血液
 - TSH: 大豆なし◎
-- Cortisol: サプリなし日だが特に問題なし
+- hs-CRP: Avoid食材なし。EVOO+Broccoli+野菜で抗炎症◎
 
 ✓ 睡眠: 86
 - 前日83から改善◎ Readiness 90は最近で最高値
 - Deep 1h21m / REM 2h07m — 両方とも優秀。00:34就寝はやや遅いが睡眠の質は良好
 
 ✓ 体調
-- 便の調子がほぼ完全に完治◎(Recording 23)。サプリ全面復活可能</pre>
+- 便の調子がほぼ完全に完治◎ サプリ全面復活可能</pre>
 
 <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
