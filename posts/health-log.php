@@ -236,6 +236,7 @@ Post-Workout
 - Seed DS-01 1 capsule (before dinner)
 - NOW Super Enzymes 1 capsule (before dinner)
 - Thorne Multi-Vitamin PM 2 capsules (after dinner)
+- Cannabis Indica 1.0g (21:16)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
