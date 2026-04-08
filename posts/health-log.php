@@ -214,9 +214,13 @@ h2.after(editor);
 - Healthy Junk "Salmon In The Garden": Salmon 150g (grilled with Rosemary), Curly Kale, Cherry Tomatoes, Sweet Potato Airfry Cubes, Avocado, Feta Cheese Crumbles, Pumpkin Seeds, Pickle Onion, Lemon Wedge, Dressing (597kcal: C19/P50/F36) + Edamame 40g + Rice 210g
 → 922kcal / P:60g / F:38.5g / C:82g / Fiber:7g / Zinc:3.5mg / Mg:80mg
 
+Post-Workout
+- Banana 2本 (約220g 皮なし), 3 Seed Protein Super Foods (Doctor Murray) 2 scoops (30g)
+→ 310kcal / P:19g / F:4g / C:56g / Fiber:6g / Zinc:1mg / Mg:40mg
+
 19:26
-- カオニャオ(もち米) 138g, Chicken Wings 6個, ソムタム 1人前, トムヤムスープ 1人前
-→ 800kcal / P:50g / F:34.5g / C:72g / Fiber:5g / Zinc:3mg / Mg:40mg
+- カオニャオ(もち米) 138g, Fried Chicken Wings 6個, ソムタム(青パパイヤ) 1人前, トムヤムクン(エビ入り) 1人前
+→ 910kcal / P:56g / F:42.5g / C:74g / Fiber:5g / Zinc:3.5mg / Mg:45mg
 
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
@@ -231,27 +235,27 @@ h2.after(editor);
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,752 / 2,700  ▓▓▓▓▓▓▓░░░  65%
-P:       110 / 126g   ▓▓▓▓▓▓▓▓▓░  87%
-F:        74 / 75g    ▓▓▓▓▓▓▓▓▓▓  99%
-C:       162 / 380g   ▓▓▓▓░░░░░░  43% 📉
-Fiber:    12 / 28g    ▓▓▓▓░░░░░░  43% 📉
-Zinc:  14.0 / 11mg    ▓▓▓▓▓▓▓▓▓▓  127% ✅
-Mg:      322 / 400mg  ▓▓▓▓▓▓▓▓░░  81%
+kcal:  2,172 / 2,700  ▓▓▓▓▓▓▓▓░░  80%
+P:       135 / 126g   ▓▓▓▓▓▓▓▓▓▓  107% ✅
+F:        86 / 75g    ▓▓▓▓▓▓▓▓▓▓  115% ✅
+C:       220 / 380g   ▓▓▓▓▓▓░░░░  58%
+Fiber:    18 / 28g    ▓▓▓▓▓▓░░░░  64%
+Zinc:  15.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  141% ✅
+Mg:      367 / 400mg  ▓▓▓▓▓▓▓▓▓░  92%
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 62/100
-- Good → Salmon (grilled), Kale, Avocado, Sweet Potato, Pumpkin Seeds, Cherry Tomatoes, Ginger
-- OK → もち米, Chicken Wings, トムヤムスープ
-- Avoid → Edamame 40g(大豆) → 次回Chickpeaに代替
-- note: Chicken Wingsは揚げている場合🔴寄り。グリルなら🟡OK
+✓ 総合: 58/100
+- Good → Salmon (grilled), Kale, Avocado, Sweet Potato, Pumpkin Seeds, Cherry Tomatoes, Ginger, トムヤムクン(エビ), ソムタム
+- OK → もち米
+- Avoid → Edamame 40g(大豆), Fried Chicken Wings(揚げ物)
+- note: 写真確認 → Chicken Wingsは揚げ物🔴。次回はグリルチキンに代替推奨
 
-✓ 栄養: 1,752/2,700kcal (65%)
-- P:110/126g (87%) — あと16g。Night snackでCollagen Peptides 20g(P:18g)追加で達成可能
-- Fiber 12/28g (43%)📉 — ソムタムで+3gだがまだ不足。Oats bowl追加推奨
+✓ 栄養: 2,172/2,700kcal (80%)
+- P:135/126g (107%)✅ — Post-Workout Banana+3 Seed Proteinで達成◎
+- Fiber 18/28g (64%) — Night snackにOats bowl追加で達成可能
 
 ✓ 血液
 - TSH: Edamame 40g(昼)摂取 → 少量だが週2回以下に
