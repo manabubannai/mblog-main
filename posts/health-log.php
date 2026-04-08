@@ -214,6 +214,10 @@ h2.after(editor);
 - Healthy Junk "Salmon In The Garden": Salmon 150g (grilled with Rosemary), Curly Kale, Cherry Tomatoes, Sweet Potato Airfry Cubes, Avocado, Feta Cheese Crumbles, Pumpkin Seeds, Pickle Onion, Lemon Wedge, Dressing (597kcal: C19/P50/F36) + Edamame 40g + Rice 210g
 → 922kcal / P:60g / F:38.5g / C:82g / Fiber:7g / Zinc:3.5mg / Mg:80mg
 
+19:26
+- カオニャオ(もち米) 138g, Chicken Wings 6個, ソムタム 1人前, トムヤムスープ 1人前
+→ 800kcal / P:50g / F:34.5g / C:72g / Fiber:5g / Zinc:3mg / Mg:40mg
+
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
 - NOW Super Enzymes 1 capsule (before lunch)
@@ -221,37 +225,39 @@ h2.after(editor);
 - Thorne Creatine Powder 5g (after lunch)
 - ProHealth NMN Powder 1 scoop (after lunch)
 - Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:    952 / 2,700  ▓▓▓▓░░░░░░  35% 📉
-P:        60 / 126g   ▓▓▓▓▓░░░░░  48% 📉
-F:        39 / 75g    ▓▓▓▓▓░░░░░  52%
-C:        90 / 380g   ▓▓░░░░░░░░  24% 📉
-Fiber:     7 / 28g    ▓▓▓░░░░░░░  25% 📉
-Zinc:  11.0 / 11mg    ▓▓▓▓▓▓▓▓▓▓  100% ✅
-Mg:      282 / 400mg  ▓▓▓▓▓▓▓░░░  71%
+kcal:  1,752 / 2,700  ▓▓▓▓▓▓▓░░░  65%
+P:       110 / 126g   ▓▓▓▓▓▓▓▓▓░  87%
+F:        74 / 75g    ▓▓▓▓▓▓▓▓▓▓  99%
+C:       162 / 380g   ▓▓▓▓░░░░░░  43% 📉
+Fiber:    12 / 28g    ▓▓▓▓░░░░░░  43% 📉
+Zinc:  14.0 / 11mg    ▓▓▓▓▓▓▓▓▓▓  127% ✅
+Mg:      322 / 400mg  ▓▓▓▓▓▓▓▓░░  81%
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 72/100
+✓ 総合: 62/100
 - Good → Salmon (grilled), Kale, Avocado, Sweet Potato, Pumpkin Seeds, Cherry Tomatoes, Ginger
-- OK → Rice 210g, Feta Cheese, Honey
-- Avoid → Edamame 40g(大豆)
-- note: 🔴 Edamame → TSH 3.66への影響。次回はChickpea or Broccoli に代替推奨
+- OK → もち米, Chicken Wings, トムヤムスープ
+- Avoid → Edamame 40g(大豆) → 次回Chickpeaに代替
+- note: Chicken Wingsは揚げている場合🔴寄り。グリルなら🟡OK
 
-✓ 栄養: 952/2,700kcal (35%)📉
-- 夕飯で1,748kcal / P:66g必要。EL COOP BOWL or 高P自炊推奨
-- Fiber 7/28g (25%)📉 — 夕飯で+21g必要。野菜・Oats追加必須
+✓ 栄養: 1,752/2,700kcal (65%)
+- P:110/126g (87%) — あと16g。Night snackでCollagen Peptides 20g(P:18g)追加で達成可能
+- Fiber 12/28g (43%)📉 — ソムタムで+3gだがまだ不足。Oats bowl追加推奨
 
 ✓ 血液
-- TSH: Edamame 40g摂取 → 少量だが大豆のイソフラボンは甲状腺に影響。週2回以下に
+- TSH: Edamame 40g(昼)摂取 → 少量だが週2回以下に
 
 ✓ 睡眠: 76
 - Sleep Score 76 — 前日86から低下。Total 6h46mと短い
-- Deep 1h06m / REM 1h19m — 前日より減少
 
 ✓ 体調
 - 便の調子がほぼ完全に完治◎ サプリ全面復活済み
