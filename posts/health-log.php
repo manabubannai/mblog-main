@@ -259,7 +259,16 @@ Post-Workout
 → 1,100kcal / P:55g / F:30g / C:130g / Fiber:8g / Zinc:8mg / Mg:60mg
 
 ■ Substances
-—
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
 kcal:  2,294 / 2,700  ▓▓▓▓▓▓▓▓▓░  85%
@@ -267,23 +276,22 @@ P:       178 / 126g   ▓▓▓▓▓▓▓▓▓▓  141% ✅
 F:        66 / 75g    ▓▓▓▓▓▓▓▓▓░  88%
 C:       231 / 380g   ▓▓▓▓▓▓░░░░  61%
 Fiber:    20 / 28g    ▓▓▓▓▓▓▓░░░  71%
-Zinc:  13.5 / 11mg    ▓▓▓▓▓▓▓▓▓▓  123% ✅
-Mg:      162 / 400mg  ▓▓▓▓░░░░░░  41% 📉
-VitD:      0 / 2,000  ░░░░░░░░░░   0% 📉
-Cr:      0g / 5g      ░░░░░░░░░░   0% 📉
+Zinc:  21.0 / 11mg    ▓▓▓▓▓▓▓▓▓▓  191% ✅
+Mg:      362 / 400mg  ▓▓▓▓▓▓▓▓▓░  91%
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 68/100
+✓ 総合: 75/100
 - Good → Chicken 300g (air fry), Grill Vegetables, Avocado, Broccoli, EVOO, Beef, 野菜(しゃぶしゃぶ), Ginger
 - OK → Rice 540g(合計), Tortilla Chips, Cheese, Corn, Honey
 - Avoid → なし
-- note: EL COOP BOWLでP大幅達成◎ ただしサプリ未摂取でMg/VitD/Crが未達
 
 ✓ 栄養: 2,294/2,700kcal (85%)
 - P:178/126g (141%)✅ — EL COOP BOWL(P:108g)が圧倒的に貢献
-- Mg 162/400mg (41%)📉 — サプリなしの影響。食事だけではMg不足
-- VitD/Creatine 0%📉 — サプリ未摂取。翌日から復活推奨
+- VitD 1,000/2,000 (50%)📉 — 日光浴なし+サプリ1,000IUのみ
+- Fiber 20/28g (71%) — しゃぶしゃぶの野菜で一部補填。翌日は意識的に追加
 
 ✓ 血液
 - TSH: 大豆なし◎
@@ -291,7 +299,7 @@ Cr:      0g / 5g      ░░░░░░░░░░   0% 📉
 
 ✓ 睡眠: 86
 - 前日83から改善◎ Readiness 90は最近で最高値
-- Deep 1h21m / REM 2h07m — 両方とも優秀。00:34就寝はやや遅いが睡眠の質は良好
+- Deep 1h21m / REM 2h07m — 両方とも優秀
 
 ✓ 体調
 - 便の調子がほぼ完全に完治◎ サプリ全面復活可能</pre>

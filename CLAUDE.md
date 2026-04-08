@@ -151,6 +151,7 @@ https://mblog.com に反映
 - health-log.php のセクション順序は以下を厳守する: Body → Sleep → Stretch → Meditation → Workout → Food → Substances → Daily Summary → タスク → Idea → Thought → マナブの1日（最下部）
 - Health Notes（体感メモ）は独立セクションではなく、Substancesセクションの直下に `*メモ内容` の形式で記載する（`- ` ではなく `*` 始まり、改行なしでSubstancesの最終行の次行に書く）。例: `*ProBac7（4-5日目）：驚くほど効果を実感。腸は改善途中。`
 - Substancesに記録がない日で、ヘルスノート（`*`行）もない場合は `—` を記載する。ヘルスノートがある場合は `—` は不要（`*`行のみ）
+- Substancesは特に指示がない限り、前日と同じデータを入れる（Cannabis等の嗜好品は除く。サプリのみ前日踏襲）
 - データがないセクション（Stretch, Workout等）は見出しごと省略する（「■ Stretch (Oura Ring)\n—」のように空のセクションを書かない）
 - Push to Server 時もこの順序に従ってセクションに挿入する
 - health-log.php に記載する際は、必ず過去のログを確認し、既存のフォーマットに合わせて記載する（例:「5分強ぐらいの日光浴完了」→「日光 5分（時刻）（VitD 約1,000IU）」）
