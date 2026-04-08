@@ -210,23 +210,51 @@ h2.after(editor);
 - Ginger Honey Tea 1杯
 → 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
 
+12:50
+- Healthy Junk "Salmon In The Garden": Salmon 150g (grilled with Rosemary), Curly Kale, Cherry Tomatoes, Sweet Potato Airfry Cubes, Avocado, Feta Cheese Crumbles, Pumpkin Seeds, Pickle Onion, Lemon Wedge, Dressing (597kcal: C19/P50/F36) + Edamame 40g + Rice 210g
+→ 922kcal / P:60g / F:38.5g / C:82g / Fiber:7g / Zinc:3.5mg / Mg:80mg
+
 ■ Substances
-—
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:    952 / 2,700  ▓▓▓▓░░░░░░  35% 📉
+P:        60 / 126g   ▓▓▓▓▓░░░░░  48% 📉
+F:        39 / 75g    ▓▓▓▓▓░░░░░  52%
+C:        90 / 380g   ▓▓░░░░░░░░  24% 📉
+Fiber:     7 / 28g    ▓▓▓░░░░░░░  25% 📉
+Zinc:  11.0 / 11mg    ▓▓▓▓▓▓▓▓▓▓  100% ✅
+Mg:      282 / 400mg  ▓▓▓▓▓▓▓░░░  71%
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: —/100
-- データ不足(朝のみ)
+✓ 総合: 72/100
+- Good → Salmon (grilled), Kale, Avocado, Sweet Potato, Pumpkin Seeds, Cherry Tomatoes, Ginger
+- OK → Rice 210g, Feta Cheese, Honey
+- Avoid → Edamame 40g(大豆)
+- note: 🔴 Edamame → TSH 3.66への影響。次回はChickpea or Broccoli に代替推奨
 
-✓ 栄養: 30/2,700kcal (1%)
-- note: 朝のGinger Honey Teaのみ。データ追加待ち
+✓ 栄養: 952/2,700kcal (35%)📉
+- 夕飯で1,748kcal / P:66g必要。EL COOP BOWL or 高P自炊推奨
+- Fiber 7/28g (25%)📉 — 夕飯で+21g必要。野菜・Oats追加必須
+
+✓ 血液
+- TSH: Edamame 40g摂取 → 少量だが大豆のイソフラボンは甲状腺に影響。週2回以下に
 
 ✓ 睡眠: 76
-- Sleep Score 76 — 前日86から低下。23:42就寝は良好だがTotal 6h46mと短い
-- Deep 1h06m / REM 1h19m — 前日(Deep 1h21m/REM 2h07m)より減少
+- Sleep Score 76 — 前日86から低下。Total 6h46mと短い
+- Deep 1h06m / REM 1h19m — 前日より減少
 
 ✓ 体調
-- 便の調子がほぼ完全に完治(Recording 23)◎ サプリ増量を検討可能
+- 便の調子がほぼ完全に完治◎ サプリ全面復活済み
 
 ■ Thought
 便の調子がほぼ完全に完治してきた、最高。サプリも全て復活できるかも。
