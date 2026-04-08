@@ -226,7 +226,10 @@ h2.after(editor);
 - Deep 1h06m / REM 1h19m — 前日(Deep 1h21m/REM 2h07m)より減少
 
 ✓ 体調
-- 便の調子がほぼ完全に完治(Recording 23)◎ サプリ増量を検討可能</pre>
+- 便の調子がほぼ完全に完治(Recording 23)◎ サプリ増量を検討可能
+
+■ Thought
+便の調子がほぼ完全に完治してきた、最高。サプリも全て復活できるかも。</pre>
 
 <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
