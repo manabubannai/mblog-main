@@ -194,6 +194,110 @@ document.addEventListener('keydown',e=>{
 
   <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+  <h2># 2026-04-08</h2>
+  <pre>
+■ Body Check
+- Readiness: 82, Sleep Score: 76, Total Sleep: 6h46m
+- Sleep Time: 23:42~08:06, Deep: 1h06m, REM: 1h19m
+- Weight: 61.82 kg
+
+■ Treatment
+- Meditation: 10:27~11:27 (HR: 57bpm)
+
+■ Food
+
+08:22
+- Ginger Honey Tea 1杯
+→ 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
+
+■ Substances
+—
+
+■ Feedback from AI
+
+✓ 総合: —/100
+- データ不足(朝のみ)
+
+✓ 栄養: 30/2,700kcal (1%)
+- note: 朝のGinger Honey Teaのみ。データ追加待ち
+
+✓ 睡眠: 76
+- Sleep Score 76 — 前日86から低下。23:42就寝は良好だがTotal 6h46mと短い
+- Deep 1h06m / REM 1h19m — 前日(Deep 1h21m/REM 2h07m)より減少
+
+✓ 体調
+- 便の調子がほぼ完全に完治(Recording 23)◎ サプリ増量を検討可能</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-04-07</h2>
+  <pre>
+■ Body Check
+- Readiness: 90, Sleep Score: 86, Total Sleep: 8h25m
+- Sleep Time: 00:34~09:50, Deep: 1h21m, REM: 2h07m
+- Weight: 62.22 kg, Muscle: 54.19 kg, Body Fat: 8.3%
+
+■ Treatment
+- Meditation: 12:44~13:44 (HR: 57bpm)
+
+■ Food
+
+10:13
+- Ginger Honey Tea 1杯
+→ 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
+
+13:30 (estimated)
+- Rice 160g
+→ 210kcal / P:4g / F:0.5g / C:46g / Fiber:0.5g / Zinc:0.8mg / Mg:8mg
+
+Post-Workout
+- 3 Seed Protein Super Foods (Doctor Murray) 2 scoops (30g)
+→ 120kcal / P:15g / F:3g / C:10g / Fiber:3g / Zinc:0.5mg / Mg:20mg
+
+20:00
+- しゃぶ葉: Beef 200g, 野菜盛り合わせ, Rice 170g x 2杯 (340g)
+→ 1,100kcal / P:55g / F:30g / C:130g / Fiber:8g / Zinc:8mg / Mg:60mg
+
+■ Substances
+—
+
+■ Daily Summary (Food + Supplements)
+kcal:  1,460 / 2,700  ▓▓▓▓▓░░░░░  54%
+P:        74 / 126g   ▓▓▓▓▓▓░░░░  59%
+F:        34 / 75g    ▓▓▓▓░░░░░░  45% 📉
+C:       194 / 380g   ▓▓▓▓▓░░░░░  51%
+Fiber:    12 / 28g    ▓▓▓▓░░░░░░  43% 📉
+Zinc:    9.3 / 11mg   ▓▓▓▓▓▓▓▓░░  85%
+Mg:       90 / 400mg  ▓▓░░░░░░░░  23% 📉
+VitD:      0 / 2,000  ░░░░░░░░░░  0% 📉
+Cr:      0g / 5g      ░░░░░░░░░░  0% 📉
+
+■ Feedback from AI
+
+✓ 総合: 55/100
+- Good → Beef, 野菜(しゃぶしゃぶ)
+- OK → Rice 500g(合計), Ginger, Honey
+- Avoid → なし
+- note: サプリ未摂取でZinc/Mg/VitD/Crが全て未達。Rice合計500gは過多
+
+✓ 栄養: 1,460/2,700kcal (54%)
+- P:74/126g (59%) — 大幅不足。しゃぶしゃぶのBeef 200gでP:55gだが他の食事でP不足
+- Mg 90/400mg (23%)📉 — サプリなしの影響が顕著
+- VitD/Creatine 0% — サプリ未摂取
+
+✓ 血液
+- TSH: 大豆なし◎
+- Cortisol: サプリなし日だが特に問題なし
+
+✓ 睡眠: 86
+- 前日83から改善◎ Readiness 90は最近で最高値
+- Deep 1h21m / REM 2h07m — 両方とも優秀。00:34就寝はやや遅いが睡眠の質は良好
+
+✓ 体調
+- 便の調子がほぼ完全に完治◎(Recording 23)。サプリ全面復活可能</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
   <h2># 2026-04-06</h2>
   <pre>
 ■ Body Check
@@ -242,6 +346,9 @@ Night 19:54
 - Seed DS-01 1 capsule (before dinner)
 - NOW Super Enzymes 1 capsule (before dinner)
 - Thorne Multi-Vitamin PM 2 capsules (after dinner)
+- Cannabis Sativa 0.5g (17:03)
+- Cannabis Indica 0.7g (20:20)
+- Cannabis Indica 0.7g (21:50)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
