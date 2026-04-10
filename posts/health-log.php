@@ -216,8 +216,10 @@ h2.after(editor);
 → 450kcal / P:25g / F:10g / C:60g / Fiber:2g / Zinc:2mg / Mg:30mg
 
 14:20
-- Carbonara 1人前, サラダ(小)
-→ 700kcal / P:22g / F:28g / C:75g / Fiber:3g / Zinc:2mg / Mg:35mg
+- Carbonara 1人前 (Spaghetti, Pancetta, Parmesan, Egg, Black Pepper, Parsley)
+→ 650kcal / P:20g / F:28g / C:70g / Fiber:2g / Zinc:2mg / Mg:30mg
+- Rocket Salad (Arugula, Burrata Cheese, Radish, Balsamic Dressing)
+→ 250kcal / P:12g / F:18g / C:8g / Fiber:4g / Zinc:1mg / Mg:20mg
 
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
@@ -232,13 +234,13 @@ h2.after(editor);
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,239 / 2,700  ▓▓▓▓▓░░░░░  46% 📉
-P:        51 / 126g   ▓▓▓▓░░░░░░  40% 📉
-F:        44 / 75g    ▓▓▓▓▓▓░░░░  59%
-C:       142 / 380g   ▓▓▓▓░░░░░░  37% 📉
-Fiber:     7 / 28g    ▓▓▓░░░░░░░  25% 📉
-Zinc:  11.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  107% ✅
-Mg:      280 / 400mg  ▓▓▓▓▓▓▓░░░  70%
+kcal:  1,439 / 2,700  ▓▓▓▓▓░░░░░  53%
+P:        61 / 126g   ▓▓▓▓▓░░░░░  48% 📉
+F:        62 / 75g    ▓▓▓▓▓▓▓▓░░  83%
+C:       145 / 380g   ▓▓▓▓░░░░░░  38% 📉
+Fiber:    10 / 28g    ▓▓▓▓░░░░░░  36% 📉
+Zinc:  12.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  116% ✅
+Mg:      295 / 400mg  ▓▓▓▓▓▓▓░░░  74%
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
