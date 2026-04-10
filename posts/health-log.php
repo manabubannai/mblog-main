@@ -194,6 +194,165 @@ h2.after(editor);
 
 <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
+<h2># 2026-04-10</h2>
+  <pre>
+■ Body Check
+- Readiness: 85, Sleep Score: 82, Total Sleep: 6h52m
+- Sleep Time: 00:44~08:19, Deep: 1h41m, REM: 1h29m
+- Weight: 63.05 kg, Muscle: 56.75 kg, Body Fat: 5.2%
+
+■ Treatment
+- Sunlight: 09:04~ (reading)
+- Meditation: 12:38~13:38 (HR: 56bpm)
+
+■ Food
+
+09:41
+- 昨日のGreek Kale Salad残り(半分): Kale, Black Olive, Pickle Onion, Cucumber
+→ 89kcal / P:4g / F:6g / C:7g / Fiber:2g / Zinc:0.3mg / Mg:15mg
+
+09:55
+- カオマンガイ 1人前: Chicken 80g, Rice 150g, きゅうり, ソース
+→ 450kcal / P:25g / F:10g / C:60g / Fiber:2g / Zinc:2mg / Mg:30mg
+
+14:20
+- Carbonara 1人前, サラダ(小)
+→ 700kcal / P:22g / F:28g / C:75g / Fiber:3g / Zinc:2mg / Mg:35mg
+
+■ Substances
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:  1,239 / 2,700  ▓▓▓▓▓░░░░░  46% 📉
+P:        51 / 126g   ▓▓▓▓░░░░░░  40% 📉
+F:        44 / 75g    ▓▓▓▓▓▓░░░░  59%
+C:       142 / 380g   ▓▓▓▓░░░░░░  37% 📉
+Fiber:     7 / 28g    ▓▓▓░░░░░░░  25% 📉
+Zinc:  11.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  107% ✅
+Mg:      280 / 400mg  ▓▓▓▓▓▓▓░░░  70%
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
+■ Feedback from AI
+
+✓ 総合: 50/100
+- Good → Kale, Olive, Cucumber, Sunlight
+- OK → Rice, Chicken(カオマンガイ)
+- Avoid → Carbonara(小麦パスタ=グルテン🔴)
+- note: パスタはグルテン含有。次回はグルテンフリーパスタ or Rice代替推奨
+
+✓ 栄養: 1,239/2,700kcal (46%)📉
+- P:51/126g (40%)📉 — 大幅不足。夕飯で高Pメニュー必須
+- 全体的にカロリー不足。夕飯+Night snack追加推奨
+
+✓ 血液
+- hs-CRP: Carbonara(グルテン)は炎症リスク。連日摂取は避ける
+
+✓ 睡眠: 82
+- Total 6h52m — やや短い。00:44就寝。Deep 1h41m◎(最近で最高)
+
+✓ 体調
+- 日光浴+読書◎
+
+■ Thought
+瞑想する時の匂いをもうちょい工夫してみる。サンダルウッド以外でもいいのある気がしてきた。
+日本語のヘルスカテゴリーの本を物色して良さそうな本をすべて買う。
+自分がいびきや歯ぎしりをしていないか、夜の寝ている時の状態を確認する方法を確かめて、そこを改善していく。</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-04-09</h2>
+  <pre>
+■ Body Check
+- Readiness: 91, Sleep Score: 89, Total Sleep: 8h03m
+- Sleep Time: 00:52~09:33, Deep: 1h27m, REM: 2h20m
+- Weight: 62.43 kg, Muscle: 54.97 kg, Body Fat: 7.3%
+
+■ Treatment
+- Sunlight: 10:13~10:24 (11min) (VitD ~1,000IU)
+- Meditation: 11:54~12:54 (HR: 57bpm)
+
+■ Food
+
+10:03
+- Ginger Honey Tea 1杯
+→ 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
+
+13:04
+- カオマンガイ: Rice 333g, Chicken 84g, カモの血 25g, きゅうり 42g
+→ 680kcal / P:32g / F:8g / C:115g / Fiber:2g / Zinc:3mg / Mg:45mg
+- Greek Kale Salad(半分): Kale, Black Olive, Pickle Onion, Cucumber + Broccoli 100g + EVOO 15ml ※半分残した
+→ 224kcal / P:7g / F:12g / C:14g / Fiber:5g / Zinc:0.5mg / Mg:30mg
+
+15:37
+- Coconut Water 1個分, Banana 小 1本
+→ 135kcal / P:1g / F:0g / C:33g / Fiber:2g / Zinc:0.2mg / Mg:40mg
+
+18:36
+- Banana 小 4本, 3 Seed Protein Super Foods (Doctor Murray) 1 scoop (15g)
+→ 420kcal / P:15g / F:2g / C:92g / Fiber:7g / Zinc:1mg / Mg:55mg
+
+23:09
+- カレー(牛肉入り) 1人前, 味噌汁(小) 1杯, サラダ(小) 1皿, 海藻サラダ 0.5人前, 餃子 1個, サーモン寿司 2貫, シメサバ寿司 1貫
+→ 950kcal / P:40g / F:30g / C:120g / Fiber:5g / Zinc:4mg / Mg:60mg
+
+■ Substances
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:  2,439 / 2,700  ▓▓▓▓▓▓▓▓▓░  90%
+P:        95 / 126g   ▓▓▓▓▓▓▓▓░░  75%
+F:        52 / 75g    ▓▓▓▓▓▓▓░░░  69%
+C:       382 / 380g   ▓▓▓▓▓▓▓▓▓▓  101% ✅
+Fiber:    21 / 28g    ▓▓▓▓▓▓▓▓░░  75%
+Zinc:  16.2 / 11mg    ▓▓▓▓▓▓▓▓▓▓  147% ✅
+Mg:      432 / 400mg  ▓▓▓▓▓▓▓▓▓▓  108% ✅
+VitD:  2,000 / 2,000  ▓▓▓▓▓▓▓▓▓▓  100% ✅
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
+■ Feedback from AI
+
+✓ 総合: 58/100
+- Good → Kale, Broccoli, EVOO, Ginger, Salmon(寿司), Coconut Water, Sunlight
+- OK → Rice 333g, Banana x5, Chicken(カオマンガイ), カレー
+- Avoid → 餃子(小麦皮🔴), 寿司の酢飯(白米+砂糖🟡), カモの血(🟡)
+- note: Rice 333g + Banana 5本 = 糖質過多。C:382gは目標ちょうどだが質に注意
+
+✓ 栄養: 2,439/2,700kcal (90%)
+- P:95/126g (75%) — 不足。夕飯のタンパク質が分散しすぎ。1食に高P集中が理想
+- C:382/380g (101%)✅ — Rice 333g + Banana 5本で達成だが精製糖質多め
+
+✓ 血液
+- TSH: 大豆なし◎
+- VitD: 日光浴11min + サプリ = 2,000IU◎
+
+✓ 睡眠: 89
+- Readiness 91◎ 最近の最高値タイ。Sleep Score 89も優秀
+- Deep 1h27m / REM 2h20m — 両方とも優秀
+
+✓ 体調
+- 肌のキメが改善 → ナイアシンアミドトナーの効果の可能性(有酸素だけではないかも)</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
 <h2># 2026-04-08</h2>
 <pre>
 ■ Body Check
@@ -236,7 +395,7 @@ Post-Workout
 - Seed DS-01 1 capsule (before dinner)
 - NOW Super Enzymes 1 capsule (before dinner)
 - Thorne Multi-Vitamin PM 2 capsules (after dinner)
-- Cannabis Indica 1.0g (21:16)
+- Cannabis Indica 0.8g (20:20)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
