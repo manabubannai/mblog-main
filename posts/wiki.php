@@ -24,7 +24,9 @@ pre.wiki-content { white-space: pre-wrap; font-family: 'SFMono-Regular', Consola
 
 <?php
 // Load wiki data
-$wiki_dir = '/Users/manabu/wiki';
+$wiki_dir = $_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1'
+    ? '/Users/manabu/wiki'
+    : '/var/www/wiki';
 $daily_dir = $wiki_dir . '/daily';
 
 // Count entries
