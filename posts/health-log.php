@@ -194,7 +194,68 @@ h2.after(editor);
 
 <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
 
-<h2># 2026-04-10</h2>
+<h2># 2026-04-11</h2>
+  <pre>
+■ Body Check
+- Readiness: 88, Sleep Score: 89, Total Sleep: 8h14m
+- Sleep Time: 23:00~08:00, Deep: 1h29m, REM: 2h10m
+- Weight: 63.08 kg, Muscle: 56.57 kg, Body Fat: 5.6%
+
+■ Treatment
+- Sunlight: 09:05~ (10min)
+- Meditation: 11:07~12:07 (HR: 56bpm)
+
+■ Food
+
+08:23
+- Ginger Honey Tea 1杯
+→ 30kcal / P:0g / F:0g / C:8g / Fiber:0g / Zinc:0mg / Mg:2mg
+
+■ Substances
+- Seed DS-01 1 capsule (before lunch)
+- NOW Super Enzymes 1 capsule (before lunch)
+- Thorne Multi-Vitamin AM 2 capsules (after lunch)
+- Thorne Creatine Powder 5g (after lunch)
+- ProHealth NMN Powder 1 scoop (after lunch)
+- Nordic Naturals Omega 2 capsules (after lunch)
+- Seed DS-01 1 capsule (before dinner)
+- NOW Super Enzymes 1 capsule (before dinner)
+- Thorne Multi-Vitamin PM 2 capsules (after dinner)
+→ Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
+
+■ Daily Summary (Food + Supplements)
+kcal:     30 / 2,700  ░░░░░░░░░░   1% 📉
+P:         0 / 126g   ░░░░░░░░░░   0% 📉
+F:         0 / 75g    ░░░░░░░░░░   0%
+C:         8 / 380g   ░░░░░░░░░░   2% 📉
+Fiber:     0 / 28g    ░░░░░░░░░░   0% 📉
+Zinc:    7.5 / 11mg   ▓▓▓▓▓▓▓░░░  68%
+Mg:      202 / 400mg  ▓▓▓▓▓░░░░░  51%
+VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
+Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
+
+■ Feedback from AI
+
+✓ 総合: —/100
+- データ不足(朝のみ)
+
+✓ 栄養: 30/2,700kcal (1%)📉
+- 朝のGinger Honey Teaのみ。ランチ以降のデータ追加待ち
+
+✓ 血液
+- VitD: 日光浴10min (~1,000IU) + サプリ1,000IU = 2,000IU◎
+
+✓ 睡眠: 89
+- Sleep Score 89 — 最近で最高値◎ 23:00就寝が効いている
+- Deep 1h29m / REM 2h10m — 両方とも優秀
+- 前日Cannabis 2.4gにも関わらず高スコア。23:00就寝の効果が上回った
+
+✓ 体調
+- 日光浴◎ ジンジャーティーで朝スタート</pre>
+
+  <hr style="border: none; border-top: 0.5px solid rgba(0,0,0,0.06); margin: 50px 0 40px;">
+
+  <h2># 2026-04-10</h2>
   <pre>
 ■ Body Check
 - Readiness: 85, Sleep Score: 82, Total Sleep: 6h52m
@@ -221,6 +282,18 @@ h2.after(editor);
 - Rocket Salad (Arugula, Burrata Cheese, Radish, Balsamic Dressing)
 → 250kcal / P:12g / F:18g / C:8g / Fiber:4g / Zinc:1mg / Mg:20mg
 
+16:09
+- 3 Seed Protein Super Foods (Doctor Murray) 1 scoop (15g), Vital Proteins Collagen Peptides 1 scoop (20g)
+→ 130kcal / P:27g / F:2g / C:5g / Fiber:2g / Zinc:0.5mg / Mg:15mg
+
+19:00
+- サムギョプサル 1人前, Rice 1人前, Korean Noodle 1人前, キムチ 20g
+→ 950kcal / P:40g / F:35g / C:100g / Fiber:4g / Zinc:4mg / Mg:40mg
+
+21:25
+- Banana Smoothie 1杯
+→ 200kcal / P:3g / F:2g / C:45g / Fiber:2g / Zinc:0.3mg / Mg:30mg
+
 ■ Substances
 - Seed DS-01 1 capsule (before lunch)
 - NOW Super Enzymes 1 capsule (before lunch)
@@ -231,36 +304,40 @@ h2.after(editor);
 - Seed DS-01 1 capsule (before dinner)
 - NOW Super Enzymes 1 capsule (before dinner)
 - Thorne Multi-Vitamin PM 2 capsules (after dinner)
+- Cannabis Hybrid 0.8g (17:19)
+- Cannabis Hybrid/Indica 0.8g (20:00)
+- Cannabis Indica 0.8g (22:00)
 → Zinc:7.5mg / Mg:200mg / VitD:1,000IU / Creatine:5g / EPA+DHA:1,280mg
 
 ■ Daily Summary (Food + Supplements)
-kcal:  1,439 / 2,700  ▓▓▓▓▓░░░░░  53%
-P:        61 / 126g   ▓▓▓▓▓░░░░░  48% 📉
-F:        62 / 75g    ▓▓▓▓▓▓▓▓░░  83%
-C:       145 / 380g   ▓▓▓▓░░░░░░  38% 📉
-Fiber:    10 / 28g    ▓▓▓▓░░░░░░  36% 📉
-Zinc:  12.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  116% ✅
-Mg:      295 / 400mg  ▓▓▓▓▓▓▓░░░  74%
+kcal:  2,719 / 2,700  ▓▓▓▓▓▓▓▓▓▓  101% ✅
+P:       131 / 126g   ▓▓▓▓▓▓▓▓▓▓  104% ✅
+F:       101 / 75g    ▓▓▓▓▓▓▓▓▓▓  135% ✅
+C:       295 / 380g   ▓▓▓▓▓▓▓▓░░  78%
+Fiber:    18 / 28g    ▓▓▓▓▓▓░░░░  64%
+Zinc:  17.8 / 11mg    ▓▓▓▓▓▓▓▓▓▓  162% ✅
+Mg:      370 / 400mg  ▓▓▓▓▓▓▓▓▓░  93%
 VitD:  1,000 / 2,000  ▓▓▓▓▓░░░░░  50% 📉
 Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 
 ■ Feedback from AI
 
-✓ 総合: 50/100
-- Good → Kale, Olive, Cucumber, Sunlight
-- OK → Rice, Chicken(カオマンガイ)
-- Avoid → Carbonara(小麦パスタ=グルテン🔴)
-- note: パスタはグルテン含有。次回はグルテンフリーパスタ or Rice代替推奨
+✓ 総合: 40/100
+- Good → Kale, Olive, Cucumber, Collagen Peptides, 3 Seed Protein, Sunlight
+- OK → Rice, Chicken(カオマンガイ), サムギョプサル, Korean Noodle, Banana Smoothie
+- Avoid → Carbonara(小麦パスタ🔴), Korean Noodle(小麦🔴)
+- note: グルテン食材2回(パスタ+韓国麺)。Cannabis 2.4g/日は過去最多
 
-✓ 栄養: 1,239/2,700kcal (46%)📉
-- P:51/126g (40%)📉 — 大幅不足。夕飯で高Pメニュー必須
-- 全体的にカロリー不足。夕飯+Night snack追加推奨
+✓ 栄養: 2,719/2,700kcal (101%)✅
+- P:131g(104%)✅ — Collagen+3 Seed Proteinが効いた
+- Cannabis 2.4g — 過去最多。翌日のSleep Score/Deep Sleepへの影響を注視
 
 ✓ 血液
-- hs-CRP: Carbonara(グルテン)は炎症リスク。連日摂取は避ける
+- hs-CRP: グルテン2回+高脂質サムギョプサル。連日は避ける
+- TSH: 大豆なし◎
 
 ✓ 睡眠: 82
-- Total 6h52m — やや短い。00:44就寝。Deep 1h41m◎(最近で最高)
+- Deep 1h41m◎(最近で最高) / Total 6h52m — やや短い
 
 ✓ 体調
 - 日光浴+読書◎
