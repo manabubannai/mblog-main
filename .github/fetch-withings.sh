@@ -9,6 +9,7 @@ BLOG_DIR="/Users/manabu/mblog-main"
 ENV_FILE="$BLOG_DIR/.env"
 TOKEN_FILE="$BLOG_DIR/.github/.withings-tokens.json"
 OUTPUT="$BLOG_DIR/.github/withings-today.txt"
+JSON_OUTPUT="$BLOG_DIR/.github/withings-data.json"
 
 # .env 読み込み
 if [ ! -f "$ENV_FILE" ]; then
@@ -31,7 +32,7 @@ fi
 DATE=${1:-$(date '+%Y-%m-%d')}
 
 # Python でトークン更新 → データ取得 → フォーマット
-python3 - "$TOKEN_FILE" "$OUTPUT" "$DATE" "$WITHINGS_CLIENT_ID" "$WITHINGS_CLIENT_SECRET" << 'PYEOF'
+python3 - "$TOKEN_FILE" "$OUTPUT" "$DATE" "$WITHINGS_CLIENT_ID" "$WITHINGS_CLIENT_SECRET" "$JSON_OUTPUT" << 'PYEOF'
 import json, sys, time, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
@@ -40,6 +41,7 @@ output_file = sys.argv[2]
 target_date = sys.argv[3]
 client_id = sys.argv[4]
 client_secret = sys.argv[5]
+json_output_file = sys.argv[6]
 
 def api_post(url, data):
     encoded = urllib.parse.urlencode(data).encode()
@@ -140,6 +142,53 @@ if 88 in results:
 
 with open(output_file, "w") as f:
     f.write("\n".join(lines) + "\n")
+
+# --- 全履歴の Raw JSON 取得（/withings ページ用） ---
+# meastype: 1=Weight, 5=Fat Free Mass, 6=Fat Ratio, 8=Fat Mass Weight, 76=Muscle Mass,
+#           77=Hydration, 88=Bone Mass, 91=Pulse Wave Velocity, 9=Diastolic BP, 10=Systolic BP,
+#           11=Heart Pulse, 54=SpO2, 71=Body Temperature, 73=Skin Temperature
+MEAS_TYPES = "1,5,6,8,9,10,11,54,71,73,76,77,88,91"
+
+all_meas_resp = api_post("https://wbsapi.withings.net/measure", {
+    "action": "getmeas",
+    "meastypes": MEAS_TYPES,
+    "category": 1,
+    "startdate": 0,
+    "enddate": int(time.time()),
+    "access_token": tokens["access_token"]
+})
+
+# Activity データ（歩数・消費カロリー等） 過去1年
+year_ago = (datetime.now(local_tz) - timedelta(days=365)).strftime("%Y-%m-%d")
+today_str = datetime.now(local_tz).strftime("%Y-%m-%d")
+activity_resp = api_post("https://wbsapi.withings.net/v2/measure", {
+    "action": "getactivity",
+    "startdateymd": year_ago,
+    "enddateymd": today_str,
+    "data_fields": "steps,distance,elevation,soft,moderate,intense,active,calories,totalcalories,hr_average,hr_min,hr_max,hr_zone_0,hr_zone_1,hr_zone_2,hr_zone_3",
+    "access_token": tokens["access_token"]
+})
+
+# Sleep Summary 過去1年
+sleep_resp = api_post("https://wbsapi.withings.net/v2/sleep", {
+    "action": "getsummary",
+    "startdateymd": year_ago,
+    "enddateymd": today_str,
+    "data_fields": "total_sleep_time,light_sleep_duration,deep_sleep_duration,rem_sleep_duration,wakeup_duration,wakeup_count,durationtosleep,durationtowakeup,hr_average,hr_min,hr_max,rr_average,rr_min,rr_max,sleep_score,snoring,snoring_episode_count,breathing_disturbances_intensity",
+    "access_token": tokens["access_token"]
+})
+
+combined = {
+    "fetched_at": datetime.now(local_tz).isoformat(),
+    "target_date": target_date,
+    "measure_today": meas_resp,
+    "measure_all": all_meas_resp,
+    "activity": activity_resp,
+    "sleep": sleep_resp,
+}
+
+with open(json_output_file, "w") as f:
+    json.dump(combined, f, indent=2, ensure_ascii=False)
 
 print(f"Withings data saved for {target_date}")
 PYEOF

@@ -1,0 +1,5631 @@
+{
+  "fetched_at": "2026-04-12T12:26:28.983408+07:00",
+  "target_date": "2026-04-12",
+  "measure_today": {
+    "status": 0,
+    "body": {
+      "updatetime": 1775956444,
+      "timezone": "Asia/Bangkok",
+      "measuregrps": [
+        {
+          "grpid": 7610643072,
+          "attrib": 8,
+          "date": 1775956372,
+          "created": 1775956444,
+          "modified": 1775956444,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 5911,
+              "type": 91,
+              "unit": -3,
+              "algo": 0,
+              "fm": 128
+            },
+            {
+              "value": 323,
+              "type": 155,
+              "unit": -1,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7610643062,
+          "attrib": 0,
+          "date": 1775956372,
+          "created": 1775956443,
+          "modified": 1775956443,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7610643061,
+          "attrib": 0,
+          "date": 1775956372,
+          "created": 1775956443,
+          "modified": 1775956443,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 69070,
+              "type": 196,
+              "unit": -3,
+              "algo": 0,
+              "fm": 128
+            },
+            {
+              "value": 71517,
+              "type": 197,
+              "unit": -3,
+              "algo": 0,
+              "fm": 128
+            },
+            {
+              "value": 65532,
+              "type": 198,
+              "unit": -3,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7610643054,
+          "attrib": 0,
+          "date": 1775956372,
+          "created": 1775956443,
+          "modified": 1775956443,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63037,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5901,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 403,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5603,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4166,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 298,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 1675,
+              "type": 168,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 2491,
+              "type": 169,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 10,
+              "type": 170,
+              "unit": -1,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 3154,
+              "type": 173,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 12
+            },
+            {
+              "value": 967,
+              "type": 173,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 10
+            },
+            {
+              "value": 371,
+              "type": 173,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 3
+            },
+            {
+              "value": 1019,
+              "type": 173,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 11
+            },
+            {
+              "value": 389,
+              "type": 173,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 2
+            },
+            {
+              "value": 200,
+              "type": 174,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 12
+            },
+            {
+              "value": 95,
+              "type": 174,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 10
+            },
+            {
+              "value": 23,
+              "type": 174,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 3
+            },
+            {
+              "value": 73,
+              "type": 174,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 11
+            },
+            {
+              "value": 12,
+              "type": 174,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 2
+            },
+            {
+              "value": 3005,
+              "type": 175,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 12
+            },
+            {
+              "value": 916,
+              "type": 175,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 10
+            },
+            {
+              "value": 350,
+              "type": 175,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 3
+            },
+            {
+              "value": 965,
+              "type": 175,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 11
+            },
+            {
+              "value": 368,
+              "type": 175,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 2
+            },
+            {
+              "value": 1694,
+              "type": 226,
+              "unit": 0,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 26,
+              "type": 227,
+              "unit": 0,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6393,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        }
+      ]
+    }
+  },
+  "measure_all": {
+    "status": 0,
+    "body": {
+      "updatetime": 1775956444,
+      "timezone": "Asia/Bangkok",
+      "measuregrps": [
+        {
+          "grpid": 7610643062,
+          "attrib": 0,
+          "date": 1775956372,
+          "created": 1775956443,
+          "modified": 1775956443,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7610643054,
+          "attrib": 0,
+          "date": 1775956372,
+          "created": 1775956443,
+          "modified": 1775956443,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63037,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5901,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 403,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5603,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4166,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 298,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6393,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7606917309,
+          "attrib": 0,
+          "date": 1775869563,
+          "created": 1775869633,
+          "modified": 1775869633,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7606917307,
+          "attrib": 0,
+          "date": 1775869563,
+          "created": 1775869633,
+          "modified": 1775869633,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63078,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5957,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 351,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5657,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4192,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 300,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5565,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7603010319,
+          "attrib": 0,
+          "date": 1775784065,
+          "created": 1775784140,
+          "modified": 1775784140,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 58,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7603010315,
+          "attrib": 0,
+          "date": 1775784065,
+          "created": 1775784140,
+          "modified": 1775784140,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63051,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5976,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 329,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5675,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4199,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 301,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5218,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7599161226,
+          "attrib": 0,
+          "date": 1775702081,
+          "created": 1775702153,
+          "modified": 1775702153,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 85,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7599161220,
+          "attrib": 0,
+          "date": 1775702081,
+          "created": 1775702152,
+          "modified": 1775702152,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62429,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5789,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 454,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5497,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4150,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 292,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7272,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7595816019,
+          "attrib": 0,
+          "date": 1775624921,
+          "created": 1775624994,
+          "modified": 1775624994,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 67,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7595815991,
+          "attrib": 0,
+          "date": 1775624921,
+          "created": 1775624993,
+          "modified": 1775624993,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61628,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5757,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 405,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5466,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4132,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 291,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6572,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7595195071,
+          "attrib": 0,
+          "date": 1775610458,
+          "created": 1775610543,
+          "modified": 1775610543,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 70,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7595195065,
+          "attrib": 0,
+          "date": 1775610458,
+          "created": 1775610543,
+          "modified": 1775610543,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61821,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7595195036,
+          "attrib": 0,
+          "date": 1775610397,
+          "created": 1775610542,
+          "modified": 1775610542,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61766,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7591522409,
+          "attrib": 0,
+          "date": 1775530355,
+          "created": 1775530419,
+          "modified": 1775530419,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 68,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7591522404,
+          "attrib": 0,
+          "date": 1775530355,
+          "created": 1775530419,
+          "modified": 1775530419,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62222,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5708,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 514,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5419,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4165,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 289,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8261,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7591519708,
+          "attrib": 0,
+          "date": 1775530245,
+          "created": 1775530302,
+          "modified": 1775530302,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62843,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7587796822,
+          "attrib": 0,
+          "date": 1775438533,
+          "created": 1775438602,
+          "modified": 1775438602,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 71,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7587796816,
+          "attrib": 0,
+          "date": 1775438533,
+          "created": 1775438602,
+          "modified": 1775438602,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63299,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5908,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 422,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5610,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4204,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 298,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6667,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7584517476,
+          "attrib": 0,
+          "date": 1775353850,
+          "created": 1775353922,
+          "modified": 1775353922,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 64,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7584517466,
+          "attrib": 0,
+          "date": 1775353850,
+          "created": 1775353921,
+          "modified": 1775353921,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62277,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5860,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 368,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5564,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4187,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 296,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5909,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7581072031,
+          "attrib": 0,
+          "date": 1775273125,
+          "created": 1775273197,
+          "modified": 1775273197,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 74,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7581072020,
+          "attrib": 0,
+          "date": 1775273125,
+          "created": 1775273197,
+          "modified": 1775273197,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62429,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5932,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 311,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5633,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4239,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 299,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4982,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7577271372,
+          "attrib": 0,
+          "date": 1775180771,
+          "created": 1775180852,
+          "modified": 1775180852,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 66,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7577271367,
+          "attrib": 0,
+          "date": 1775180771,
+          "created": 1775180852,
+          "modified": 1775180852,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62084,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5895,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 314,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5597,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4210,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 297,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5058,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7573553328,
+          "attrib": 0,
+          "date": 1775092278,
+          "created": 1775092350,
+          "modified": 1775092350,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 64,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7573553311,
+          "attrib": 0,
+          "date": 1775092278,
+          "created": 1775092350,
+          "modified": 1775092350,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62111,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5791,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 420,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5499,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4146,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 293,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6762,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7569934140,
+          "attrib": 0,
+          "date": 1775012473,
+          "created": 1775012537,
+          "modified": 1775012537,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 71,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7569934130,
+          "attrib": 0,
+          "date": 1775012473,
+          "created": 1775012537,
+          "modified": 1775012537,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61559,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5730,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 426,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5440,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4127,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 290,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6920,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7566132742,
+          "attrib": 0,
+          "date": 1774927452,
+          "created": 1774927537,
+          "modified": 1774927537,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 69,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7566132698,
+          "attrib": 0,
+          "date": 1774927452,
+          "created": 1774927537,
+          "modified": 1774927537,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61573,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5723,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 434,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5434,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4140,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 289,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7049,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7562224228,
+          "attrib": 0,
+          "date": 1774840834,
+          "created": 1774840905,
+          "modified": 1774840905,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 68,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7562224215,
+          "attrib": 0,
+          "date": 1774840834,
+          "created": 1774840905,
+          "modified": 1774840905,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62125,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5806,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 407,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5513,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4167,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 293,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6551,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7558445025,
+          "attrib": 0,
+          "date": 1774750464,
+          "created": 1774750537,
+          "modified": 1774750537,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 67,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7558445021,
+          "attrib": 0,
+          "date": 1774750464,
+          "created": 1774750536,
+          "modified": 1774750536,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62263,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5800,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 427,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5507,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4133,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 293,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6858,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7554724411,
+          "attrib": 0,
+          "date": 1774665298,
+          "created": 1774665369,
+          "modified": 1774665369,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7554724406,
+          "attrib": 0,
+          "date": 1774665298,
+          "created": 1774665369,
+          "modified": 1774665369,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62968,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5878,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 419,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5581,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4168,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 297,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6654,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7551000574,
+          "attrib": 0,
+          "date": 1774582110,
+          "created": 1774582183,
+          "modified": 1774582183,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 67,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7551000558,
+          "attrib": 0,
+          "date": 1774582110,
+          "created": 1774582182,
+          "modified": 1774582182,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62180,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5771,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 447,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5480,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4148,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 292,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7189,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7547122668,
+          "attrib": 0,
+          "date": 1774493290,
+          "created": 1774493356,
+          "modified": 1774493356,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 94,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7547122660,
+          "attrib": 0,
+          "date": 1774493290,
+          "created": 1774493356,
+          "modified": 1774493356,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62125,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5800,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 413,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5507,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4160,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 293,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6648,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7543155086,
+          "attrib": 0,
+          "date": 1774409814,
+          "created": 1774409886,
+          "modified": 1774409886,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 81,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7543155080,
+          "attrib": 0,
+          "date": 1774409814,
+          "created": 1774409885,
+          "modified": 1774409885,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62222,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5756,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 467,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5465,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4122,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 291,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7505,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7539066202,
+          "attrib": 0,
+          "date": 1774318008,
+          "created": 1774318079,
+          "modified": 1774318079,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 69,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7539066195,
+          "attrib": 0,
+          "date": 1774318008,
+          "created": 1774318079,
+          "modified": 1774318079,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62291,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5787,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 442,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5494,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4165,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 292,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7096,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7535117381,
+          "attrib": 0,
+          "date": 1774227899,
+          "created": 1774227973,
+          "modified": 1774227973,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 78,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7535117377,
+          "attrib": 0,
+          "date": 1774227899,
+          "created": 1774227973,
+          "modified": 1774227973,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62332,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5729,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 504,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5440,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4177,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 290,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8086,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7531458054,
+          "attrib": 0,
+          "date": 1774145605,
+          "created": 1774145678,
+          "modified": 1774145678,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 76,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7531458050,
+          "attrib": 0,
+          "date": 1774145605,
+          "created": 1774145678,
+          "modified": 1774145678,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61946,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5668,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 527,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5381,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4094,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 287,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8507,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7527682011,
+          "attrib": 0,
+          "date": 1774055017,
+          "created": 1774055091,
+          "modified": 1774055091,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 64,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7527682006,
+          "attrib": 0,
+          "date": 1774055017,
+          "created": 1774055090,
+          "modified": 1774055090,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62995,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5698,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 601,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5410,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4109,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 288,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 9540,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7523919754,
+          "attrib": 0,
+          "date": 1773968585,
+          "created": 1773968651,
+          "modified": 1773968651,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 68,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7523919750,
+          "attrib": 0,
+          "date": 1773968585,
+          "created": 1773968651,
+          "modified": 1773968651,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63216,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5798,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 523,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5506,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4159,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 293,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8273,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7520103377,
+          "attrib": 0,
+          "date": 1773881980,
+          "created": 1773882058,
+          "modified": 1773882058,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 102,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7520103374,
+          "attrib": 0,
+          "date": 1773881980,
+          "created": 1773882058,
+          "modified": 1773882058,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62650,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5781,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 484,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5489,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4176,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 292,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7725,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7516251100,
+          "attrib": 0,
+          "date": 1773795764,
+          "created": 1773795836,
+          "modified": 1773795836,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 75,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7516251097,
+          "attrib": 0,
+          "date": 1773795764,
+          "created": 1773795836,
+          "modified": 1773795836,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63451,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5838,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 507,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5544,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4160,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 295,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7990,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7512325709,
+          "attrib": 0,
+          "date": 1773709420,
+          "created": 1773709490,
+          "modified": 1773709490,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 83,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7512325702,
+          "attrib": 0,
+          "date": 1773709420,
+          "created": 1773709489,
+          "modified": 1773709489,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63244,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5753,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 572,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5462,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4132,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 291,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 9044,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7508426767,
+          "attrib": 0,
+          "date": 1773622567,
+          "created": 1773622639,
+          "modified": 1773622639,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 77,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7508426763,
+          "attrib": 0,
+          "date": 1773622567,
+          "created": 1773622639,
+          "modified": 1773622639,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63493,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5864,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 485,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5568,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4196,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 296,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7639,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7504948153,
+          "attrib": 0,
+          "date": 1773547476,
+          "created": 1773547546,
+          "modified": 1773547546,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 86,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7504948147,
+          "attrib": 0,
+          "date": 1773547476,
+          "created": 1773547546,
+          "modified": 1773547546,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62857,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5697,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 589,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5409,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4128,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 288,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 9370,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7501136894,
+          "attrib": 0,
+          "date": 1773450268,
+          "created": 1773450341,
+          "modified": 1773450341,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 70,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7501136887,
+          "attrib": 0,
+          "date": 1773450268,
+          "created": 1773450340,
+          "modified": 1773450340,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63202,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5816,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 504,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5523,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4175,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 294,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7974,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7497382137,
+          "attrib": 0,
+          "date": 1773363736,
+          "created": 1773363808,
+          "modified": 1773363808,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 81,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7497382130,
+          "attrib": 0,
+          "date": 1773363736,
+          "created": 1773363807,
+          "modified": 1773363807,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62981,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5774,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 524,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5483,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4121,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 292,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8320,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7485878818,
+          "attrib": 0,
+          "date": 1773106794,
+          "created": 1773106866,
+          "modified": 1773106866,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 84,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7485878788,
+          "attrib": 0,
+          "date": 1773106794,
+          "created": 1773106865,
+          "modified": 1773106865,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63769,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5994,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 383,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5692,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4144,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 302,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6006,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7482000305,
+          "attrib": 0,
+          "date": 1773018026,
+          "created": 1773018099,
+          "modified": 1773018099,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 68,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7482000278,
+          "attrib": 0,
+          "date": 1773018026,
+          "created": 1773018098,
+          "modified": 1773018098,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 63893,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5985,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 404,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5684,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4224,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 301,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6323,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7478424399,
+          "attrib": 0,
+          "date": 1772934762,
+          "created": 1772934827,
+          "modified": 1772934827,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 85,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7478424395,
+          "attrib": 0,
+          "date": 1772934762,
+          "created": 1772934827,
+          "modified": 1772934827,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61877,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5676,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 512,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5388,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4127,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 287,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8274,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7474690840,
+          "attrib": 0,
+          "date": 1772845445,
+          "created": 1772845517,
+          "modified": 1772845517,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 81,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7474690801,
+          "attrib": 0,
+          "date": 1772845445,
+          "created": 1772845516,
+          "modified": 1772845516,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62346,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5734,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 500,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5445,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4166,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 290,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8020,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7470941754,
+          "attrib": 0,
+          "date": 1772759123,
+          "created": 1772759193,
+          "modified": 1772759193,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 83,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7470941751,
+          "attrib": 0,
+          "date": 1772759123,
+          "created": 1772759193,
+          "modified": 1772759193,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62609,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5728,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 533,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5438,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4096,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 290,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8513,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7467120579,
+          "attrib": 0,
+          "date": 1772672499,
+          "created": 1772672574,
+          "modified": 1772672574,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 88,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7467120575,
+          "attrib": 0,
+          "date": 1772672499,
+          "created": 1772672574,
+          "modified": 1772672574,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62968,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5830,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 467,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5535,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4199,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 294,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7416,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7463120125,
+          "attrib": 0,
+          "date": 1772586314,
+          "created": 1772586388,
+          "modified": 1772586388,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 78,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7463120119,
+          "attrib": 0,
+          "date": 1772586314,
+          "created": 1772586387,
+          "modified": 1772586387,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61890,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5660,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 529,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5373,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4070,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 286,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8547,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7459220030,
+          "attrib": 0,
+          "date": 1772499728,
+          "created": 1772499798,
+          "modified": 1772499798,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 81,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7459220021,
+          "attrib": 0,
+          "date": 1772499728,
+          "created": 1772499798,
+          "modified": 1772499798,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62802,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5838,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 442,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5544,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4185,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 295,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7038,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7455310575,
+          "attrib": 0,
+          "date": 1772412897,
+          "created": 1772412963,
+          "modified": 1772412963,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 78,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7455310524,
+          "attrib": 0,
+          "date": 1772412897,
+          "created": 1772412963,
+          "modified": 1772412963,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62319,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5762,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 470,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5470,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4124,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 291,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7542,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7451626390,
+          "attrib": 0,
+          "date": 1772327045,
+          "created": 1772327131,
+          "modified": 1772327131,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 80,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7451626385,
+          "attrib": 0,
+          "date": 1772327045,
+          "created": 1772327130,
+          "modified": 1772327130,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 62167,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5823,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 393,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5529,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4203,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 294,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6322,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7448031587,
+          "attrib": 0,
+          "date": 1772240709,
+          "created": 1772240779,
+          "modified": 1772240779,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 90,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7448031582,
+          "attrib": 0,
+          "date": 1772240709,
+          "created": 1772240779,
+          "modified": 1772240779,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61780,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5650,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 528,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5364,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4135,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 286,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8546,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7444347935,
+          "attrib": 0,
+          "date": 1772154232,
+          "created": 1772154302,
+          "modified": 1772154302,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 93,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7444347910,
+          "attrib": 0,
+          "date": 1772154232,
+          "created": 1772154302,
+          "modified": 1772154302,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61448,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5603,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 542,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5319,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4123,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 284,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8820,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7440682490,
+          "attrib": 0,
+          "date": 1772068862,
+          "created": 1772068935,
+          "modified": 1772068935,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 93,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7440682485,
+          "attrib": 0,
+          "date": 1772068862,
+          "created": 1772068934,
+          "modified": 1772068934,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61517,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5568,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 584,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5286,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4035,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 282,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 9493,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7436860350,
+          "attrib": 0,
+          "date": 1771981437,
+          "created": 1771981511,
+          "modified": 1771981511,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 70,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7436860344,
+          "attrib": 0,
+          "date": 1771981437,
+          "created": 1771981511,
+          "modified": 1771981511,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61766,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5739,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 438,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5449,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4127,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 290,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7091,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7429250273,
+          "attrib": 0,
+          "date": 1771808562,
+          "created": 1771808649,
+          "modified": 1771808649,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 78,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7429250269,
+          "attrib": 0,
+          "date": 1771808562,
+          "created": 1771808648,
+          "modified": 1771808648,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61448,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5694,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 451,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5406,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4129,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 288,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7340,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7425706440,
+          "attrib": 0,
+          "date": 1771725224,
+          "created": 1771725300,
+          "modified": 1771725300,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 71,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7425706422,
+          "attrib": 0,
+          "date": 1771725224,
+          "created": 1771725300,
+          "modified": 1771725300,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60951,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5579,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 516,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5296,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4076,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 283,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8466,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7422061751,
+          "attrib": 0,
+          "date": 1771635886,
+          "created": 1771635957,
+          "modified": 1771635957,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 102,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7422061748,
+          "attrib": 0,
+          "date": 1771635886,
+          "created": 1771635956,
+          "modified": 1771635956,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61517,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5674,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 478,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5387,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4084,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 287,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7770,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7418425535,
+          "attrib": 0,
+          "date": 1771551308,
+          "created": 1771551381,
+          "modified": 1771551381,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 92,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7418425531,
+          "attrib": 0,
+          "date": 1771551308,
+          "created": 1771551381,
+          "modified": 1771551381,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61227,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5680,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 443,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5392,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4077,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 287,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7235,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7414703701,
+          "attrib": 0,
+          "date": 1771462929,
+          "created": 1771463001,
+          "modified": 1771463001,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 98,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7414703698,
+          "attrib": 0,
+          "date": 1771462929,
+          "created": 1771463001,
+          "modified": 1771463001,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61614,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5645,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 517,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5359,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4051,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 286,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8391,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7410926120,
+          "attrib": 0,
+          "date": 1771375299,
+          "created": 1771375367,
+          "modified": 1771375367,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 86,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7410926114,
+          "attrib": 0,
+          "date": 1771375299,
+          "created": 1771375367,
+          "modified": 1771375367,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60882,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5631,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 457,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5346,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4102,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 285,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7506,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7410926080,
+          "attrib": 0,
+          "date": 1771375211,
+          "created": 1771375366,
+          "modified": 1771375366,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60896,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5682,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 408,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5394,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4131,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 287,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6700,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7407124423,
+          "attrib": 0,
+          "date": 1771289381,
+          "created": 1771289451,
+          "modified": 1771289451,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 69,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7407124418,
+          "attrib": 0,
+          "date": 1771289381,
+          "created": 1771289451,
+          "modified": 1771289451,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60730,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5562,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 511,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5280,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4085,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 282,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8414,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7403436388,
+          "attrib": 0,
+          "date": 1771203003,
+          "created": 1771203076,
+          "modified": 1771203076,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 65,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7403436381,
+          "attrib": 0,
+          "date": 1771203003,
+          "created": 1771203075,
+          "modified": 1771203075,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60620,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5536,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 526,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5255,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4059,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 281,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 8677,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7400085557,
+          "attrib": 0,
+          "date": 1771120719,
+          "created": 1771120791,
+          "modified": 1771120791,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 92,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7400085552,
+          "attrib": 0,
+          "date": 1771120719,
+          "created": 1771120791,
+          "modified": 1771120791,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 60689,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5608,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 460,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5324,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4073,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 284,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7580,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7396598483,
+          "attrib": 0,
+          "date": 1771030819,
+          "created": 1771030892,
+          "modified": 1771030892,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 92,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7396598476,
+          "attrib": 0,
+          "date": 1771030819,
+          "created": 1771030892,
+          "modified": 1771030892,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61214,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300672,
+              "fm": 128
+            },
+            {
+              "value": 5650,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 472,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5364,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4080,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 286,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300672,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 7711,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7394649621,
+          "attrib": 0,
+          "date": 1770977088,
+          "created": 1770977161,
+          "modified": 1770977161,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 65,
+              "type": 11,
+              "unit": 0,
+              "algo": 0,
+              "fm": 128
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7394649614,
+          "attrib": 0,
+          "date": 1770977088,
+          "created": 1770977160,
+          "modified": 1770977160,
+          "category": 1,
+          "deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "hash_deviceid": "032e8007be788424361f8595e0802905dd2c620f",
+          "measures": [
+            {
+              "value": 61505,
+              "type": 1,
+              "unit": -3,
+              "algo": 218300416,
+              "fm": 128
+            },
+            {
+              "value": 5767,
+              "type": 5,
+              "unit": -2,
+              "algo": 218300416,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 384,
+              "type": 8,
+              "unit": -2,
+              "algo": 218300416,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 5475,
+              "type": 76,
+              "unit": -2,
+              "algo": 218300416,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 4079,
+              "type": 77,
+              "unit": -2,
+              "algo": 218300416,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 291,
+              "type": 88,
+              "unit": -2,
+              "algo": 218300416,
+              "fm": 128,
+              "position": 7
+            },
+            {
+              "value": 6243,
+              "type": 6,
+              "unit": -3
+            }
+          ],
+          "modelid": 10,
+          "model": "Body Scan",
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "grpid": 7394628276,
+          "attrib": 2,
+          "date": 1770976577,
+          "created": 1770976577,
+          "modified": 1770976577,
+          "category": 1,
+          "deviceid": null,
+          "hash_deviceid": null,
+          "measures": [
+            {
+              "value": 62000,
+              "type": 1,
+              "unit": -3,
+              "algo": 0,
+              "fm": 128,
+              "apppfmid": 7,
+              "appliver": 8040003
+            }
+          ],
+          "modelid": null,
+          "model": null,
+          "comment": null,
+          "timezone": "Asia/Bangkok"
+        }
+      ]
+    }
+  },
+  "activity": {
+    "status": 403,
+    "body": {},
+    "error": "XRequestID: [Not provided] - Insufficient_scope: The request requires higher privileges than provided by the access token"
+  },
+  "sleep": {
+    "status": 403,
+    "body": {},
+    "error": "XRequestID: [Not provided] - Insufficient_scope: The request requires higher privileges than provided by the access token"
+  }
+}
