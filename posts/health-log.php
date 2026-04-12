@@ -541,6 +541,40 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 ■ Treatment
 - Meditation: 12:44~13:44 (HR: 57bpm)
 
+■ Workout（Chest Day）
+
+Goal:
+- 1. Try 85kg
+- 2. 5kg × 12 × 3
+- 3. 50kg × 6 × 3
+- 4. 38.3kg × 12 × 2
+
+1. Bench Press w/o Smith Machine
+ 60kg × 10
+ 70kg × 4
+ 85kg × 0
+ 80kg × (2+2s)
+ 75kg × (1+5s)
+ 70kg × (2+4s)
+ 65kg × (3+5s)
+*note: Rep時に頭が動いているから固定する。重量は全体的に重すぎたので次回は少し下げる。
+
+2. Dips
+ 5kg × 10
+ 5kg × 10
+ 5kg × 10
+
+3. Incline Bench Press（Bar = 20kg）
+ 50kg × 6
+ 50kg × (5+1s)
+ 50kg × (5+1s)
+
+4. Low-to-High Cable Fly
+ 20kg × 10
+ 20kg × 10
+ 15kg × 10
+*note: 手に引っ掛ける感じで、力を抜いてにぎると胸に入りやすい。
+
 ■ Food
 
 10:13
