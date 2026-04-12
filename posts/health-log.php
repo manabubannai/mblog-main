@@ -373,6 +373,33 @@ Thoughtログに関しては絶対に1回はフィルターを通すというル
 - Sunlight: 10:13~10:24 (11min) (VitD ~1,000IU)
 - Meditation: 11:54~12:54 (HR: 57bpm)
 
+■ Workout（Leg Day）
+
+Goal:
+- 1. 120kg × 4
+- 2. 61kg × 12 × 3
+- 3. 89kg × 12 × 3
+- 4. 40kg × 20 × 3
+
+1. Squat（Bar = 20kg, s = Support）
+ 90lb + Bar × 10
+ 140lb + Bar × 4
+ 220lb + Bar × 4
+ 180lb + Bar × 8
+ 140lb + Bar × 12
+ 140lb + Bar × 12
+*note: これ以上に腰を下げるには体の柔らかさが必要。ストレッチをする
+
+2. Leg Curl
+ 59kg × 12
+ 63.5kg × 12
+ 68kg × 10
+
+3. Leg Extension
+ 190lb × 10
+ 190lb × 10
+ 190lb × (10+2c)
+
 ■ Food
 
 10:03
