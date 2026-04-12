@@ -458,6 +458,42 @@ Cr:      5g / 5g      ▓▓▓▓▓▓▓▓▓▓  100% ✅
 ■ Treatment
 - Meditation: 10:27~11:27 (HR: 57bpm)
 
+■ Workout（Shoulder Day）
+
+Goal:
+- 1. 40kg × 15 × 3
+- 2. 85kg × 3
+- 3. 20kg × 8 × 2
+- 4. 15kg × 10 → 80kg × 10
+
+1. Dumbbell Rear Raise
+ 20lb × 10
+ 20lb × 10
+ 20lb × 10
+ 25lb × 10
+ 25lb × 10
+ 25lb × 10
+ 25lb × 10
+ 25lb × 10
+ 25lb × 10
+
+2. Shoulder Press Machine（Bar = 10kg）
+ 50lb + Bar × 10
+ 90lb + Bar × 4
+ 110lb + Bar × 2
+ 90lb + Bar × 5
+ 80lb + Bar × 9
+ 75lb + Bar × 8
+
+3. Arnold Shoulder Press
+ 12.5kg × 12
+ 15kg × (9+1c)
+
+4. Side Raise (Drop Set: 12.5kg → 7.5kg → 5kg)
+ 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+ 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+ 12.5kg × 10 → 7.5kg × 15 → 5kg × 15
+
 ■ Food
 
 08:22
