@@ -1,0 +1,82 @@
+name: Sync Withings Data
+
+on:
+  schedule:
+    # 毎日 Asia/Bangkok 09:00 = UTC 02:00
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyNaCl
+        run: pip install pynacl
+
+      - name: Fetch Withings data
+        id: fetch
+        env:
+          WITHINGS_CLIENT_ID: ${{ secrets.WITHINGS_CLIENT_ID }}
+          WITHINGS_CLIENT_SECRET: ${{ secrets.WITHINGS_CLIENT_SECRET }}
+          WITHINGS_REFRESH_TOKEN: ${{ secrets.WITHINGS_REFRESH_TOKEN }}
+        run: bash .github/fetch-withings-full.sh
+
+      - name: Rotate WITHINGS_REFRESH_TOKEN secret
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          NEW_REFRESH: ${{ steps.fetch.outputs.new_refresh_token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 << 'PY'
+          import os, json, base64, urllib.request
+          from nacl import encoding, public
+
+          pat = os.environ["GH_PAT"]
+          new_refresh = os.environ["NEW_REFRESH"]
+          repo = os.environ["REPO"]
+
+          req = urllib.request.Request(
+              f"https://api.github.com/repos/{repo}/actions/secrets/public-key",
+              headers={"Authorization": f"Bearer {pat}", "Accept": "application/vnd.github+json"},
+          )
+          with urllib.request.urlopen(req) as r:
+              pk = json.loads(r.read())
+
+          pub_key = public.PublicKey(pk["key"].encode("utf-8"), encoding.Base64Encoder())
+          sealed_box = public.SealedBox(pub_key)
+          encrypted = base64.b64encode(sealed_box.encrypt(new_refresh.encode("utf-8"))).decode("utf-8")
+
+          body = json.dumps({"encrypted_value": encrypted, "key_id": pk["key_id"]}).encode()
+          req = urllib.request.Request(
+              f"https://api.github.com/repos/{repo}/actions/secrets/WITHINGS_REFRESH_TOKEN",
+              data=body, method="PUT",
+              headers={
+                  "Authorization": f"Bearer {pat}",
+                  "Accept": "application/vnd.github+json",
+                  "Content-Type": "application/json",
+              },
+          )
+          with urllib.request.urlopen(req) as r:
+              print(f"Secret updated: HTTP {r.status}")
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/withings-data.json
+          if git diff --cached --quiet -- .github/withings-data.json; then
+            echo "No changes."
+          else
+            git commit -m "chore: sync Withings data $(date -u +%Y-%m-%d)"
+            git push
+          fi

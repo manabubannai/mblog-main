@@ -2,8 +2,8 @@ name: Sync Oura Data
 
 on:
   schedule:
-    # 毎日 JST 6:00 / Asia/Bangkok 4:00 = UTC 21:00（前日）
-    - cron: '0 21 * * *'
+    # 毎日 Asia/Bangkok 09:00 = UTC 02:00
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
