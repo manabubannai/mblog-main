@@ -1,0 +1,38 @@
+name: Sync Oura Data
+
+on:
+  schedule:
+    # 毎日 JST 6:00 / Asia/Bangkok 4:00 = UTC 21:00（前日）
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch Oura data
+        env:
+          OURA_TOKEN: ${{ secrets.OURA_TOKEN }}
+        run: |
+          bash .github/fetch-oura-full.sh
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- .github/oura-data.json; then
+            echo "No changes."
+          else
+            git add .github/oura-data.json
+            git commit -m "chore: sync Oura data $(date -u +%Y-%m-%d)"
+            git push
+          fi
