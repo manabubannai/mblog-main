@@ -3,10 +3,15 @@ name: Deploy to VPS
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows: ["Sync Oura Data"]
+    types: [completed]
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Deploy via SSH
         run: |
@@ -14,7 +19,16 @@ jobs:
           echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/mblog && git fetch origin main && git reset --hard origin/main && (test -d /var/www/wiki && cd /var/www/wiki && git pull || cd /var/www && git clone https://github.com/manabubannai/wiki.git wiki)"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} '
+            set -e
+            cd /var/www/mblog && git fetch origin main && git reset --hard origin/main
+            if [ -d /var/www/wiki/.git ]; then
+              cd /var/www/wiki && git fetch origin main && git reset --hard origin/main || true
+            else
+              cd /var/www && git clone https://github.com/manabubannai/wiki.git wiki || true
+            fi
+          '
       - name: Clear opcache
+        if: always()
         run: |
           curl -sf -H "X-Deploy-Token: mblog-opcache-2026" "https://${{ secrets.VPS_HOST }}/opcache-reset.php" || true
